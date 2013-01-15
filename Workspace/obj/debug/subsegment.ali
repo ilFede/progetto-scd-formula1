@@ -1,0 +1,105 @@
+V "GNAT Lib v4.4"
+A -O0
+A -g
+A -gnatA
+P SS ZX
+R vnnnnnnnnnnnnnnvnnvnnnnvnvnnvnnnnvnnnvnnnvnnnnnnnnnnnnnnnnvnvnnnv2nnnnnnnnnnnn
+
+U subsegment%b		subsegment.adb		eb3e284a NE OO PK
+W system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
+
+U subsegment%s		subsegment.ads		7c80226c EE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.containers.generic_array_sort%s
+W ada.containers.vectors%s
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.finalization%s	a-finali.adb		a-finali.ali
+W ada.finalization.list_controller%s  a-filico.adb  a-filico.ali
+W ada.streams%s		a-stream.ads		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.unchecked_deallocation%s
+W system%s		system.ads		system.ali
+W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
+W system.finalization_root%s  s-finroo.adb	s-finroo.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-contai.ads		20070406091342 7b35f559
+D a-cgarso.ads		20070406091342 943b3aae
+D a-convec.ads		20090409232307 317e4a8c
+D a-convec.adb		20090409232307 5aeb8a2b
+D a-except.ads		20090409232307 b54b55de
+D a-finali.ads		20090409232307 9eaacebd
+D a-filico.ads		20090409232307 9299732a
+D a-stream.ads		20090409232307 34aca5be
+D a-tags.ads		20090409232307 bfa07446
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D interfac.ads		20090409232307 a69cad5c
+D i-c.ads		20070406091342 bc3ef662
+D subsegment.ads	20130111162056 4dfe68e0
+D subsegment.adb	20130111162056 a6c040aa
+D system.ads		20100127085936 15e10948
+D s-atacco.ads		20090409232307 60789a20
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-finimp.ads		20090409232307 9449f4cb
+D s-finroo.ads		20090409232307 1408f9d1
+D s-linux.ads		20090409232307 ad070dbe
+D s-osinte.ads		20080408064315 b04c0edf
+D s-parame.ads		20090409232307 f32e56e9
+D s-secsta.ads		20090409232307 7bae3621
+D s-soflin.ads		20090409232307 0c6fd39d
+D s-stache.ads		20090409232307 257b3be8
+D s-stausa.ads		20090409232307 6ab7dd35
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-stratt.ads		20090409232307 fef7c1da
+D s-strops.ads		20090409232307 845f72d2
+D s-sopco3.ads		20090409232307 72ce1063
+D s-sopco4.ads		20090409232307 bc112723
+D s-sopco5.ads		20090409232307 191315e8
+D s-tasinf.ads		20090409232307 268f0cd4
+D s-taspri.ads		20080408071349 5459bcd0
+D s-taskin.ads		20090409232307 376ff2dd
+D s-taprob.ads		20090409232307 5e00115c
+D s-tpoben.ads		20090409232307 37be425d
+D s-tpobop.ads		20090409232307 ccd38b83
+D s-traent.ads		20090409232307 bd5f2753
+D s-unstyp.ads		20090409232307 c0f9fae5
+X 1 ada.ads
+16K9*Ada 19e8 15|1r6 38r37
+X 2 a-contai.ads
+16K13*Containers 22e19 15|1r10 38r41
+X 4 a-convec.ads
+38I9 Index_Type 15|40r7
+39+9 Element_Type 15|39r7
+43k24*Vectors 379e27 15|1w21 38r52
+X 15 subsegment.ads
+3K9*Subsegment 42l5 42e15 16|1b14 26l5 26t15
+6E9*Subsegment_Type_T 6e52
+6n31*First{6E9}
+6n38*Last{6E9}
+6n44*Central{6E9}
+9I12*Num_Lane_Seg_T{positive} 21r53 29r25 31r25
+12I12*Subsegment_Length_T{positive}
+15I12*Subsegment_Index_T{positive} 40r21
+18I12*Speed_T{positive}
+21W19*Subsegment_T 21d33 32l8 32e20 35r36 16|3b19 24l8 24t20
+21i33 num_lane_subseg_p{9I12} 29r43 31r43
+24Y13 Enter_Subsegment 16|6b13 13l11 13t27
+26Y13 Leave_Subsegment 16|12r18 17b13 21l11 21t27
+29i7 Num_Lane_Subseg{9I12}
+30i7 Pilot_In_Subsegment{integer} 16|7r15 10r10 10r33 20r10 20r33
+31i7 Subsegment_Molt{9I12} 16|7r38
+35P9*Subsegment_Ref_T(21W19) 39r23
+38K12*Subsegment_Vector[4|43]
+
