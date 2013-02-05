@@ -1,16 +1,14 @@
 V "GNAT Lib v4.4"
 M P W=b
-A -O0
-A -g
 A -gnatA
 P SS ZX
 R nnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
 
-U main%b		main.adb		0e6dffc5 NE OO SU
+U main%b		main.adb		e0ab55b2 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W common%s		common.adb		common.ali
-W track%s		track.adb		track.ali
+W race%s		race.adb		race.ali
 
 D ada.ads		20070406091342 9c7dd3ea
 D a-contai.ads		20070406091342 7b35f559
@@ -23,13 +21,14 @@ D a-stream.ads		20090409232307 34aca5be
 D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
-D common.ads		20130205125352 62d86cbc
+D common.ads		20130205163414 1c4a234a
 D interfac.ads		20090409232307 a69cad5c
 D i-c.ads		20070406091342 bc3ef662
 D i-cstrea.ads		20090409232307 e1e064a9
-D main.adb		20130126200850 95f60487
-D segment.ads		20130205125316 9c9f8953
-D subsegment.ads	20130125141638 1e2176b4
+D main.adb		20130205164632 8cbd48c1
+D race.ads		20130205164938 8ed6ca57
+D segment.ads		20130205162018 eaf98473
+D subsegment.ads	20130205162835 1b2ec677
 D system.ads		20100127085936 15e10948
 D s-atacco.ads		20090409232307 60789a20
 D s-crtl.ads		20090409232307 997234a1
@@ -56,7 +55,7 @@ D s-tpoben.ads		20090409232307 37be425d
 D s-traent.ads		20090409232307 bd5f2753
 D s-unstyp.ads		20090409232307 c0f9fae5
 D s-wchcon.ads		20090409232307 ab028799
-D track.ads		20130130124108 07c96390
+D track.ads		20130205165059 74a16e51
 X 1 ada.ads
 16K9*Ada 19e8 16|2r6 6r8
 X 3 a-convec.ads
@@ -64,13 +63,13 @@ X 3 a-convec.ads
 X 10 a-textio.ads
 48K13*Text_IO 506e16 16|2w10 6r12
 X 12 common.ads
-3K9*Common 56e11 16|3w6 8r8
-40P9*String_Vector_Ref_T(3|53R9[35]) 16|11r11
-53V13*String_Tokenizer{40P9} 16|15r15
+3K9*Common 52e11 16|3w6 8r8
+35P9*String_Vector_Ref_T(3|53R9[30]) 16|11r11
+46V13*String_Tokenizer{35P9} 16|15r15
 X 16 main.adb
 4U11*Main 4b11 26l5 26t9
-11p4 Test{12|40P9} 15m7
+11p4 Test{12|35P9} 15m7
 12i4 ciao{natural} 16m7
-X 45 track.ads
-6K9*Track 16|1w6 7r8 45|49e10
+X 17 race.ads
+5K9*Race 16|1w6 7r8 17|30e9
 

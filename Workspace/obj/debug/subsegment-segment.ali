@@ -3,18 +3,19 @@ A -O0
 A -g
 A -gnatA
 P SS ZX
-R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnvnvnnnnnnnnnnnnnnnn
+R nnnvnnnnnnnnnnnnnnnnnnnvnnnnvnnvvnnnnnnnnvnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
 
-U subsegment.segment%b	subsegment-segment.adb	39ab6abc NE OO PK
+U subsegment.segment%b	subsegment-segment.adb	7985ebf3 NE OO PK
 W subsegment%s		subsegment.adb		subsegment.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
 
-U subsegment.segment%s	subsegment-segment.ads	2650e916 EE OO PK
+U subsegment.segment%s	subsegment-segment.ads	c61f2dde EE NE OO PK
+W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W subsegment%s		subsegment.adb		subsegment.ali
 W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
 W system.finalization_root%s  s-finroo.adb	s-finroo.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
-W system.standard_library%s  s-stalib.adb	s-stalib.ali
 
 D ada.ads		20070406091342 9c7dd3ea
 D a-contai.ads		20070406091342 7b35f559
@@ -27,9 +28,9 @@ D a-tags.ads		20090409232307 bfa07446
 D a-unccon.ads		20070406091342 51e09df2
 D interfac.ads		20090409232307 a69cad5c
 D i-c.ads		20070406091342 bc3ef662
-D subsegment.ads	20130111162056 4dfe68e0
-D subsegment-segment.ads  20130111160351 6bae81f6
-D subsegment-segment.adb  20130111161726 5205eb4a
+D subsegment.ads	20130125104252 4f0cd028
+D subsegment-segment.ads  20130125103710 c61f2dde
+D subsegment-segment.adb  20130125103648 bf9ac62d
 D system.ads		20100127085936 15e10948
 D s-atacco.ads		20090409232307 60789a20
 D s-exctab.ads		20090409232307 5c1c61ae
@@ -54,15 +55,35 @@ D s-tpoben.ads		20090409232307 37be425d
 D s-traent.ads		20090409232307 bd5f2753
 D s-unstyp.ads		20090409232307 c0f9fae5
 X 3 a-convec.ads
-53R9*Vector 13|4r43[12|38]
+53R9*Vector 13|9r45[12|45] 14|6r34[12|45]
+197U14*Append 14|9r12[12|45] 10r27[12|45]
 X 12 subsegment.ads
-3K9*Subsegment 42e15 13|1r9 13r5 14|1r14 9r5
-9I12*Num_Lane_Seg_T{positive} 13|7r15
-38K12*Subsegment_Vector[3|43] 13|4r25
+3K9*Subsegment 49e15 13|1w6 2r9 3r8 29r5 14|1r14 38r5
+9I12*Num_Lane_Seg_T{positive} 13|11r18
+21W19*Subsegment_T 39e20 14|5r36
+42P9*Subsegment_Ref_T(21W19) 14|5r12
+45K12*Subsegment_Vector_T[3|43] 13|9r25 14|6r14
 X 13 subsegment-segment.ads
-1K20*Segment 12|3k9 13|13l16 13e23 14|1b25 9l16 9t23
-4r4*Subsegment_Vectors{3|53R9[12|38]}
-7i4*Num_Lane{12|9I12}
-10U14*Create_Subsegments 10>34 14|3b14 7l8 7t26
-10i34 N_Subseg{positive} 14|3b34
+2K20*Segment 12|3k9 13|29l16 29e23 14|1b25 38l16 38t23
+5R9*Segment_T 12e14 15r45 17r45 19r44 25r47 14|4r45 15r45 21r44 27r47
+9r7*Subsegment_List{3|53R9[12|45]} 14|8r19 10m11
+11i7*Num_Lane{12|9I12}
+15U14*Enter_Subsegment 15=32 15=56 15>95 14|4b14 12l8 12t24
+15r32 Afs{5R9} 14|4b32 8r15 10m7
+15i56 Num_Subsegment_Lane{positive} 14|4b56
+15i95 Subsegment_Index{positive} 14|4b95
+17U14*Leave_Subsegment 17>32 17=56 17>95 14|15b14 18l8 18t24
+17r32 Segment{5R9} 14|15b32
+17i56 Num_Subsegment_Lane{positive} 14|15b56
+17i95 Subsegment_Index{positive} 14|15b95
+19V13*Get_Subsegment_Numb{positive} 19>34 14|21b13 24l8 24t27
+19r34 Segment{5R9} 14|21b34
+21U14*Create_Track 14|34b14 37l8 37t20
+25U14 Create_Subsegments 25>34 25>58 14|27b14 32l8 32t26
+25r34 Segment{5R9} 14|27b34
+25i58 N_Subseg{positive} 14|27b58 29r35
+X 14 subsegment-segment.adb
+5p7 Rf{12|42P9} 9r19 10r34
+6r7 test{3|53R9[12|45]} 8m7 9m7
+29i11 I{integer}
 

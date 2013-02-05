@@ -1,14 +1,14 @@
 V "GNAT Lib v4.4"
-M P W=b
-A -O0
-A -g
 A -gnatA
 P SS ZX
-R nnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnvnvnnnnnnnnnnnnnnnn
 
-U main%b		main.adb		0e6dffc5 NE OO SU
+U race%b		race.adb		640150fd NE OO PK
+
+U race%s		race.ads		d743cdc0 EE OO PK
 W ada%s			ada.ads			ada.ali
-W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.containers.vectors%s
 W common%s		common.adb		common.ali
 W track%s		track.adb		track.ali
 
@@ -18,23 +18,19 @@ D a-convec.ads		20090409232307 317e4a8c
 D a-except.ads		20090409232307 b54b55de
 D a-finali.ads		20090409232307 9eaacebd
 D a-filico.ads		20090409232307 9299732a
-D a-ioexce.ads		20070406091342 be0900a0
 D a-stream.ads		20090409232307 34aca5be
 D a-tags.ads		20090409232307 bfa07446
-D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
-D common.ads		20130205125352 62d86cbc
+D common.ads		20130205163414 1c4a234a
 D interfac.ads		20090409232307 a69cad5c
 D i-c.ads		20070406091342 bc3ef662
-D i-cstrea.ads		20090409232307 e1e064a9
-D main.adb		20130126200850 95f60487
-D segment.ads		20130205125316 9c9f8953
-D subsegment.ads	20130125141638 1e2176b4
+D race.ads		20130205164938 8ed6ca57
+D race.adb		20130205165043 ead79aaa
+D segment.ads		20130205162018 eaf98473
+D subsegment.ads	20130205162835 1b2ec677
 D system.ads		20100127085936 15e10948
 D s-atacco.ads		20090409232307 60789a20
-D s-crtl.ads		20090409232307 997234a1
 D s-exctab.ads		20090409232307 5c1c61ae
-D s-ficobl.ads		20090409232307 8bb681e5
 D s-finimp.ads		20090409232307 9449f4cb
 D s-finroo.ads		20090409232307 1408f9d1
 D s-linux.ads		20090409232307 ad070dbe
@@ -55,22 +51,32 @@ D s-taprob.ads		20090409232307 5e00115c
 D s-tpoben.ads		20090409232307 37be425d
 D s-traent.ads		20090409232307 bd5f2753
 D s-unstyp.ads		20090409232307 c0f9fae5
-D s-wchcon.ads		20090409232307 ab028799
-D track.ads		20130130124108 07c96390
+D track.ads		20130205165059 74a16e51
 X 1 ada.ads
-16K9*Ada 19e8 16|2r6 6r8
+16K9*Ada 19e8 13|1r6
+X 2 a-contai.ads
+16K13*Containers 22e19 13|1r10
 X 3 a-convec.ads
+43k24*Vectors 379e27 13|1w21
 53R9*Vector
-X 10 a-textio.ads
-48K13*Text_IO 506e16 16|2w10 6r12
-X 12 common.ads
-3K9*Common 56e11 16|3w6 8r8
-40P9*String_Vector_Ref_T(3|53R9[35]) 16|11r11
-53V13*String_Tokenizer{40P9} 16|15r15
-X 16 main.adb
-4U11*Main 4b11 26l5 26t9
-11p4 Test{12|40P9} 15m7
-12i4 ciao{natural} 16m7
-X 45 track.ads
-6K9*Track 16|1w6 7r8 45|49e10
+X 10 common.ads
+3K9*Common 52e11 13|3w6 7r8
+21E9*Meteo_T 21e30 13|19r15
+43P9*Configuration_Ref_T(3|53R9[38]) 13|23r53 26r49 14|4r54 11r49
+49V13*Read_Config_File{43P9} 14|6r14
+X 13 race.ads
+5K9*Race 30l5 30e9 14|1b14 17l5 17t9
+11R9*Race 20e14
+15p7*Track_Ref{40|22P9}
+17i7*Num_Laps{positive}
+19e7*Meteo{10|21E9}
+23V13*Get_Config{10|43P9} 23>24 14|4b13 7l8 7t18
+23s24 Filename{string} 14|4b25 6r32
+26U14*Build_Race 26>26 14|11b14 14l8 14t18
+26p26 Configuration_Ref{10|43P9} 14|11b26
+29r4*Race_Track{40|12R9}
+X 40 track.ads
+6K9*Track 13|2w6 6r8 40|32e10
+12R9*Track_T 13|29r17 40|19e14
+22P9*Track_Ref_T(12R9) 13|15r19
 
