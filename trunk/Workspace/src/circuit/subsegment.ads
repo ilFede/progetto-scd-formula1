@@ -1,42 +1,45 @@
 with Ada.Containers.Vectors;
+with Common;
 
 package Subsegment is
-
-   -- tipo del segmento
-   type Subsegment_Type_T is (First, Last, Central);
-
-   -- sottotipo per il numero di corsie del segmento e sottosegmento
-   subtype Num_Lane_Seg_T is Positive range 1..2;
-
-   -- tipo per la lunghezza del sottosegmento
-   subtype Subsegment_Length_T is Positive range 1..Positive'Last;
-
-   -- tipo per indicizzae i sottosegmenti
-   subtype Subsegment_Index_T is Positive range 1..Positive'Last;
-
-   -- tipo per la velocità
-   subtype Speed_T is Positive range 1..Positive'Last;
+   use Common;
 
    -- risorsa protetta sottosegmento
-   protected type Subsegment_T (num_lane_subseg_p : Num_Lane_Seg_T) is
+   protected type Subsegment_T (Tot_Lanes : Num_Lanes_Seg_T) is
 
       -- entry per entrare nel sottosegmento
-      entry Enter_Subsegment;
-      --  entry per uscire dal sottosegmento
-      entry Leave_Subsegment;
+      entry Enter_Subsegment (Num_Subsegment_Lane : in out Num_Lanes_Seg_T);
+
+      -- entry per uscire dal sottosegmento
+      entry Leave_Subsegment (Num_Subsegment_Lane : in out Num_Lanes_Seg_T);
 
    private
-      Num_Lane_Subseg : Num_Lane_Seg_T := num_lane_subseg_p;
-      Pilot_In_Subsegment : Integer := 0;
-      Subsegment_Molt : Num_Lane_Seg_T := num_lane_subseg_p;
+      -- entry per entrare nel corsia 1 del sottosegmento
+      entry Enter_Subsegment_Lane1;
+
+      -- entry per entrare nel corsia 2 del sottosegmento
+      entry Enter_Subsegment_Lane2;
+
+      -- Numero di corsie presenti nel sottosegmento
+      Num_Lane_Subseg : Num_Lanes_Seg_T := Tot_Lanes;
+
+      -- numero di piloti presenti nella corsia 1 del sottosegmento
+      Pilot_In_Subsegment_Lane1 : Integer := 0;
+
+      -- numero di piloti presenti nella corsia 2 del sottosegmento
+      Pilot_In_Subsegment_Lane2 : Integer := 0;
    end Subsegment_T;
 
    -- accesso al segmento
    type Subsegment_Ref_T is access Subsegment_T;
 
    -- array che contiene i vari segmenti
-   package Subsegment_Vector is new Ada.Containers.Vectors
+   package Subsegment_Vector_T is new Ada.Containers.Vectors
      (Element_Type => Subsegment_Ref_T,
-      Index_Type => Subsegment_Index_T);
+      Index_Type => Natural);
+
+   -- riferimento per accedere all'array dei segmenti
+   type Subsegment_Vector_Ref_T is access Subsegment_Vector_T.Vector;
+
 
 end Subsegment;

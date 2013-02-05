@@ -1,0 +1,158 @@
+V "GNAT Lib v4.4"
+A -gnatA
+P SS ZX
+R nnnvnnnnnnnnnnnnnnnnnvvnnnnnvnnvnnnnnnvnnvnnnnnnnnnnnnnvnnvnvnnnnnnnnnnnnnnnn
+
+U common%b		common.adb		dafd6da8 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.characters%s	a-charac.ads		a-charac.ali
+W ada.characters.latin_1%s  a-chlat1.ads	a-chlat1.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W gnat%s		gnat.ads		gnat.ali
+W gnat.string_split%s	g-strspl.ads		g-strspl.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.string_ops%s	s-strops.adb		s-strops.ali
+W system.string_ops_concat_3%s  s-sopco3.adb	s-sopco3.ali
+W system.string_ops_concat_5%s  s-sopco5.adb	s-sopco5.ali
+
+U common%s		common.ads		2d3469c6 EE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.containers.generic_array_sort%s
+W ada.containers.vectors%s
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.finalization%s	a-finali.adb		a-finali.ali
+W ada.finalization.list_controller%s  a-filico.adb  a-filico.ali
+W ada.streams%s		a-stream.ads		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.unchecked_deallocation%s
+W system%s		system.ads		system.ali
+W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
+W system.finalization_root%s  s-finroo.adb	s-finroo.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-charac.ads		20070912115821 506ce725
+D a-chlat1.ads		20070912115821 e9ee6d0a
+D a-contai.ads		20070406091342 7b35f559
+D a-cgarso.ads		20070406091342 943b3aae
+D a-convec.ads		20090409232307 317e4a8c
+D a-convec.adb		20090409232307 5aeb8a2b
+D a-except.ads		20090409232307 b54b55de
+D a-finali.ads		20090409232307 9eaacebd
+D a-filico.ads		20090409232307 9299732a
+D a-ioexce.ads		20070406091342 be0900a0
+D a-stream.ads		20090409232307 34aca5be
+D a-string.ads		20070406091342 87b4230b
+D a-strmap.ads		20090409232307 5253a637
+D a-tags.ads		20090409232307 bfa07446
+D a-textio.ads		20090409232307 fe8af46e
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D common.ads		20130205163414 1c4a234a
+D common.adb		20130205163513 bf03fd1b
+D gnat.ads		20050905075125 96410e68
+D g-arrspl.ads		20090409232307 a7944cb8
+D g-strspl.ads		20090409232307 6ed02a9d
+D interfac.ads		20090409232307 a69cad5c
+D i-cstrea.ads		20090409232307 e1e064a9
+D system.ads		20100127085936 15e10948
+D s-crtl.ads		20090409232307 997234a1
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-ficobl.ads		20090409232307 8bb681e5
+D s-finimp.ads		20090409232307 9449f4cb
+D s-finroo.ads		20090409232307 1408f9d1
+D s-imgint.ads		20090409232307 f77d133c
+D s-parame.ads		20090409232307 f32e56e9
+D s-secsta.ads		20090409232307 7bae3621
+D s-soflin.ads		20090409232307 0c6fd39d
+D s-stache.ads		20090409232307 257b3be8
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-stratt.ads		20090409232307 fef7c1da
+D s-strops.ads		20090409232307 845f72d2
+D s-sopco3.ads		20090409232307 72ce1063
+D s-sopco4.ads		20090409232307 bc112723
+D s-sopco5.ads		20090409232307 191315e8
+D s-traent.ads		20090409232307 bd5f2753
+D s-unstyp.ads		20090409232307 c0f9fae5
+D s-wchcon.ads		20090409232307 ab028799
+X 1 ada.ads
+16K9*Ada 19e8 19|1r6 30r35 38r35 20|1r6 2r6 8r11 9r11 60r26 63r7 64r33 70r17
+. 72r30 84r7
+X 2 a-charac.ads
+16K13*Characters 18e19 20|1r10 8r15
+X 3 a-chlat1.ads
+20K24*Latin_1 298e27 20|1w21 18r40
+36e4*HT{character} 20|18r48
+X 4 a-contai.ads
+16K13*Containers 22e19 19|1r10 30r39 38r39
+X 6 a-convec.ads
+38I9 Index_Type 19|32r7 40r7
+39+9 Element_Type 19|31r7 39r7
+43k24*Vectors 379e27 19|1w21 30r50 38r50
+53R9*Vector 19|35r55[30] 43r55[38] 20|35r41[19|30] 68r45[19|38]
+197U14*Append 20|50r25[19|30] 79r35[19|38]
+X 16 a-textio.ads
+48K13*Text_IO 506e16 20|2w10 9r15 60r30 63r11 64r37 70r21 72r34 84r11
+51P9*File_Type(369R9) 20|60r38
+52n23*In_File{52E9} 20|64r45
+92U14*Open 20|63r19
+93p7 File{51P9} 20|63r25
+94e7 Mode{52E9} 20|64r25
+95s7 Name{string} 20|65r25
+98U14*Close 20|84r19
+183V13*End_Of_File{boolean} 20|70r29
+253V13*Get_Line{string} 20|72r42
+263U14*Put_Line 20|22r7 33r7 43r10
+X 19 common.ads
+3K9*Common 52l5 52e11 20|5b14 89l5 89t11
+6I12*Segment_Type_T{positive}
+9F12*Speed_T{float}
+15I12*Num_Lanes_Seg_T{positive}
+18I12*Performance_Coeff_T{positive}
+21E9*Meteo_T 21e30
+21n21*Dry{21E9}
+21n26*Wet{21E9}
+24P9*String_Ref_T(string) 31r23
+30K12*String_Vector_T[6|43] 35r39 20|35r25
+35P9*String_Vector_Ref_T(6|53R9[30]) 39r23 46r55 20|7r55 20r20 58r26
+38K12*Configuration_T[6|43] 43r39 20|68r29
+43P9*Configuration_Ref_T(6|53R9[38]) 49r60 20|57r60 59r26
+46V13*String_Tokenizer{35P9} 46>31 20|7b13 54l8 54t24 77r36
+46s31 Str{string} 20|7b31 22r33 26r42
+49V13*Read_Config_File{43P9} 49>31 20|57b13 87l8 87t24
+49s31 Filename{string} 20|57b31 65r33
+X 20 common.adb
+15r7 Subs{22|74R9[23|39]} 25m42 33r84 37r47 40r55
+18a7 Seps{string} 27r42
+20p7 Tokens_Ref{19|35P9} 35m7 50r10 53r14
+37i11 I<integer> 40r61 43r53
+40a10 Sub{string} 45r20 46r49 50r44
+58p7 Segment_Conf_Ref{19|35P9} 77m16 79r43
+59p7 Track_Conf_Ref{19|43P9} 68m7 79r16 86r14
+60p7 File{16|51P9} 63m33 70r42 72r52 84m26
+72a13 Line{string} 75r16 75r22 77r54
+X 21 gnat.ads
+36K9*GNAT 20|3r6 10r11 21|39e9
+X 22 g-arrspl.ads
+63E9*Separator_Mode
+69n7*Multiple{63E9[23|39]} 20|28r55[23|39]
+74R9*Slice_Set 20|15r27[23|39]
+82U14*Create 20|25r20[23|39]
+83r7 S{74R9[23|39]} 20|25r28[23|39]
+84a7 From{string} 20|26r28[23|39]
+85a7 Separators{string} 20|27r28[23|39]
+86e7 Mode{63E9[23|39]} 20|28r28[23|39]
+116I9*Slice_Number<integer> 20|33r38[23|39] 43r33[23|39]
+119V13*Slice_Count{116I9[23|39]} 20|33r71[23|39] 37r34[23|39]
+123V13*Slice{string} 20|40r48[23|39]
+X 23 g-strspl.ads
+39K14*String_Split[22|58] 20|3w11 15r14 25r7 28r42 33r25 33r58 37r21 40r35
+. 43r20
+
