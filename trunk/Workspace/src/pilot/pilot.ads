@@ -1,3 +1,15 @@
+package Pilot is
+
+   --+---------------------------
+   --  THE TRAVELER PROCESS CLASS
+   --+---------------------------
+   task type Pilot_T (         : Positive;
+      Home, Away : Address_T;
+      Interval   : Positive);
+
+end Pilot;
+
+
 with Common;
 
 package Pilot is
