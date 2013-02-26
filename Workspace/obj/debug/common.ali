@@ -3,13 +3,16 @@ A -O0
 A -g
 A -gnatA
 P SS ZX
-R nnnvnnnnnnnnnnnnnnnnnvvnnnnnvnnvnnnnnnvnnvnnnnnnnnnnnnnvnnvnvnnnnnnnnnnnnnnnn
+R nnnvnnnnnnnnnnnnnnnnnvvvnnnnvnnvnnnnnnvnnvnnnnnnnnnnnnnvnnvnvnnnnnnnnnnnnnnnn
 
-U common%b		common.adb		d5c248a8 NE OO PK
+U common%b		common.adb		f1e739a2 NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.characters%s	a-charac.ads		a-charac.ali
 W ada.characters.latin_1%s  a-chlat1.ads	a-chlat1.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.text_io.unbounded_io%s  a-tiunio.ads	a-tiunio.ali
 W gnat%s		gnat.ads		gnat.ali
 W gnat.string_split%s	g-strspl.ads		g-strspl.ali
 W system.img_int%s	s-imgint.adb		s-imgint.ali
@@ -17,7 +20,7 @@ W system.string_ops%s	s-strops.adb		s-strops.ali
 W system.string_ops_concat_3%s  s-sopco3.adb	s-sopco3.ali
 W system.string_ops_concat_5%s  s-sopco5.adb	s-sopco5.ali
 
-U common%s		common.ads		53a62630 EE OO PK
+U common%s		common.ads		50fc2af7 EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.generic_array_sort%s
@@ -26,7 +29,10 @@ W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.finalization%s	a-finali.adb		a-finali.ali
 W ada.finalization.list_controller%s  a-filico.adb  a-filico.ali
 W ada.streams%s		a-stream.ads		a-stream.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
 W ada.unchecked_deallocation%s
 W system%s		system.ads		system.ali
 W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
@@ -50,13 +56,17 @@ D a-filico.ads		20090409232307 9299732a
 D a-ioexce.ads		20070406091342 be0900a0
 D a-stream.ads		20090409232307 34aca5be
 D a-string.ads		20070406091342 87b4230b
+D a-strfix.ads		20070406091342 253a46ca
 D a-strmap.ads		20090409232307 5253a637
+D a-strunb.ads		20090409232307 f0549c04
+D a-suteio.ads		20090409232307 d857a771
 D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
+D a-tiunio.ads		20070406091342 d721fe49
 D a-unccon.ads		20070406091342 51e09df2
 D a-uncdea.ads		20070406091342 dc667e6d
-D common.ads		20130205125352 62d86cbc
-D common.adb		20130130110030 ceae97ed
+D common.ads		20130223171226 3d86f1d4
+D common.adb		20130221162809 92a019c2
 D gnat.ads		20050905075125 96410e68
 D g-arrspl.ads		20090409232307 a7944cb8
 D g-strspl.ads		20090409232307 6ed02a9d
@@ -85,66 +95,104 @@ D s-traent.ads		20090409232307 bd5f2753
 D s-unstyp.ads		20090409232307 c0f9fae5
 D s-wchcon.ads		20090409232307 ab028799
 X 1 ada.ads
-16K9*Ada 19e8 19|1r6 35r35 43r35 20|1r6 2r6 22r11 23r11
+16K9*Ada 19e8 23|1r6 2r6 2r23 3r6 3r23 4r6 4r29 22r35 30r35 24|1r6 2r6 4r6
+. 5r5 6r6 11r11 12r11 63r26 66r7 67r33 73r17 76r35 89r7
 X 2 a-charac.ads
-16K13*Characters 18e19 20|1r10 22r15
+16K13*Characters 18e19 24|1r10 11r15
 X 3 a-chlat1.ads
-20K24*Latin_1 298e27 20|1w21 32r40
-36e4*HT{character} 20|32r48
+20K24*Latin_1 298e27 24|1w21 21r40
+36e4*HT{character} 24|21r48
 X 4 a-contai.ads
-16K13*Containers 22e19 19|1r10 35r39 43r39
+16K13*Containers 22e19 23|1r10 22r39 30r39
 X 6 a-convec.ads
-38I9 Index_Type 19|37r7 45r8
-39+9 Element_Type 19|36r7 44r8
-43k24*Vectors 379e27 19|1w21 35r50 43r50
-53R9*Vector 19|40r55[35] 48r55[43] 20|13r41[19|35] 49r41[19|35]
-197U14*Append 20|64r25[19|35]
-X 16 a-textio.ads
-48K13*Text_IO 506e16 20|2w10 23r15
-263U14*Put_Line 20|36r7 47r7 57r10
-X 19 common.ads
-3K9*Common 56l5 56e11 20|5b14 69l5 69t11
-6I12*Segment_Num_T{natural}
-9I12*Segment_Type_T{positive}
-12F12*Speed_T{float}
-15I12*Segment_Length_T{positive}
-18I12*Num_Lane_Seg_T{positive}
-21I12*Performance_Coeff_T{positive}
-24I12*Subsegment_Length_T{positive}
-29P9*String_Ref_T(string) 36r23
-35K12*String_Vector_T[6|43] 40r39 20|13r25 49r25
-40P9*String_Vector_Ref_T(6|53R9[35]) 44r24 51r56 53r55 20|8r56 9r20 21r55
-. 34r20
-43K12*Configuration_T[6|43] 48r39
-48P9*Configuration_Ref_T(6|53R9[43])
-51V13*String_Tokenizer1{40P9} 51>32 20|8b13 18l8 18t25
-51s32 Str{string} 20|8b32 14r17 15r21
-53V13*String_Tokenizer{40P9} 53>31 20|21b13 68l8 68t24
-53s31 Str{string} 20|21b31 36r33 40r42
-X 20 common.adb
-9p7 Tokens_Ref{19|40P9} 13m7
-10i7 Last_Index{natural} 15m7
-11i7 Length{natural} 14m7
-29r7 Subs{22|74R9[23|39]} 39m42 47r84 51r47 54r55
-32a7 Seps{string} 41r42
-34p7 Tokens_Ref{19|40P9} 49m7 64r10 67r14
-51i11 I<integer> 54r61 57r53
-54a10 Sub{string} 59r20 60r49 64r44
-X 21 gnat.ads
-36K9*GNAT 20|3r6 24r11 21|39e9
-X 22 g-arrspl.ads
+38I9 Index_Type 23|24r7 32r7
+39+9 Element_Type 23|23r7 31r7
+43k24*Vectors 379e27 23|1w21 22r50 30r50
+53R9*Vector 23|27r55[22] 35r55[30] 24|38r41[23|22] 71r39[23|30]
+197U14*Append 24|53r25[23|22] 84r29[23|30]
+X 13 a-string.ads
+16K13*Strings 35e16 23|3w10 3r27 4r10 4r33 24|4r10 5r9
+33n37*Both{33E9} 24|76r64
+X 14 a-strfix.ads
+18K21*Fixed 242e22 23|4w18 4r41
+186V13*Trim{string} 24|76r30
+X 16 a-strunb.ads
+39K21*Unbounded 428e26 24|4w18 5r17
+X 19 a-textio.ads
+48K13*Text_IO 506e16 23|2w10 2r27 24|2w10 6r10 12r15 63r30 66r11 67r37 73r21
+. 76r39 89r11
+51P9*File_Type(369R9) 24|63r38
+52n23*In_File{52E9} 24|67r45
+92U14*Open 24|66r19
+93p7 File{51P9} 24|66r25
+94e7 Mode{52E9} 24|67r25
+95s7 Name{string} 24|68r25
+98U14*Close 24|89r19
+183V13*End_Of_File{boolean} 24|73r29
+253V13*Get_Line{string} 24|76r47
+263U14*Put_Line 24|25r7 36r7 46r10
+X 20 a-tiunio.ads
+25K21*Unbounded_IO 61e29 24|6w18
+X 23 common.ads
+6K9*Common 115l5 115e11 24|8b14 102l5 102t11
+13F12*Speed_T{float}
+19P9*String_Ref_T(string) 23r23
+22K12*String_Vector_T[6|43] 27r39 24|38r25
+27P9*String_Vector_Ref_T(6|53R9[22]) 31r23 42r55 24|10r55 23r20 61r26
+30K12*Configuration_T[6|43] 35r39 24|71r23
+35P9*Configuration_Ref_T(6|53R9[30]) 45r60 24|60r60 62r20
+42V13*String_Tokenizer{27P9} 42>31 24|10b13 57l8 57t24 82r36
+42s31 Str{string} 24|10b31 25r33 29r42
+45V13*Read_Config_File{35P9} 45>31 24|60b13 92l8 92t24
+45s31 Filename{string} 24|60b31 68r33
+55E9*Meteo_T 55e30
+55n21*dry{55E9}
+55n26*wet{55E9}
+62I12*Skill_Acceleration_T{positive}
+65I12*Skill_Deceleration_T{positive}
+72I12*Coeff_Acceleration_T{positive}
+75I12*Coeff_Deceleration_T{positive}
+78I12*Coeff_Roadholding_T{positive}
+81F12*Car_Consumption_T{float}
+88a4*Race_Config_Path{string}
+91a4*Pilots_Set_Path{string}
+94a4*Cars_Set_Path{string}
+97a4*Circuits_Set_Path{string}
+104i4*Subsegment_Lengh{positive}
+107E9*Segment_Type_T 107e49
+107n28*acc{107E9}
+107n33*const{107E9}
+107n40*dec{107E9}
+107n45*box{107E9}
+110I12*Num_Lanes_Seg_T{positive}
+113E9*Has_Time_Check_T 113e38
+113n30*yes{113E9}
+113n35*no{113E9}
+X 24 common.adb
+18r7 Subs{26|74R9[27|39]} 28m42 36r84 40r47 43r55
+21a7 Seps{string} 30r42
+23p7 Tokens_Ref{23|27P9} 38m7 53r10 56r14
+40i11 I<integer> 43r61 46r53
+43a10 Sub{string} 48r20 49r49 53r44
+61p7 Segment_Conf_Ref{23|27P9} 82m16 84r37
+62p7 Conf_Ref{23|35P9} 71m7 84r16 91r14
+63p7 File{19|51P9} 66m33 73r42 76r57 89m26
+76a13 Line{string} 80r16 80r42 80r48 82r54
+X 25 gnat.ads
+36K9*GNAT 24|3r6 13r11 25|39e9
+X 26 g-arrspl.ads
 63E9*Separator_Mode
-69n7*Multiple{63E9[23|39]} 20|42r55[23|39]
-74R9*Slice_Set 20|29r27[23|39]
-82U14*Create 20|39r20[23|39]
-83r7 S{74R9[23|39]} 20|39r28[23|39]
-84a7 From{string} 20|40r28[23|39]
-85a7 Separators{string} 20|41r28[23|39]
-86e7 Mode{63E9[23|39]} 20|42r28[23|39]
-116I9*Slice_Number<integer> 20|47r38[23|39] 57r33[23|39]
-119V13*Slice_Count{116I9[23|39]} 20|47r71[23|39] 51r34[23|39]
-123V13*Slice{string} 20|54r48[23|39]
-X 23 g-strspl.ads
-39K14*String_Split[22|58] 20|3w11 29r14 39r7 42r42 47r25 47r58 51r21 54r35
-. 57r20
+69n7*Multiple{63E9[27|39]} 24|31r55[27|39]
+74R9*Slice_Set 24|18r27[27|39]
+82U14*Create 24|28r20[27|39]
+83r7 S{74R9[27|39]} 24|28r28[27|39]
+84a7 From{string} 24|29r28[27|39]
+85a7 Separators{string} 24|30r28[27|39]
+86e7 Mode{63E9[27|39]} 24|31r28[27|39]
+116I9*Slice_Number<integer> 24|36r38[27|39] 46r33[27|39]
+119V13*Slice_Count{116I9[27|39]} 24|36r71[27|39] 40r34[27|39]
+123V13*Slice{string} 24|43r48[27|39]
+X 27 g-strspl.ads
+39K14*String_Split[26|58] 24|3w11 18r14 28r7 31r42 36r25 36r58 40r21 43r35
+. 46r20
 

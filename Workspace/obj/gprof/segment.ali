@@ -1,14 +1,15 @@
 V "GNAT Lib v4.4"
+A -p
 A -gnatA
 P SS ZX
 R nnnvnnnnnnnnnnnnnnnnnvnnnnnnvnnnvnnnnnnnnvnnnnnnnnnnnnnvnnvnvnnnnnnnnnnnnnv1+nn
 
-U segment%b		segment.adb		b949570f NE OO PK
+U segment%b		segment.adb		40cf4d31 NE OO PK
 W system.tasking%s	s-taskin.adb		s-taskin.ali
 W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 W system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
 
-U segment%s		segment.ads		dce32bc2 EE OO PK
+U segment%s		segment.ads		c644b7dd EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.generic_array_sort%s
@@ -42,10 +43,10 @@ D a-stream.ads		20090409232307 34aca5be
 D a-tags.ads		20090409232307 bfa07446
 D a-unccon.ads		20070406091342 51e09df2
 D a-uncdea.ads		20070406091342 dc667e6d
-D common.ads		20130205163414 1c4a234a
+D common.ads		20130219103951 ff6ba56b
 D interfac.ads		20090409232307 a69cad5c
 D i-c.ads		20070406091342 bc3ef662
-D segment.ads		20130205162018 eaf98473
+D segment.ads		20130211095937 137f9e4d
 D segment.adb		20130205160529 53b0d37c
 D subsegment.ads	20130205162835 1b2ec677
 D system.ads		20100127085936 15e10948
@@ -88,22 +89,22 @@ X 4 a-convec.ads
 101V13*Element{18|34P9} 17|6r31[18|37] 13r31[18|37]
 197U14*Append 17|39r34[18|37]
 X 13 common.ads
-3K9*Common 52e11 16|2w6 8r8
-6I12*Segment_Type_T{positive} 16|14r18
-9F12*Speed_T{float} 16|18r15
-15I12*Num_Lanes_Seg_T{positive} 16|24r19 56r95 17|32r95
-18I12*Performance_Coeff_T{positive} 16|22r27
+3K9*Common 55e11 16|2w6 8r8
+6E9*Segment_Type_T 6e49 16|16r30
+9F12*Speed_T{float} 16|20r30
+15I12*Num_Lanes_Seg_T{positive} 16|22r30 56r95 17|32r95
+18I12*Performance_Coeff_T{positive} 16|24r30
 X 16 segment.ads
 6K9*Segment 60l5 60e12 17|1b14 44l5 44t12
-10R9*Segment_T 29e14 32r33 43r49 46r45 49r44 56r50 17|4r49 11r45 18r44 32r50
-14i7*Tipology{13|6I12}
-16i7*Code{natural}
-18f7*Speed{13|9F12}
-20i7*Lenght{positive}
-22i7*Performance_Coeff{13|18I12}
-24i7*Tot_Lanes{13|15I12} 17|35m15
-26i7*Tot_Subsegments{positive} 17|20r22 36m15
-28p7*Subsegment_List{18|42P9} 17|6m15 13m15 39m18
+10R9*Segment_T 29e17 32r33 43r49 46r45 49r44 56r50 17|4r49 11r45 18r44 32r50
+14i10*Code{natural}
+16e10*Tipology{13|6E9}
+18i10*Lenght{positive}
+20f10*Speed{13|9F12}
+22i10*Tot_Lanes{13|15I12} 17|35m15
+24i10*Performance_Coeff{13|18I12}
+26i10*Tot_Subsegments{positive} 17|20r22 36m15
+28p10*Subsegment_List{18|42P9} 17|6m15 13m15 39m18
 32P9*Segment_Ref_T(10R9) 36r23
 35K12*Segment_Vector_T[4|43] 40r40
 40P9*Segment_Vector_Ref_T(4|53R9[35])
@@ -130,5 +131,5 @@ X 18 subsegment.ads
 11Y13 Enter_Subsegment 17|6r61
 14Y13 Leave_Subsegment 17|13r61
 34P9*Subsegment_Ref_T(8W19)
-42P9*Subsegment_Vector_Ref_T(4|53R9[37]) 16|28r25
+42P9*Subsegment_Vector_Ref_T(4|53R9[37]) 16|28r30
 

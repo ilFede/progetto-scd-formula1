@@ -1,22 +1,24 @@
 V "GNAT Lib v4.4"
-M P W=b
 A -O0
 A -g
 A -gnatA
 P SS ZX
-R nnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+R nnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnvnvnnnnnnnnnnnnnnnn
 
-U main%b		main.adb		b3f0fc3f NE OO SU
-W ada%s			ada.ads			ada.ali
-W ada.strings%s		a-string.ads		a-string.ali
-W ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
+U race%b		race.adb		f2578bb3 NE OO PK
 W ada.tags%s		a-tags.adb		a-tags.ali
-W ada.text_io%s		a-textio.adb		a-textio.ali
+W system%s		system.ads		system.ali
+W system.val_enum%s	s-valenu.adb		s-valenu.ali
+W system.val_int%s	s-valint.adb		s-valint.ali
+
+U race%s		race.ads		313ac171 EE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.containers.vectors%s
 W car%s			car.adb			car.ali
 W common%s		common.adb		common.ali
 W pilot%s		pilot.adb		pilot.ali
-W race%s		race.adb		race.ali
-W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W track%s		track.adb		track.ali
 
 D ada.ads		20070406091342 9c7dd3ea
 D a-charac.ads		20070912115821 506ce725
@@ -39,9 +41,9 @@ D common.ads		20130223171226 3d86f1d4
 D interfac.ads		20090409232307 a69cad5c
 D i-c.ads		20070406091342 bc3ef662
 D i-cstrea.ads		20090409232307 e1e064a9
-D main.adb		20130223162900 5c6ef0e1
 D pilot.ads		20130226152048 32a5b865
 D race.ads		20130222110549 f394ea5b
+D race.adb		20130222085922 01c361e8
 D segment.ads		20130226151324 cad43189
 D subsegment.ads	20130205162835 1b2ec677
 D system.ads		20100127085936 15e10948
@@ -69,42 +71,47 @@ D s-taprob.ads		20090409232307 5e00115c
 D s-tpoben.ads		20090409232307 37be425d
 D s-traent.ads		20090409232307 bd5f2753
 D s-unstyp.ads		20090409232307 c0f9fae5
+D s-valenu.ads		20090409232307 9e547a01
+D s-valint.ads		20090409232307 d23209d2
 D s-wchcon.ads		20090409232307 ab028799
 D track.ads		20130223175316 4d54e2e2
 X 1 ada.ads
-16K9*Ada 19e8 22|3r6 4r6 4r23 5r6 5r23 6r6 6r29 11r8
+16K9*Ada 19e8 23|1r6
+X 4 a-contai.ads
+16K13*Containers 22e19 23|1r10
 X 5 a-convec.ads
+43k24*Vectors 379e27 23|1w21
 53R9*Vector
-X 11 a-string.ads
-16K13*Strings 35e16 22|5w10 5r27 6r10 6r33
-33n37*Both{33E9} 22|22r36 23r36 24r36
-X 12 a-strfix.ads
-18K21*Fixed 242e22 22|6w18 6r41
-186V13*Trim{string} 22|22r24 23r24 24r24
-X 15 a-textio.ads
-48K13*Text_IO 506e16 22|3w10 4w10 4r27 11r12
+101V13*Element{18|27P9} 24|12r53[18|30] 12r68[18|22] 14r61[18|30] 14r76[18|22]
+. 16r58[18|30] 16r73[18|22]
 X 17 car.ads
-3K9*Car 32e8 22|8w6 15r5
-27P9*Car_Ref_T(7R9) 22|28r14
-30V13*Build_Car{27P9} 22|35r15
+3K9*Car 32e8 23|3w6
 X 18 common.ads
-6K9*Common 115e11 22|1w6 13r8
-27P9*String_Vector_Ref_T(5|53R9[22]) 22|18r14
-42V13*String_Tokenizer{27P9} 22|31r12
-X 22 main.adb
-10U11*Main 10b11 45l5 45t9
-18p4 Test{18|27P9} 31m4
-19a4 Str1{string} 22r30
-20a4 Str2{string} 23r30
-21a4 Str3{string} 24r30
-22a4 StrTr1{string}
-23a4 StrTr2{string} 25r25
-24a4 StrTr3{string} 26r25
-25i4 LenStr2{integer}
-26i4 LenStr3{integer}
-28p4 Car_Ref{17|27P9} 35m4
-X 23 pilot.ads
-3K9*Pilot 22|7w6 14r5 23|26e10
-X 24 race.ads
-7K9*Race 22|2w6 12r8 24|35e12
+6K9*Common 115e11 23|5w6 9r8
+19P9*String_Ref_T(string) 24|7r30
+27P9*String_Vector_Ref_T(5|53R9[22])
+35P9*Configuration_Ref_T(5|53R9[30]) 24|5r27
+45V13*Read_Config_File{35P9} 24|10r28
+55E9*Meteo_T 55e30 23|21r22 24|16r21
+X 22 pilot.ads
+3K9*Pilot 26e10 23|4w6
+X 23 race.ads
+7K9*Race 35l8 35e12 24|1b14 30l5 30t9
+13R9*Race_T 22e17 25r11
+17p10*Track_Ref{55|22P9} 24|18m12
+19i10*Num_Laps{positive} 24|14m12
+21e10*Meteo{18|55E9} 24|16m12
+25r4*Race{13R9} 24|14m7 16m7 18m7
+28U14*Build_Race 28>26 24|4b14 20l8 20t18
+28s26 Race_Filename{string} 24|4b26 10r46
+31U14*Start_Race 24|24b14 27l8 27t18
+34r4*Race_Track{55|12R9}
+X 24 race.adb
+5p7 Configuration_Ref{18|35P9} 10m7 12r31 14r39 16r36
+7p7 Circuit_Filename_Ref{18|19P9} 12m7 18r38
+X 55 track.ads
+6K9*Track 23|2w6 8r8 55|30e10
+12R9*Track_T 23|34r17 55|19e14
+22P9*Track_Ref_T(12R9) 23|17r22
+25V13*Build_Track{22P9} 24|18r25
 
