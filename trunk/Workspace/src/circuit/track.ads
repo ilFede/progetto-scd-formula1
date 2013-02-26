@@ -18,15 +18,13 @@ package Track is
       Segment_List_Ref : Segment_Vector_Ref_T;
    end record;
 
-   -- tipo per l'accesso al circuito
+   -- tipo per l'accesso ad un circuito
    type Track_Ref_T is access Track_T;
 
-   -- funzione per ottenere una configurazione leggendola da file
-   function Get_Config (Filename : String) return Configuration_Ref_T;
-
    -- procedura per configurare il circuito partendo da una configurazione
-   procedure Build_Track (Track : in out Track_T; Configuration_Ref : in Configuration_Ref_T);
+   function Build_Track (Track_Filename : String) return Track_Ref_T;
 
    -- entità che rappresenta il circuito
-   Race_Track : Track_T;
+   Track : Track_T;
+
 end Track;
