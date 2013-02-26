@@ -3,15 +3,16 @@ A -O0
 A -g
 A -gnatA
 P SS ZX
-R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+R nnnvnnnnnnnnnnnnnnnnnvnnnnnnvnnnnnnnnnvnnvnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
 
-U pilot%b		pilot.adb		3cd0cae8 NE OO PK
+U car%b			car.adb			db1f4d9d NE OO PK
 W ada.tags%s		a-tags.adb		a-tags.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.string_ops%s	s-strops.adb		s-strops.ali
 W system.val_int%s	s-valint.adb		s-valint.ali
+W system.val_real%s	s-valrea.adb		s-valrea.ali
 
-U pilot%s		pilot.ads		0f2349b1 EE NE OO PK
+U car%s			car.ads			8c213b21 EE NE OO PK
 W common%s		common.adb		common.ali
 
 D ada.ads		20070406091342 9c7dd3ea
@@ -30,11 +31,11 @@ D a-strmap.ads		20090409232307 5253a637
 D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
+D car.ads		20130223171207 b1a7caf5
+D car.adb		20130223171207 6ab88768
 D common.ads		20130223171226 3d86f1d4
 D interfac.ads		20090409232307 a69cad5c
 D i-cstrea.ads		20090409232307 e1e064a9
-D pilot.ads		20130226152048 32a5b865
-D pilot.adb		20130226152331 0e75728d
 D system.ads		20100127085936 15e10948
 D s-crtl.ads		20090409232307 997234a1
 D s-exctab.ads		20090409232307 5c1c61ae
@@ -56,35 +57,45 @@ D s-sopco5.ads		20090409232307 191315e8
 D s-traent.ads		20090409232307 bd5f2753
 D s-unstyp.ads		20090409232307 c0f9fae5
 D s-valint.ads		20090409232307 d23209d2
+D s-valrea.ads		20090409232307 e4c63a53
 D s-wchcon.ads		20090409232307 ab028799
 X 5 a-convec.ads
 53R9*Vector
-101V13*Element{17|27P9} 21|18r61[17|30] 18r77[17|22] 19r43[17|30] 19r59[17|22]
-. 20r85[17|30] 20r101[17|22] 21r85[17|30] 21r101[17|22]
-X 17 common.ads
-6K9*Common 115e11 20|1w6 4r8
-19P9*String_Ref_T(string) 20|13r23 21|10r34
+101V13*Element{19|27P9} 18|23r51[19|30] 23r67[19|22] 24r83[19|30] 24r99[19|22]
+. 25r83[19|30] 25r99[19|22] 26r61[19|30] 26r77[19|22] 27r81[19|30] 27r97[19|22]
+. 28r61[19|30] 28r77[19|22]
+X 17 car.ads
+3K9*Car 32l5 32e8 18|1b14 42l5 42t8
+7R9*Car_T 24e17 27r29 18|31r22
+11p10*Manufacturer{19|19P9} 18|31r30
+13i10*Coeff_Acceleration{19|72I12} 18|32r30
+15i10*Coeff_Deceleration{19|75I12} 18|33r30
+17f10*Max_Speed{19|13F12} 18|34r30
+19i10*Coeff_Roadholding{19|78I12} 18|35r30
+21f10*Consumption{19|81F12} 18|36r30
+23f10*Fuel_Level{float} 18|37r30
+27P9*Car_Ref_T(7R9) 30r54 18|4r54 20r34
+30V13*Build_Car{27P9} 30>24 18|4b13 39l8 39t17
+30s24 Car_Filename{string} 18|4b24 22r62
+X 18 car.adb
+6p7 Configuration_Ref{19|35P9} 22m7 23r29 24r61 25r61 26r39 27r59 28r39
+8p7 Car_Manufacter_Ref{19|19P9} 23m7 31r52
+10i7 Car_Coeff_Acceleration{19|72I12} 24m7 32r52
+12i7 Car_Coeff_Deceleration{19|75I12} 25m7 33r52
+14f7 Car_Max_Speed{19|13F12} 26m7 34r52
+16i7 Car_Coeff_Roadholding{19|78I12} 27m7 35r52
+18f7 Car_Consumption{19|81F12} 28m7 36r52
+20p7 Car_Ref{17|27P9} 31m7 38r14
+X 19 common.ads
+6K9*Common 17|1w6 4r8 19|115e11
+13F12*Speed_T{float} 17|17r31 18|14r34 26r24
+19P9*String_Ref_T(string) 17|11r31 18|8r34
 27P9*String_Vector_Ref_T(5|53R9[22])
-35P9*Configuration_Ref_T(5|53R9[30]) 21|6r34
-45V13*Read_Config_File{35P9} 21|17r28
-62I12*Skill_Acceleration_T{positive} 20|15r31 21|12r34 20r35
-65I12*Skill_Deceleration_T{positive} 20|17r31 21|14r34 21r35
-91a4*Pilots_Set_Path{string} 21|17r46
-X 20 pilot.ads
-3K9*Pilot 26l5 26e10 21|1b14 30l5 30t10
-7R9*Pilot_T 18e14 21r31 24r75 21|4r75
-11i10*Number{positive} 21|22m18
-13p10*Name{17|19P9} 21|23m18
-15i10*Skill_Acceleration{17|62I12} 21|24m18
-17i10*Skill_Deceleration{17|65I12} 21|25m18
-21P9*Pilot_Ref_T(7R9)
-24U14*Build_Pilot 24>27 24=55 21|4b14 27l8 27t19
-24s27 Pilot_Filename{string} 21|4b27 17r64
-24r55 Race_Pilot{7R9} 21|4b55 22m7 23m7 24m7 25m7
-X 21 pilot.adb
-6p7 Configuration_Ref{17|35P9} 17m7 18r39 19r21 20r63 21r63
-8i7 Pilot_Number{positive} 18m7 22r28
-10p7 Pilot_Name{17|19P9} 19m7 23r26
-12i7 Pilot_Skill_Acceleration{17|62I12} 20m7 24r40
-14i7 Pilot_Skill_Deceleration{17|65I12} 21m7 25r40
+35P9*Configuration_Ref_T(5|53R9[30]) 18|6r34
+45V13*Read_Config_File{35P9} 18|22r28
+72I12*Coeff_Acceleration_T{positive} 17|13r31 18|10r34 24r33
+75I12*Coeff_Deceleration_T{positive} 17|15r31 18|12r34 25r33
+78I12*Coeff_Roadholding_T{positive} 17|19r31 18|16r34 27r32
+81F12*Car_Consumption_T{float} 17|21r31 18|18r34
+94a4*Cars_Set_Path{string} 18|22r46
 
