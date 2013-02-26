@@ -1,6 +1,9 @@
 with Ada.Characters.Latin_1;
 with Ada.Text_IO;
 with GNAT.String_Split;
+with Ada.Strings.Unbounded;
+use Ada.Strings.Unbounded;
+with Ada.Text_IO.Unbounded_IO;
 
 package body Common is
 
@@ -56,7 +59,7 @@ package body Common is
 
    function Read_Config_File (Filename : in String) return Configuration_Ref_T is
       Segment_Conf_Ref : String_Vector_Ref_T;
-      Track_Conf_Ref   : Configuration_Ref_T;
+      Conf_Ref   : Configuration_Ref_T;
       File             : Ada.Text_IO.File_Type;
    begin
       -- apro il file contenente la configurazione
@@ -65,25 +68,35 @@ package body Common is
 			Name => Filename);
       -- estraggo le informazione dal circuito e le metto in una struttura comoda da maneggiare
       -- struttura dove salvo i dati
-      Track_Conf_Ref := new Configuration_T.Vector;
+      Conf_Ref := new Configuration_T.Vector;
       -- ciclo per la lettura del file
       while not Ada.Text_IO.End_Of_File (File) loop
 	 declare
-	    Line : String := Ada.Text_IO.Get_Line (File);
+            -- Leggo la prima riga togliendo gli spazi all'inizio e alla fine
+	    Line : String := Trim(Ada.Text_IO.Get_Line (File), Both);
+            --Line_Trim : String := Trim (Line, Both);
 	 begin
 	    -- ignoro i commenti
-	    if Line (Line'First) /= '#' then
+	    if Line'Length /= 0 and then Line (Line'First) /= '#' then
 	       -- ottengo i token
 	       Segment_Conf_Ref := String_Tokenizer (Line);
 	       -- salvo il segmento nella struttura dati
-	       Track_Conf_Ref.all.Append (Segment_Conf_Ref);
+	       Conf_Ref.all.Append (Segment_Conf_Ref);
             end if;
          end;
       end loop;
       -- chiudo il file
       Ada.Text_IO.Close (File);
       -- restituisco la configurazione
-      return Track_Conf_Ref;
+      return Conf_Ref;
    end Read_Config_File;
    --+------------
+
+   -- procedura per otttenere una configurazione da un file di testo
+   --function Get_Config (Filename : in String) return Configuration_Ref_T is
+   --begin
+      --return Read_Config_File (Filename);
+   --end Get_Config;
+   --+------------
+
 end Common;
