@@ -81,6 +81,8 @@ package body Track is
 	    Track_Race.Segment_List.Append (Segment);
 	    -- aggiorno il numero di segmenti del circuito
 	    N_Seg := N_Seg + 1;
+            -- aggiorno la lunghezza del circuito
+            Track_Race.Lap_Length := Track_Race.Lap_Length + Segment.Lenght;
 	 end;
       end loop;
       -- configuro il circuito

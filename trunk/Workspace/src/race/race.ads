@@ -30,5 +30,5 @@ package Race is
    procedure Start_Race;
 
    -- entità che rappresenta il circuito
-   Circuit_Race : Race_T;
+   The_Race : Race_T;
    end Race;

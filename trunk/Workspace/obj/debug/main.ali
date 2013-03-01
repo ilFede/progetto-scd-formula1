@@ -6,7 +6,7 @@ A -gnatA
 P SS ZX
 R nnnvnnnnnnnnnnnnnnnnnvvnnnnnvnnvnnnnnnvnnvnnvnnnvnnnnnnvnnvnnnnnnnnnnnv1+nnnnnn
 
-U main%b		main.adb		9dd02d64 NE OO SU
+U main%b		main.adb		511a4e2f NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
@@ -50,9 +50,9 @@ D common.ads		20130301092618 309350e1
 D interfac.ads		20090409232307 a69cad5c
 D i-c.ads		20070406091342 bc3ef662
 D i-cstrea.ads		20090409232307 e1e064a9
-D main.adb		20130301110342 6bf1af44
-D pilot.ads		20130301092631 8ab17383
-D race.ads		20130226173340 e98905e3
+D main.adb		20130301131044 520df119
+D pilot.ads		20130301143620 8cb1962d
+D race.ads		20130301143620 1abfdd5b
 D segment.ads		20130227113401 51a32ba4
 D subsegment.ads	20130228162952 823923ce
 D system.ads		20100127085936 15e10948
@@ -88,52 +88,52 @@ D s-traent.ads		20090409232307 bd5f2753
 D s-unstyp.ads		20090409232307 c0f9fae5
 D s-valrea.ads		20090409232307 e4c63a53
 D s-wchcon.ads		20090409232307 ab028799
-D track.ads		20130228162408 a69bd64b
+D track.ads		20130301171848 1e2be86c
 X 1 ada.ads
-16K9*Ada 19e8 25|3r6 4r6 4r23 5r6 5r23 6r6 6r29 11r8
+16K9*Ada 19e8 25|3r6 4r6 4r23 5r6 5r23 6r6 6r29
 X 5 a-convec.ads
 47I12*Extended_Index{integer}
-53R9*Vector 25|17r42[21|38] 19r32[26|22] 31r73[21|27]
-101V13*Element{21|35P9} 25|30r75[21|38] 33r62[21|22] 34r62[21|22] 38r57[21|22]
-197U14*Append 25|38r22[21|27] 42r21[26|22]
-237V13*First_Index{integer} 25|28r33[21|38]
-243V13*Last_Index{47I12[21|38]} 25|28r68[21|38] 37r38[21|22]
+53R9*Vector 25|12r42[21|38] 14r32[26|22] 26r73[21|27]
+101V13*Element{21|35P9} 25|25r75[21|38] 28r62[21|22] 29r62[21|22] 33r57[21|22]
+197U14*Append 25|33r22[21|27] 37r21[26|22]
+237V13*First_Index{integer} 25|23r33[21|38]
+243V13*Last_Index{47I12[21|38]} 25|23r68[21|38] 32r38[21|22]
 X 14 a-string.ads
 16K13*Strings 35e16 25|5w10 5r27 6r10 6r33
 X 15 a-strfix.ads
 18K21*Fixed 242e22 25|6w18 6r41
 X 18 a-textio.ads
-48K13*Text_IO 506e16 25|3w10 4w10 4r27 11r12
+48K13*Text_IO 506e16 25|3w10 4w10 4r27
 X 20 car.ads
-3K9*Car 32e8 25|8w6 15r5
+3K9*Car 32e8 25|8w6 8r15
 X 21 common.ads
-6K9*Common 139e11 25|1w6 13r8
-19P9*String_Ref_T(string) 25|33r32 34r32
-27K12*Float_Vector_T[5|43] 25|31r58
-32P10*Float_Vector_Ref_T(5|53R9[27]) 25|31r32
-35P9*String_Vector_Ref_T(5|53R9[22]) 25|30r32
-38K12*Configuration_T[5|43] 25|17r26
-56U14*Read_Config_File 25|25r4
-106a4*Race_Config_Path{string} 25|23r16 25r21
-118a4*Race_Config_Filename{string} 25|23r35
-121a4*Competitors_Config_Filename{string} 25|25r40
+6K9*Common 139e11 25|1w6 1r18
+19P9*String_Ref_T(string) 25|28r32 29r32
+27K12*Float_Vector_T[5|43] 25|26r58
+32P10*Float_Vector_Ref_T(5|53R9[27]) 25|26r32
+35P9*String_Vector_Ref_T(5|53R9[22]) 25|25r32
+38K12*Configuration_T[5|43] 25|12r26
+56U14*Read_Config_File 25|20r4
+106a4*Race_Config_Path{string} 25|18r16 20r21
+118a4*Race_Config_Filename{string} 25|18r35
+121a4*Competitors_Config_Filename{string} 25|20r40
 X 25 main.adb
-10U11*Main 10b11 62l5 62t9
-17r4 Pilot_Configuration{5|53R9[21|38]} 25m69 28r13 28r48 30r55
-19r4 Pilot_Vett{5|53R9[26|22]} 42m10
-28i8 I{integer} 30r84
-30p10 Configuration{21|35P9} 33r48 34r48 37r24 38r43
-31p10 Strategy{21|32P10} 38r13 41r77
-32p10 Pilot_Ref{26|19P9} 41m10 42r29
-33p10 Pilot_Name_Filename{21|19P9} 41r36
-34p10 Pilot_Car_Filename{21|19P9} 41r57
-37i14 J{integer} 38r66
+10U11*Main 10b11 57l5 57t9
+12r4 Pilot_Configuration{5|53R9[21|38]} 20m69 23r13 23r48 25r55
+14r4 Pilot_Vett{5|53R9[26|22]} 37m10
+23i8 I{integer} 25r84
+25p10 Configuration{21|35P9} 28r48 29r48 32r24 33r43
+26p10 Strategy{21|32P10} 33r13 36r77
+27p10 Pilot_Ref{26|19P9} 36m10 37r29
+28p10 Pilot_Name_Filename{21|19P9} 36r36
+29p10 Pilot_Car_Filename{21|19P9} 36r57
+32i14 J{integer} 33r66
 X 26 pilot.ads
-8K9*Pilot 25|7w6 14r5 26|26e10
-14T14*Pilot_T 25|41r27
-19P9*Pilot_Ref_T(14T14) 25|32r22
-22K12*Pilot_Vector_T[5|43] 25|19r17
+8K9*Pilot 25|7w6 7r17 26|26e10
+14T14*Pilot_T 25|36r27
+19P9*Pilot_Ref_T(14T14) 25|27r22
+22K12*Pilot_Vector_T[5|43] 25|14r17
 X 27 race.ads
-6K9*Race 25|2w6 12r8 27|34e12
-27U14*Build_Race 25|23r4
+6K9*Race 25|2w6 2r16 27|34e12
+27U14*Build_Race 25|18r4
 

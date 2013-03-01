@@ -5,7 +5,7 @@ A -gnatA
 P SS ZX
 R nnnvnnnnnnnnvnnnnnnnnvnvnnnnvnnvvnnnnnvnnvnnnnnnnnnnnnnvnnvnvnnnnnnnnnnnnnnnn
 
-U track%b		track.adb		f3d4426b NE OO PK
+U track%b		track.adb		8a9b0c69 NE OO PK
 W system%s		system.ads		system.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.string_ops%s	s-strops.adb		s-strops.ali
@@ -13,7 +13,7 @@ W system.val_enum%s	s-valenu.adb		s-valenu.ali
 W system.val_int%s	s-valint.adb		s-valint.ali
 W system.val_real%s	s-valrea.adb		s-valrea.ali
 
-U track%s		track.ads		74ecc44c EE OO PK
+U track%s		track.ads		cc5cfa6b EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.vectors%s
@@ -83,8 +83,8 @@ D s-valenu.ads		20090409232307 9e547a01
 D s-valint.ads		20090409232307 d23209d2
 D s-valrea.ads		20090409232307 e4c63a53
 D s-wchcon.ads		20090409232307 ab028799
-D track.ads		20130228162408 a69bd64b
-D track.adb		20130228163509 554f9420
+D track.ads		20130301171848 1e2be86c
+D track.adb		20130301171848 94b0e405
 X 1 ada.ads
 16K9*Ada 19e8 56|1r6
 X 4 a-contai.ads
@@ -115,7 +115,7 @@ X 21 segment.ads
 11R9*Segment_T 30e17 57|22r49
 15i10*Code{natural} 57|63m21
 17e10*Tipology{17|131E9} 57|64m21
-19i10*Lenght{positive} 57|65m21
+19i10*Lenght{positive} 57|65m21 85r70
 21f10*Speed{17|13F12} 57|66m21
 23i10*Tot_Lanes{17|134I12} 57|67m21
 25e10*Has_Time_Check{17|137E9} 57|68m21
@@ -129,22 +129,24 @@ X 22 subsegment.ads
 34P9*Subsegment_Ref_T(8W19) 57|53r36
 37K12*Subsegment_Vector_T[5|43] 57|31r49 33r49
 X 56 track.ads
-6K9*Track 30l5 30e10 57|1b14 92l5 92t10
-12R9*Track_T 19e14 22r31 28r17
-16i7*Tot_Segments{natural} 57|87m18
+6K9*Track 32l5 32e10 57|1b14 94l5 94t10
+12R9*Track_T 21e14 24r31 30r17
+16i7*Tot_Segments{natural} 57|89m18
 18r7*Segment_List{5|53R9[21|36]} 57|81m24
-22P9*Track_Ref_T(12R9)
-25U14*Build_Track 25>27 57|4b14 89l8 89t19
-25s27 Track_Filename{string} 57|4b27 12r45
-28r4*Track_Race{12R9} 57|81m13 87m7
+20i7*Lap_Length{positive} 57|85m24 85r49
+24P9*Track_Ref_T(12R9)
+27U14*Build_Track 27>27 57|4b14 91l8 91t19
+27s27 Track_Filename{string} 57|4b27 12r45
+30r4*Track_Race{12R9} 57|81m13 85m13 85r38 89m7
 X 57 track.adb
 5i7 Start_Index{integer} 14m7 19r16
 6i7 Stop_Index{integer} 15m7 19r31
-7i7 N_Seg{natural} 38r29 83m13 83r22 87r34
+7i7 N_Seg{natural} 38r29 83m13 83r22 89r34
 8p7 Segment_Vector_Ref{21|41P9} 17m7
 9r7 Configuration{5|53R9[17|38]} 12m61 14r22 15r21 36r34
 19i11 I{integer} 36r57
 22r13 Segment{21|11R9} 63m13 64m13 65m13 66m13 67m13 68m13 69m13 70m13 81r45
+. 85r62
 24e13 Segment_Type{17|131E9} 40m13 64r33
 25i13 Segment_Code{natural} 38m13 63r29
 26f13 Segment_Speed{17|13F12} 42m13 66r30
