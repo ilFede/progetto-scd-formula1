@@ -7,7 +7,7 @@ with Ada.Text_IO.Unbounded_IO;
 
 package body Common is
 
-   function String_Tokenizer (Str : in String) return String_Vector_Ref_T is
+   procedure String_Tokenizer (Str : in String; String_Vector_Ref: in out String_Vector_Ref_T) is
       use Ada.Characters;
       use Ada.Text_IO;
       use GNAT;
@@ -50,16 +50,15 @@ package body Common is
                    ")");
 
          --  Output the individual substrings, and their length.
-         Tokens_Ref.all.Append(new String'(Sub));
+         String_Vector_Ref.all.Append(new String'(Sub));
       end;
       end loop;
-      return Tokens_Ref;
    end String_Tokenizer;
    --+------------
 
-   function Read_Config_File (Filename : in String) return Configuration_Ref_T is
-      Segment_Conf_Ref : String_Vector_Ref_T;
-      Conf_Ref   : Configuration_Ref_T;
+   procedure Read_Config_File (Filename : in String; Configuration : in out Configuration_T.Vector) is
+      Segment_Conf : String_Vector_T.Vector;
+      -- Conf_Ref   : Configuration_Ref_T;
       File             : Ada.Text_IO.File_Type;
    begin
       -- apro il file contenente la configurazione
@@ -68,27 +67,27 @@ package body Common is
 			Name => Filename);
       -- estraggo le informazione dal circuito e le metto in una struttura comoda da maneggiare
       -- struttura dove salvo i dati
-      Conf_Ref := new Configuration_T.Vector;
+      -- Conf_Ref := new Configuration_T.Vector;
       -- ciclo per la lettura del file
       while not Ada.Text_IO.End_Of_File (File) loop
 	 declare
             -- Leggo la prima riga togliendo gli spazi all'inizio e alla fine
 	    Line : String := Trim(Ada.Text_IO.Get_Line (File), Both);
             --Line_Trim : String := Trim (Line, Both);
+            String_Vector_Ref : String_Vector_Ref_T := new String_Vector_T.Vector;
 	 begin
 	    -- ignoro i commenti
 	    if Line'Length /= 0 and then Line (Line'First) /= '#' then
 	       -- ottengo i token
-	       Segment_Conf_Ref := String_Tokenizer (Line);
+	       String_Tokenizer (Line, String_Vector_Ref);
 	       -- salvo il segmento nella struttura dati
-	       Conf_Ref.all.Append (Segment_Conf_Ref);
+	       Configuration.Append (String_Vector_Ref);
             end if;
          end;
       end loop;
       -- chiudo il file
       Ada.Text_IO.Close (File);
       -- restituisco la configurazione
-      return Conf_Ref;
    end Read_Config_File;
    --+------------
 

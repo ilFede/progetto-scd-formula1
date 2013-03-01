@@ -4,9 +4,9 @@ A -O0
 A -g
 A -gnatA
 P SS ZX
-R nnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+R nnnnnnnnnnnnnnnnnnnnnvvnnnnnnnnvnnnnnnvnnnnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
 
-U main%b		main.adb		b3f0fc3f NE OO SU
+U main%b		main.adb		7680d354 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
@@ -16,7 +16,13 @@ W car%s			car.adb			car.ali
 W common%s		common.adb		common.ali
 W pilot%s		pilot.adb		pilot.ali
 W race%s		race.adb		race.ali
+W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
+W system.finalization_root%s  s-finroo.adb	s-finroo.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.string_ops%s	s-strops.adb		s-strops.ali
+W system.val_real%s	s-valrea.adb		s-valrea.ali
 
 D ada.ads		20070406091342 9c7dd3ea
 D a-charac.ads		20070912115821 506ce725
@@ -27,6 +33,9 @@ D a-except.ads		20090409232307 b54b55de
 D a-finali.ads		20090409232307 9eaacebd
 D a-filico.ads		20090409232307 9299732a
 D a-ioexce.ads		20070406091342 be0900a0
+D a-numeri.ads		20080324174807 1cf3e608
+D a-ngelfu.ads		20070406091342 46fb4d9b
+D a-reatim.ads		20090409232307 7c462ab4
 D a-stream.ads		20090409232307 34aca5be
 D a-string.ads		20070406091342 87b4230b
 D a-strfix.ads		20070406091342 253a46ca
@@ -34,16 +43,16 @@ D a-strmap.ads		20090409232307 5253a637
 D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
-D car.ads		20130223171207 b1a7caf5
-D common.ads		20130223171226 3d86f1d4
+D car.ads		20130227141119 0704c160
+D common.ads		20130228154951 685bdf89
 D interfac.ads		20090409232307 a69cad5c
 D i-c.ads		20070406091342 bc3ef662
 D i-cstrea.ads		20090409232307 e1e064a9
-D main.adb		20130223162900 5c6ef0e1
-D pilot.ads		20130226152048 32a5b865
-D race.ads		20130222110549 f394ea5b
-D segment.ads		20130226151324 cad43189
-D subsegment.ads	20130205162835 1b2ec677
+D main.adb		20130228173029 91ffcb66
+D pilot.ads		20130228135401 c32766f9
+D race.ads		20130226173340 e98905e3
+D segment.ads		20130227113401 51a32ba4
+D subsegment.ads	20130228162952 823923ce
 D system.ads		20100127085936 15e10948
 D s-atacco.ads		20090409232307 60789a20
 D s-crtl.ads		20090409232307 997234a1
@@ -62,49 +71,61 @@ D s-stalib.ads		20090409232307 52b793d5
 D s-stoele.ads		20090409232307 ed966df3
 D s-stoele.adb		20090409232307 e9998c78
 D s-stratt.ads		20090409232307 fef7c1da
+D s-strops.ads		20090409232307 845f72d2
+D s-sopco3.ads		20090409232307 72ce1063
+D s-sopco4.ads		20090409232307 bc112723
+D s-sopco5.ads		20090409232307 191315e8
 D s-tasinf.ads		20090409232307 268f0cd4
 D s-taspri.ads		20080408071349 5459bcd0
+D s-taprop.ads		20090409232307 25a7965c
 D s-taskin.ads		20090409232307 376ff2dd
 D s-taprob.ads		20090409232307 5e00115c
 D s-tpoben.ads		20090409232307 37be425d
+D s-tassta.ads		20090409232307 71d2b71d
 D s-traent.ads		20090409232307 bd5f2753
 D s-unstyp.ads		20090409232307 c0f9fae5
+D s-valrea.ads		20090409232307 e4c63a53
 D s-wchcon.ads		20090409232307 ab028799
-D track.ads		20130223175316 4d54e2e2
+D track.ads		20130228162408 a69bd64b
 X 1 ada.ads
-16K9*Ada 19e8 22|3r6 4r6 4r23 5r6 5r23 6r6 6r29 11r8
+16K9*Ada 19e8 25|3r6 4r6 4r23 5r6 5r23 6r6 6r29 11r8
 X 5 a-convec.ads
-53R9*Vector
-X 11 a-string.ads
-16K13*Strings 35e16 22|5w10 5r27 6r10 6r33
-33n37*Both{33E9} 22|22r36 23r36 24r36
-X 12 a-strfix.ads
-18K21*Fixed 242e22 22|6w18 6r41
-186V13*Trim{string} 22|22r24 23r24 24r24
-X 15 a-textio.ads
-48K13*Text_IO 506e16 22|3w10 4w10 4r27 11r12
-X 17 car.ads
-3K9*Car 32e8 22|8w6 15r5
-27P9*Car_Ref_T(7R9) 22|28r14
-30V13*Build_Car{27P9} 22|35r15
-X 18 common.ads
-6K9*Common 115e11 22|1w6 13r8
-27P9*String_Vector_Ref_T(5|53R9[22]) 22|18r14
-42V13*String_Tokenizer{27P9} 22|31r12
-X 22 main.adb
-10U11*Main 10b11 45l5 45t9
-18p4 Test{18|27P9} 31m4
-19a4 Str1{string} 22r30
-20a4 Str2{string} 23r30
-21a4 Str3{string} 24r30
-22a4 StrTr1{string}
-23a4 StrTr2{string} 25r25
-24a4 StrTr3{string} 26r25
-25i4 LenStr2{integer}
-26i4 LenStr3{integer}
-28p4 Car_Ref{17|27P9} 35m4
-X 23 pilot.ads
-3K9*Pilot 22|7w6 14r5 23|26e10
-X 24 race.ads
-7K9*Race 22|2w6 12r8 24|35e12
+47I12*Extended_Index{integer}
+53R9*Vector 25|17r42[21|37] 29r47[21|27]
+101V13*Element{21|34P9} 25|28r75[21|37] 30r56[21|22] 31r56[21|22] 34r55[21|22]
+197U14*Append 25|34r22[21|27]
+237V13*First_Index{integer} 25|26r33[21|37]
+243V13*Last_Index{47I12[21|37]} 25|26r68[21|37] 33r38[21|22]
+X 14 a-string.ads
+16K13*Strings 35e16 25|5w10 5r27 6r10 6r33
+X 15 a-strfix.ads
+18K21*Fixed 242e22 25|6w18 6r41
+X 18 a-textio.ads
+48K13*Text_IO 506e16 25|3w10 4w10 4r27 11r12
+X 20 car.ads
+3K9*Car 32e8 25|8w6 15r5
+X 21 common.ads
+6K9*Common 138e11 25|1w6 13r8
+19P9*String_Ref_T(string)
+27K12*Float_Vector_T[5|43] 25|29r32
+34P9*String_Vector_Ref_T(5|53R9[22]) 25|28r32
+37K12*Configuration_T[5|43] 25|17r26
+55U14*Read_Config_File 25|23r4
+105a4*Race_Config_Path{string} 25|21r16 23r21
+117a4*Race_Config_Filename{string} 25|21r35
+120a4*Competitors_Config_Filename{string} 25|23r40
+X 25 main.adb
+10U11*Main 10b11 55l5 55t9
+17r4 Pilot_Configuration{5|53R9[21|37]} 23m69 26r13 26r48 28r55
+26i8 I{integer} 28r84
+28p10 Configuration{21|34P9} 30r42 31r42 33r24 34r41
+29r10 Strategy{5|53R9[21|27]} 34m13
+30a10 Pilot_Name_Filename{string}
+31a10 Pilot_Car_Filename{string}
+33i14 J{integer} 34r63
+X 26 pilot.ads
+6K9*Pilot 25|7w6 14r5 26|19e10
+X 27 race.ads
+6K9*Race 25|2w6 12r8 27|34e12
+27U14*Build_Race 25|21r4
 

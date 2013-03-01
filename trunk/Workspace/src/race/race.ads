@@ -1,7 +1,6 @@
 with Ada.Containers.Vectors;
 with Track;
 with Car;
-with Pilot;
 with Common;
 
 package Race is
@@ -14,7 +13,7 @@ package Race is
    -- parametri che caratterizzano un circuito
       record
       -- circito
-	 Track_Ref : Track_Ref_T;
+	 Track : Track_T;
 	 -- numero di giri
 	 Num_Laps  : Positive;
 	 -- condizioni meteo
@@ -31,5 +30,5 @@ package Race is
    procedure Start_Race;
 
    -- entità che rappresenta il circuito
-   Race_Track : Track_T;
+   Circuit_Race : Race_T;
    end Race;

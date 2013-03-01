@@ -14,25 +14,35 @@ procedure Main is
 use Pilot;
 use Car;
 
-   --Easy : Race_Pilot (1);
-   Test    : String_Vector_Ref_T;
-   Str1    : String := "    sdfsfdfd sdfgds   ";
-   Str2    : String := "    ";
-   Str3    : String := "";
-   StrTr1  : String := Trim (Str1, Both);
-   StrTr2  : String := Trim (Str2, Both);
-   StrTr3  : String := Trim (Str3, Both);
-   LenStr2 : Integer := StrTr2'Length;
-   LenStr3 : Integer := StrTr3'Length;
-   --Plt_Ref : Pilot_Ref_T;
-   Car_Ref : Car_Ref_T;
-
+   Pilot_Configuration : Configuration_T.Vector;
 begin
-   Test := String_Tokenizer ("100 200 300 # 3443 - 342");
    null;
-   --Build_Race (Race_Config_Path & "race.conf");
+   -- costrisco il circuito
+   Build_Race (Race_Config_Path & Race_Config_Filename);
+   -- istanzio e configuro i piloti
+   Read_Config_File(Race_Config_Path & Competitors_Config_Filename, Pilot_Configuration);
+   -- per ogni pilota creo il task e carico la strategia
+
+   for I in Pilot_Configuration.First_Index .. Pilot_Configuration.Last_Index loop
+      declare
+	 Configuration       : String_Vector_Ref_T := Pilot_Configuration.Element (I);
+	 Strategy            : Float_Vector_T.Vector;
+	 Pilot_Name_Filename : String := Configuration.Element (0).all;
+	 Pilot_Car_Filename  : String := Configuration.Element (1).all;
+      begin
+	 for J in 2 .. Configuration.Last_Index loop
+            Strategy.Append(Float'Value(Configuration.Element(J).all));
+  	 end loop;
+      end;
+      null;
+   end loop;
+
+
+   null;
+
+
    -- Plt_Ref := Build_Pilot("Vettel.plt");
-   Car_Ref := Build_Car("Redbull.car");
+   -- Car_Ref := Build_Car("Redbull.car");
    null;
    -- configuro il circuito
    -- Build_Track("");

@@ -18,10 +18,17 @@ package Common is
    -- puntatore ad una stringa
    type String_Ref_T is access String;
 
- -- array per i token delle configurazioni
+   -- array per i token delle configurazioni
    package String_Vector_T is new Ada.Containers.Vectors
      (Element_Type => String_Ref_T,
       Index_Type   => Natural);
+
+   -- array float usato per le strategie
+   package Float_Vector_T is new Ada.Containers.Vectors
+     (Element_Type => Float,
+      Index_Type   => Natural);
+
+   -- accesso per
 
    -- riferimento per accedere all'array di stringhe
    type String_Vector_Ref_T is access String_Vector_T.Vector;
@@ -32,17 +39,20 @@ package Common is
       Index_Type   => Natural);
 
    -- riferimento per accedere al tipo Conf_T
-   type Configuration_Ref_T is access Configuration_T.Vector;
+   -- type Configuration_Ref_T is access Configuration_T.Vector;
+
+   -- sottotipo per le percuntuali
+   subtype Percent_T is Float range 0.0..100.0;
 
    ---------------------------------------------------
    -- DEFINIZIONE DELLE FUNZIONI E PROCEDURE GENERICHE
    ---------------------------------------------------
 
    -- funzione per fare il token di una stringa, restituisce un riferimento ad un vector di puntatori a stringhe
-   function String_Tokenizer (Str : in String) return String_Vector_Ref_T;
+   procedure String_Tokenizer (Str : in String; String_Vector_Ref : in out String_Vector_Ref_T);
 
    -- funzione per leggere il file di configurazione e salvarlo in una struttura comoda
-   function Read_Config_File (Filename : in String) return Configuration_Ref_T;
+   procedure Read_Config_File (Filename : in String; Configuration : in out Configuration_T.Vector);
 
    -- funzione per ottenere una configurazione leggendola da file
    --function Get_Config (Filename : String) return Configuration_Ref_T;
@@ -81,6 +91,13 @@ package Common is
    subtype Car_Consumption_T is Float range 0.0..300.0;
 
    ---------------------------------------------------
+   -- COSTANTI PER LA MODELLAZIONED DELL'ACCELERAZIONE
+   ---------------------------------------------------
+
+   Alpha : constant Float := 80.0;
+   Beta : constant Float := 100.0;
+
+   ---------------------------------------------------
    -- PATH PER LE VARIE CONFIGURAZIONI
    ---------------------------------------------------
 
@@ -96,7 +113,13 @@ package Common is
    -- costante con le configurazioni dei singoli circiti dispinibili
    Circuits_Set_Path : String := "./conf/circuits_set/";
 
- ---------------------------------------------------
+   -- nome file con la configurazione della gara
+   Race_Config_Filename : constant String := "race.conf";
+
+   -- nome file con la configurazione dei concorrenti
+   Competitors_Config_Filename : constant String := "competitors.conf";
+
+   ---------------------------------------------------
    -- DEFINIZIONE DEI TIPI E SOTTOTIPI PER I SEGMENTI E SOTTOSEGMENTI
    ---------------------------------------------------
 
