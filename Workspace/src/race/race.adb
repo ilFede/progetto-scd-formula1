@@ -11,13 +11,13 @@ package body Race is
       -- ottengo il riferimento al nome del circuito
       Circuit_Filename_Ref := Configuration.Element(0).all.Element(0);
       -- ottengo il numero di giri
-      Circuit_Race.Num_Laps := Integer'Value (Configuration.Element(1).all.Element(0).all);
+      The_Race.Num_Laps := Integer'Value (Configuration.Element(1).all.Element(0).all);
       -- ottengo le condizioni meteo
-      Circuit_Race.Meteo := Meteo_T'Value (Configuration.Element (2).all.Element (0).all);
+      The_Race.Meteo := Meteo_T'Value (Configuration.Element (2).all.Element (0).all);
       -- costruisco il tracciato sulla variabilie Track
       Build_Track (Circuit_Filename_Ref.all);
       -- inserisco il tracciato Track nella gara Race
-      Circuit_Race.Track := Track_Race;
+      The_Race.Track := Track_Race;
       -- ho finito la costruzione del circuito, posso liberae la memoria
       -- Free(Configuration_Ref);
       null;

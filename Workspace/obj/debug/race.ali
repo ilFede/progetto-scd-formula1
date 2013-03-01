@@ -5,13 +5,13 @@ A -gnatA
 P SS ZX
 R nnnnnnnnnnnnvnnvnnvnnnnvnnnnnnnvnnnnnnnnnvnnnnnnnnnnnnnvnnvnvnnnnnnnnnnnnnnnn
 
-U race%b		race.adb		6dafde7f NE OO PK
+U race%b		race.adb		aba3e4cc NE OO PK
 W system%s		system.ads		system.ali
 W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 W system.val_enum%s	s-valenu.adb		s-valenu.ali
 W system.val_int%s	s-valint.adb		s-valint.ali
 
-U race%s		race.ads		49fb08a5 EE OO PK
+U race%s		race.ads		027dee3a EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.vectors%s
@@ -46,8 +46,8 @@ D common.ads		20130301092618 309350e1
 D interfac.ads		20090409232307 a69cad5c
 D i-c.ads		20070406091342 bc3ef662
 D i-cstrea.ads		20090409232307 e1e064a9
-D race.ads		20130226173340 e98905e3
-D race.adb		20130228151008 8426db9c
+D race.ads		20130301143620 1abfdd5b
+D race.adb		20130301145134 b11c3997
 D segment.ads		20130227113401 51a32ba4
 D subsegment.ads	20130228162952 823923ce
 D system.ads		20100127085936 15e10948
@@ -78,7 +78,7 @@ D s-unstyp.ads		20090409232307 c0f9fae5
 D s-valenu.ads		20090409232307 9e547a01
 D s-valint.ads		20090409232307 d23209d2
 D s-wchcon.ads		20090409232307 ab028799
-D track.ads		20130228162408 a69bd64b
+D track.ads		20130301171848 1e2be86c
 X 1 ada.ads
 16K9*Ada 19e8 22|1r6
 X 4 a-contai.ads
@@ -86,8 +86,8 @@ X 4 a-contai.ads
 X 5 a-convec.ads
 43k24*Vectors 379e27 22|1w21
 53R9*Vector 23|5r39[18|38]
-101V13*Element{18|35P9} 23|12r45[18|38] 12r60[18|22] 14r61[18|38] 14r76[18|22]
-. 16r58[18|38] 16r74[18|22]
+101V13*Element{18|35P9} 23|12r45[18|38] 12r60[18|22] 14r57[18|38] 14r72[18|22]
+. 16r54[18|38] 16r70[18|22]
 X 17 car.ads
 3K9*Car 32e8 22|3w6
 X 18 common.ads
@@ -96,24 +96,24 @@ X 18 common.ads
 35P9*String_Vector_Ref_T(5|53R9[22])
 38K12*Configuration_T[5|43] 23|5r23
 56U14*Read_Config_File 23|10r7
-66E9*Meteo_T 66e30 22|20r22 23|16r29
+66E9*Meteo_T 66e30 22|20r22 23|16r25
 X 22 race.ads
 6K9*Race 34l8 34e12 23|1b14 34l5 34t9
-12R9*Race_T 21e17 24r11 33r19
-16r10*Track{54|12R9} 23|20m20
-18i10*Num_Laps{positive} 23|14m20
-20e10*Meteo{18|66E9} 23|16m20
+12R9*Race_T 21e17 24r11 33r15
+16r10*Track{54|12R9} 23|20m16
+18i10*Num_Laps{positive} 23|14m16
+20e10*Meteo{18|66E9} 23|16m16
 24r4*Race{12R9}
 27U14*Build_Race 27>26 23|4b14 24l8 24t18
 27s26 Race_Filename{string} 23|4b26 10r25
 30U14*Start_Race 23|28b14 31l8 31t18
-33r4*Circuit_Race{12R9} 23|14m7 16m7 20m7
+33r4*The_Race{12R9} 23|14m7 16m7 20m7
 X 23 race.adb
-5r7 Configuration{5|53R9[18|38]} 10m40 12r31 14r47 16r44
+5r7 Configuration{5|53R9[18|38]} 10m40 12r31 14r43 16r40
 7p7 Circuit_Filename_Ref{18|19P9} 12m7 18r20
 X 54 track.ads
-6K9*Track 22|2w6 7r8 54|30e10
-12R9*Track_T 22|16r18 54|19e14
-25U14*Build_Track 23|18r7
-28r4*Track_Race{12R9} 23|20r29
+6K9*Track 22|2w6 7r8 54|32e10
+12R9*Track_T 22|16r18 54|21e14
+27U14*Build_Track 23|18r7
+30r4*Track_Race{12R9} 23|20r25
 

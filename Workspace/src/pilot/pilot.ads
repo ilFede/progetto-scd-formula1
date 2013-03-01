@@ -13,7 +13,7 @@ package Pilot is
    -- task per descrivere il pilota
    task type Pilot_T (Pilot_Config_File_Ref : String_Ref_T;
 		      Car_Config_File_Ref : String_Ref_T;
-		      Stategy          : Float_Vector_Ref_T);
+		      Strategy          : Float_Vector_Ref_T);
 
    -- tipo per l'accesso a una variabile di tipo Pilot_T
    type Pilot_Ref_T is access Pilot_T;
