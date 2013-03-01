@@ -13,7 +13,7 @@ W system.val_enum%s	s-valenu.adb		s-valenu.ali
 W system.val_int%s	s-valint.adb		s-valint.ali
 W system.val_real%s	s-valrea.adb		s-valrea.ali
 
-U track%s		track.ads		2c244b24 EE OO PK
+U track%s		track.ads		74ecc44c EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.vectors%s
@@ -44,7 +44,7 @@ D a-strmap.ads		20090409232307 5253a637
 D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
-D common.ads		20130228154951 685bdf89
+D common.ads		20130301092618 309350e1
 D interfac.ads		20090409232307 a69cad5c
 D i-c.ads		20070406091342 bc3ef662
 D i-cstrea.ads		20090409232307 e1e064a9
@@ -92,33 +92,33 @@ X 4 a-contai.ads
 X 5 a-convec.ads
 43k24*Vectors 379e27 56|1w21
 47I12*Extended_Index{integer}
-53R9*Vector 56|18r39[21|36] 57|9r43[17|37] 17r50[21|36] 31r69[22|37] 33r69[22|37]
-101V13*Element{17|34P9} 57|36r48[17|37] 40r73[17|22] 41r67[17|22] 42r65[17|22]
+53R9*Vector 56|18r39[21|36] 57|9r43[17|38] 17r50[21|36] 31r69[22|37] 33r69[22|37]
+101V13*Element{17|35P9} 57|36r48[17|38] 40r73[17|22] 41r67[17|22] 42r65[17|22]
 . 43r71[17|22] 44r85[17|22]
 197U14*Append 57|59r39[22|37] 81r37[21|36]
-237V13*First_Index{integer} 57|14r36[17|37]
-243V13*Last_Index{47I12[17|37]} 57|15r35[17|37]
+237V13*First_Index{integer} 57|14r36[17|38]
+243V13*Last_Index{47I12[17|38]} 57|15r35[17|38]
 X 17 common.ads
-6K9*Common 138e11 56|2w6 7r8
+6K9*Common 139e11 56|2w6 7r8
 13F12*Speed_T{float} 57|26r49
 19P9*String_Ref_T(string)
-34P9*String_Vector_Ref_T(5|53R9[22]) 57|32r49
-37K12*Configuration_T[5|43] 57|9r27
-55U14*Read_Config_File 57|12r7
-114a4*Circuits_Set_Path{string} 57|12r25
-127i4*Subsegment_Lengh{positive} 57|47r55
-130E9*Segment_Type_T 130e49 57|24r49 40r29
-133I12*Num_Lanes_Seg_T{positive} 57|29r49
-136E9*Has_Time_Check_T 136e38 57|28r49 44r39
+35P9*String_Vector_Ref_T(5|53R9[22]) 57|32r49
+38K12*Configuration_T[5|43] 57|9r27
+56U14*Read_Config_File 57|12r7
+115a4*Circuits_Set_Path{string} 57|12r25
+128i4*Subsegment_Lengh{positive} 57|47r55
+131E9*Segment_Type_T 131e49 57|24r49 40r29
+134I12*Num_Lanes_Seg_T{positive} 57|29r49
+137E9*Has_Time_Check_T 137e38 57|28r49 44r39
 X 21 segment.ads
 7K9*Segment 61e12 56|3w6 8r8
 11R9*Segment_T 30e17 57|22r49
 15i10*Code{natural} 57|63m21
-17e10*Tipology{17|130E9} 57|64m21
+17e10*Tipology{17|131E9} 57|64m21
 19i10*Lenght{positive} 57|65m21
 21f10*Speed{17|13F12} 57|66m21
-23i10*Tot_Lanes{17|133I12} 57|67m21
-25e10*Has_Time_Check{17|136E9} 57|68m21
+23i10*Tot_Lanes{17|134I12} 57|67m21
+25e10*Has_Time_Check{17|137E9} 57|68m21
 27i10*Tot_Subsegments{positive} 57|69m21
 29r10*Subsegment_List{5|53R9[22|37]} 57|70m21
 36K12*Segment_Vector_T[5|43] 56|18r22 57|17r33
@@ -142,18 +142,18 @@ X 57 track.adb
 6i7 Stop_Index{integer} 15m7 19r31
 7i7 N_Seg{natural} 38r29 83m13 83r22 87r34
 8p7 Segment_Vector_Ref{21|41P9} 17m7
-9r7 Configuration{5|53R9[17|37]} 12m61 14r22 15r21 36r34
+9r7 Configuration{5|53R9[17|38]} 12m61 14r22 15r21 36r34
 19i11 I{integer} 36r57
 22r13 Segment{21|11R9} 63m13 64m13 65m13 66m13 67m13 68m13 69m13 70m13 81r45
-24e13 Segment_Type{17|130E9} 40m13 64r33
+24e13 Segment_Type{17|131E9} 40m13 64r33
 25i13 Segment_Code{natural} 38m13 63r29
 26f13 Segment_Speed{17|13F12} 42m13 66r30
 27i13 Segment_Leght{positive} 41m13 47r39 65r31
-28e13 Segment_Has_Time_Check{17|136E9} 44m13 68r39
-29i13 Segment_Tot_Lanes{17|133I12} 43m13 58r55 67r34
+28e13 Segment_Has_Time_Check{17|137E9} 44m13 68r39
+29i13 Segment_Tot_Lanes{17|134I12} 43m13 58r55 67r34
 30i13 Segment_Tot_Subsegment{natural} 47m13 49r41 69r40
 31r13 Segment_Subseg_Vect{5|53R9[22|37]} 59m19 70r40
-32p13 String_Vector_Ref{17|34P9} 36m13 40r51 41r45 42r43 43r49 44r63
+32p13 String_Vector_Ref{17|35P9} 36m13 40r51 41r45 42r43 43r49 44r63
 33r13 Segment_Test{5|53R9[22|37]}
 49i17 J{integer}
 53p19 Subsegment_Ref{22|34P9} 58m19 59r47

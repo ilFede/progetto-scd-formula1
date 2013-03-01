@@ -5,30 +5,40 @@ A -gnatA
 P SS ZX
 R nnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnvnnnnnnvnnvnnnnnnvnnnnnnvnnvnvnnnnnnnnnnnnnnnn
 
-U pilot%b		pilot.adb		f693cfcb OO PK
+U pilot%b		pilot.adb		bf05dab1 OO PK
 W ada%s			ada.ads			ada.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 W ada.numerics.elementary_functions%s  a-nuelfu.ads  a-nuelfu.ali
 W car%s			car.adb			car.ali
-W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
-W system.finalization_root%s  s-finroo.adb	s-finroo.ali
-W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
-W system.standard_library%s  s-stalib.adb	s-stalib.ali
 W system.string_ops%s	s-strops.adb		s-strops.ali
 W system.val_int%s	s-valint.adb		s-valint.ali
 
-U pilot%s		pilot.ads		030a3068 EE OO PK
+U pilot%s		pilot.ads		581f15af EE OO PK
 W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.containers.generic_array_sort%s
+W ada.containers.vectors%s
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.finalization%s	a-finali.adb		a-finali.ali
+W ada.finalization.list_controller%s  a-filico.adb  a-filico.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 W ada.numerics.generic_elementary_functions%s
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.streams%s		a-stream.ads		a-stream.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.unchecked_deallocation%s
 W car%s			car.adb			car.ali
 W common%s		common.adb		common.ali
 W race%s		race.adb		race.ali
 W system%s		system.ads		system.ali
+W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
+W system.finalization_root%s  s-finroo.adb	s-finroo.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
 W system.task_info%s	s-tasinf.adb		s-tasinf.ali
 W system.tasking%s	s-taskin.adb		s-taskin.ali
 W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
@@ -37,7 +47,9 @@ D ada.ads		20070406091342 9c7dd3ea
 D a-charac.ads		20070912115821 506ce725
 D a-chlat1.ads		20070912115821 e9ee6d0a
 D a-contai.ads		20070406091342 7b35f559
+D a-cgarso.ads		20070406091342 943b3aae
 D a-convec.ads		20090409232307 317e4a8c
+D a-convec.adb		20090409232307 5aeb8a2b
 D a-except.ads		20090409232307 b54b55de
 D a-finali.ads		20090409232307 9eaacebd
 D a-filico.ads		20090409232307 9299732a
@@ -53,12 +65,13 @@ D a-strmap.ads		20090409232307 5253a637
 D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
 D car.ads		20130227141119 0704c160
-D common.ads		20130228154951 685bdf89
+D common.ads		20130301092618 309350e1
 D interfac.ads		20090409232307 a69cad5c
 D i-c.ads		20070406091342 bc3ef662
 D i-cstrea.ads		20090409232307 e1e064a9
-D pilot.ads		20130228135401 c32766f9
+D pilot.ads		20130301092631 8ab17383
 D pilot.adb		20130228150908 816ddab3
 D race.ads		20130226173340 e98905e3
 D segment.ads		20130227113401 51a32ba4
@@ -98,81 +111,88 @@ D s-valint.ads		20090409232307 d23209d2
 D s-wchcon.ads		20090409232307 ab028799
 D track.ads		20130228162408 a69bd64b
 X 1 ada.ads
-16K9*Ada 19e8 26|4r6 27|3r6 80r26 86r25
-X 5 a-convec.ads
-53R9*Vector 27|52r49[22|37]
-101V13*Element{22|34P9} 27|56r50[22|37] 56r66[22|22] 57r32[22|37] 57r48[22|22]
-. 58r74[22|37] 58r90[22|22] 59r74[22|37] 59r90[22|22]
-X 10 a-numeri.ads
-16K13*Numerics 32e17 26|4r10 27|3r10 80r30 86r29
-X 11 a-nuelfu.ads
-18K22*Elementary_Functions[12|19] 27|3w19 80r39 86r38
-X 12 a-ngelfu.ads
-19k22*Generic_Elementary_Functions 73e46 26|4w19
-24V13*Log{float} 27|80r60[11|18]
-24f22 X{float} 27|80r79[11|18]
-24f25 Base{float} 27|80r65[11|18]
-25V13*Exp{float} 27|86r59[11|18]
-X 21 car.ads
-3K9*Car 32e8 26|3w6 8r8 27|1w6 6r8
-7R9*Car_T 24e17 27|22r28
-15i10*Coeff_Deceleration{22|85I12} 27|117r95
-30U14*Build_Car 27|61r10 68r10
-X 22 common.ads
-6K9*Common 138e11 26|1w6 7r8
-13F12*Speed_T{float} 27|34r66 36r49 38r49 38r83 40r53 40r76 42r47 42r70 44r52
+16K9*Ada 19e8 29|4r6 5r6 6r6 22r34 30|3r6 80r26 86r25
+X 4 a-contai.ads
+16K13*Containers 22e19 29|5w10 6r10 22r38
+X 6 a-convec.ads
+38I9 Index_Type 29|24r7
+39+9 Element_Type 29|23r7
+43k24*Vectors 379e27 29|6w21 22r49
+53R9*Vector 30|52r49[25|38]
+101V13*Element{25|35P9} 30|56r50[25|38] 56r66[25|22] 57r32[25|38] 57r48[25|22]
+. 58r74[25|38] 58r90[25|22] 59r74[25|38] 59r90[25|22]
+X 12 a-numeri.ads
+16K13*Numerics 32e17 29|4r10 30|3r10 80r30 86r29
+X 13 a-nuelfu.ads
+18K22*Elementary_Functions[14|19] 30|3w19 80r39 86r38
+X 14 a-ngelfu.ads
+19k22*Generic_Elementary_Functions 73e46 29|4w19
+24V13*Log{float} 30|80r60[13|18]
+24f22 X{float} 30|80r79[13|18]
+24f25 Base{float} 30|80r65[13|18]
+25V13*Exp{float} 30|86r59[13|18]
+X 24 car.ads
+3K9*Car 32e8 29|3w6 10r8 30|1w6 6r8
+7R9*Car_T 24e17 30|22r28
+15i10*Coeff_Deceleration{25|86I12} 30|117r95
+30U14*Build_Car 30|61r10 68r10
+X 25 common.ads
+6K9*Common 139e11 29|1w6 9r8
+13F12*Speed_T{float} 30|34r66 36r49 38r49 38r83 40r53 40r76 42r47 42r70 44r52
 . 44r75 78r66 84r49 90r49 90r83 98r53 98r76 104r47 104r70 105r22 113r52 113r75
-19P9*String_Ref_T(string) 26|12r47 13r45 27|16r28
-34P9*String_Vector_Ref_T(5|53R9[22])
-37K12*Configuration_T[5|43] 27|52r33
-45F12*Percent_T{float} 27|72r40
-55U14*Read_Config_File 27|55r10
-72I12*Skill_Acceleration_T{positive} 27|18r28 58r32
-75I12*Skill_Deceleration_T{positive} 27|20r28 59r32
-85I12*Coeff_Deceleration_T{positive}
-97f4*Alpha{float} 27|80r17 86r72
-98f4*Beta{float} 27|80r97 86r17
-108a4*Pilots_Set_Path{string} 27|55r28
-X 26 pilot.ads
-6K9*Pilot 19l5 19e10 27|5b14 132l5 132t10
-12T14*Pilot_T 12d23 13d23 14d23 17r31 27|8b14 130l8 130t15
-12p23 Pilot_Config_File_Ref{22|19P9} 27|55r46
-13p23 Car_Config_File_Ref{22|19P9} 27|61r21 68r21
-14i23 Stategy{integer}
-17P9*Pilot_Ref_T(12T14)
-X 27 pilot.adb
+19P9*String_Ref_T(string) 29|14r47 15r45 30|16r28
+32P10*Float_Vector_Ref_T(6|53R9[27]) 29|16r42
+35P9*String_Vector_Ref_T(6|53R9[22])
+38K12*Configuration_T[6|43] 30|52r33
+46F12*Percent_T{float} 30|72r40
+56U14*Read_Config_File 30|55r10
+73I12*Skill_Acceleration_T{positive} 30|18r28 58r32
+76I12*Skill_Deceleration_T{positive} 30|20r28 59r32
+86I12*Coeff_Deceleration_T{positive}
+98f4*Alpha{float} 30|80r17 86r72
+99f4*Beta{float} 30|80r97 86r17
+109a4*Pilots_Set_Path{string} 30|55r28
+X 29 pilot.ads
+8K9*Pilot 26l5 26e10 30|5b14 132l5 132t10
+14T14*Pilot_T 14d23 15d23 16d23 19r31 30|8b14 130l8 130t15
+14p23 Pilot_Config_File_Ref{25|19P9} 30|55r46
+15p23 Car_Config_File_Ref{25|19P9} 30|61r21 68r21
+16p23 Stategy{25|32P10}
+19P9*Pilot_Ref_T(14T14) 23r23
+22K12*Pilot_Vector_T[6|43]
+X 30 pilot.adb
 14i7 Number{positive} 56m10
-16p7 Name{22|19P9} 57m10
-18i7 Skill_Acceleration{22|72I12} 58m10
-20i7 Skill_Deceleration{22|75I12} 59m10
-22r7 Car{21|7R9} 61m46 68m46 117r91
+16p7 Name{25|19P9} 57m10
+18i7 Skill_Acceleration{25|73I12} 58m10
+20i7 Skill_Deceleration{25|76I12} 59m10
+22r7 Car{24|7R9} 61m46 68m46 117r91
 24f7 Effective_Deceleration{float} 108r29 108r78 108r103 108r155
 31U17 Configure_Pilot_And_Car 50b17 63l11 63t34 128r7
-34V16 Get_Speed_From_Distance{22|13F12} 34>41 78b16 81l11 81t34
+34V16 Get_Speed_From_Distance{25|13F12} 34>41 78b16 81l11 81t34
 34f41 Distance{float} 78b41 80r86
 36V16 Get_Distance_From_Speed{float} 36>41 84b16 87l11 87t34 93r19 94r17
-36f41 Speed{22|13F12} 84b41 86r64
-38V16 Get_Final_Speed{22|13F12} 38>33 38>58 90b16 95l11 95t26
-38f33 Initial_Speed{22|13F12} 90b33 93r44
+36f41 Speed{25|13F12} 84b41 86r64
+38V16 Get_Final_Speed{25|13F12} 38>33 38>58 90b16 95l11 95t26
+38f33 Initial_Speed{25|13F12} 90b33 93r44
 38f58 Distance{float} 90b58 94r42
 40V16 Get_Acc_Travel_Time{float} 40>37 40>62 98b16 101l11 101t30
-40f37 Initial_Speed{22|13F12} 98b37 100r19
-40f62 Final_Speed{22|13F12} 98b62 100r35
+40f37 Initial_Speed{25|13F12} 98b37 100r19
+40f62 Final_Speed{25|13F12} 98b62 100r35
 42V16 Get_Dec_Space{positive} 42>31 42>56 104b16 110l11 110t24 114r42
-42f31 Initial_Speed{22|13F12} 104b31 105r47 108r128
-42f56 Final_Speed{22|13F12} 104b56 105r33
+42f31 Initial_Speed{25|13F12} 104b31 105r47 108r128
+42f56 Final_Speed{25|13F12} 104b56 105r33
 44V16 Get_Breaking_Point{integer} 44>36 44>61 44>84 113b16 119l11 119t29
-44f36 Initial_Speed{22|13F12} 113b36 114r57
-44f61 Final_Speed{22|13F12} 113b61 114r72
+44f36 Initial_Speed{25|13F12} 113b36 114r57
+44f61 Final_Speed{25|13F12} 113b61 114r72
 44i84 Segment_Length{positive} 113b84
-52r10 Configuration{5|53R9[22|37]} 55m73 56r36 57r18 58r60 59r60
+52r10 Configuration{6|53R9[25|38]} 55m73 56r36 57r18 58r60 59r60
 66U17 Configure_Car 66b17 69l11 69t24
-72V16 Get_Tot_Penality{22|45F12} 72b16 75l11 75t27
+72V16 Get_Tot_Penality{25|46F12} 72b16 75l11 75t27
 91f10 Shift{float} 93m10 94r53
-105f10 Delta_V{22|13F12} 108r56 108r66 108r145
+105f10 Delta_V{25|13F12} 108r56 108r66 108r145
 106f10 Dec_Space{float} 108m10 109r27
 114i10 Breaking_Space{integer} 117r39 117r66
 115f10 Pen_Breaking_Space{float} 117m10 118r26
-X 28 race.ads
-6K9*Race 26|2w6 9r8 28|34e12
+X 31 race.ads
+6K9*Race 29|2w6 11r8 31|34e12
 
