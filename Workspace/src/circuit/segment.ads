@@ -1,4 +1,5 @@
 with Subsegment;
+use Subsegment;
 with Common;
 with Ada.Containers.Vectors;
 
@@ -25,15 +26,15 @@ package Segment is
 	 -- numero di sottosegmenti del segmento
 	 Tot_Subsegments   : Positive;
 	 -- array che contiene i sottosegmenti del segmento
-	 Subsegment_List   : Subsegment_Vector_Ref_T;
+	 Subsegment_List   : Subsegment_Vector_T.Vector;
       end record;
 
    -- tipo puntatore a Segment_T
-   type Segment_Ref_T is access Segment_T;
+   -- type Segment_Ref_T is access Segment_T;
 
    -- definizione del tipo array che contiene i vari segmenti
    package Segment_Vector_T is new Ada.Containers.Vectors
-     (Element_Type => Segment_Ref_T,
+     (Element_Type => Segment_T,
       Index_Type   => Natural);
 
    -- riferimento per accedere all'array dei segmenti

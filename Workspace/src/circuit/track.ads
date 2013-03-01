@@ -1,12 +1,12 @@
 with Ada.Containers.Vectors;
+with Common;
 with Segment;
 with Subsegment;
-with Common;
 
 package Track is
+   use Common;
    use Segment;
    use Subsegment;
-   use Common;
 
    -- definizione del tipo di record che rappresenta un circuito
    type Track_T is
@@ -15,16 +15,16 @@ package Track is
       -- numero dei segmenti
       Tot_Segments : Natural;
       -- array dei segmenti
-      Segment_List_Ref : Segment_Vector_Ref_T;
+      Segment_List : Segment_Vector_T.Vector;
    end record;
 
    -- tipo per l'accesso ad un circuito
    type Track_Ref_T is access Track_T;
 
    -- procedura per configurare il circuito partendo da una configurazione
-   function Build_Track (Track_Filename : String) return Track_Ref_T;
+   procedure Build_Track (Track_Filename : in String);
 
    -- entità che rappresenta il circuito
-   Track : Track_T;
+   Track_Race : Track_T;
 
 end Track;

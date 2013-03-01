@@ -39,7 +39,7 @@ package Subsegment is
       Index_Type => Natural);
 
    -- riferimento per accedere all'array dei segmenti
-   type Subsegment_Vector_Ref_T is access Subsegment_Vector_T.Vector;
+   -- type Subsegment_Vector_Ref_T is access Subsegment_Vector_T.Vector;
 
 
 end Subsegment;
