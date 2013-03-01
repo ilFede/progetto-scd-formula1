@@ -28,7 +28,8 @@ package Common is
      (Element_Type => Float,
       Index_Type   => Natural);
 
-   -- accesso per
+   -- accesso per Float_Vector_T
+    type Float_Vector_Ref_T is access Float_Vector_T.Vector;
 
    -- riferimento per accedere all'array di stringhe
    type String_Vector_Ref_T is access String_Vector_T.Vector;

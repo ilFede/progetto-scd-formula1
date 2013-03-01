@@ -13,8 +13,10 @@ procedure Main is
    use Common;
 use Pilot;
 use Car;
-
+   -- configurazione di un pilota
    Pilot_Configuration : Configuration_T.Vector;
+   -- vettore di piloti
+   Pilot_Vett : Pilot_Vector_T.Vector;
 begin
    null;
    -- costrisco il circuito
@@ -26,15 +28,20 @@ begin
    for I in Pilot_Configuration.First_Index .. Pilot_Configuration.Last_Index loop
       declare
 	 Configuration       : String_Vector_Ref_T := Pilot_Configuration.Element (I);
-	 Strategy            : Float_Vector_T.Vector;
-	 Pilot_Name_Filename : String := Configuration.Element (0).all;
-	 Pilot_Car_Filename  : String := Configuration.Element (1).all;
+	 Strategy            : Float_Vector_Ref_T := new Float_Vector_T.Vector;
+         Pilot_Ref : Pilot_Ref_T;
+	 Pilot_Name_Filename : String_Ref_T := Configuration.Element (0);
+	 Pilot_Car_Filename  : String_Ref_T := Configuration.Element (1);
       begin
+	 -- leggo la stetegia
 	 for J in 2 .. Configuration.Last_Index loop
-            Strategy.Append(Float'Value(Configuration.Element(J).all));
-  	 end loop;
+	    Strategy.Append (Float'Value (Configuration.Element (J).all));
+	 end loop;
+	 -- creo il pilota e lo appendo al vettore di piloti
+         Pilot_Ref := new Pilot_T (Pilot_Name_Filename, Pilot_Car_Filename, Strategy);
+	 Pilot_Vett.Append (Pilot_Ref);
+	 null;
       end;
-      null;
    end loop;
 
 

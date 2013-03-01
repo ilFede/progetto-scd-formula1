@@ -10,7 +10,7 @@ W system.tasking%s	s-taskin.adb		s-taskin.ali
 W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 W system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
 
-U segment%s		segment.ads		8abf9d6f EE OO PK
+U segment%s		segment.ads		d2771207 EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.generic_array_sort%s
@@ -51,7 +51,7 @@ D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
 D a-uncdea.ads		20070406091342 dc667e6d
-D common.ads		20130228154951 685bdf89
+D common.ads		20130301092618 309350e1
 D interfac.ads		20090409232307 a69cad5c
 D i-c.ads		20070406091342 bc3ef662
 D i-cstrea.ads		20090409232307 e1e064a9
@@ -100,20 +100,20 @@ X 6 a-convec.ads
 53R9*Vector 24|29r50[26|37] 41r57[36]
 101V13*Element{26|34P9} 25|6r31[26|37] 13r31[26|37]
 X 20 common.ads
-6K9*Common 138e11 24|3w6 9r8
+6K9*Common 139e11 24|3w6 9r8
 13F12*Speed_T{float} 24|21r30
-130E9*Segment_Type_T 130e49 24|17r30
-133I12*Num_Lanes_Seg_T{positive} 24|23r30
-136E9*Has_Time_Check_T 136e38 24|25r27
+131E9*Segment_Type_T 131e49 24|17r30
+134I12*Num_Lanes_Seg_T{positive} 24|23r30
+137E9*Has_Time_Check_T 137e38 24|25r27
 X 24 segment.ads
 7K9*Segment 61l5 61e12 25|1b14 44l5 44t12
 11R9*Segment_T 30e17 37r23 44r49 47r45 25|4r49 11r45
 15i10*Code{natural}
-17e10*Tipology{20|130E9}
+17e10*Tipology{20|131E9}
 19i10*Lenght{positive}
 21f10*Speed{20|13F12}
-23i10*Tot_Lanes{20|133I12}
-25e10*Has_Time_Check{20|136E9}
+23i10*Tot_Lanes{20|134I12}
+25e10*Has_Time_Check{20|137E9}
 27i10*Tot_Subsegments{positive}
 29r10*Subsegment_List{6|53R9[26|37]} 25|6r15 13r15
 36K12*Segment_Vector_T[6|43] 41r40

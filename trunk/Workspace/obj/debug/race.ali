@@ -11,7 +11,7 @@ W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 W system.val_enum%s	s-valenu.adb		s-valenu.ali
 W system.val_int%s	s-valint.adb		s-valint.ali
 
-U race%s		race.ads		113387cd EE OO PK
+U race%s		race.ads		49fb08a5 EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.vectors%s
@@ -42,7 +42,7 @@ D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
 D car.ads		20130227141119 0704c160
-D common.ads		20130228154951 685bdf89
+D common.ads		20130301092618 309350e1
 D interfac.ads		20090409232307 a69cad5c
 D i-c.ads		20070406091342 bc3ef662
 D i-cstrea.ads		20090409232307 e1e064a9
@@ -85,31 +85,31 @@ X 4 a-contai.ads
 16K13*Containers 22e19 22|1r10
 X 5 a-convec.ads
 43k24*Vectors 379e27 22|1w21
-53R9*Vector 23|5r39[18|37]
-101V13*Element{18|34P9} 23|12r45[18|37] 12r60[18|22] 14r61[18|37] 14r76[18|22]
-. 16r58[18|37] 16r74[18|22]
+53R9*Vector 23|5r39[18|38]
+101V13*Element{18|35P9} 23|12r45[18|38] 12r60[18|22] 14r61[18|38] 14r76[18|22]
+. 16r58[18|38] 16r74[18|22]
 X 17 car.ads
 3K9*Car 32e8 22|3w6
 X 18 common.ads
-6K9*Common 138e11 22|4w6 8r8
+6K9*Common 139e11 22|4w6 8r8
 19P9*String_Ref_T(string) 23|7r30
-34P9*String_Vector_Ref_T(5|53R9[22])
-37K12*Configuration_T[5|43] 23|5r23
-55U14*Read_Config_File 23|10r7
-65E9*Meteo_T 65e30 22|20r22 23|16r29
+35P9*String_Vector_Ref_T(5|53R9[22])
+38K12*Configuration_T[5|43] 23|5r23
+56U14*Read_Config_File 23|10r7
+66E9*Meteo_T 66e30 22|20r22 23|16r29
 X 22 race.ads
 6K9*Race 34l8 34e12 23|1b14 34l5 34t9
 12R9*Race_T 21e17 24r11 33r19
 16r10*Track{54|12R9} 23|20m20
 18i10*Num_Laps{positive} 23|14m20
-20e10*Meteo{18|65E9} 23|16m20
+20e10*Meteo{18|66E9} 23|16m20
 24r4*Race{12R9}
 27U14*Build_Race 27>26 23|4b14 24l8 24t18
 27s26 Race_Filename{string} 23|4b26 10r25
 30U14*Start_Race 23|28b14 31l8 31t18
 33r4*Circuit_Race{12R9} 23|14m7 16m7 20m7
 X 23 race.adb
-5r7 Configuration{5|53R9[18|37]} 10m40 12r31 14r47 16r44
+5r7 Configuration{5|53R9[18|38]} 10m40 12r31 14r47 16r44
 7p7 Circuit_Filename_Ref{18|19P9} 12m7 18r20
 X 54 track.ads
 6K9*Track 22|2w6 7r8 54|30e10
