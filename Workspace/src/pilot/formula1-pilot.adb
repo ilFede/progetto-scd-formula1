@@ -3,7 +3,7 @@ with Segment;
 --with Ada.Numerics.Generic_Elementary_Functions;
 with Ada.Numerics.Elementary_Functions;
 
-package body Pilot is
+package body Formula1.Pilot is
    use Car;
    use Segment;
 
@@ -24,10 +24,6 @@ package body Pilot is
       Car                : Car_T;
       -- decelazione effettiva dell'auto
       Effective_Deceleration : Float := 0.0;
-      -- parametro che indica di quanti sottosegmenti ritardo l'accelerazione
-      Acceleration_Delay_Param : Positive;
-      -- parametro che indica di quanti sottosegmenti anticipo la frenata
-      Braking_Early_Param : Positive;
       -- numero totale di giri
       Num_Laps : Positive;
       -- numero totale di segmenti
@@ -44,6 +40,8 @@ package body Pilot is
       Num_Pit_Stop : Natural := 0;
       -- carburante necessario per fare un giro di pista
       Fuel_For_Lap : Float;
+      -- corsia attuale occupata
+      Actual_Lane : Num_Lanes_Seg_T;
 
       ---------------------------------------------------
       -- DEFINIZIONE DELLE PROCEDURE E FUNZIONI DI APPOGGIO
@@ -53,17 +51,23 @@ package body Pilot is
       procedure Configure_Pilot_And_Car;
       -- function Get_Tot_Penality return Percent_T;
       -- funzione che mappa la distanza nella velocità
-      function Get_Speed_From_Distance (Distance : Float) return Speed_T;
+      function Get_Speed_From_Distance (Distance : Positive) return Speed_T;
       -- funzione che mappa la velocità nella distanza
       function Get_Distance_From_Speed (Speed : Speed_T) return Float;
-      -- funzione che restiutisce la velocità finale in base a quella iniziale e alla distanza persorsa
-      function Get_Final_Speed (Initial_Speed : Speed_T; Distance : Float) return Speed_T;
-      -- funzione che calcola il tempo di percorrenza in base a distanza iniziale, distanza finale e distanza
-      function Get_Acceleration_Travel_Time (Initial_Speed : Speed_T; Final_Speed : Speed_T) return Float;
-      -- funzione che mi calcola lo spazio necessario a rallentare ad un certa velocità, tiene conto delle ceratteristiche della vettura
-      function Get_Deceleration_Space (Initial_Speed : Speed_T; Final_Speed : Speed_T; Segment_Length : Positive) return Integer;
-      -- funzione calcola il tempo per effettuare la frenata
-      function Get_Breaking_Travel_Time (Initial_Speed : Speed_T; Final_Speed : Speed_T; Distance : Positive) return Positive;
+      -- funzione che restiutisce la velocità finale in base a quella iniziale e alla distanza persorsa, tiene conto delle skill delle auto
+      function Get_Final_Speed (Initial_Speed : Speed_T; Distance : Positive) return Speed_T;
+      -- procedura che mi calcola il tempo necessario a compiere una distanza in accelerazione
+      --  e la velocità finale raggiunta in base anche alle caratteristiche dell'auto e del pilota
+      procedure Do_Acceleration (Initial_Speed : in Speed_T; Final_Speed : out Speed_T; Segment_Length : in Positive; Time : out Float);
+      -- funzione calcola il tempo per effettuare la frenata (calcola solo il tempo di staccata, tiene conto delle skill dell'auto)
+      function Get_Braking_Space (Initial_Speed : Speed_T; Final_Speed : Speed_T) return Positive;
+      -- funzione calcola il tempo per effettuare la frenata (calcola solo il tempo di staccata, tiene conto delle skill dell'auto)
+      function Get_Braking_Time (Initial_Speed : Speed_T; Final_Speed : Speed_T) return Float;
+      -- procedura che mi calcola il tempo necessario a rallentare ad un certa velocità e la velocità di entrata in curva.
+      -- la velocità d'entrata in curva è quella desctitta nel circuito, la procedura
+      -- tiene conto delle ceratteristiche della vettura e del pilota e ricalcola tale velocità
+      procedure Do_Deceleration (Initial_Speed : in Speed_T; Final_Speed : in out Speed_T; Segment_Length : in Positive; Time : out Float);
+
 
       ---------------------------------------------------
       -- CORPI DELLE PROCEDURE E FUNZIONI DI APPOGGIO
@@ -82,12 +86,8 @@ package body Pilot is
 	 -- configuro la vettura
 	 Build_Car (Car_Config_File_Ref.all, Car);
 	 -- configuro i ritardi di accelerazione e gli anticipi di frenata
-	 Acceleration_Delay_Param := Skill_Acceleration * 2 / Subsegment_Lengh;
-	 Braking_Early_Param := Skill_Deceleration * 2 / Subsegment_Lengh;
 	 -- numero di pit stop totali e numero di quelli fatti
 	 Num_Tot_Pit_Stop := Strategy.Last_Index;
-
-
       end Configure_Pilot_And_Car;
       --+--------
 
@@ -97,15 +97,9 @@ package body Pilot is
       end Configure_Car;
       --+--------
 
-      function Get_Tot_Penality return Percent_T is
+      function Get_Speed_From_Distance (Distance : Positive) return Speed_T is
       begin
-	 return 0.0;
-      end Get_Tot_Penality;
-      --+--------
-
-      function Get_Speed_From_Distance (Distance : Float) return Speed_T is
-      begin
-	 return Alpha * (Ada.Numerics.Elementary_Functions.Log (Base => 10.0, X => ((Distance / Beta)+1.0)));
+	 return Alpha * (Ada.Numerics.Elementary_Functions.Log (Base => 10.0, X => ((Float(Distance) / Beta)+1.0)));
       end Get_Speed_From_Distance;
       --+--------
 
@@ -115,42 +109,67 @@ package body Pilot is
       end Get_Distance_From_Speed;
       --+--------
 
-      function Get_Final_Speed (Initial_Speed : Speed_T; Distance : Float) return Speed_T is
-	 Shift : Float := 0.0;
+      function Get_Final_Speed (Initial_Speed : Speed_T; Distance : Positive) return Speed_T is
+	 Shift : Positive := 1;
       begin
-	 Shift := Get_Distance_From_Speed (Initial_Speed);
-	 return Get_Distance_From_Speed (Distance + Shift);
+	 Shift := Positive(Get_Distance_From_Speed (Initial_Speed));
+	 return Get_Speed_From_Distance (Distance + Shift);
       end Get_Final_Speed;
       --+--------
 
-      function Get_Acceleration_Travel_Time (Initial_Speed : Speed_T; Final_Speed : Speed_T) return Float is
+      procedure Do_Acceleration (Initial_Speed : in Speed_T; Final_Speed : out Speed_T; Segment_Length : in Positive; Time : out Float) is
+	 -- spazio che simula l'accelerazione ritardata, faccio un tratto a velocità ridotta a causa dei riflessi del pilota che non acelera subito
+	 Before_Acceleration_Space  : Natural := Natural ((Segment_Length / 100) * (Skill_Acceleration_T'Last - Skill_Acceleration));
+	 Acceleation_Space : Natural := Segment_Length - Before_Acceleration_Space;
+	 -- spazio prima della staccata
+         Acceleration_Time : Float := 0.0;
       begin
-	 return ((Initial_Speed + Final_Speed) / 3.0) * 2.0;
-      end Get_Acceleration_Travel_Time;
+         -- calcolo la velocità finale in base senza considerare le caratteristiche dell'auto
+         Final_Speed := Get_Final_Speed(Initial_Speed, Segment_Length);
+         -- modifico la velocità in base alla vettura
+         Final_Speed := Final_Speed - ((Final_Speed / 100.0) * Float(Coeff_Acceleration_T'Last - Car.Coeff_Acceleration));
+         -- controllo che la velocità massima sia monore di quella massima raggiungibile dall'auto
+	 if (Final_Speed > Car.Max_Speed) then
+	    Final_Speed := Car.Max_Speed;
+	 end if;
+         Time := Float(Segment_Length) / (((Initial_Speed + Final_Speed)/3.0)*2.0);
+      end Do_Acceleration;
       --+--------
 
-      function Get_Deceleration_Space (Initial_Speed : Speed_T; Final_Speed : Speed_T) return Positive is
+      function Get_Braking_Space (Initial_Speed : Speed_T; Final_Speed : Speed_T) return Positive is
 	 Delta_V   : Speed_T := Final_Speed - Initial_Speed;
 	 Dec_Space : Float := 0.0;
       begin
 	 Dec_Space := 0.5 * Effective_Deceleration * ((Delta_V * Delta_V) / (Effective_Deceleration * Effective_Deceleration))+Initial_Speed * (Delta_V / Effective_Deceleration);
 	 return Positive (Dec_Space);
-      end Get_Deceleration_Space;
+      end Get_Braking_Space;
       --+--------
 
-      function Get_Deceleration_Space (Initial_Speed : Speed_T; Final_Speed : Speed_T; Segment_Length : Positive) return Integer is
-	 Breaking_Space     : Integer := Get_Deceleration_Space (Initial_Speed, Final_Speed);
-	 Pen_Breaking_Space : Float := 0.0;
+      function Get_Braking_Time (Initial_Speed : Speed_T; Final_Speed : Speed_T) return Float is
       begin
-	 Pen_Breaking_Space := Float (Breaking_Space) + Float (((Breaking_Space / 100)) * Car.Coeff_Deceleration);
-	 return Integer (Pen_Breaking_Space);
-      end Get_Deceleration_Space;
+	 return (Initial_Speed - Final_Speed) / Effective_Deceleration;
+      end Get_Braking_Time;
       --+--------
 
-      function Get_Breaking_Travel_Time (Initial_Speed : Speed_T; Final_Speed : Speed_T; Distance : Positive) return Positive is
-      begin
-	 return 1;
-      end Get_Breaking_Travel_Time;
+      procedure  Do_Deceleration (Initial_Speed : in Speed_T; Final_Speed : in out Speed_T; Segment_Length : in Positive; Time : out Float) is
+         -- calcolo lo spazio di frenata ideale
+	 Braking_Space     : Natural := Natural (Get_Braking_Space (Initial_Speed, Final_Speed));
+	 -- spazio che simula la frenata anticipata, soppungo che frenando troppo presto si faccia un pezzo di
+	 -- staccata finale a velocità ridotta invece che in frenata
+	 Before_Brake_Space  : Natural := Natural ((Segment_Length / 100) * (Skill_Deceleration_T'Last - Skill_Deceleration));
+	 -- spazio prima della staccata
+	 After_Brake_Space : Natural := Segment_Length - (Braking_Space + Before_Brake_Space);
+	 begin
+            -- tempo prima della staccata vatta a velocità iniziale
+            Time := 0.0;
+            Time := Time + (Float(Before_Brake_Space)/Initial_Speed);
+            -- aggiungo il tempo per la frenata
+            Time := Time + Get_Braking_Time(Initial_Speed, Final_Speed);
+            -- aggiungo il tempo per percorrere il tratto del segmento dopo la frenata anticipata
+            Time := Time + (Final_Speed / Float(Before_Brake_Space));
+            -- tempo di decelerazione
+	 end Do_Deceleration;
+      --+--------
 
       ---------------------------------------------------
       -- TASK PILOTA
@@ -168,14 +187,20 @@ package body Pilot is
       -- imposto la velocità di entrata e uscita nel segmento
       Segment_Enter_Speed := 1.0;
       Segment_Exit_Speed := 1.0;
+      -- imposto la corsia attuale
+      Actual_Lane := 1;
       -- calcolo il carburante necessario per un giro di pista
       Fuel_For_Lap := Car.Consumption * Float (The_Race.Track.Lap_Length);
       for Lap in 1 .. Num_Laps loop
+	 declare
+	    -- segmento da cui partire (indica se nel giro entro ai box o se continuo normalmente)
+            Start_Segment : Natural := 0;
 	 begin
 	    -- controllo se ho carburante sufficente per fare un giro di pista
+            -- se non ho carburante a sufficenza e non ho previsto soste abbandono la gara
 	    -- controllo se devo attraversare il box o il rettilineo
 	    if Pit_Stop = True then
-	       for Segment_Index in 0 .. 3 loop
+	       for Segment_Index in 0 .. 2 loop
 		  declare
 		     Actual_Segment : Segment_T := The_Race.Track.Segment_List.Element (Segment_Index);
 		  begin
@@ -195,36 +220,40 @@ package body Pilot is
 		     end if;
 		  end;
 	       end loop;
+               -- sono uscito dai box e riprendo dalla prima frenata
+               Start_Segment := 4;
 	    else
-	       for Segment_Index in 3 .. Num_Tot_Seg loop
-		  declare
-		     Actual_Segment : Segment_T := The_Race.Track.Segment_List.Element (Segment_Index);
-		  begin
+               -- non sono passato per i box e continuo per il rettilineo
+               Start_Segment := 3;
+            end if;
+            -- continuo il giro
+	    for Segment_Index in 3 .. Num_Tot_Seg loop
+	       declare
+		  Actual_Segment : Segment_T := The_Race.Track.Segment_List.Element (Segment_Index);
+	       begin
 
-		     Segment_Enter_Speed := Segment_Exit_Speed;
-		     Segment_Exit_Speed := Actual_Segment.Speed;
+		  Segment_Enter_Speed := Segment_Exit_Speed;
+		  Segment_Exit_Speed := Actual_Segment.Speed;
 
-		     if Actual_Segment.Tipology = dec then
-			-- frenata
-			null;
-		     elsif Actual_Segment.Tipology = const then
-			-- tratto a velocità costante
-			null;
-		     elsif Actual_Segment.Tipology = acc then
-			-- accelerazione
-			null;
-		     end if;
-		  end;
-	       end loop;
-	       null;
-	    end if;
+		  if Actual_Segment.Tipology = dec then
+		     -- frenata
+		     null;
+		  elsif Actual_Segment.Tipology = const then
+		     -- tratto a velocità costante
+		     null;
+		  elsif Actual_Segment.Tipology = acc then
+		     -- accelerazione
+		     null;
+		  end if;
+	       end;
+	    end loop;
 	 end;
       end loop;
       null;
    end Pilot_T;
    --+--------
 
-end Pilot;
+end Formula1.Pilot;
 
 
 

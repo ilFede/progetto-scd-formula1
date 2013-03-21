@@ -5,7 +5,7 @@ with Ada.Numerics.Generic_Elementary_Functions;
 with Ada.Containers;
 with Ada.Containers.Vectors;
 
-package Pilot is
+package Formula1.Pilot is
    use Common;
    use Car;
    use Race;
@@ -23,4 +23,4 @@ package Pilot is
      (Element_Type => Pilot_Ref_T,
       Index_Type   => Natural);
 
-end Pilot;
+end Formula1.Pilot;
