@@ -1,11 +1,7 @@
 with Ada.Containers.Vectors;
-with Track;
-with Car;
-with Common;
+with Formula1.Track; use Formula1.Track;
 
 package Formula1.Race is
-   use Track;
-   use Common;
 
 
    -- definizione del tipo di record che rappresenta un circuito

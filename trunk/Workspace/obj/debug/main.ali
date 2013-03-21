@@ -4,29 +4,17 @@ A -O0
 A -g
 A -gnatA
 P SS ZX
-R nnnvnnnnnnnnnnnnnnnnnvvnnnnnvnnvnnnnnnvnnvnnvnnnvnnnnnnvnnvnnnnnnnnnnnv1+nnnnnn
+R nnnnnvvnnnnnnnnnnnnnnvvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnn
 
-U main%b		main.adb		511a4e2f NE OO SU
+U main%b		main.adb		2883d107 NE OO SU
 W ada%s			ada.ads			ada.ali
-W ada.strings%s		a-string.ads		a-string.ali
-W ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
-W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.calendar%s	a-calend.adb		a-calend.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
-W car%s			car.adb			car.ali
-W common%s		common.adb		common.ali
-W pilot%s		pilot.adb		pilot.ali
-W race%s		race.adb		race.ali
-W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
-W system.finalization_root%s  s-finroo.adb	s-finroo.ali
-W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
-W system.soft_links%s	s-soflin.adb		s-soflin.ali
-W system.standard_library%s  s-stalib.adb	s-stalib.ali
-W system.string_ops%s	s-strops.adb		s-strops.ali
-W system.tasking%s	s-taskin.adb		s-taskin.ali
-W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
-W system.val_real%s	s-valrea.adb		s-valrea.ali
+W formula1%s		formula1.adb		formula1.ali
+W formula1.startup%s	formula1-startup.adb	formula1-startup.ali
 
 D ada.ads		20070406091342 9c7dd3ea
+D a-calend.ads		20090409232307 19486c30
 D a-charac.ads		20070912115821 506ce725
 D a-chlat1.ads		20070912115821 e9ee6d0a
 D a-contai.ads		20070406091342 7b35f559
@@ -35,9 +23,6 @@ D a-except.ads		20090409232307 b54b55de
 D a-finali.ads		20090409232307 9eaacebd
 D a-filico.ads		20090409232307 9299732a
 D a-ioexce.ads		20070406091342 be0900a0
-D a-numeri.ads		20080324174807 1cf3e608
-D a-ngelfu.ads		20070406091342 46fb4d9b
-D a-reatim.ads		20090409232307 7c462ab4
 D a-stream.ads		20090409232307 34aca5be
 D a-string.ads		20070406091342 87b4230b
 D a-strfix.ads		20070406091342 253a46ca
@@ -45,95 +30,44 @@ D a-strmap.ads		20090409232307 5253a637
 D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
-D car.ads		20130227141119 0704c160
-D common.ads		20130301092618 309350e1
+D formula1.ads		20130321125507 1464ce3e
+D formula1-startup.ads	20130321125849 c9ee114f
 D interfac.ads		20090409232307 a69cad5c
-D i-c.ads		20070406091342 bc3ef662
 D i-cstrea.ads		20090409232307 e1e064a9
-D main.adb		20130301131044 520df119
-D pilot.ads		20130301143620 8cb1962d
-D race.ads		20130301143620 1abfdd5b
-D segment.ads		20130227113401 51a32ba4
-D subsegment.ads	20130228162952 823923ce
+D main.adb		20130321125821 06af5816
 D system.ads		20100127085936 15e10948
-D s-atacco.ads		20090409232307 60789a20
 D s-crtl.ads		20090409232307 997234a1
 D s-exctab.ads		20090409232307 5c1c61ae
 D s-ficobl.ads		20090409232307 8bb681e5
 D s-finimp.ads		20090409232307 9449f4cb
 D s-finroo.ads		20090409232307 1408f9d1
-D s-linux.ads		20090409232307 ad070dbe
-D s-osinte.ads		20080408064315 b04c0edf
 D s-parame.ads		20090409232307 f32e56e9
 D s-secsta.ads		20090409232307 7bae3621
 D s-soflin.ads		20090409232307 0c6fd39d
 D s-stache.ads		20090409232307 257b3be8
-D s-stausa.ads		20090409232307 6ab7dd35
 D s-stalib.ads		20090409232307 52b793d5
 D s-stoele.ads		20090409232307 ed966df3
 D s-stoele.adb		20090409232307 e9998c78
 D s-stratt.ads		20090409232307 fef7c1da
-D s-strops.ads		20090409232307 845f72d2
-D s-sopco3.ads		20090409232307 72ce1063
-D s-sopco4.ads		20090409232307 bc112723
-D s-sopco5.ads		20090409232307 191315e8
-D s-tasinf.ads		20090409232307 268f0cd4
-D s-taspri.ads		20080408071349 5459bcd0
-D s-taprop.ads		20090409232307 25a7965c
-D s-taskin.ads		20090409232307 376ff2dd
-D s-taprob.ads		20090409232307 5e00115c
-D s-tpoben.ads		20090409232307 37be425d
-D s-tassta.ads		20090409232307 71d2b71d
 D s-traent.ads		20090409232307 bd5f2753
 D s-unstyp.ads		20090409232307 c0f9fae5
-D s-valrea.ads		20090409232307 e4c63a53
 D s-wchcon.ads		20090409232307 ab028799
-D track.ads		20130301171848 1e2be86c
 X 1 ada.ads
-16K9*Ada 19e8 25|3r6 4r6 4r23 5r6 5r23 6r6 6r29
-X 5 a-convec.ads
-47I12*Extended_Index{integer}
-53R9*Vector 25|12r42[21|38] 14r32[26|22] 26r73[21|27]
-101V13*Element{21|35P9} 25|25r75[21|38] 28r62[21|22] 29r62[21|22] 33r57[21|22]
-197U14*Append 25|33r22[21|27] 37r21[26|22]
-237V13*First_Index{integer} 25|23r33[21|38]
-243V13*Last_Index{47I12[21|38]} 25|23r68[21|38] 32r38[21|22]
-X 14 a-string.ads
-16K13*Strings 35e16 25|5w10 5r27 6r10 6r33
-X 15 a-strfix.ads
-18K21*Fixed 242e22 25|6w18 6r41
-X 18 a-textio.ads
-48K13*Text_IO 506e16 25|3w10 4w10 4r27
-X 20 car.ads
-3K9*Car 32e8 25|8w6 8r15
-X 21 common.ads
-6K9*Common 139e11 25|1w6 1r18
-19P9*String_Ref_T(string) 25|28r32 29r32
-27K12*Float_Vector_T[5|43] 25|26r58
-32P10*Float_Vector_Ref_T(5|53R9[27]) 25|26r32
-35P9*String_Vector_Ref_T(5|53R9[22]) 25|25r32
-38K12*Configuration_T[5|43] 25|12r26
-56U14*Read_Config_File 25|20r4
-106a4*Race_Config_Path{string} 25|18r16 20r21
-118a4*Race_Config_Filename{string} 25|18r35
-121a4*Competitors_Config_Filename{string} 25|20r40
-X 25 main.adb
-10U11*Main 10b11 57l5 57t9
-12r4 Pilot_Configuration{5|53R9[21|38]} 20m69 23r13 23r48 25r55
-14r4 Pilot_Vett{5|53R9[26|22]} 37m10
-23i8 I{integer} 25r84
-25p10 Configuration{21|35P9} 28r48 29r48 32r24 33r43
-26p10 Strategy{21|32P10} 33r13 36r77
-27p10 Pilot_Ref{26|19P9} 36m10 37r29
-28p10 Pilot_Name_Filename{21|19P9} 36r36
-29p10 Pilot_Car_Filename{21|19P9} 36r57
-32i14 J{integer} 33r66
-X 26 pilot.ads
-8K9*Pilot 25|7w6 7r17 26|26e10
-14T14*Pilot_T 25|36r27
-19P9*Pilot_Ref_T(14T14) 25|27r22
-22K12*Pilot_Vector_T[5|43] 25|14r17
-X 27 race.ads
-6K9*Race 25|2w6 2r16 27|34e12
-27U14*Build_Race 25|18r4
+16K9*Ada 19e8 22|2r6 3r6 3r24 16r4
+X 2 a-calend.ads
+36K13*Calendar 358e17 22|3w10 3r28
+38I9*Time 22|9r12
+52V13*Clock{38I9} 22|9r20
+X 16 a-textio.ads
+48K13*Text_IO 506e16 22|2w10 16r8
+263U14*Put_Line 22|16r16
+X 18 formula1.ads
+6K9*Formula1 144e13 22|1r6
+X 19 formula1-startup.ads
+3K18*Startup 12e21 22|1w15
+X 22 main.adb
+5U11*Main 5b11 18l5 18t9
+7i4 Int{integer} 8r26 12r23 13m4 15m4
+8f4 Flo{float} 12m4 12r11 13r19 14m4 14r11 15r19
+9i4 Timee{2|38I9}
 

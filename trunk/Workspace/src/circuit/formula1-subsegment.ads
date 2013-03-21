@@ -1,33 +1,25 @@
 with Ada.Containers.Vectors;
-with Common;
+with Ada.Calendar; use Ada.Calendar;
 
 package Formula1.Subsegment is
-   use Common;
+
+   -- array di tempi
+   type Time_Array_T is array(Positive range <>) of Time;
 
    -- risorsa protetta sottosegmento
    protected type Subsegment_T (Tot_Lanes : Num_Lanes_Seg_T) is
 
-      -- entry per entrare nel sottosegmento
-      entry Enter_Subsegment (Num_Subsegment_Lane : in out Num_Lanes_Seg_T);
-
-      -- entry per uscire dal sottosegmento
-      entry Leave_Subsegment (Num_Subsegment_Lane : in out Num_Lanes_Seg_T);
+      -- procedura che mi restituisce il tempo di percoerrenza del segmento
+      procedure Get_Driving_Time (Exit_Duration : in out Duration);
 
    private
-      -- entry per entrare nel corsia 1 del sottosegmento
-      entry Enter_Subsegment_Lane1;
-
-      -- entry per entrare nel corsia 2 del sottosegmento
-      entry Enter_Subsegment_Lane2;
 
       -- Numero di corsie presenti nel sottosegmento
       Num_Lane_Subseg : Num_Lanes_Seg_T := Tot_Lanes;
 
-      -- numero di piloti presenti nella corsia 1 del sottosegmento
-      Pilot_In_Subsegment_Lane1 : Integer := 0;
+      -- array per tenere gli istanti minimi di uscita dalle varie corsie
+      Time_Array : Time_Array_T (1..Tot_Lanes) := (others => Clock);
 
-      -- numero di piloti presenti nella corsia 2 del sottosegmento
-      Pilot_In_Subsegment_Lane2 : Integer := 0;
    end Subsegment_T;
 
    -- accesso al segmento
@@ -42,4 +34,4 @@ package Formula1.Subsegment is
    -- type Subsegment_Vector_Ref_T is access Subsegment_Vector_T.Vector;
 
 
-end Subsegment;
+end Formula1.Subsegment;

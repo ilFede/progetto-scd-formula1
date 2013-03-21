@@ -1,12 +1,9 @@
-with Subsegment;
-use Subsegment;
-with Common;
+with Formula1.Subsegment; use Formula1.Subsegment;
+with Formula1; use Formula1;
 with Ada.Containers.Vectors;
 
 
 package Formula1.Segment is
-   use Subsegment;
-   use Common;
 
    type Segment_T is
    -- parametri che caratterizzano un segmento
@@ -44,7 +41,7 @@ package Formula1.Segment is
    procedure Enter_Subsegment (Segment : in out Segment_T; Num_Subsegment_Lane : in out positive; Subsegment_Index : in positive);
 
    -- procedure per lasciare un sottosegmento
-   procedure Leave_Subsegment (Segment : in Segment_T; Num_Subsegment_Lane : in out positive; Subsegment_Index : in positive);
+   -- procedure Leave_Subsegment (Segment : in Segment_T; Num_Subsegment_Lane : in out positive; Subsegment_Index : in positive);
 
    -- restituisce il numero di sottosegmenti
    -- function Get_Subsegment_Numb (Segment : Segment_T) return Positive;

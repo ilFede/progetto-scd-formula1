@@ -1,7 +1,5 @@
-with Common;
 
 package Formula1.Car is
-   use Common;
 
    -- definizione del tipo car
    type Car_T is

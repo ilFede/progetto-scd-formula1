@@ -1,11 +1,9 @@
-with Car;
-with Segment;
---with Ada.Numerics.Generic_Elementary_Functions;
+with Formula1.Car; use Formula1.Car;
 with Ada.Numerics.Elementary_Functions;
+with Formula1.Race; use Formula1.Race;
+with Formula1.Segment; use Formula1.Segment;
 
 package body Formula1.Pilot is
-   use Car;
-   use Segment;
 
    task body Pilot_T is
 

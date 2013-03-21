@@ -1,10 +1,12 @@
-with Formula1;
+with Formula1.Startup;
 with Ada.Text_IO;
+with Ada.Calendar; use Ada.Calendar;
 
 procedure Main is
 
    Int : Integer := 8;
    Flo : Float := Float (Int);
+   Timee : Time := Clock;
 begin
 -- Race_Startup;
    Flo := Flo + Float(Int) + 0.4;
