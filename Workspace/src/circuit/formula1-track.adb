@@ -1,3 +1,4 @@
+with Formula1.Subsegment; use Formula1.Subsegment;
 package body Formula1.Track is
 
    -- procedura per settare il circuito data una configurazione

@@ -10,7 +10,6 @@ project Formula1 is
    end Ide;
 
    package Builder is
-      for Default_Switches ("ada") use ("sdsadsadsadad");
    end Builder;
 
 end Formula1;

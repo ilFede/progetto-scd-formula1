@@ -1,0 +1,128 @@
+V "GNAT Lib v4.4"
+A -O0
+A -g
+A -gnatA
+P SS ZX
+R nnnvnnnnnnnnnnnnnnnnnvvnnnnnvnnvnnnnnnvnnvnnvnnnvnnnnnnvnnvnnnnnnnnnnnv1+nnnnnn
+
+U formula1.startup%b	formula1-startup.adb	3e9e0fb6 NE OO PK
+W ada.tags%s		a-tags.adb		a-tags.ali
+W formula1%s		formula1.adb		formula1.ali
+W formula1.pilot%s	formula1-pilot.adb	formula1-pilot.ali
+W formula1.race%s	formula1-race.adb	formula1-race.ali
+W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
+W system.finalization_root%s  s-finroo.adb	s-finroo.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.string_ops%s	s-strops.adb		s-strops.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+W system.val_real%s	s-valrea.adb		s-valrea.ali
+
+U formula1.startup%s	formula1-startup.ads	c9ee114f EE NE OO PK
+W formula1%s		formula1.adb		formula1.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-calend.ads		20090409232307 19486c30
+D a-charac.ads		20070912115821 506ce725
+D a-chlat1.ads		20070912115821 e9ee6d0a
+D a-contai.ads		20070406091342 7b35f559
+D a-convec.ads		20090409232307 317e4a8c
+D a-except.ads		20090409232307 b54b55de
+D a-finali.ads		20090409232307 9eaacebd
+D a-filico.ads		20090409232307 9299732a
+D a-ioexce.ads		20070406091342 be0900a0
+D a-numeri.ads		20080324174807 1cf3e608
+D a-ngelfu.ads		20070406091342 46fb4d9b
+D a-reatim.ads		20090409232307 7c462ab4
+D a-stream.ads		20090409232307 34aca5be
+D a-string.ads		20070406091342 87b4230b
+D a-strfix.ads		20070406091342 253a46ca
+D a-strmap.ads		20090409232307 5253a637
+D a-tags.ads		20090409232307 bfa07446
+D a-textio.ads		20090409232307 fe8af46e
+D a-unccon.ads		20070406091342 51e09df2
+D formula1.ads		20130321125507 1464ce3e
+D formula1-pilot.ads	20130321130928 49e1cb8d
+D formula1-race.ads	20130321130944 c9ec525c
+D formula1-segment.ads	20130321122857 55c96691
+D formula1-startup.ads	20130321125849 c9ee114f
+D formula1-startup.adb	20130321130849 777d8728
+D formula1-subsegment.ads  20130321125702 9019d053
+D formula1-track.ads	20130321121607 a9b42fb3
+D interfac.ads		20090409232307 a69cad5c
+D i-c.ads		20070406091342 bc3ef662
+D i-cstrea.ads		20090409232307 e1e064a9
+D system.ads		20100127085936 15e10948
+D s-atacco.ads		20090409232307 60789a20
+D s-crtl.ads		20090409232307 997234a1
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-ficobl.ads		20090409232307 8bb681e5
+D s-finimp.ads		20090409232307 9449f4cb
+D s-finroo.ads		20090409232307 1408f9d1
+D s-linux.ads		20090409232307 ad070dbe
+D s-osinte.ads		20080408064315 b04c0edf
+D s-parame.ads		20090409232307 f32e56e9
+D s-secsta.ads		20090409232307 7bae3621
+D s-soflin.ads		20090409232307 0c6fd39d
+D s-stache.ads		20090409232307 257b3be8
+D s-stausa.ads		20090409232307 6ab7dd35
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-stratt.ads		20090409232307 fef7c1da
+D s-strops.ads		20090409232307 845f72d2
+D s-sopco3.ads		20090409232307 72ce1063
+D s-sopco4.ads		20090409232307 bc112723
+D s-sopco5.ads		20090409232307 191315e8
+D s-tasinf.ads		20090409232307 268f0cd4
+D s-taspri.ads		20080408071349 5459bcd0
+D s-taprop.ads		20090409232307 25a7965c
+D s-taskin.ads		20090409232307 376ff2dd
+D s-taprob.ads		20090409232307 5e00115c
+D s-tassta.ads		20090409232307 71d2b71d
+D s-traent.ads		20090409232307 bd5f2753
+D s-unstyp.ads		20090409232307 c0f9fae5
+D s-valrea.ads		20090409232307 e4c63a53
+D s-wchcon.ads		20090409232307 ab028799
+X 6 a-convec.ads
+47I12*Extended_Index{integer}
+53R9*Vector 26|8r45[21|38] 10r44[22|16] 22r76[21|27]
+101V13*Element{21|35P9} 26|21r78[21|38] 24r65[21|22] 25r65[21|22] 29r60[21|22]
+197U14*Append 26|29r25[21|27] 33r24[22|16]
+237V13*First_Index{integer} 26|19r36[21|38]
+243V13*Last_Index{47I12[21|38]} 26|19r71[21|38] 28r41[21|22]
+X 21 formula1.ads
+6K9*Formula1 144e13 25|1w6 1r20 3r9 12r5 26|1r6 1r26 2r6 2r25 4r14 54r5
+19P9*String_Ref_T(string) 26|24r35 25r35
+27K12*Float_Vector_T[6|43] 26|22r61
+32P10*Float_Vector_Ref_T(6|53R9[27]) 26|22r35
+35P9*String_Vector_Ref_T(6|53R9[22]) 26|21r35
+38K12*Configuration_T[6|43] 26|8r29
+112a4*Race_Config_Path{string} 26|14r19 16r25
+124a4*Race_Config_Filename{string} 26|14r38
+127a4*Competitors_Config_Filename{string} 26|16r44
+138U14*Read_Config_File 26|16r7
+X 22 formula1-pilot.ads
+5K18*Pilot 20e19 26|1w15 1r35
+8T14*Pilot_T 26|32r30
+13P9*Pilot_Ref_T(8T14) 26|23r35
+16K12*Pilot_Vector_T[6|43] 26|10r29
+X 23 formula1-race.ads
+4K18*Race 30e21 26|2w15 2r34
+23U14*Build_Race 26|14r7
+X 25 formula1-startup.ads
+3K18*Startup 21|6k9 25|12l14 12e21 26|4b23 54l14 54t21
+10U14*Startup 26|6b14 53l8 53t15
+X 26 formula1-startup.adb
+8r7 Pilot_Configuration{6|53R9[21|38]} 16m73 19r16 19r51 21r58
+10r7 Pilot_Vett{6|53R9[22|16]} 33m13
+19i11 I{integer} 21r87
+21p13 Configuration{21|35P9} 24r51 25r51 28r27 29r46
+22p13 Strategy{21|32P10} 29r16 32r80
+23p13 Pilot_Ref{22|13P9} 32m13 33r32
+24p13 Pilot_Name_Filename{21|19P9} 32r39
+25p13 Pilot_Car_Filename{21|19P9} 32r60
+28i17 J{integer} 29r69
+

@@ -3,15 +3,16 @@ package body Formula1.Segment is
    --  procedure per accedere ad un sottosegmento
    procedure Enter_Subsegment (Segment : in out Segment_T; Num_Subsegment_Lane : in out positive; Subsegment_Index : in positive) is
    begin
-      Segment.Subsegment_List.Element(Subsegment_Index).all.Enter_Subsegment(Num_Subsegment_Lane);
+     null;
+     --Segment.Subsegment_List.Element(Subsegment_Index).all.Enter_Subsegment(Num_Subsegment_Lane);
    end Enter_Subsegment;
    --+------------
 
    -- entry per lasciare un sottosegmento
-   procedure Leave_Subsegment (Segment : in Segment_T; Num_Subsegment_Lane : in out positive; Subsegment_Index : in positive) is
-   begin
-      Segment.Subsegment_List.Element(Subsegment_Index).all.Leave_Subsegment(Num_Subsegment_Lane);
-   end Leave_Subsegment;
+   -- procedure Leave_Subsegment (Segment : in Segment_T; Num_Subsegment_Lane : in out positive; Subsegment_Index : in positive) is
+   -- begin
+   --   Segment.Subsegment_List.Element(Subsegment_Index).all.Leave_Subsegment(Num_Subsegment_Lane);
+   -- end Leave_Subsegment;
    --+------------
 
    -- restituisce il numero di sottosegmenti

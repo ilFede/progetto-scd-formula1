@@ -1,12 +1,9 @@
 with Ada.Containers.Vectors;
-with Common;
-with Segment;
-with Subsegment;
+with Formula1;
+with Formula1.Segment; use Formula1.Segment;
+with Formula1.Subsegment;
 
 package Formula1.Track is
-   use Common;
-   use Segment;
-   use Subsegment;
 
    -- definizione del tipo di record che rappresenta un circuito
    type Track_T is
