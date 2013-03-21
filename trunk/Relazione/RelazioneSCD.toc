@@ -1,0 +1,17 @@
+\select@language {italian}
+\contentsline {chapter}{\numberline {1}Introduzione}{1}
+\contentsline {section}{\numberline {1.1}Scopo del progetto}{1}
+\contentsline {section}{\numberline {1.2}Struttura del documento}{1}
+\contentsline {chapter}{\numberline {2}Analisi dei requisiti}{3}
+\contentsline {chapter}{\numberline {3}Progettazione}{5}
+\contentsline {section}{\numberline {3.1}Elenco entit\IeC {\`a} coinvolte}{5}
+\contentsline {section}{\numberline {3.2}Descrizione delle entit\IeC {\`a} coinvolte}{5}
+\contentsline {subsection}{\numberline {3.2.1}Circuito}{5}
+\contentsline {subsection}{\numberline {3.2.2}Piloti}{6}
+\contentsline {subsection}{\numberline {3.2.3}Controller}{7}
+\contentsline {subsection}{\numberline {3.2.4}Inizializzatore}{7}
+\contentsline {subsection}{\numberline {3.2.5}descrizione della varie entit\IeC {\`a}}{7}
+\contentsline {section}{\numberline {3.3}Distribuzioni}{7}
+\contentsline {chapter}{\numberline {4}Implementazione}{9}
+\contentsline {section}{\numberline {4.1}implementazione delle varie entit\IeC {\`a}}{9}
+\contentsline {chapter}{\numberline {5}Compilazione ed esecuzione}{11}
