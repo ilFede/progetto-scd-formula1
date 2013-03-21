@@ -3,7 +3,7 @@ with Track;
 with Car;
 with Common;
 
-package Race is
+package Formula1.Race is
    use Track;
    use Common;
 
@@ -31,4 +31,4 @@ package Race is
 
    -- entità che rappresenta il circuito
    The_Race : Race_T;
-   end Race;
+   end Formula1.Race;

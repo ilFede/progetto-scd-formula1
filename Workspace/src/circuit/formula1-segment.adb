@@ -1,4 +1,4 @@
-package body Segment is
+package body Formula1.Segment is
 
    --  procedure per accedere ad un sottosegmento
    procedure Enter_Subsegment (Segment : in out Segment_T; Num_Subsegment_Lane : in out positive; Subsegment_Index : in positive) is
@@ -41,4 +41,4 @@ package body Segment is
    -- end Configure_Segment;
    --+------------
 
-end Segment;
+end Formula1.Segment;
