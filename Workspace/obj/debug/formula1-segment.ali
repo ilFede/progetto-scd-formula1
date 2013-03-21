@@ -5,10 +5,10 @@ A -gnatA
 P SS ZX
 R nnnnnnnnnnnnnnnnnnnnnvvvnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnvnvnnnnnnnnnnnnnnnn
 
-U formula1.segment%b	formula1-segment.adb	e6130a82 NE OO PK
+U formula1.segment%b	formula1-segment.adb	6604bf23 NE OO PK
 W formula1%s		formula1.adb		formula1.ali
 
-U formula1.segment%s	formula1-segment.ads	f4aefc4e EE OO PK
+U formula1.segment%s	formula1-segment.ads	74b949ef EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.generic_array_sort%s
@@ -50,8 +50,8 @@ D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
 D a-uncdea.ads		20070406091342 dc667e6d
-D formula1.ads		20130321125507 1464ce3e
-D formula1-segment.ads	20130321122857 55c96691
+D formula1.ads		20130321174159 e148803b
+D formula1-segment.ads	20130321171914 d5ded330
 D formula1-segment.adb	20130321122913 b3da6c13
 D formula1-subsegment.ads  20130321125702 9019d053
 D interfac.ads		20090409232307 a69cad5c
@@ -96,20 +96,20 @@ X 7 a-convec.ads
 43k24*Vectors 379e27 22|3w21 33r51
 53R9*Vector 22|26r50[24|29] 38r57[33]
 X 21 formula1.ads
-6K9*Formula1 144e13 22|1r6 1r31 2w6 2r20 6r9 58r5 23|1r14 45r5
-13F12*Speed_T{float} 22|18r30
-63E9*Segment_Type_T 63e49 22|14r30
-66I12*Num_Lanes_Seg_T{positive} 22|20r30
-69E9*Has_Time_Check_T 69e38 22|22r27
+6K9*Formula1 155e13 22|1r6 1r31 2w6 2r20 6r9 58r5 23|1r14 45r5
+19F9*Real_T<short_float> 22|16r30 18r30
+70E9*Segment_Type_T 70e49 22|14r30
+73I12*Num_Lanes_Seg_T{positive} 22|20r30
+76E9*Has_Time_Check_T 76e38 22|22r27
 X 22 formula1-segment.ads
 6K18*Segment 21|6k9 22|58l14 58e21 23|1b23 45l14 45t21
 8R9*Segment_T 27e17 34r23 41r49 23|4r49
 12i10*Code{natural}
-14e10*Tipology{21|63E9}
-16i10*Lenght{positive}
-18f10*Speed{21|13F12}
-20i10*Tot_Lanes{21|66I12}
-22e10*Has_Time_Check{21|69E9}
+14e10*Tipology{21|70E9}
+16f10*Length{21|19F9}
+18f10*Speed{21|19F9}
+20i10*Tot_Lanes{21|73I12}
+22e10*Has_Time_Check{21|76E9}
 24i10*Tot_Subsegments{positive}
 26r10*Subsegment_List{7|53R9[24|29]}
 33K12*Segment_Vector_T[7|43] 38r40

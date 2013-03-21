@@ -12,7 +12,7 @@ W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 W system.val_enum%s	s-valenu.adb		s-valenu.ali
 W system.val_int%s	s-valint.adb		s-valint.ali
 
-U formula1.race%s	formula1-race.ads	4542f95d EE OO PK
+U formula1.race%s	formula1-race.ads	b06eb758 EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.vectors%s
@@ -42,10 +42,10 @@ D a-strmap.ads		20090409232307 5253a637
 D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
-D formula1.ads		20130321125507 1464ce3e
+D formula1.ads		20130321174159 e148803b
 D formula1-race.ads	20130321130944 c9ec525c
 D formula1-race.adb	20130320135732 47267c26
-D formula1-segment.ads	20130321122857 55c96691
+D formula1-segment.ads	20130321171914 d5ded330
 D formula1-subsegment.ads  20130321125702 9019d053
 D formula1-track.ads	20130321121607 a9b42fb3
 D interfac.ads		20090409232307 a69cad5c
@@ -84,30 +84,30 @@ X 5 a-contai.ads
 16K13*Containers 22e19 19|1r10
 X 6 a-convec.ads
 43k24*Vectors 379e27 19|1w21
-53R9*Vector 20|5r39[18|38]
-101V13*Element{18|35P9} 20|12r45[18|38] 12r60[18|22] 14r57[18|38] 14r72[18|22]
-. 16r54[18|38] 16r70[18|22]
+53R9*Vector 20|5r39[18|45]
+101V13*Element{18|42P9} 20|12r45[18|45] 12r60[18|29] 14r57[18|45] 14r72[18|29]
+. 16r54[18|45] 16r70[18|29]
 X 18 formula1.ads
-6K9*Formula1 144e13 19|2r6 2r26 4r9 30r8 20|1r14 34r5
-19P9*String_Ref_T(string) 20|7r30
-35P9*String_Vector_Ref_T(6|53R9[22])
-38K12*Configuration_T[6|43] 20|5r23
-53E9*Meteo_T 53e30 19|16r22 20|16r25
-138U14*Read_Config_File 20|10r7
+6K9*Formula1 155e13 19|2r6 2r26 4r9 30r8 20|1r14 34r5
+26P9*String_Ref_T(string) 20|7r30
+42P9*String_Vector_Ref_T(6|53R9[29])
+45K12*Configuration_T[6|43] 20|5r23
+60E9*Meteo_T 60e30 19|16r22 20|16r25
+149U14*Read_Config_File 20|10r7
 X 19 formula1-race.ads
 4K18*Race 18|6k9 19|30l17 30e21 20|1b23 34l14 34t18
 8R9*Race_T 17e17 20r11 29r15
 12r10*Track{23|9R9} 20|20m16
 14i10*Num_Laps{positive} 20|14m16
-16e10*Meteo{18|53E9} 20|16m16
+16e10*Meteo{18|60E9} 20|16m16
 20r4*Race{8R9}
 23U14*Build_Race 23>26 20|4b14 24l8 24t18
 23s26 Race_Filename{string} 20|4b26 10r25
 26U14*Start_Race 20|28b14 31l8 31t18
 29r4*The_Race{8R9} 20|14m7 16m7 20m7
 X 20 formula1-race.adb
-5r7 Configuration{6|53R9[18|38]} 10m40 12r31 14r43 16r40
-7p7 Circuit_Filename_Ref{18|19P9} 12m7 18r20
+5r7 Configuration{6|53R9[18|45]} 10m40 12r31 14r43 16r40
+7p7 Circuit_Filename_Ref{18|26P9} 12m7 18r20
 X 23 formula1-track.ads
 6K18*Track 19|2w15 2r35 23|29e19
 9R9*Track_T 19|12r18 23|18e14

@@ -5,7 +5,7 @@ A -gnatA
 P SS ZX
 R nnnnnnnnnnnnnnnnnnnnnvvnnnnnnnnvnnnnnnvnnnnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
 
-U formula1.car%b	formula1-car.adb	df5f1abf NE OO PK
+U formula1.car%b	formula1-car.adb	2243e7fe NE OO PK
 W ada.tags%s		a-tags.adb		a-tags.ali
 W formula1%s		formula1.adb		formula1.ali
 W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
@@ -17,7 +17,7 @@ W system.string_ops%s	s-strops.adb		s-strops.ali
 W system.val_int%s	s-valint.adb		s-valint.ali
 W system.val_real%s	s-valrea.adb		s-valrea.ali
 
-U formula1.car%s	formula1-car.ads	84bba151 EE NE OO PK
+U formula1.car%s	formula1-car.ads	9a1d475c EE NE OO PK
 W formula1%s		formula1.adb		formula1.ali
 
 D ada.ads		20070406091342 9c7dd3ea
@@ -36,9 +36,9 @@ D a-strmap.ads		20090409232307 5253a637
 D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
-D formula1.ads		20130321125507 1464ce3e
-D formula1-car.ads	20130321131017 90df6f6f
-D formula1-car.adb	20130320135733 4f8075d0
+D formula1.ads		20130321174159 e148803b
+D formula1-car.ads	20130321173702 7b55c767
+D formula1-car.adb	20130321173754 59162099
 D interfac.ads		20090409232307 a69cad5c
 D i-cstrea.ads		20090409232307 e1e064a9
 D system.ads		20100127085936 15e10948
@@ -65,41 +65,41 @@ D s-valint.ads		20090409232307 d23209d2
 D s-valrea.ads		20090409232307 e4c63a53
 D s-wchcon.ads		20090409232307 ab028799
 X 5 a-convec.ads
-53R9*Vector 19|6r39[17|38]
-101V13*Element{17|35P9} 19|25r43[17|38] 25r59[17|22] 26r75[17|38] 26r91[17|22]
-. 27r75[17|38] 27r91[17|22] 28r53[17|38] 28r69[17|22] 29r73[17|38] 29r89[17|22]
-. 30r53[17|38] 30r69[17|22]
+53R9*Vector 19|6r39[17|45]
+101V13*Element{17|42P9} 19|25r43[17|45] 25r59[17|29] 26r75[17|45] 26r91[17|29]
+. 27r75[17|45] 27r91[17|29] 28r52[17|45] 28r68[17|29] 29r73[17|45] 29r89[17|29]
+. 30r53[17|45] 30r69[17|29]
 X 17 formula1.ads
-6K9*Formula1 144e13 18|2r9 30r5 19|1r14 44r5
-13F12*Speed_T{float} 18|15r31 19|15r34 28r24
-19P9*String_Ref_T(string) 18|9r35 19|9r34
-35P9*String_Vector_Ref_T(5|53R9[22])
-38K12*Configuration_T[5|43] 19|6r23
-89I12*Coeff_Acceleration_T{positive} 18|11r31 19|11r34 26r33
-92I12*Coeff_Deceleration_T{positive} 18|13r31 19|13r34 27r33
-95I12*Coeff_Roadholding_T{positive} 18|17r31 19|17r34 29r32
-98F12*Car_Consumption_T{float} 18|19r31 19|19r34
-118a4*Cars_Set_Path{string} 19|24r25
-138U14*Read_Config_File 19|24r7
+6K9*Formula1 155e13 18|2r9 30r5 19|1r14 44r5
+19F9*Real_T<short_float> 18|15r31 19|15r34 28r24
+26P9*String_Ref_T(string) 18|9r35 19|9r34
+42P9*String_Vector_Ref_T(5|53R9[29])
+45K12*Configuration_T[5|43] 19|6r23
+96I12*Coeff_Acceleration_T{positive} 18|11r31 19|11r34 26r33
+99I12*Coeff_Deceleration_T{positive} 18|13r31 19|13r34 27r33
+102I12*Coeff_Roadholding_T{positive} 18|17r31 19|17r34 29r32
+105F12*Car_Consumption_T{float} 18|19r31 19|19r34
+129a4*Cars_Set_Path{string} 19|24r25
+149U14*Read_Config_File 19|24r7
 X 18 formula1-car.ads
 2K18*Car 17|6k9 18|30l14 30e17 19|1b23 44l14 44t17
 5R9*Car_T 22e17 28r64 19|4r64
-9p10*Manufacturer_Ref{17|19P9} 19|34m11
-11i10*Coeff_Acceleration{17|89I12} 19|35m11
-13i10*Coeff_Deceleration{17|92I12} 19|36m11
-15f10*Max_Speed{17|13F12} 19|37m11
-17i10*Coeff_Roadholding{17|95I12} 19|38m11
-19f10*Consumption{17|98F12} 19|39m11
+9p10*Manufacturer_Ref{17|26P9} 19|34m11
+11i10*Coeff_Acceleration{17|96I12} 19|35m11
+13i10*Coeff_Deceleration{17|99I12} 19|36m11
+15f10*Max_Speed{17|19F9} 19|37m11
+17i10*Coeff_Roadholding{17|102I12} 19|38m11
+19f10*Consumption{17|105F12} 19|39m11
 21f10*Fuel_Level{float} 19|40m11
 28U14*Build_Car 28>25 28=51 19|4b14 41l8 41t17
 28s25 Car_Filename{string} 19|4b25 24r41
 28r51 Car{5R9} 19|4b51 34m7 35m7 36m7 37m7 38m7 39m7 40m7
 X 19 formula1-car.adb
-6r7 Configuration{5|53R9[17|38]} 24m55 25r29 26r61 27r61 28r39 29r59 30r39
-9p7 Car_Manufacter_Ref{17|19P9} 25m7 34r31
-11i7 Car_Coeff_Acceleration{17|89I12} 26m7 35r33
-13i7 Car_Coeff_Deceleration{17|92I12} 27m7 36r33
-15f7 Car_Max_Speed{17|13F12} 28m7 37r24
-17i7 Car_Coeff_Roadholding{17|95I12} 29m7 38r33
-19f7 Car_Consumption{17|98F12} 30m7 39r26
+6r7 Configuration{5|53R9[17|45]} 24m55 25r29 26r61 27r61 28r38 29r59 30r39
+9p7 Car_Manufacter_Ref{17|26P9} 25m7 34r31
+11i7 Car_Coeff_Acceleration{17|96I12} 26m7 35r33
+13i7 Car_Coeff_Deceleration{17|99I12} 27m7 36r33
+15f7 Car_Max_Speed{17|19F9} 28m7 37r24
+17i7 Car_Coeff_Roadholding{17|102I12} 29m7 38r33
+19f7 Car_Consumption{17|105F12} 30m7 39r26
 

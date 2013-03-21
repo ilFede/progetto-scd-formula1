@@ -10,7 +10,14 @@ package Formula1 is
    ---------------------------------------------------
 
    -- sottotipo per la velocità
-   subtype Speed_T is Float range 1.0 .. 600.0;
+   --type Speed_T is digits 2 range 0.0 .. 600.0;
+
+   -- sottotipo per la distaza
+   --type Distance_T is digits 2 range 0.0 .. 100000.0;
+
+   -- tipo per distanze e velocità
+   type Real_T is digits 2 range 0.0..1000000.0;
+
 
    -- sottotipo per la lunghezza del segmento
    -- subtype Length_T is Positive range 1 .. Positive'Last;
@@ -57,7 +64,7 @@ package Formula1 is
    ---------------------------------------------------
 
    -- costante con la lunghezza in metri di un sottosegmento
-   Subsegment_Lengh : Positive := 1;
+   Subsegment_Lengh : Real_T := 300.0;
 
    -- tipo del segmento
    type Segment_Type_T is (acc, const, dec, box);
@@ -101,8 +108,12 @@ package Formula1 is
    -- COSTANTI PER LA MODELLAZIONED DELL'ACCELERAZIONE
    ---------------------------------------------------
 
-   Alpha : constant Float := 80.0;
-   Beta : constant Float := 100.0;
+   -- tipo per le costanti nelle funzioni logaritmiche dell'accelerazione
+   -- type Log_Constant is digits 4 range 0.0..200.0;
+
+   -- definizione delle costanti
+   Alpha : constant Real_T := 80.0;
+   Beta : constant Real_T := 100.0;
 
    ---------------------------------------------------
    -- PATH PER LE VARIE CONFIGURAZIONI

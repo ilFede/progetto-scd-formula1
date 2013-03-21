@@ -12,7 +12,7 @@ package Formula1.Car is
 	 -- parametro per la decellerazione
 	 Coeff_Deceleration : Coeff_Deceleration_T;
 	 -- velocità massima
-	 Max_Speed          : Speed_T;
+	 Max_Speed          : Real_T;
 	 -- coefficente di tenuta di strada
 	 Coeff_Roadholding  : Coeff_Roadholding_T;
 	 -- consumo di carburante

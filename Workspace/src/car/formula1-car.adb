@@ -12,7 +12,7 @@ package body Formula1.Car is
       -- parametro per la decellerazione
       Car_Coeff_Deceleration   : Coeff_Deceleration_T;
       -- velocità massima
-      Car_Max_Speed            : Speed_T;
+      Car_Max_Speed            : Real_T;
       -- coefficente di tenuta di strada
       Car_Coeff_Roadholding    : Coeff_Roadholding_T;
       -- consumo di carburante
@@ -25,7 +25,7 @@ package body Formula1.Car is
       Car_Manufacter_Ref := Configuration.Element (0).all.Element (0);
       Car_Coeff_Acceleration := Coeff_Acceleration_T'Value (Configuration.Element (1).all.Element (0).all);
       Car_Coeff_Deceleration := Coeff_Deceleration_T'Value (Configuration.Element (2).all.Element (0).all);
-      Car_Max_Speed := Speed_T'Value (Configuration.Element (3).all.Element (0).all);
+      Car_Max_Speed := Real_T'Value (Configuration.Element (3).all.Element (0).all);
       Car_Coeff_Roadholding := Coeff_Roadholding_T'Value (Configuration.Element (4).all.Element (0).all);
       Car_Consumption := Float'Value (Configuration.Element (5).all.Element (0).all);
       -- configuro l'auto coi parametri letti

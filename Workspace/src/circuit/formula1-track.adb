@@ -24,8 +24,8 @@ package body Formula1.Track is
 	    -- parametri per descricere un segmento
 	    Segment_Type                      : Segment_Type_T;
 	    Segment_Code                      : Natural;
-	    Segment_Speed                     : Speed_T;
-	    Segment_Leght                     : Positive;
+	    Segment_Speed                     : Real_T;
+	    Segment_Leght                     : Real_T;
 	    Segment_Has_Time_Check            : Has_Time_Check_T;
 	    Segment_Tot_Lanes                 : Num_Lanes_Seg_T;
 	    Segment_Tot_Subsegment            : Natural;
@@ -39,13 +39,17 @@ package body Formula1.Track is
 	    Segment_Code := N_Seg;
 	    -- estraggo i parametri del segmento dal Configuration_Ref
 	    Segment_Type := Segment_Type_T'Value (String_Vector_Ref.all.Element (0).all);
-	    Segment_Leght := Integer'Value (String_Vector_Ref.all.Element (1).all);
-	    Segment_Speed := Float'Value (String_Vector_Ref.all.Element (2).all);
+	    Segment_Leght := Real_T'Value (String_Vector_Ref.all.Element (1).all);
+	    Segment_Speed := Real_T'Value (String_Vector_Ref.all.Element (2).all);
 	    Segment_Tot_Lanes := Integer'Value (String_Vector_Ref.all.Element (3).all);
 	    Segment_Has_Time_Check := Has_Time_Check_T'Value (String_Vector_Ref.all.Element (4).all);
 	    -- fine estrazione parametri del segmento
 	    -- calcolo il numero di sottosegmenti
 	    Segment_Tot_Subsegment := Segment_Leght / Subsegment_Lengh;
+            -- controllo che ci sia almeno un sottosegmento
+	    if Segment_Tot_Subsegment < 1 then
+	       Segment_Tot_Subsegment := 1;
+	    end if;
 	    -- creo i sottosegmenti e li appendo al vettore Segment_Subseg_Vect
 	    for J in Integer range 1 .. Segment_Tot_Subsegment loop
 	       declare
@@ -63,7 +67,7 @@ package body Formula1.Track is
 	    -- configuro il segmento
 	    Segment.Code := Segment_Code;
 	    Segment.Tipology := Segment_Type;
-	    Segment.Lenght := Segment_Leght;
+	    Segment.Length := Segment_Leght;
 	    Segment.Speed := Segment_Speed;
 	    Segment.Tot_Lanes := Segment_Tot_Lanes;
 	    Segment.Has_Time_Check := Segment_Has_Time_Check;
