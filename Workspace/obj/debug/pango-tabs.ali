@@ -1,0 +1,102 @@
+V "GNAT Lib v4.4"
+A -O0
+A -g
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnn
+
+U pango.tabs%b		pango-tabs.adb		4153a413 NE OO PK
+W glib%s		glib.adb		glib.ali
+W pango%s		pango.ads		pango.ali
+
+U pango.tabs%s		pango-tabs.ads		04d61552 EE NE OO PK
+W ada.tags%s		a-tags.adb		a-tags.ali
+W glib%s		glib.adb		glib.ali
+W pango%s		pango.ads		pango.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20090409232307 b54b55de
+D a-finali.ads		20090409232307 9eaacebd
+D a-filico.ads		20090409232307 9299732a
+D a-stream.ads		20090409232307 34aca5be
+D a-tags.ads		20090409232307 bfa07446
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D glib.ads		20091225112831 54df1dc2
+D interfac.ads		20090409232307 a69cad5c
+D i-c.ads		20070406091342 bc3ef662
+D pango.ads		20091225112832 567c5424
+D pango-tabs.ads	20091225112832 06755cb4
+D pango-tabs.adb	20091225112832 13f9e565
+D system.ads		20100127085936 15e10948
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-finimp.ads		20090409232307 9449f4cb
+D s-finroo.ads		20090409232307 1408f9d1
+D s-parame.ads		20090409232307 f32e56e9
+D s-secsta.ads		20090409232307 7bae3621
+D s-soflin.ads		20090409232307 0c6fd39d
+D s-stache.ads		20090409232307 257b3be8
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-stratt.ads		20090409232307 fef7c1da
+D s-traent.ads		20090409232307 bd5f2753
+D s-unstyp.ads		20090409232307 c0f9fae5
+X 9 glib.ads
+37K9*Glib 397e9 13|34w6 51r29 59r29 70r59 75r19 81r19 83r19 91r19 93r23 102r32
+. 14|23w6 23r16 33r29 37r17 37r37 50r56
+50I9*Gint<11|35I9> 13|51r34 70r64 75r24 81r24 83r24 91r24 93r28 14|33r34
+. 37r22
+52I9*Gboolean<50I9> 14|37r42 50r61
+72M9*Gsize<11|60M9>
+149P9*C_Proxy(146R9) 13|102r37
+258M9*GType<72M9> 13|59r34
+X 11 i-c.ads
+35I9*int<integer>
+60M9*size_t
+X 12 pango.ads
+29K9*Pango 33e10 13|36r9 112r5 14|25r14 70r5
+X 13 pango-tabs.ads
+36K15*Tabs 12|29k9 13|112l11 112e15 14|25b20 70l11 70t15
+38P9*Pango_Tab_Array(9|146R9) 39r30 50r33 63r16 64r20 67r32 70r35 74r19 80r19
+. 90r19 98r19 102c9 104r30 14|32r33 37r59 48r19 50r32 61r16 62r20 64r32 64r56
+39p4*Null_Tab_Array{38P9} 104c4
+45E9*Pango_Tab_Align 45e44 46r26 82r19 92r23
+45n29*Pango_Tab_Left{45E9} 82r38
+49U14*Pango_New 50<7 51>7 52>7 14|31b14 41l8 41t17
+50p7 Tab_Array{38P9} 14|32b7 40m7
+51i7 Initial_Size{9|50I9} 14|33b7 40r30
+52b7 Positions_In_Pixels{boolean} 14|34b7 40r57
+59V13*Get_Type{9|258M9} 106b<c,pango_tab_array_get_type>22
+62U14*Copy 63>7 64<7 14|60b14 68l8 68t12
+63p7 Src{38P9} 14|61b7 67r27
+64p7 Target{38P9} 14|62b7 67m7
+67U14*Free 67>20 107b<c,pango_tab_array_free>22
+67p20 Tab_Array{38P9}
+70V13*Get_Size{9|50I9} 70>23 108b<c,pango_tab_array_get_size>22
+70p23 Tab_Array{38P9}
+73U14*Resize 74>7 75>7 109b<c,pango_tab_array_resize>22
+74p7 Tab_Array{38P9}
+75i7 New_Size{9|50I9}
+79U14*Set_Tab 80>7 81>7 82>7 83>7 110b<c,pango_tab_array_set_tab>22
+80p7 Tab_Array{38P9}
+81i7 Tab_Index{9|50I9}
+82e7 Alignment{45E9}
+83i7 Location{9|50I9}
+89U14*Get_Tab 90>7 91>7 92<7 93<7 111b<c,pango_tab_array_get_tab>22
+90p7 Tab_Array{38P9}
+91i7 Tab_Index{9|50I9}
+92e7 Alignment{45E9}
+93i7 Location{9|50I9}
+97V13*Get_Positions_In_Pixels{boolean} 98>7 14|47b13 54l8 54t31
+98p7 Tab_Array{38P9} 14|48b7 53r37
+X 14 pango-tabs.adb
+36V16*Internal{13|38P9} 37>10 37>28 38b<c,pango_tab_array_new>25 40r20
+37i10 Size{9|50I9}
+37i28 Pixels{9|52I9}
+50V16*Internal{9|52I9} 50>26 51b<c,pango_tab_array_get_positions_in_pixels>25
+. 53r27
+50p26 Tab{13|38P9}
+64V16*Internal{13|38P9} 64>26 65b<c,pango_tab_array_copy>25 67r17
+64p26 Src{13|38P9}
+

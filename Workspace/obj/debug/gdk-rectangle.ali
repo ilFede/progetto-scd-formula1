@@ -1,0 +1,84 @@
+V "GNAT Lib v4.4"
+A -O0
+A -g
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnn
+
+U gdk.rectangle%b	gdk-rectangle.adb	66ee5421 NE OO PK
+W gdk%s			gdk.ads			gdk.ali
+W system%s		system.ads		system.ali
+
+U gdk.rectangle%s	gdk-rectangle.ads	39505833 EE NE OO PK
+W ada.tags%s		a-tags.adb		a-tags.ali
+W gdk%s			gdk.ads			gdk.ali
+W glib%s		glib.adb		glib.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20090409232307 b54b55de
+D a-finali.ads		20090409232307 9eaacebd
+D a-filico.ads		20090409232307 9299732a
+D a-stream.ads		20090409232307 34aca5be
+D a-tags.ads		20090409232307 bfa07446
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D gdk.ads		20091225112831 c70a781f
+D gdk-rectangle.ads	20091225112831 aa853dee
+D gdk-rectangle.adb	20091225112831 d98a6087
+D glib.ads		20091225112831 54df1dc2
+D interfac.ads		20090409232307 a69cad5c
+D i-c.ads		20070406091342 bc3ef662
+D system.ads		20100127085936 15e10948
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-finimp.ads		20090409232307 9449f4cb
+D s-finroo.ads		20090409232307 1408f9d1
+D s-parame.ads		20090409232307 f32e56e9
+D s-secsta.ads		20090409232307 7bae3621
+D s-soflin.ads		20090409232307 0c6fd39d
+D s-stache.ads		20090409232307 257b3be8
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-stratt.ads		20090409232307 fef7c1da
+D s-traent.ads		20090409232307 bd5f2753
+D s-unstyp.ads		20090409232307 c0f9fae5
+X 9 gdk.ads
+34K9*Gdk 60e8 10|27r9 68r5 11|26r14 50r5
+X 10 gdk-rectangle.ads
+27K13*Rectangle 9|34k9 10|68l9 68e18 11|26b18 50l9 50t18
+29I12*GRectangle_Coord{12|50I9} 33r16 34r16
+30I12*GRectangle_Length{12|50I9} 35r16 36r16
+32R9*Gdk_Rectangle 37e14 38r26 40r44 43r60 46r25 51r19 52r19 53r23 57r14
+. 58r14 59r18 63r25 11|33r19 34r19 35r23 39r23 43r26
+33i7*X{29I12}
+34i7*Y{29I12}
+35i7*Width{30I12}
+36i7*Height{30I12}
+40P9*Gdk_Rectangle_Access(32R9) 41r26
+43A9*Gdk_Rectangle_Array(32R9)<integer>
+46r4*Full_Area{32R9} 63c4
+50U14*Intersect 51>7 52>7 53<7 54<7 11|32b14 48l8 48t17
+51r7 Src1{32R9} 11|33b7 46r30
+52r7 Src2{32R9} 11|34b7 46r36
+53r7 Dest{32R9} 11|35b7 47m7
+54b7 Intersect{boolean} 11|36b7 46m7
+56U14*Union 57>7 58>7 59<7 66b<c,gdk_rectangle_union>22
+57r7 Src1{32R9}
+58r7 Src2{32R9}
+59r7 Dest{32R9}
+X 11 gdk-rectangle.adb
+38V16*Internal{12|50I9} 39>10 39>16 40>10 41b<c,gdk_rectangle_intersect>25
+. 46r20
+39r10 Src1{10|32R9}
+39r16 Src2{10|32R9}
+40m10 Dest{15|64M9}
+43r7 Dest_Rec{10|32R9} 46m42 47r15
+X 12 glib.ads
+37K9*Glib 10|25w6 25r16 12|397e9
+50I9*Gint<14|35I9> 10|29r32 30r33 64r7 64r19 64r31 64r42 11|40r46
+X 14 i-c.ads
+35I9*int<integer>
+X 15 system.ads
+37K9*System 11|24w6 40r23 15|153e11
+64M9*Address 11|40r30
+

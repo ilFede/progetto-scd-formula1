@@ -1,0 +1,125 @@
+V "GNAT Lib v4.4"
+A -O0
+A -g
+A -gnatA
+P SS ZX
+R nnnnnnnnvnnnnnnnnnnnnnnvnnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnvnnvnvnnnnnnnnnnnnnnnn
+
+U pango.context%b	pango-context.adb	4bd43485 NE OO PK
+W glib%s		glib.adb		glib.ali
+W glib.object%s		glib-object.adb		glib-object.ali
+W pango%s		pango.ads		pango.ali
+W pango.font%s		pango-font.adb		pango-font.ali
+W system%s		system.ads		system.ali
+
+U pango.context%s	pango-context.ads	47c9a0c1 EE OO PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.finalization.list_controller%s  a-filico.adb  a-filico.ali
+W ada.streams%s		a-stream.ads		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W glib%s		glib.adb		glib.ali
+W glib.object%s		glib-object.adb		glib-object.ali
+W pango%s		pango.ads		pango.ali
+W pango.font%s		pango-font.adb		pango-font.ali
+W system%s		system.ads		system.ali
+W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
+W system.finalization_root%s  s-finroo.adb	s-finroo.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20090409232307 b54b55de
+D a-finali.ads		20090409232307 9eaacebd
+D a-filico.ads		20090409232307 9299732a
+D a-stream.ads		20090409232307 34aca5be
+D a-tags.ads		20090409232307 bfa07446
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D glib.ads		20091225112831 54df1dc2
+D glib-generic_properties.ads  20091225112831 bc53e554
+D glib-glist.ads	20091225112831 86ff2c8b
+D glib-gslist.ads	20091225112831 172859be
+D glib-object.ads	20091225112831 d347b7c2
+D glib-values.ads	20091225112831 233fe8b3
+D gtkada.ads		20091225112832 1096f5e5
+D gtkada-types.ads	20091225112832 b2ab92a2
+D interfac.ads		20090409232307 a69cad5c
+D i-c.ads		20070406091342 bc3ef662
+D i-cstrin.ads		20090409232307 841d8a31
+D pango.ads		20091225112832 567c5424
+D pango-context.ads	20091225112832 dbda6b1f
+D pango-context.adb	20091225112832 4f80c928
+D pango-enums.ads	20091225112832 f87f8fab
+D pango-font.ads	20091225112832 4df735fa
+D system.ads		20100127085936 15e10948
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-finimp.ads		20090409232307 9449f4cb
+D s-finroo.ads		20090409232307 1408f9d1
+D s-parame.ads		20090409232307 f32e56e9
+D s-secsta.ads		20090409232307 7bae3621
+D s-soflin.ads		20090409232307 0c6fd39d
+D s-stache.ads		20090409232307 257b3be8
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-stratt.ads		20090409232307 fef7c1da
+D s-traent.ads		20090409232307 bd5f2753
+D s-unstyp.ads		20090409232307 c0f9fae5
+X 9 glib.ads
+37K9*Glib 397e9 21|25w6 26r6 31r37 38r29 55r37 22|23w6 23r23 24r6 24r23
+72M9*Gsize<18|60M9>
+149P9*C_Proxy(146R9)
+258M9*GType<72M9> 21|38r34
+X 13 glib-object.ads
+37K14*Object 452e16 21|26w11 31r42 55r42 22|24w11 24r28
+39R9*GObject_Record 413e14 21|31r49 55r49
+40P9*GObject(39R9)
+53V13*Get_Type{9|258M9}
+77U14*Ref
+83U14*Unref
+111U14*Deallocate
+131V13*Get_Object{25|64M9} 22|43r24 59r17 78r35
+140V13*Get_User_Data{40P9} 22|78r10
+311U14*Notify
+X 18 i-c.ads
+60M9*size_t
+X 20 pango.ads
+29K9*Pango 33e10 21|27r6 29r9 43r21 46r14 50r17 51r14 58r5 22|25r6 25r23
+. 28r14 36r14 52r21 68r17 69r14 81r5
+X 21 pango-context.ads
+29K15*Context 20|29k9 21|58l11 58e18 22|28b20 81l11 81t18
+31R9*Pango_Context_Record<13|39R9> 13|53p13 77p14 83p14 111p14 311p14 21|32r37
+. 49r24 55c9 56e22 22|67r24
+32P9*Pango_Context(31R9) 42r21 45r45 22|35r17 51r21
+38V13*Get_Type{9|258M9} 57b<c,pango_context_get_type>22
+41U14*Set_Font_Description 42>7 43>7 22|50b14 60l8 60t28
+42p7 Context{32P9} 22|51b7 59r29
+43p7 Description{24|50P9} 22|52b7 59r39
+45V13*Get_Font_Description{24|50P9} 45>35 22|34b13 44l8 44t28
+45p35 Context{32P9} 22|35b7 43r36
+48V13*Load_Font{24|187P9} 49^7 50>7 22|66b13 79l8 79t17
+49p7 Context(31R9) 22|67b7 78r47
+50p7 Descr{24|50P9} 22|68b7 78r57
+X 22 pango-context.adb
+38V16*Internal{24|50P9} 38>26 41b<c,pango_context_get_font_description>13
+. 43r14
+38m26 Context{25|64M9}
+54U17*Internal 54>27 55>27 57b<c,pango_context_set_font_description>13 59r7
+54m27 Context{25|64M9}
+55p27 Description{24|50P9}
+71V16*Internal{25|64M9} 71>26 72>26 74b<c,pango_context_load_font>25 78r25
+71m26 Context{25|64M9}
+72p26 Descr{24|50P9}
+75r7 Stub{24|186R9} 78r65
+X 24 pango-font.ads
+48K15*Font 21|27w12 43r27 46r20 50r23 51r20 22|25w12 25r29 36r20 52r27 68r23
+. 69r20 24|291e15
+50P9*Pango_Font_Description<9|149P9> 21|43r32 46r25 50r28 22|36r25 39r17
+. 52r32 55r41 68r28 72r36
+186R9*Pango_Font_Record<13|39R9> 22|75r14 24|186e77
+187P9*Pango_Font(186R9) 21|51r25 22|69r25 77r14
+X 25 system.ads
+37K9*System 22|26w6 26r23 38r36 54r37 71r36 73r17 25|153e11
+64M9*Address 22|38r43 54r44 71r43 73r24
+

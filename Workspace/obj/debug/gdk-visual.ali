@@ -1,0 +1,168 @@
+V "GNAT Lib v4.4"
+A -O0
+A -g
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnvnnvnnnnnnnnnvnnnvnnvnvnnnnnnnnnnnnnnnn
+
+U gdk.visual%b		gdk-visual.adb		f6c9e787 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.unchecked_conversion%s
+W gdk%s			gdk.ads			gdk.ali
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W interfaces.c.pointers%s
+W interfaces.c.strings%s  i-cstrin.adb		i-cstrin.ali
+W system%s		system.ads		system.ali
+W system.exception_table%s  s-exctab.adb	s-exctab.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+U gdk.visual%s		gdk-visual.ads		56eee064 EE NE OO PK
+W ada.tags%s		a-tags.adb		a-tags.ali
+W gdk%s			gdk.ads			gdk.ali
+W glib%s		glib.adb		glib.ali
+W glib.glist%s		glib-glist.adb		glib-glist.ali  EA
+W system%s		system.ads		system.ali
+W unchecked_conversion%s
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20090409232307 b54b55de
+D a-finali.ads		20090409232307 9eaacebd
+D a-filico.ads		20090409232307 9299732a
+D a-stream.ads		20090409232307 34aca5be
+D a-tags.ads		20090409232307 bfa07446
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D gdk.ads		20091225112831 c70a781f
+D gdk-visual.ads	20091225112831 62a3aa2f
+D gdk-visual.adb	20091225112831 baba1f1d
+D glib.ads		20091225112831 54df1dc2
+D glib-glist.ads	20091225112831 86ff2c8b
+D glib-glist.adb	20091225112831 6492f714
+D interfac.ads		20090409232307 a69cad5c
+D i-c.ads		20070406091342 bc3ef662
+D i-cpoint.ads		20090409232307 2ed052b5
+D i-cpoint.adb		20090409232307 6a25fbbe
+D i-cstrin.ads		20090409232307 841d8a31
+D system.ads		20100127085936 15e10948
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-finimp.ads		20090409232307 9449f4cb
+D s-finroo.ads		20090409232307 1408f9d1
+D s-parame.ads		20090409232307 f32e56e9
+D s-secsta.ads		20090409232307 7bae3621
+D s-soflin.ads		20090409232307 0c6fd39d
+D s-stache.ads		20090409232307 257b3be8
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-stratt.ads		20090409232307 fef7c1da
+D s-traent.ads		20090409232307 bd5f2753
+D s-unstyp.ads		20090409232307 c0f9fae5
+D unchconv.ads		20070406091342 34860a55
+X 9 gdk.ads
+34K9*Gdk 60e8 10|34r9 36r26 91r5 11|26r14 157r5
+50P9*Gdk_Visual<12|149P9> 10|36r30
+X 10 gdk-visual.ads
+34K13*Visual 9|34k9 10|91l9 91e15 11|26b18 157l9 157t15
+36P12*Gdk_Visual{9|50P9} 37r27 59r31 61r29 63r37 65r45 67r61 71r45 77r50
+. 78r66 80r60 85r27 11|46r29 47r32 53r37 58r44 59r47 66r61 67r64 75r59 78r62
+37p4*Null_Visual{36P12} 85c4
+41E9*Gdk_Visual_Type 47e27 48r26 50r62 57r34 67r37 71r21 11|35r17 38r36 66r37
+. 67r40 75r35 78r38
+42n7*Visual_Static_Gray{41E9} 11|40r29
+43n7*Visual_Grayscale{41E9}
+44n7*Visual_Static_Color{41E9}
+45n7*Visual_Pseudo_Color{41E9}
+46n7*Visual_True_Color{41E9}
+47n7*Visual_Direct_Color{41E9}
+50A9*Gdk_Visual_Type_Array(41E9)<integer> 75r39 11|131r39 146r19
+52V13*Get_Type{12|258M9} 86b<c,gdk_visual_get_type>22
+55V13*Get_Best_Depth{12|50I9} 87b<c,gdk_visual_get_best_depth>22
+57V13*Get_Best_Type{41E9} 88b<c,gdk_visual_get_best_type>22
+59V13*Get_System{36P12} 89b<c,gdk_visual_get_system>22
+61V13*Get_Best{36P12} 11|46b13 51l8 51t16 55r17
+63U14*Get_Best 63<24 11|53b14 56l8 56t16
+63p24 Visual{36P12} 11|53b24 55m7
+65V13*Get_Best{36P12} 65>23 11|58b13 64l8 64t16
+65i23 Depth{12|50I9} 11|58b23 63r24
+67V13*Get_Best{36P12} 67>23 11|66b13 72l8 72t16
+67e23 Visual_Type{41E9} 11|66b23 71r24
+69V13*Get_Best{36P12} 70>7 71>7 11|74b13 83l8 83t16
+70i7 Depth{12|50I9} 11|75b7 82r24
+71e7 Visual_Type{41E9} 11|75b21 82r31
+73V13*Query_Depths{12|105A9} 11|102b13 125l8 125t20
+75V13*Query_Visual_Types{50A9} 11|131b13 155l8 155t26
+77V13*Convert[34|20]{20|64M9}
+78V13*Convert[34|20]{9|50P9}
+80K12*Gdk_Visual_List[13|62] 82r33 11|89r33 92r16 94r7
+82V13*List_Visuals{13|64R12[80]} 11|89b13 96l8 96t20
+X 11 gdk-visual.adb
+28A9 Aliased_Gint_Array(12|50I9)<integer> 31r59 113r26
+30K12 Gint_Ptr[17|42] 103r40 106r25 114r12
+34A9 Aliased_Visual_Type_Array(10|41E9)<integer> 39r24 143r26
+37K12 Visual_Type_Ptr[17|42] 132r45 136r25 144r12
+47V16*Internal{10|36P12} 48b<c,gdk_visual_get_best>25 50r14
+59V16*Internal{10|36P12} 59>26 60b<c,gdk_visual_get_best_with_depth>25 63r14
+59i26 Depth{12|50I9}
+67V16*Internal{10|36P12} 67>26 68b<c,gdk_visual_get_best_with_type>25 71r14
+67e26 Visual_Type{10|41E9}
+77V16*Internal{10|36P12} 78>10 78>24 79b<c,gdk_visual_get_best_with_both>25
+. 82r14
+78i10 Depth{12|50I9}
+78e24 Visual_Type{10|41E9}
+90V16*Internal{20|64M9} 91b<c,gdk_list_visuals>25 94r43
+92r7 Result{13|64R12[10|80]} 94m35 95r14
+103U17*Internal 103<27 103<58 104b<c,gdk_query_depths>25 110r7
+103p27 Depths{17|45P9[30]}
+103i58 Count{12|50I9}
+106p7 Internal_Result{17|45P9[30]} 110m17 114r35
+107i7 Count{12|50I9} 110m34 115r62
+113a10 Temp{28A9} 116r36 119r23 120r44 120r59
+116a10 Result{12|105A9} 120m13 120r21 123r17
+119i14 Index{integer} 120r36 120r65
+132U17*Internal 132<27 133<27 134b<c,gdk_query_visual_types>25 140r7
+132p27 Visual_Type{17|45P9[37]}
+133i27 Count{12|50I9}
+136p7 Internal_Result{17|45P9[37]} 140m17 144r42
+137i7 Count{12|50I9} 140m34 145r69
+143a10 Temp{34A9} 146r47 149r23 150r44 150r59
+146a10 Result{10|50A9} 150m13 150r21 153r17
+149i14 Index{integer} 150r36 150r65
+X 12 glib.ads
+37K9*Glib 10|27w6 27r16 28r6 52r29 80r35 12|397e9
+50I9*Gint<16|35I9> 10|55r35 65r32 70r21 11|28r67 31r36 58r31 59r34 75r15
+. 78r18 103r70 107r15 133r39 137r15
+72M9*Gsize<16|60M9>
+105A9*Gint_Array(50I9)<integer> 10|73r33 11|102r33 116r19
+149P9*C_Proxy(146R9)
+258M9*GType<72M9> 10|52r34
+X 13 glib-glist.ads
+51K14*Glist 10|28w11 80r40 13|224e15
+62k12*Generic_List 10|80r46 13|222e20
+64R12*Glist 10|82r49[80] 11|89r49[10|80] 92r32[10|80]
+209U17*Set_Object 11|94r23[10|80]
+X 15 interfac.ads
+36K9*Interfaces 11|24r6 30r28 37r35 115r38 145r45 15|171e15
+X 16 i-c.ads
+18K20*C 11|24r17 30r39 37r46 115r49 145r56 16|230e17
+35I9*int<integer>
+56I9*ptrdiff_t<integer> 11|115r51 145r58
+60M9*size_t
+X 17 i-cpoint.ads
+37E9 Index 11|31r7 38r7
+38+9 Element 11|31r25 38r25
+39A9 Element_Array(38+9)<37E9> 11|31r42 39r7
+40*4 Default_Terminator{38+9} 11|32r7 40r7
+42k22*Pointers 11|24w19 30r41 37r48 17|99e26
+45P9*Pointer(12|50I9) 11|103r49[30] 106r34[30] 132r61[37] 136r41[37]
+55V13*Value{11|28A9} 11|114r21[30] 144r28[37]
+56p7 Ref{45P9[11|30]} 11|114r28[30] 144r35[37]
+57i7 Length{16|56I9} 11|115r28[30] 145r35[37]
+X 20 system.ads
+37K9*System 10|31w6 77r62 78r50 11|90r32 20|153e11
+64M9*Address 10|77r69 78r57 11|90r39
+X 34 unchconv.ads
+20v10*Unchecked_Conversion 10|32w6 77r28 78r28
+
