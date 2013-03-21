@@ -1,0 +1,179 @@
+V "GNAT Lib v4.4"
+A -O0
+A -g
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnn
+
+U gdk.region%b		gdk-region.adb		a6e323df NE OO PK
+W gdk%s			gdk.ads			gdk.ali
+W system%s		system.ads		system.ali
+
+U gdk.region%s		gdk-region.ads		a1fca365 EE NE OO PK
+W ada.tags%s		a-tags.adb		a-tags.ali
+W gdk%s			gdk.ads			gdk.ali
+W gdk.rectangle%s	gdk-rectangle.adb	gdk-rectangle.ali
+W gdk.types%s		gdk-types.ads		gdk-types.ali
+W glib%s		glib.adb		glib.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20090409232307 b54b55de
+D a-finali.ads		20090409232307 9eaacebd
+D a-filico.ads		20090409232307 9299732a
+D a-stream.ads		20090409232307 34aca5be
+D a-tags.ads		20090409232307 bfa07446
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D gdk.ads		20091225112831 c70a781f
+D gdk-rectangle.ads	20091225112831 aa853dee
+D gdk-region.ads	20091225112831 254dc05c
+D gdk-region.adb	20091225112831 964feacb
+D gdk-types.ads		20091225112831 bde13b0a
+D glib.ads		20091225112831 54df1dc2
+D glib-generic_properties.ads  20091225112831 bc53e554
+D glib-glist.ads	20091225112831 86ff2c8b
+D glib-gslist.ads	20091225112831 172859be
+D glib-object.ads	20091225112831 d347b7c2
+D glib-values.ads	20091225112831 233fe8b3
+D gtkada.ads		20091225112832 1096f5e5
+D gtkada-types.ads	20091225112832 b2ab92a2
+D interfac.ads		20090409232307 a69cad5c
+D i-c.ads		20070406091342 bc3ef662
+D i-cstrin.ads		20090409232307 841d8a31
+D system.ads		20100127085936 15e10948
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-finimp.ads		20090409232307 9449f4cb
+D s-finroo.ads		20090409232307 1408f9d1
+D s-parame.ads		20090409232307 f32e56e9
+D s-secsta.ads		20090409232307 7bae3621
+D s-soflin.ads		20090409232307 0c6fd39d
+D s-stache.ads		20090409232307 257b3be8
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-stratt.ads		20090409232307 fef7c1da
+D s-traent.ads		20090409232307 bd5f2753
+D s-unstyp.ads		20090409232307 c0f9fae5
+X 9 gdk.ads
+34K9*Gdk 60e8 11|28r6 29r6 31r9 33r26 58r19 64r19 70r23 74r26 85r16 99r16
+. 104r16 137r5 12|26r14 83r26 116r19 120r22 135r16 139r19 149r16 155r5
+56P9*Gdk_Region<14|149P9> 11|33r30
+X 10 gdk-rectangle.ads
+27K13*Rectangle 68e18 11|28w10 64r23 70r27 74r30 85r20 99r20 104r20 12|83r30
+. 135r20 139r23 149r20
+32R9*Gdk_Rectangle 37e14 11|64r33 70r37 85r30 99r30 104r30 12|135r30 139r33
+. 149r30
+43A9*Gdk_Rectangle_Array(32R9)<integer> 11|74r40 12|83r40
+X 11 gdk-region.ads
+31K13*Region 9|34k9 11|137l9 137e15 12|26b18 155l9 155t15
+33P12*Gdk_Region{9|56P9} 34r27 53r36 57r23 61r28 61r47 64r55 66r39 69r19
+. 73r22 77r29 79r32 81r32 84r16 88r16 93r16 98r23 102r23 103r16 109r24 110r17
+. 113r24 114r17 117r24 118r17 121r24 122r17 125r27 12|32r32 33r45 44r39 45r36
+. 57r29 58r35 69r36 70r32 82r22 87r25 101r16 103r35 115r23 122r44 134r23
+. 138r19 147r23 148r16
+34p4*Null_Region{33P12} 125c4 12|50r17
+36E9*Gdk_Fill_Rule 36e55 38r26 59r19 12|117r19 122r22
+36n27*Even_Odd_Rule{36E9}
+36n42*Winding_Rule{36E9}
+40E9*Gdk_Overlap_Type 49e7 51r26 85r52
+41n7*Overlap_Rectangle_In{40E9}
+44n7*Overlap_Rectangle_Out{40E9}
+47n7*Overlap_Rectangle_Part{40E9}
+53U14*Gdk_New 53<23 12|69b14 75l8 75t15
+53p23 Region{33P12} 12|69b23 74m7
+56U14*Polygon 57<7 58>7 59>7 12|114b14 127l8 127t15
+57p7 Region{33P12} 12|115b7 126m7
+58a7 Points{13|41A9} 12|116b7 126r27 126r35
+59e7 Fill_Rule{36E9} 12|117b7 126r50
+61V13*Copy{33P12} 61>19 127b<c,gdk_region_copy>22
+61p19 Region{33P12}
+63V13*Rectangle{33P12} 64>7 128b<c,gdk_region_rectangle>22
+64r7 Rectangle{10|32R9}
+66U14*Destroy 66=23 12|44b14 51l8 51t15
+66p23 Region{33P12} 12|44b23 49r17 50m7
+68U14*Get_Clipbox 69>7 70<7 129b<c,gdk_region_get_clipbox>22
+69p7 Region{33P12}
+70r7 Rectangle{10|32R9}
+72U14*Get_Rectangles 73>7 74<7 75<7 12|81b14 94l8 94t22
+73p7 Region{33P12} 12|82b7 93r17
+74a7 Rectangle{10|43A9} 12|83b7 93m25
+75i7 N_Rectangles{natural} 12|84b7 93m44
+77V13*Empty{boolean} 77>20 12|57b13 63l8 63t13
+77p20 Region{33P12} 12|57b20 62r37
+79V13*"="{boolean} 79>18 79>24 12|32b13 38l8 38t11 151r29
+79p18 Left{33P12} 12|32b18 37r37
+79p24 Right{33P12} 12|32b24 37r43
+81V13*Point_In{boolean} 81>23 81>44 81>47 12|100b13 108l8 108t16
+81p23 Region{33P12} 12|101b7 107r37
+81i44 X{integer} 12|101b28 107r45
+81i47 Y{integer} 12|101b31 107r48
+83V13*Rect_In{40E9} 84>7 85>7 130b<c,gdk_region_rect_in>22
+84p7 Region{33P12}
+85r7 Rect{10|32R9}
+87U14*Offset 88>7 89>7 90>7 131b<c,gdk_region_offset>22
+88p7 Region{33P12}
+89i7 Dx{14|50I9}
+90i7 Dy{14|50I9}
+92U14*Shrink 93>7 94>7 95>7 132b<c,gdk_region_shrink>22
+93p7 Region{33P12}
+94i7 Dx{14|50I9}
+95i7 Dy{14|50I9}
+97U14*Union_With_Rect 98=7 99>7 12|133b14 144l8 144t23 152r7
+98p7 Region{33P12} 12|134b7 141r26 143r17
+99r7 Rect{10|32R9} 12|135b7 143r25
+101U14*Union_With_Rect 102=7 103>7 104>7 12|146b14 153l8 153t23
+102p7 Result{33P12} 12|147b7 151r31 152m24
+103p7 Region{33P12} 12|148b7 151r22
+104r7 Rect{10|32R9} 12|149b7 152r32
+108U14*Intersect 109=7 110>7 133b<c,gdk_region_intersect>22
+109p7 Source1{33P12}
+110p7 Source2{33P12}
+112U14*Union 113=7 114>7 134b<c,gdk_region_union>22
+113p7 Source1{33P12}
+114p7 Source2{33P12}
+116U14*Substract 117=7 118>7 135b<c,gdk_region_subtract>22
+117p7 Source1{33P12}
+118p7 Source2{33P12}
+120U14*Gdk_Xor 121=7 122>7 136b<c,gdk_region_xor>22
+121p7 Source1{33P12}
+122p7 Source2{33P12}
+X 12 gdk-region.adb
+33V16*Internal{14|52I9} 33>26 33>35 34b<c,gdk_region_equal>25 37r27
+33p26 Region1{11|33P12}
+33p35 Region2{11|33P12}
+45U17*Internal 45>27 46b<c,gdk_region_destroy>25 49r7
+45p27 Region{11|33P12}
+58V16*Internal{14|52I9} 58>26 59b<c,gdk_region_empty>25 62r27
+58p26 Region{11|33P12}
+70V16*Internal{11|33P12} 71b<c,gdk_region_new>25 74r17
+86U17*Internal 87>10 88>10 89<10 90b<c,gdk_region_get_rectangles>25 93r7
+87p10 Region{11|33P12}
+88m10 Rectangle{25|64M9}
+89i10 N_Rectangles{natural}
+103V16*Internal{14|52I9} 103>26 103>47 103>50 104b<c,gdk_region_point_in>25
+. 107r27
+103p26 Region{11|33P12}
+103i47 X{integer}
+103i50 Y{integer}
+119V16*Internal{11|33P12} 120>10 121>10 122>10 123b<c,gdk_region_polygon>25
+. 126r17
+120a10 Points{13|41A9}
+121i10 Npoints{14|50I9}
+122e10 Fill_Rule{11|36E9}
+137U17*Internal 138>10 139>10 140b<c,gdk_region_union_with_rect>25 143r7
+138p10 Region{11|33P12}
+139r10 Rect{10|32R9}
+X 13 gdk-types.ads
+30K13*Types 11|29w10 58r23 12|116r23 120r26 13|248e14
+41A9*Gdk_Points_Array(35R9)<integer> 11|58r29 12|116r29 120r32
+X 14 glib.ads
+37K9*Glib 11|27w6 27r16 14|397e9
+50I9*Gint<23|35I9> 11|89r16 90r16 94r16 95r16 12|121r22
+52I9*Gboolean<50I9> 12|33r64 58r54 103r70
+149P9*C_Proxy(146R9)
+X 23 i-c.ads
+35I9*int<integer>
+X 25 system.ads
+37K9*System 12|24w6 88r25 25|153e11
+64M9*Address 12|88r32
+

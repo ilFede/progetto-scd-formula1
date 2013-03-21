@@ -1,0 +1,14 @@
+V "GNAT Lib v4.4"
+A -O0
+A -g
+A -gnatA
+P ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnn
+
+U gtkada%s		gtkada.ads		1096f5e5 NE OO PU PK
+
+D gtkada.ads		20091225112832 1096f5e5
+D system.ads		20100127085936 15e10948
+X 1 gtkada.ads
+30K9*Gtkada 32r17 34l5 34e11
+

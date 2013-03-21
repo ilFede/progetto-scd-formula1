@@ -1,0 +1,70 @@
+V "GNAT Lib v4.4"
+A -O0
+A -g
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnn
+
+U gtk%s			gtk.ads			fdd1129e NE OO PK
+W gdk%s			gdk.ads			gdk.ali
+W glib%s		glib.adb		glib.ali
+W glib.object%s		glib-object.adb		glib-object.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20090409232307 b54b55de
+D a-finali.ads		20090409232307 9eaacebd
+D a-filico.ads		20090409232307 9299732a
+D a-stream.ads		20090409232307 34aca5be
+D a-tags.ads		20090409232307 bfa07446
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D gdk.ads		20091225112831 c70a781f
+D glib.ads		20091225112831 54df1dc2
+D glib-glist.ads	20091225112831 86ff2c8b
+D glib-gslist.ads	20091225112831 172859be
+D glib-object.ads	20091225112831 d347b7c2
+D gtk.ads		20091225112832 a8a2c9c9
+D gtkada.ads		20091225112832 1096f5e5
+D gtkada-types.ads	20091225112832 b2ab92a2
+D interfac.ads		20090409232307 a69cad5c
+D i-c.ads		20070406091342 bc3ef662
+D i-cstrin.ads		20090409232307 841d8a31
+D system.ads		20100127085936 15e10948
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-finimp.ads		20090409232307 9449f4cb
+D s-finroo.ads		20090409232307 1408f9d1
+D s-parame.ads		20090409232307 f32e56e9
+D s-secsta.ads		20090409232307 7bae3621
+D s-soflin.ads		20090409232307 0c6fd39d
+D s-stache.ads		20090409232307 257b3be8
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-stratt.ads		20090409232307 fef7c1da
+D s-traent.ads		20090409232307 bd5f2753
+D s-unstyp.ads		20090409232307 c0f9fae5
+X 9 gdk.ads
+34K9*Gdk 60e8 14|34w6 34r23 66r34
+37P12*C_Proxy{10|149P9} 14|66r38
+X 10 glib.ads
+37K9*Glib 397e9 14|33w6 33r23 37r6 37r23 61r24
+56M9*Guint<18|43M9> 14|43r34 51r34 56r34
+72M9*Gsize<18|60M9>
+149P9*C_Proxy(146R9)
+258M9*GType<72M9> 14|61r29
+X 13 glib-object.ads
+37K14*Object 452e16 14|37w11 37r28
+X 14 gtk.ads
+41K9*Gtk 77l5 77e8
+43V13*Major_Version{10|56M9} 73b<c,ada_gtk_major_version>22
+51V13*Minor_Version{10|56M9} 74b<c,ada_gtk_minor_version>22
+56V13*Micro_Version{10|56M9} 75b<c,ada_gtk_micro_version>22
+61M12*Gtk_Type{10|258M9}
+66P9*Gtk_Notebook_Page<10|149P9>
+X 18 i-c.ads
+43M9*unsigned
+60M9*size_t
+X 20 system.ads
+37K9*System 14|38w6 20|153e11
+

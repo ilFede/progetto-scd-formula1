@@ -1,0 +1,154 @@
+V "GNAT Lib v4.4"
+A -O0
+A -g
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnn
+
+U pango.enums%b		pango-enums.adb		b5a263fa NE OO PK
+W pango%s		pango.ads		pango.ali
+
+U pango.enums%s		pango-enums.ads		468f2319 EE NE OO PK
+W ada.tags%s		a-tags.adb		a-tags.ali
+W glib%s		glib.adb		glib.ali
+W glib.generic_properties%s  glib-generic_properties.adb  glib-generic_properties.ali  EA
+W pango%s		pango.ads		pango.ali
+W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20090409232307 b54b55de
+D a-finali.ads		20090409232307 9eaacebd
+D a-filico.ads		20090409232307 9299732a
+D a-stream.ads		20090409232307 34aca5be
+D a-tags.ads		20090409232307 bfa07446
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D glib.ads		20091225112831 54df1dc2
+D glib-generic_properties.ads  20091225112831 bc53e554
+D glib-generic_properties.adb  20091225112831 e941e6c4
+D glib-glist.ads	20091225112831 86ff2c8b
+D glib-gslist.ads	20091225112831 172859be
+D glib-object.ads	20091225112831 d347b7c2
+D glib-values.ads	20091225112831 233fe8b3
+D gtkada.ads		20091225112832 1096f5e5
+D gtkada-types.ads	20091225112832 b2ab92a2
+D interfac.ads		20090409232307 a69cad5c
+D i-c.ads		20070406091342 bc3ef662
+D i-cstrin.ads		20090409232307 841d8a31
+D pango.ads		20091225112832 567c5424
+D pango-enums.ads	20091225112832 f87f8fab
+D pango-enums.adb	20091225112832 4dddec51
+D system.ads		20100127085936 15e10948
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-finimp.ads		20090409232307 9449f4cb
+D s-finroo.ads		20090409232307 1408f9d1
+D s-parame.ads		20090409232307 f32e56e9
+D s-secsta.ads		20090409232307 7bae3621
+D s-soflin.ads		20090409232307 0c6fd39d
+D s-stache.ads		20090409232307 257b3be8
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-stratt.ads		20090409232307 fef7c1da
+D s-traent.ads		20090409232307 bd5f2753
+D s-unstyp.ads		20090409232307 c0f9fae5
+D unchconv.ads		20070406091342 34860a55
+X 9 glib.ads
+37K9*Glib 397e9 22|25w6 25r16 26r6 26r35
+50I9*Gint<19|35I9> 22|36r38 36r51 23|29r38 29r51
+227A9*Property(character)
+X 10 glib-generic_properties.ads
+50K14*Generic_Properties 214e28 22|26w11 26r40
+65k12*Generic_Internal_Discrete_Property 85e42 22|154r10 156r10 158r10 160r10
+. 162r10 164r10
+67A12*Property<9|227A9> 22|166r48[153] 167r50[155] 168r52[157] 169r52[159]
+. 170r56[161] 171r56[163]
+X 19 i-c.ads
+35I9*int<integer>
+X 21 pango.ads
+29K9*Pango 33e10 22|29r9 173r5 23|23r14 38r5
+X 22 pango-enums.ads
+29K15*Enums 21|29k9 22|173l11 173e16 23|23b20 38l11 38t16
+31N4*Pango_Scale 23|32r32 32r51 34r32 34r51
+36V13*To_Pixels{9|50I9} 36>24 23|29b13 36l8 36t17
+36i24 Pango_Units{9|50I9} 23|29b24 31r10 32r18 34r18
+47E9*Alignment 50e29 51r26
+48n7*Pango_Alignment_Left{47E9}
+49n7*Pango_Alignment_Center{47E9}
+50n7*Pango_Alignment_Right{47E9}
+53E9*Attr_Type 69e24 70r26
+54n7*Pango_Attr_Invalid{53E9}
+55n7*Pango_Attr_Lang{53E9}
+56n7*Pango_Attr_Family{53E9}
+57n7*Pango_Attr_Style{53E9}
+58n7*Pango_Attr_Weight{53E9}
+59n7*Pango_Attr_Variant{53E9}
+60n7*Pango_Attr_Stretch{53E9}
+61n7*Pango_Attr_Size{53E9}
+62n7*Pango_Attr_Font_Desc{53E9}
+63n7*Pango_Attr_Foreground{53E9}
+64n7*Pango_Attr_Background{53E9}
+65n7*Pango_Attr_Underline{53E9}
+66n7*Pango_Attr_Strikethrough{53E9}
+67n7*Pango_Attr_Rise{53E9}
+68n7*Pango_Attr_Shape{53E9}
+69n7*Pango_Attr_Scale{53E9}
+72E9*Coverage_Level 76e29 77r26
+73n7*Pango_Underline_None{72E9}
+74n7*Pango_Underline_Fallback{72E9}
+75n7*Pango_Underline_Approximate{72E9}
+76n7*Pango_Underline_Exact{72E9}
+79E9*Direction 83e31 84r26
+80n7*Pango_Direction_Ltr{79E9}
+81n7*Pango_Direction_Rtl{79E9}
+82n7*Pango_Direction_Ttb_Ltr{79E9}
+83n7*Pango_Direction_Ttb_Rtl{79E9}
+89E9*Stretch 98e36 99r26 160r46
+90n7*Pango_Stretch_Ultra_Condensed{89E9}
+91n7*Pango_Stretch_Extra_Condensed{89E9}
+92n7*Pango_Stretch_Condensed{89E9}
+93n7*Pango_Stretch_Semi_Condensed{89E9}
+94n7*Pango_Stretch_Normal{89E9}
+95n7*Pango_Stretch_Semi_Expanded{89E9}
+96n7*Pango_Stretch_Expanded{89E9}
+97n7*Pango_Stretch_Extra_Expanded{89E9}
+98n7*Pango_Stretch_Ultra_Expanded{89E9}
+101E9*Style 104e26 105r26 154r46
+102n7*Pango_Style_Normal{101E9}
+103n7*Pango_Style_Oblique{101E9}
+104n7*Pango_Style_Italic{101E9}
+107E9*Underline 112e29 113r26 162r46
+108n7*Pango_Underline_None{107E9}
+109n7*Pango_Underline_Single{107E9}
+110n7*Pango_Underline_Double{107E9}
+111n7*Pango_Underline_Low{107E9}
+112n7*Pango_Underline_Error{107E9}
+115E9*Variant 117e32 118r26 158r46
+116n7*Pango_Variant_Normal{115E9}
+117n7*Pango_Variant_Small_Caps{115E9}
+120E9*Weight 128e26 129r26 131r8 156r46
+121n7*Pango_Weight_Ultralight{120E9} 132r7
+122n7*Pango_Weight_Light{120E9} 133r7
+123n7*Pango_Weight_Normal{120E9} 134r7
+124n7*Pango_Weight_Medium{120E9} 135r7
+125n7*Pango_Weight_Semi_Bold{120E9} 136r7
+126n7*Pango_Weight_Bold{120E9} 137r7
+127n7*Pango_Weight_Ultrabold{120E9} 138r7
+128n7*Pango_Weight_Heavy{120E9} 139r7
+141E9*Wrap_Mode 144e28 145r26 164r46
+142n7*Pango_Wrap_Word{141E9}
+143n7*Pango_Wrap_Char{141E9}
+144n7*Pango_Wrap_Word_Char{141E9}
+153K12*Style_Properties[10|65] 166r31
+155K12*Weight_Properties[10|65] 167r32
+157K12*Variant_Properties[10|65] 168r33
+159K12*Stretch_Properties[10|65] 169r33
+161K12*Underline_Properties[10|65] 170r35
+163K12*Wrap_Mode_Properties[10|65] 171r35
+166A9*Property_Style<10|67A12[153]>
+167A9*Property_Weight<10|67A12[155]>
+168A9*Property_Variant<10|67A12[157]>
+169A9*Property_Stretch<10|67A12[159]>
+170A9*Property_Underline<10|67A12[161]>
+171A9*Property_Wrap_Mode<10|67A12[163]>
+

@@ -1,0 +1,250 @@
+V "GNAT Lib v4.4"
+A -O0
+A -g
+A -gnatA
+P SS ZX
+R nnvnnnnnnnnnnnnnnnnnnvnnnnvnnnnnnnnnnnvnnvnnnnnnnnnvvnnnnnvnvvnnnnnnnnnnnnnnn
+
+U glib%b		glib.adb		4cac05fa NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W interfaces.c.strings%s  i-cstrin.adb		i-cstrin.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.string_ops%s	s-strops.adb		s-strops.ali
+
+U glib%s		glib.ads		70860177 BN EE OO PR PK
+W ada%s			ada.ads			ada.ali
+W ada.finalization.list_controller%s  a-filico.adb  a-filico.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.unchecked_conversion%s
+W ada.unchecked_deallocation%s
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W system%s		system.ads		system.ali
+W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
+W system.finalization_root%s  s-finroo.adb	s-finroo.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20090409232307 b54b55de
+D a-finali.ads		20090409232307 9eaacebd
+D a-filico.ads		20090409232307 9299732a
+D a-stream.ads		20090409232307 34aca5be
+D a-tags.ads		20090409232307 bfa07446
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D glib.ads		20091225112831 54df1dc2
+D glib.adb		20091225112831 9c6e9209
+D interfac.ads		20090409232307 a69cad5c
+D i-c.ads		20070406091342 bc3ef662
+D i-cstrin.ads		20090409232307 841d8a31
+D system.ads		20100127085936 15e10948
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-finimp.ads		20090409232307 9449f4cb
+D s-finroo.ads		20090409232307 1408f9d1
+D s-parame.ads		20090409232307 f32e56e9
+D s-secsta.ads		20090409232307 7bae3621
+D s-soflin.ads		20090409232307 0c6fd39d
+D s-stache.ads		20090409232307 257b3be8
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-stratt.ads		20090409232307 fef7c1da
+D s-strops.ads		20090409232307 845f72d2
+D s-sopco3.ads		20090409232307 72ce1063
+D s-sopco4.ads		20090409232307 bc112723
+D s-sopco5.ads		20090409232307 191315e8
+D s-traent.ads		20090409232307 bd5f2753
+D s-unstyp.ads		20090409232307 c0f9fae5
+X 1 ada.ads
+16K9*Ada 19e8 9|32r6 33r6 138r26 141r26 161r29 163r6
+X 7 a-unccon.ads
+20v14*Unchecked_Conversion 9|33w10 161r33 163r10
+X 8 a-uncdea.ads
+17+9 Object 9|139r7 142r7
+18P9 Name(17+9) 9|139r31 142r25
+20u15*Unchecked_Deallocation 9|32w10 138r30 141r30
+X 9 glib.ads
+37K9*Glib 173r54 240r27 276r50 303r60 309r17 397l5 397e9 10|26b14 142l5 142t9
+40K12*C=40:33 41r13 42r13 48r23 49r23 50r23 51r23 54r24 55r24 56r24 57r24
+. 59r24 60r24 72r22 116r55 117r55
+48I9*Gshort<12|36I9> 103r55
+49I9*Glong<12|37I9> 81r17 82r17 104r55
+50I9*Gint<12|35I9> 52r25 95r30 105r55 126r48 10|46r48
+51E9*Gchar<12|72E9>
+52I9*Gboolean<50I9> 102r55
+54M9*Gushort<12|44M9> 108r55
+55M9*Gulong<12|45M9> 109r55
+56M9*Guint<12|43M9> 106r55 276r31 387r26
+57M9*Guchar<12|47M9> 111r55
+59F9*Gfloat<12|64F9> 110r55
+60F9*Gdouble<12|65F9> 89r28 112r55
+62I9*Gint8<short_short_integer>
+63I9*Gint16<short_integer>
+64I9*Gint32<integer>
+65I9*Gint64<long_long_integer>
+67M9*Guint8
+68M9*Guint16 92r26
+69M9*Guint32 74r25 107r55 182r23
+70M9*Guint64
+72M9*Gsize<12|60M9> 258r22
+74M9*Gunichar<69M9>
+76A12*UTF8_String{string}<integer>
+80R9*GTime_Val 83e14 84r26 86r40
+81i7*TV_Sec{49I9}
+82i7*TV_Usec{49I9}
+86P9*GTime_Val_Access(80R9) 87r26
+89F12*Grange_Float{60F9}
+92M12*Gcolor_Int{68M9}
+95I12*Allocation_Int{50I9}
+102A9*Gboolean_Array(52I9)<integer> 123r38 10|32r38
+103A9*Gshort_Array(48I9)<integer>
+104A9*Glong_Array(49I9)<integer>
+105A9*Gint_Array(50I9)<integer>
+106A9*Guint_Array(56M9)<integer>
+107A9*Guint32_Array(69M9)<integer>
+108A9*Gushort_Array(54M9)<integer>
+109A9*Gulong_Array(55M9)<integer>
+110A9*Gfloat_Array(59F9)<integer>
+111A9*Guchar_Array(57M9)<integer> 133r39 139r17
+112A9*Gdouble_Array(60F9)<integer>
+114A9*Boolean_Array(boolean)<integer> 123r61 10|32r61 33r16
+116A9*Short_Array(12|36I9)<integer>
+117A9*Long_Array(12|37I9)<integer>
+123V13*To_Boolean_Array{114A9} 123>31 10|32b13 40l8 40t24
+123a31 A{102A9} 10|32b31 33r31 35r20 36r28
+126V13*To_Gint{50I9} 126>22 10|46b13 53l8 53t15
+126b22 Bool{boolean} 10|46b22 48r10
+133P9*Guchar_Array_Access(111A9) 139r39
+135P9*String_Ptr(string) 142r33
+138U14*Free[8|20]
+141U14*Free[8|20]
+146R9*C_Dummy 149r31 375c9 377e14 378r26
+149P9*C_Proxy(146R9) 159r26 161r71 163r32 173r59 240r32 303r65 309r22
+161V13*To_Proxy[7|20]{149P9}
+162V13*To_Address[7|20]{14|64M9}
+169P9*G_Destroy_Notify_Address 171r26
+170m24 Data{14|64M9}
+173P9*G_Destroy_Notify 174r26
+173p47 Data{149P9}
+182M9*GQuark<69M9> 190r29 192r55 197r54 303r45 308r17 10|59r55 60r46 70r54
+. 71r46
+190m4*Unknown_Quark{182M9}
+192V13*Quark_From_String{182M9} 192>32 10|59b13 64l8 64t25
+192s32 Id{string} 10|59b32 63r24
+197V13*Quark_Try_String{182M9} 197>31 10|70b13 75l8 75t24
+197s31 Id{string} 10|70b31 74r24
+205M9*Signal_Id 212r33 213r30 387c9 388r33 389r30
+208A9*Signal_Name<string><integer>
+212m4*Invalid_Signal_Id{205M9} 388c4
+213m4*Null_Signal_Id{205M9} 389c4
+227A9*Property(character) 229r42 235r35 385c9 10|108r42 111r17 113r17 121r35
+229V13*Build{227A9} 229>20 395r19 10|108b13 115l8 115t13
+229s20 Name{string} 10|108b20 110r10 110r16 111r27 113r27
+235V13*Property_Name{string} 235>28 10|121b13 124l8 124t21
+235a28 Prop{227A9} 10|121b28 123r22
+240P9*Param_Spec<149P9> 241r57
+241A9*Param_Spec_Array(240P9)<integer>
+244M9*Param_Flags 245r36 246r36 247r36 248r36 249r36 250r36
+245m4*Param_Readable{244M9}
+246m4*Param_Writable{244M9}
+247m4*Param_Construct{244M9}
+248m4*Param_Construct_Only{244M9}
+249m4*Param_Lax_Validation{244M9}
+250m4*Param_Private{244M9}
+258M9*GType<72M9> 276r55 278r27 278r41 282r32 282r46 292r38 298r54 303r30
+. 307r17 318r31 319r31 320r31 322r31 323r31 324r31 325r31 326r31 327r31 328r31
+. 329r31 330r31 331r31 332r31 333r31 334r31 335r31 338r31 341r31 342r31 358r31
+. 371r33 10|81r38 82r37 97r54 98r48 133r33 136r67
+271M9*GType_Class 383c9
+276A9*GType_Array(258M9)<56M9>
+278V13*Parent{258M9} 278>21 392b<c,g_type_parent>22
+278m21 Typ{258M9}
+282V13*Fundamental{258M9} 282>26 391b<c,ada_gtype_fundamental>22
+282m26 Typ{258M9}
+292V13*Type_Name{string} 292>24 10|81b13 91l8 91t17
+292m24 Type_Num{258M9} 10|81b24 84r45
+298V13*Type_From_Name{258M9} 298>29 10|97b13 102l8 102t22
+298s29 Name{string} 10|97b29 101r24
+303V13*Get_Qdata{149P9} 303>24 303>37 393b<c,g_type_get_qdata>22
+303m24 Typ{258M9}
+303m37 Quark{182M9}
+306U14*Set_Qdata 307>7 308>7 309>7 394b<c,g_type_set_qdata>22
+307m7 Typ{258M9}
+308m7 Quark{182M9}
+309p7 Data{149P9}
+316i4*GType_Fundamental_Shift{integer} 318r50 319r50 320r50 322r50 323r50
+. 324r50 325r50 326r50 327r50 328r50 329r51 330r51 331r51 332r51 333r51 334r51
+. 335r51 338r51 341r51 342r51 358r51
+318m4*GType_Invalid{258M9}
+319m4*GType_None{258M9}
+320m4*GType_Interface{258M9}
+322m4*GType_Char{258M9}
+323m4*GType_Uchar{258M9}
+324m4*GType_Boolean{258M9}
+325m4*GType_Int{258M9}
+326m4*GType_Uint{258M9}
+327m4*GType_Long{258M9}
+328m4*GType_Ulong{258M9}
+329m4*GType_Int64{258M9}
+330m4*GType_UInt64{258M9}
+331m4*GType_Enum{258M9}
+332m4*GType_Flags{258M9}
+333m4*GType_Float{258M9}
+334m4*GType_Double{258M9}
+335m4*GType_String{258M9}
+338m4*GType_Pointer{258M9}
+341m4*GType_Param{258M9}
+342m4*GType_Object{258M9}
+358m4*GType_Boxed{258M9}
+362P9*Boxed_Copy(14|64M9) 364r26 370r14 10|132r14 136r29
+363m17 Boxed{14|64M9}
+365P9*Boxed_Free 366r26 371r14 10|133r14 136r48
+365m41 Boxed{14|64M9}
+368V13*Boxed_Type_Register_Static{258M9} 369>7 370>7 371>7 10|130b13 140l8
+. 140t34
+369s7 Name{string} 10|131b7 139r24
+370p7 Copy{362P9} 10|132b7 139r42
+371p7 Free{365P9} 10|133b7 139r48
+376m7*Dummy1{14|64M9}
+X 10 glib.adb
+33a7 Result{9|114A9} 36m10 39r14
+35i11 Index{integer} 36r18 36r31
+60V16*Internal{9|182M9} 60>26 61b<c,g_quark_from_string>25 63r14
+60s26 Id{string}
+71V16*Internal{9|182M9} 71>26 72b<c,g_quark_try_string>25 74r14
+71s26 Id{string}
+82V16*Internal{13|50P9} 82>26 83b<c,g_type_name>25 84r35
+82m26 Type_Num{9|258M9}
+84p7 Ret{13|50P9} 86r10 89r24
+98V16*Internal{9|258M9} 98>26 99b<c,g_type_from_name>25 101r14
+98s26 Name{string}
+135V16*Internal{9|258M9} 136>10 136>22 136>41 137b<c,g_boxed_type_register_static>25
+. 139r14
+136s10 N{string}
+136p22 Copy{9|362P9}
+136p41 Free{9|365P9}
+X 11 interfac.ads
+36K9*Interfaces 9|35r6 40r22 10|24r6 24r32 11|171e15
+X 12 i-c.ads
+18K20*C 9|35w17 40r33 10|24r17 24r43 12|230e17
+35I9*int<integer> 9|41r15 50r25
+36I9*short<short_integer> 9|48r25 116r57
+37I9*long<integer> 9|49r25 117r57
+43M9*unsigned 9|42r15 56r26
+44M9*unsigned_short 9|54r26
+45M9*unsigned_long 9|55r26
+47M9*unsigned_char 9|57r26
+60M9*size_t 9|72r24
+64F9*C_float<float> 9|59r26
+65F9*double<long_float> 9|60r26
+72E9*char<character> 9|51r25
+X 13 i-cstrin.ads
+36K22*Strings 10|24w19 24r45 13|106e25
+50P9*chars_ptr(character) 10|82r51 84r22
+54p4*Null_Ptr{50P9} 10|86r16
+74V13*Value{string} 10|89r17
+X 14 system.ads
+37K9*System 9|34w6 161r55 163r41 170r31 363r25 363r48 365r49 376r16 383r28
+. 14|153e11
+64M9*Address 9|161r62 163r48 170r38 363r32 363r55 365r56 376r23 383r35
+
