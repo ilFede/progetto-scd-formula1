@@ -1,8 +1,258 @@
-\documentclass[a4paper,10pt]{book}
-\usepackage[utf8]{inputenc}
 
+\documentclass[a4paper,11pt, twoside]{book}
+
+\usepackage[italian]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{url}
+\usepackage[writefile]{listings}
+\usepackage[Sonny]{fncychap}
+\usepackage{fancyhdr}
+\usepackage{supertabular}
+\usepackage{longtable}
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{multirow}
+
+\usepackage[italian]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{url}
+\usepackage[writefile]{listings}
+\usepackage{supertabular}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage[table]{xcolor}
+
+
+\usepackage{amssymb,amsmath}
+
+\pagestyle{fancy}
+
+%Impostazione capitoletti pagina
+%\renewcommand{\chaptermark}[1]%
+%{\markboth{\MakeUppercase{Capitolo \thechapter:\ #1}}{}}
+%\renewcommand{\sectionmark}[1]%
+%{\markright{\MakeUppercase{Sezione \thesection:\ #1}}}
+
+%Impostazione linee di inizio e fine pagina
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.2pt}
+
+\newcommand{\helv}{%
+\fontfamily{phv}\fontseries{b}\fontsize{9}{11}\selectfont}
+
+\fancyhf{}
+\fancyhead[LE,RO]{\helv \thepage}
+\fancyhead[LO]{\helv \rightmark}
+\fancyhead[RE]{\helv \leftmark}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\lstnewenvironment{xml}{\lstset{basicstyle=\footnotesize, frame=trbl, breaklines=true}}{} 
 \begin{document}
 
+  %Inizio Titolo
+  \thispagestyle{empty}
+    
+  \begin{flushright}
+    {Università degli Studi di Padova}\linebreak[1]
+    \textbf{Corso di Laurea \linebreak Magistrale in Informatica} \linebreak \linebreak \linebreak \linebreak
+  \end{flushright}
+  
+  \begin{center}
+    {\texttt{Relazione del progetto per il corso di Sistemi Concorrenti e Distribuiti \linebreak \linebreak \linebreak \linebreak \linebreak}}
+  \end{center}
+  
+  \begin{center}
+    \texttt{\huge{\textbf{Simulatore concorrente e distribuito di una competizione di formula 1}}} \linebreak \linebreak \linebreak \linebreak \linebreak \linebreak \linebreak \linebreak \linebreak
+  \end{center}
+  
+  
+  \begin{flushleft}
+    Studente: Cacco Federico\\Matricola: 624686\\Data: 16 giugno 2012
+  \end{flushleft}
+
+  \newpage
+  \pagenumbering{Roman}
+  \setcounter{page}{1}
+  %Fine titolo
+
+  \tableofcontents
+  \newpage
+  
   \chapter{Introduzione}
+    \setcounter{page}{1}
+    \pagenumbering{arabic}
+    
+    \section{Scopo del progetto}
+      Il progetto didattico per il corso di Sistemi Concorrenti e Distribuiti consiste nell'analisi e la risoluzione 
+      delle problematiche di progettazione di un simulatore concorrente e distribuito 
+      di una competizione paragonabile ad una gara Formula 1.
+
+      Il sistema da simulare dovrà prevedere:
+      \begin{itemize}
+	\item Un circuito, possibilmente selezionabile in fase di configurazione, dotato almeno della pista e della corsia di 
+	  rifornimento.
+	  Entrambe dovranno essere soggette a regole congruenti di accesso, condivisione, 
+	  tempo di percorrenza, condizioni atmosferiche, ecc.
+	\item Un insieme configurabile di concorrenti, ciascuno con caratteristiche specifiche di prestazione, risorse, 
+	  strategia di gara, ecc.
+	\item Un sistema di controllo capace di riportare costantemente, consistentemente e separatamente, 
+	  lo stato della competizione, le migliori prestazioni (sul giro, per sezione di circuito) e anche la 
+	  situazione di ciascun concorrente rispetto a specifici parametri tecnici
+	\item Una particolare competizione, con specifica configurabile della durata e controllo di terminazione 
+	  dei concorrenti a fine gara.
+      \end{itemize}
+    
+    \section{Struttura del documento}
+      ******** DO-TO ********
+  
+  \chapter{Analisi dei requisiti}
+    I requisiti funzionali obbligatori del progetto sono elencati nella tabella \ref{tbl:RequisitiFunzionaliObbligatori}
+    
+    \begin{longtable}{|p{2cm}|p{8cm}|}
+      \toprule
+	\bfseries{CODICE} & \bfseries{DESCRIZIONE} \\\hline
+      \endfirsthead
+      RFOBB-01 & Presenza di un circuito nella competizione \\\hline
+      RFOBB-02 & Presenza di piloti nella competizione \\\hline 
+      RFOBB-03 & Presenza di un sistema di controllo della competizione \\\hline
+      RFOBB-04 & Il circuito deve essere dotato di una pista e della corsia di rifornimento \\\hline
+      RFOBB-05 & La pista deve essere soggetta a regole congruenti di accesso \\\hline
+      RFOBB-06 & La corsia dei box deve essere soggetta a regole congruenti di accesso \\\hline
+      RFOBB-07 & La pista e la corsia box devono essere condivisibili tra i piloti \\\hline
+      RFOBB-08 & La pista e la corsia box devono avere tempi di percorrenza verosimili \\\hline
+      RFOBB-09 & La pista e la corsia box devono essere soggette a condizioni atmosferiche \\\hline
+      RFOBB-10 & I concorrenti devono possedere personali caratteristiche di prestazione  \\\hline
+      RFOBB-11 & I concorrenti devono possedere una strategia di gara  \\\hline
+      RFOBB-12 & I concorrenti devono possedere una vettura con specifiche caratteristiche prestazionali  \\\hline
+      RFOBB-13 & Il sistema di controllo deve riportare lo stato della competizione  \\\hline
+      RFOBB-14 & Il sistema di controllo deve riportare le prestazioni e o stato dei piloti  \\\hline
+      RFOBB-15 & Il sistema di controllo deve tener traccia delle migliori prestazioni  \\\hline
+      RFOBB-16 & Durata e condizione meteo della gara devono essere configurabili  \\\hline
+      RFOBB-17 & Presenza di un controllo di terminazione dei concorrenti a fine gara  \\\hline
+      \caption{Requisiti funzionali obbligatori}
+      \label{tbl:RequisitiFunzionaliObbligatori}
+    \end{longtable}
+
+    I requisiti funzionali opzionali del progetto sono invece elencati nella tabella \ref{tbl:RequisitiFunzionaliOpzionali}
+    
+    \begin{longtable}{|p{2cm}|p{8cm}|}
+      \toprule
+	\bfseries{CODICE} & \bfseries{DESCRIZIONE} \\\hline
+      \endfirsthead
+      RFOPZ-01 & Il circuito può essere scelto in fase di configurazione \\\cline{1-2}
+      RFOPZ-02 & I piloti devono poter essere configurabili \\\cline{1-2}
+      \caption{Requisiti funzionali opzionali}
+      \label{tbl:RequisitiFunzionaliOpzionali}
+    \end{longtable}
+    
+  
+  \chapter{Progettazione di massima}
+    \section{Elenco entità coinvolte}
+      Durante la fase di progettazione sono state individuate le seguenti entità costitutive:
+      
+      \begin{itemize}
+        \item Circuito
+        \item Piloti
+        \item Controller
+        \item Gara 
+      \end{itemize}
+      
+      Di seguito verranno descritte in modo più approfondito per chiarire il loro compito all'interno del
+      programma.
+      
+    \section{Descrizione delle entità coinvolte}
+      \subsection{Circuito}
+        L'entità circuito rappresenta il circuito vero e proprio nel quale si svolge la gara, dato che non deve 
+        eseguire alcuna azione si
+        tratta di una entità passiva che ha lo solo scopo di accogliere i piloti impegnati ad affrontare la
+        competizione.
+        Dovrà comunque regolamentare la loro attività garantendo che vengano rispettate delle regole di accesso congrue
+        ad una ipotetica competizione reale. 
+        Le caratteristiche e le regole che il circuito dovrà fornire saranno le seguenti:
+        
+        \begin{itemize}
+          \item Dovrà essere specificata una lunghezza del circuito
+          \item Il circuito deve avere una larghezza variabile durante la sua percorrenza, non in tutti i tratti sarà
+                ad esempio possibile eseguire un sorpasso per via dello spazio limitato
+          \item Nel circuito dovranno essere presenti sia tratti curvi che rettilinei, che avranno quindi diverse velocità
+                di percorrenza
+          \item Dovranno esserci dei punti per il rilevamento delle prestazioni
+          \item Dovrà essere presente una corsia per i box, con relative regole di accesso
+	  \item Tutte queste opzioni dovranno poter essere configurate mediante file di configurazione
+        \end{itemize}
+        
+        Questa risorsa sarà condivisa da più piloti allo stesso tempo, sarà quindi necessario gestire
+        tutte le problematiche di concorrenza derivate.
+        
+        
+        
+        
+      
+      \subsection{Piloti}
+        I piloti sono le entità che dovranno percorrere il circuito per gareggiare nella competizione,
+        la percorrenza del circuito dovrà avvenire seguendo le regole e i vincoli imposti dal circuito
+        stesso.
+        
+        Dato che nelle competizioni reali ogni pilota ha le proprie caratteristiche, come ad esempio la prontezza di riflessi
+        o la capacità di valutare i punti esatti dove effettuare le staccate \footnote{Con il termine staccata si indica 
+        la fase in cui un pilota dopo un tratto rettilineo frena bruscamente per iniziare l'inserimento in curva},
+        anche in questo caso ad ogni pilota dovranno essere associate delle caratteristiche, chiamate skill, che possano
+        modellarne il comportamento in pista.
+        I piloti avranno poi una loro personale strategia di gara, questo consentirà loro di effettuare
+        i sorpassi non solo durante la percorrenza del giro, ma anche raggiungendo un buon compromesso
+        tra numero di soste ai box e prestazioni su pista. Infatti maggiori saranno le soste e migliori saranno le prestazioni
+        sul giro, dato che il pilota avrà presumibilmente un minore quantitativo di benzina, e quindi un minor peso, nella vettura.
+        Bisognerà fare comunque attenzione che la programmazione delle soste sia tale da consentire al pilota di concludere la gara,
+        evitando che esso finisca l carburante prima del suo termine
+        
+        Le caratteristiche che dovranno avere i piloti saranno quindi:
+        
+        \begin{itemize}
+	  \item Nome 
+	  \item Numero
+	  \item Skill misurante la capacità di eseguire il prima possibile le accelerazioni in uscita dalle curve
+	  \item Skill misurante la capacità di ritardare il più possibile la staccata prima di un inserimento in curva 
+	        \footnote{La staccata dovrà essere comunque effettuata in modo tale da garantire la 
+	        corretta percorrenza della curva}
+	  \item Un strategia di gara che regoli le soste ai box
+	\end{itemize}
+	
+        
+        Ad ogni pilota sarà poi assegnata una vettura, anche questa dotata di determinate caratteristiche che influenzeranno il suo
+        comportamento in pista. Esse saranno:
+        
+        \begin{itemize}
+          \item Nome del costruttore
+          \item Forza frenante
+          \item Potenza di accelerazione
+          \item Tenuta in curva
+          \item Consumo per chilometro
+          \item Velocità massima
+          \item Livello attuale di carburante
+        \end{itemize}
+
+      \subsection{Controller}
+        Il controller di gara si occupa di visualizzare l'andamento della competizione, mostrando
+        i tempi su giro di ogni pilota, i tempi intermedi di ogni pilota e il tempo del giro migliore.
+        
+      \subsection{Gara}
+        Questa entità si occupa di inizializzare l'intera competizione e di avviare la gara.
+          
+    \section{Distribuzione}
+        \<TO DO\>
+        
+  \chapter{Implementazione}
+    Dato che il progetto presenta alcune problematiche di concorrenza, per la sua realizzazione è stato scelto
+    di utilizzare il linguaggio di programmazione ADA.
+    Per implentare il progetto è stato scelto un linguaggio che potesse supportare nativamente
+    
+    \section{implementazione delle varie entità}
+  
+  \chapter{Compilazione ed esecuzione}
 
 \end{document}
