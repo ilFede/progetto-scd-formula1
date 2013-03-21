@@ -13,9 +13,9 @@ package Formula1.Segment is
 	 -- tipo di segmento
 	 Tipology          : Segment_Type_T;
 	 -- lunghezza del segmento
-	 Lenght            : Positive;
+	 Length            : Real_T;
 	 -- velocità del segmento
-	 Speed             : Speed_T;
+	 Speed             : Real_T;
 	 -- numero di corsie
 	 Tot_Lanes         : Num_Lanes_Seg_T;
 	 -- flag per segmento con rilevamento tempi

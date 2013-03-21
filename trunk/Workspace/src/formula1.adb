@@ -92,5 +92,4 @@ package body Formula1 is
    end Read_Config_File;
    --+------------
 
-
 end Formula1;
