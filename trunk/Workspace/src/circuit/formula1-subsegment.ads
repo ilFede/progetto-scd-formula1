@@ -1,7 +1,7 @@
 with Ada.Containers.Vectors;
 with Common;
 
-package Subsegment is
+package Formula1.Subsegment is
    use Common;
 
    -- risorsa protetta sottosegmento

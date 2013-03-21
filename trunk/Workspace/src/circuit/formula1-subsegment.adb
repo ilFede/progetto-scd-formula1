@@ -1,4 +1,4 @@
-package body Subsegment is
+package body Formula1.Subsegment is
 
    protected body Subsegment_T is
 

@@ -1,4 +1,4 @@
-package body Race is
+package body Formula1.Race is
 
    -- procedura per impostare la gara partendo da una configurazione
    procedure Build_Race (Race_Filename : in String) is
@@ -31,4 +31,4 @@ package body Race is
    end Start_Race;
    --+------------
 
-end Race;
+end Formula1.Race;

@@ -4,7 +4,7 @@ with Common;
 with Ada.Containers.Vectors;
 
 
-package Segment is
+package Formula1.Segment is
    use Subsegment;
    use Common;
 
@@ -58,4 +58,4 @@ private
 
 
 
-end Segment;
+end Formula1.Segment;
