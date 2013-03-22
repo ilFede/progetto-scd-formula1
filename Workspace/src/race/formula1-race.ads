@@ -17,7 +17,7 @@ package Formula1.Race is
       end record;
 
    -- instanza della gara
-   Race : Race_T;
+   --Race : Race_T;
 
    -- procedura per configurare la gara partendo da una configurazione
    procedure Build_Race (Race_Filename : in String);

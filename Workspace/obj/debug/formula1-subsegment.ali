@@ -8,7 +8,7 @@ R nnnnnvvnnnnnnnnnnnnnvnvnnnvnnnnnnvnnnnnnnvnnnnnnnnnnnnnnnnvnvnnnnnnnnnnnnnnnn
 U formula1.subsegment%b	formula1-subsegment.adb	af59f364 NE OO PK
 W formula1%s		formula1.adb		formula1.ali
 
-U formula1.subsegment%s	formula1-subsegment.ads	ac4b38d1 EE OO PK
+U formula1.subsegment%s	formula1-subsegment.ads	73317ee6 EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
@@ -52,7 +52,7 @@ D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
 D a-uncdea.ads		20070406091342 dc667e6d
-D formula1.ads		20130321125507 1464ce3e
+D formula1.ads		20130322115917 cb1e8809
 D formula1-subsegment.ads  20130321125702 9019d053
 D formula1-subsegment.adb  20130321122049 3f402337
 D interfac.ads		20090409232307 a69cad5c
@@ -105,17 +105,17 @@ X 7 a-convec.ads
 39+9 Element_Type 22|30r7
 43k24*Vectors 379e27 22|1w21 29r54
 X 21 formula1.ads
-6K9*Formula1 144e13 22|4r9 37r5 23|1r14 34r5
-66I12*Num_Lanes_Seg_T{positive} 22|10r45 18r25
-72o4*Min_Gap{duration} 23|24r37
+6K9*Formula1 158e13 22|4r9 37r5 23|1r14 34r5
+73I12*Num_Lanes_Seg_T{positive} 22|10r45 18r25
+79o4*Min_Gap{duration} 23|24r37
 X 22 formula1-subsegment.ads
 4K18*Subsegment 21|6k9 22|37l14 37e24 23|1b23 34l14 34t24
 7A9*Time_Array_T(2|38I9)<integer> 21r20
 10W19*Subsegment_T 10d33 23l8 23e20 26r36 23|3b19 32l8 32t20
-10i33 Tot_Lanes{21|66I12} 18r44 21r37 23|14r24
+10i33 Tot_Lanes{21|73I12} 18r44 21r37 23|14r24
 13U17 Get_Driving_Time 13=35 23|5b17 29l11 29t27
 13o35 Exit_Duration{duration} 23|5b35 21r32 25r45 28r10
-18i7 Num_Lane_Subseg{21|66I12}
+18i7 Num_Lane_Subseg{21|73I12}
 21a7 Time_Array{7A9} 23|9r29 15r17 16r28 25r13
 26P9*Subsegment_Ref_T(10W19) 30r23
 29K12*Subsegment_Vector_T[7|43]

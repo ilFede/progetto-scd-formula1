@@ -5,7 +5,7 @@ A -gnatA
 P SS ZX
 R nnnvnnnnnnnnnnnnnnnnvvvvnnnnvnnvnnnnnnvnnvnnnnnnnnnnnnnvnnvnvnnnnnnnnnnnnnnnn
 
-U formula1%b		formula1.adb		a6f03e4c NE OO PK
+U formula1%b		formula1.adb		8ca6367e NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.characters%s	a-charac.ads		a-charac.ali
 W ada.characters.latin_1%s  a-chlat1.ads	a-chlat1.ali
@@ -20,7 +20,7 @@ W system.string_ops%s	s-strops.adb		s-strops.ali
 W system.string_ops_concat_3%s  s-sopco3.adb	s-sopco3.ali
 W system.string_ops_concat_5%s  s-sopco5.adb	s-sopco5.ali
 
-U formula1%s		formula1.ads		8c325b18 EE OO PK
+U formula1%s		formula1.ads		a664532a EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.generic_array_sort%s
@@ -65,7 +65,7 @@ D a-textio.ads		20090409232307 fe8af46e
 D a-tiunio.ads		20070406091342 d721fe49
 D a-unccon.ads		20070406091342 51e09df2
 D a-uncdea.ads		20070406091342 dc667e6d
-D formula1.ads		20130321174159 e148803b
+D formula1.ads		20130322115917 cb1e8809
 D formula1.adb		20130321154659 19796fc3
 D gnat.ads		20050905075125 96410e68
 D g-arrspl.ads		20090409232307 a7944cb8
@@ -108,7 +108,7 @@ X 6 a-convec.ads
 38I9 Index_Type 23|31r7 36r7 47r7
 39+9 Element_Type 23|30r7 35r7 46r7
 43k24*Vectors 379e27 23|1w21 29r50 34r49 45r50
-53R9*Vector 23|39r54[34] 42r55[29] 149r93[45] 24|39r41[23|29] 60r93[23|45]
+53R9*Vector 23|39r54[34] 42r55[29] 152r93[45] 24|39r41[23|29] 60r93[23|45]
 . 61r42[23|29] 78r76[23|29]
 197U14*Append 24|54r35[23|29] 85r30[23|45]
 X 13 a-string.ads
@@ -135,19 +135,19 @@ X 19 a-textio.ads
 X 20 a-tiunio.ads
 25K21*Unbounded_IO 61e29 24|6w18
 X 23 formula1.ads
-6K9*Formula1 155l5 155e13 24|9b14 95l5 95t13
-19F9*Real_T<short_float> 67r23 115r21 116r20
+6K9*Formula1 158l5 158e13 24|9b14 95l5 95t13
+19F9*Real_T<short_float> 67r24 108r28 118r21 119r20
 26P9*String_Ref_T(string) 30r23
 29K12*String_Vector_T[6|43] 42r39 24|39r25 61r26 78r60
 34K12*Float_Vector_T[6|43] 39r39
 39P10*Float_Vector_Ref_T(6|53R9[34])
-42P9*String_Vector_Ref_T(6|53R9[29]) 46r23 146r76 24|11r76 24r20 78r33
-45K12*Configuration_T[6|43] 149r77 24|60r77
+42P9*String_Vector_Ref_T(6|53R9[29]) 46r23 149r76 24|11r76 24r20 78r33
+45K12*Configuration_T[6|43] 152r77 24|60r77
 53F12*Percent_T{float}
 60E9*Meteo_T 60e30
 60n21*dry{60E9}
 60n26*wet{60E9}
-67f4*Subsegment_Lengh{19F9}
+67f4*Subsegment_Lenght{19F9}
 70E9*Segment_Type_T 70e49
 70n28*acc{70E9}
 70n33*const{70E9}
@@ -164,20 +164,21 @@ X 23 formula1.ads
 99I12*Coeff_Deceleration_T{positive}
 102I12*Coeff_Roadholding_T{positive}
 105F12*Car_Consumption_T{float}
-115f4*Alpha{19F9}
-116f4*Beta{19F9}
-123a4*Race_Config_Path{string}
-126a4*Pilots_Set_Path{string}
-129a4*Cars_Set_Path{string}
-132a4*Circuits_Set_Path{string}
-135a4*Race_Config_Filename{string}
-138a4*Competitors_Config_Filename{string}
-146U14*String_Tokenizer 146>32 146=49 24|11b14 57l8 57t24 83r16
-146s32 Str{string} 24|11b32 26r33 30r42
-146p49 String_Vector_Ref{42P9} 24|11b49 54r13
-149U14*Read_Config_File 149>32 149=54 24|60b14 92l8 92t24
-149s32 Filename{string} 24|60b32 68r33
-149r54 Configuration{6|53R9[45]} 24|60b54 85m16
+108f4*Standard_Deceleration{19F9}
+118f4*Alpha{19F9}
+119f4*Beta{19F9}
+126a4*Race_Config_Path{string}
+129a4*Pilots_Set_Path{string}
+132a4*Cars_Set_Path{string}
+135a4*Circuits_Set_Path{string}
+138a4*Race_Config_Filename{string}
+141a4*Competitors_Config_Filename{string}
+149U14*String_Tokenizer 149>32 149=49 24|11b14 57l8 57t24 83r16
+149s32 Str{string} 24|11b32 26r33 30r42
+149p49 String_Vector_Ref{42P9} 24|11b49 54r13
+152U14*Read_Config_File 152>32 152=54 24|60b14 92l8 92t24
+152s32 Filename{string} 24|60b32 68r33
+152r54 Configuration{6|53R9[45]} 24|60b54 85m16
 X 24 formula1.adb
 19r7 Subs{26|74R9[27|39]} 29m42 37r84 41r47 44r58
 22a7 Seps{string} 31r42

@@ -14,7 +14,7 @@ package Formula1.Track is
       -- array dei segmenti
       Segment_List : Segment_Vector_T.Vector;
       -- lunghezza del circuito
-      Lap_Length : Positive;
+      Lap_Length : Real_T;
    end record;
 
    -- tipo per l'accesso ad un circuito

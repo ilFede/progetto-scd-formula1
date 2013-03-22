@@ -64,7 +64,7 @@ package Formula1 is
    ---------------------------------------------------
 
    -- costante con la lunghezza in metri di un sottosegmento
-   Subsegment_Lengh : Real_T := 300.0;
+   Subsegment_Lenght : Real_T := 300.0;
 
    -- tipo del segmento
    type Segment_Type_T is (acc, const, dec, box);
@@ -103,6 +103,9 @@ package Formula1 is
 
    -- sottotipo per il consumo di carburante
    subtype Car_Consumption_T is Float range 0.0..300.0;
+
+   -- costante di decelazione standard
+   Standard_Deceleration : Real_T := 39.0;
 
    ---------------------------------------------------
    -- COSTANTI PER LA MODELLAZIONED DELL'ACCELERAZIONE

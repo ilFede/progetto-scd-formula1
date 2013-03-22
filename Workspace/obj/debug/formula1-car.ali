@@ -17,7 +17,7 @@ W system.string_ops%s	s-strops.adb		s-strops.ali
 W system.val_int%s	s-valint.adb		s-valint.ali
 W system.val_real%s	s-valrea.adb		s-valrea.ali
 
-U formula1.car%s	formula1-car.ads	9a1d475c EE NE OO PK
+U formula1.car%s	formula1-car.ads	b04b4f6e EE NE OO PK
 W formula1%s		formula1.adb		formula1.ali
 
 D ada.ads		20070406091342 9c7dd3ea
@@ -36,7 +36,7 @@ D a-strmap.ads		20090409232307 5253a637
 D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
-D formula1.ads		20130321174159 e148803b
+D formula1.ads		20130322115917 cb1e8809
 D formula1-car.ads	20130321173702 7b55c767
 D formula1-car.adb	20130321173754 59162099
 D interfac.ads		20090409232307 a69cad5c
@@ -70,7 +70,7 @@ X 5 a-convec.ads
 . 27r75[17|45] 27r91[17|29] 28r52[17|45] 28r68[17|29] 29r73[17|45] 29r89[17|29]
 . 30r53[17|45] 30r69[17|29]
 X 17 formula1.ads
-6K9*Formula1 155e13 18|2r9 30r5 19|1r14 44r5
+6K9*Formula1 158e13 18|2r9 30r5 19|1r14 44r5
 19F9*Real_T<short_float> 18|15r31 19|15r34 28r24
 26P9*String_Ref_T(string) 18|9r35 19|9r34
 42P9*String_Vector_Ref_T(5|53R9[29])
@@ -79,8 +79,8 @@ X 17 formula1.ads
 99I12*Coeff_Deceleration_T{positive} 18|13r31 19|13r34 27r33
 102I12*Coeff_Roadholding_T{positive} 18|17r31 19|17r34 29r32
 105F12*Car_Consumption_T{float} 18|19r31 19|19r34
-129a4*Cars_Set_Path{string} 19|24r25
-149U14*Read_Config_File 19|24r7
+132a4*Cars_Set_Path{string} 19|24r25
+152U14*Read_Config_File 19|24r7
 X 18 formula1-car.ads
 2K18*Car 17|6k9 18|30l14 30e17 19|1b23 44l14 44t17
 5R9*Car_T 22e17 28r64 19|4r64

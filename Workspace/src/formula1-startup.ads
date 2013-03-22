@@ -7,6 +7,6 @@ package Formula1.Startup is
    -------------------------------------------------
 
    -- procedura che avvia tutto
-   procedure Startup;
+   procedure Race_Startup;
 
 end Formula1.Startup;
