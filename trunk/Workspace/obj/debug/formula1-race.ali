@@ -5,14 +5,14 @@ A -gnatA
 P SS ZX
 R nnnnnnnnnnnnvnnvnnvnnnvvnnnnnnnvnnnnnnnnnvnnnnnnnnnnnnnvnnvnvnnnnnnnnnnnnnnnn
 
-U formula1.race%b	formula1-race.adb	8eca2e7a NE OO PK
+U formula1.race%b	formula1-race.adb	d63a353b NE OO PK
 W formula1%s		formula1.adb		formula1.ali
 W system%s		system.ads		system.ali
 W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 W system.val_enum%s	s-valenu.adb		s-valenu.ali
 W system.val_int%s	s-valint.adb		s-valint.ali
 
-U formula1.race%s	formula1-race.ads	b06eb758 EE OO PK
+U formula1.race%s	formula1-race.ads	7fdcf7b5 EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.vectors%s
@@ -42,12 +42,12 @@ D a-strmap.ads		20090409232307 5253a637
 D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
-D formula1.ads		20130321174159 e148803b
-D formula1-race.ads	20130321130944 c9ec525c
+D formula1.ads		20130322115917 cb1e8809
+D formula1-race.ads	20130322091927 911c491d
 D formula1-race.adb	20130320135732 47267c26
 D formula1-segment.ads	20130321171914 d5ded330
 D formula1-subsegment.ads  20130321125702 9019d053
-D formula1-track.ads	20130321121607 a9b42fb3
+D formula1-track.ads	20130322083712 14a07c2d
 D interfac.ads		20090409232307 a69cad5c
 D i-c.ads		20070406091342 bc3ef662
 D i-cstrea.ads		20090409232307 e1e064a9
@@ -88,19 +88,18 @@ X 6 a-convec.ads
 101V13*Element{18|42P9} 20|12r45[18|45] 12r60[18|29] 14r57[18|45] 14r72[18|29]
 . 16r54[18|45] 16r70[18|29]
 X 18 formula1.ads
-6K9*Formula1 155e13 19|2r6 2r26 4r9 30r8 20|1r14 34r5
+6K9*Formula1 158e13 19|2r6 2r26 4r9 30r8 20|1r14 34r5
 26P9*String_Ref_T(string) 20|7r30
 42P9*String_Vector_Ref_T(6|53R9[29])
 45K12*Configuration_T[6|43] 20|5r23
 60E9*Meteo_T 60e30 19|16r22 20|16r25
-149U14*Read_Config_File 20|10r7
+152U14*Read_Config_File 20|10r7
 X 19 formula1-race.ads
 4K18*Race 18|6k9 19|30l17 30e21 20|1b23 34l14 34t18
-8R9*Race_T 17e17 20r11 29r15
+8R9*Race_T 17e17 29r15
 12r10*Track{23|9R9} 20|20m16
 14i10*Num_Laps{positive} 20|14m16
 16e10*Meteo{18|60E9} 20|16m16
-20r4*Race{8R9}
 23U14*Build_Race 23>26 20|4b14 24l8 24t18
 23s26 Race_Filename{string} 20|4b26 10r25
 26U14*Start_Race 20|28b14 31l8 31t18

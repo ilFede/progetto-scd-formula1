@@ -1,4 +1,5 @@
 with Formula1.Subsegment; use Formula1.Subsegment;
+
 package body Formula1.Track is
 
    -- procedura per settare il circuito data una configurazione
@@ -45,7 +46,7 @@ package body Formula1.Track is
 	    Segment_Has_Time_Check := Has_Time_Check_T'Value (String_Vector_Ref.all.Element (4).all);
 	    -- fine estrazione parametri del segmento
 	    -- calcolo il numero di sottosegmenti
-	    Segment_Tot_Subsegment := Segment_Leght / Subsegment_Lengh;
+	    Segment_Tot_Subsegment := Natural(Segment_Leght / Subsegment_Lenght);
             -- controllo che ci sia almeno un sottosegmento
 	    if Segment_Tot_Subsegment < 1 then
 	       Segment_Tot_Subsegment := 1;
@@ -87,7 +88,7 @@ package body Formula1.Track is
 	    -- aggiorno il numero di segmenti del circuito
 	    N_Seg := N_Seg + 1;
             -- aggiorno la lunghezza del circuito
-            Track_Race.Lap_Length := Track_Race.Lap_Length + Segment.Lenght;
+            Track_Race.Lap_Length := Track_Race.Lap_Length + Segment.Length;
 	 end;
       end loop;
       -- configuro il circuito

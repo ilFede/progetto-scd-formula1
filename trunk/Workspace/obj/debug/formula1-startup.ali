@@ -3,9 +3,9 @@ A -O0
 A -g
 A -gnatA
 P SS ZX
-R nnnvnnnnnnnnnnnnnnnnnvvnnnnnvnnvnnnnnnvnnvnnvnnnvnnnnnnvnnvnnnnnnnnnnnv1+nnnnnn
+R nnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnvnnnnnnvnnnnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
 
-U formula1.startup%b	formula1-startup.adb	3e9e0fb6 NE OO PK
+U formula1.startup%b	formula1-startup.adb	00a6dfbe NE OO PK
 W ada.tags%s		a-tags.adb		a-tags.ali
 W formula1%s		formula1.adb		formula1.ali
 W formula1.pilot%s	formula1-pilot.adb	formula1-pilot.ali
@@ -16,11 +16,8 @@ W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.standard_library%s  s-stalib.adb	s-stalib.ali
 W system.string_ops%s	s-strops.adb		s-strops.ali
-W system.tasking%s	s-taskin.adb		s-taskin.ali
-W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
-W system.val_real%s	s-valrea.adb		s-valrea.ali
 
-U formula1.startup%s	formula1-startup.ads	c9ee114f EE NE OO PK
+U formula1.startup%s	formula1-startup.ads	e0f9e4be EE NE OO PK
 W formula1%s		formula1.adb		formula1.ali
 
 D ada.ads		20070406091342 9c7dd3ea
@@ -43,14 +40,14 @@ D a-strmap.ads		20090409232307 5253a637
 D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
-D formula1.ads		20130321174159 e148803b
+D formula1.ads		20130322115917 cb1e8809
 D formula1-pilot.ads	20130321130928 49e1cb8d
-D formula1-race.ads	20130321130944 c9ec525c
+D formula1-race.ads	20130322091927 911c491d
 D formula1-segment.ads	20130321171914 d5ded330
-D formula1-startup.ads	20130321125849 c9ee114f
-D formula1-startup.adb	20130321130849 777d8728
+D formula1-startup.ads	20130322090207 e0f9e4be
+D formula1-startup.adb	20130322090207 38a2b990
 D formula1-subsegment.ads  20130321125702 9019d053
-D formula1-track.ads	20130321121607 a9b42fb3
+D formula1-track.ads	20130322083712 14a07c2d
 D interfac.ads		20090409232307 a69cad5c
 D i-c.ads		20070406091342 bc3ef662
 D i-cstrea.ads		20090409232307 e1e064a9
@@ -84,45 +81,24 @@ D s-taprob.ads		20090409232307 5e00115c
 D s-tassta.ads		20090409232307 71d2b71d
 D s-traent.ads		20090409232307 bd5f2753
 D s-unstyp.ads		20090409232307 c0f9fae5
-D s-valrea.ads		20090409232307 e4c63a53
 D s-wchcon.ads		20090409232307 ab028799
 X 6 a-convec.ads
-47I12*Extended_Index{integer}
-53R9*Vector 26|8r45[21|45] 10r44[22|16] 22r76[21|34]
-101V13*Element{21|42P9} 26|21r78[21|45] 24r65[21|29] 25r65[21|29] 29r60[21|29]
-197U14*Append 26|29r25[21|34] 33r24[22|16]
-237V13*First_Index{integer} 26|19r36[21|45]
-243V13*Last_Index{47I12[21|45]} 26|19r71[21|45] 28r41[21|29]
+53R9*Vector 26|8r45[21|45] 10r44[22|16]
 X 21 formula1.ads
-6K9*Formula1 155e13 25|1w6 1r20 3r9 12r5 26|1r6 1r26 2r6 2r25 4r14 54r5
-26P9*String_Ref_T(string) 26|24r35 25r35
-34K12*Float_Vector_T[6|43] 26|22r61
-39P10*Float_Vector_Ref_T(6|53R9[34]) 26|22r35
-42P9*String_Vector_Ref_T(6|53R9[29]) 26|21r35
+6K9*Formula1 158e13 25|1w6 1r20 3r9 12r5 26|1r6 1r26 2r6 2r25 4r14 54r5
 45K12*Configuration_T[6|43] 26|8r29
-123a4*Race_Config_Path{string} 26|14r19 16r25
-135a4*Race_Config_Filename{string} 26|14r38
-138a4*Competitors_Config_Filename{string} 26|16r44
-149U14*Read_Config_File 26|16r7
+126a4*Race_Config_Path{string} 26|14r19
+138a4*Race_Config_Filename{string} 26|14r38
 X 22 formula1-pilot.ads
 5K18*Pilot 20e19 26|1w15 1r35
-8T14*Pilot_T 26|32r30
-13P9*Pilot_Ref_T(8T14) 26|23r35
 16K12*Pilot_Vector_T[6|43] 26|10r29
 X 23 formula1-race.ads
 4K18*Race 30e21 26|2w15 2r34
 23U14*Build_Race 26|14r7
 X 25 formula1-startup.ads
 3K18*Startup 21|6k9 25|12l14 12e21 26|4b23 54l14 54t21
-10U14*Startup 26|6b14 53l8 53t15
+10U14*Race_Startup 26|6b14 53l8 53t20
 X 26 formula1-startup.adb
-8r7 Pilot_Configuration{6|53R9[21|45]} 16m73 19r16 19r51 21r58
-10r7 Pilot_Vett{6|53R9[22|16]} 33m13
-19i11 I{integer} 21r87
-21p13 Configuration{21|42P9} 24r51 25r51 28r27 29r46
-22p13 Strategy{21|39P10} 29r16 32r80
-23p13 Pilot_Ref{22|13P9} 32m13 33r32
-24p13 Pilot_Name_Filename{21|26P9} 32r39
-25p13 Pilot_Car_Filename{21|26P9} 32r60
-28i17 J{integer} 29r69
+8r7 Pilot_Configuration{6|53R9[21|45]}
+10r7 Pilot_Vett{6|53R9[22|16]}
 

@@ -50,7 +50,7 @@ D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
 D a-uncdea.ads		20070406091342 dc667e6d
-D formula1.ads		20130321174159 e148803b
+D formula1.ads		20130322115917 cb1e8809
 D formula1-segment.ads	20130321171914 d5ded330
 D formula1-segment.adb	20130321122913 b3da6c13
 D formula1-subsegment.ads  20130321125702 9019d053
@@ -96,7 +96,7 @@ X 7 a-convec.ads
 43k24*Vectors 379e27 22|3w21 33r51
 53R9*Vector 22|26r50[24|29] 38r57[33]
 X 21 formula1.ads
-6K9*Formula1 155e13 22|1r6 1r31 2w6 2r20 6r9 58r5 23|1r14 45r5
+6K9*Formula1 158e13 22|1r6 1r31 2w6 2r20 6r9 58r5 23|1r14 45r5
 19F9*Real_T<short_float> 22|16r30 18r30
 70E9*Segment_Type_T 70e49 22|14r30
 73I12*Num_Lanes_Seg_T{positive} 22|20r30

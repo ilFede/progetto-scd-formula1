@@ -6,7 +6,7 @@ A -gnatA
 P SS ZX
 R nnnnnvvnnnnnnnnnnnnnnvvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnn
 
-U main%b		main.adb		ee2140f6 NE OO SU
+U main%b		main.adb		bbc8de67 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -30,11 +30,11 @@ D a-strmap.ads		20090409232307 5253a637
 D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
-D formula1.ads		20130321174159 e148803b
-D formula1-startup.ads	20130321125849 c9ee114f
+D formula1.ads		20130322115917 cb1e8809
+D formula1-startup.ads	20130322090207 e0f9e4be
 D interfac.ads		20090409232307 a69cad5c
 D i-cstrea.ads		20090409232307 e1e064a9
-D main.adb		20130321171851 214549dc
+D main.adb		20130322090146 9714ce30
 D system.ads		20100127085936 15e10948
 D s-crtl.ads		20090409232307 997234a1
 D s-exctab.ads		20090409232307 5c1c61ae
@@ -53,24 +53,25 @@ D s-traent.ads		20090409232307 bd5f2753
 D s-unstyp.ads		20090409232307 c0f9fae5
 D s-wchcon.ads		20090409232307 ab028799
 X 1 ada.ads
-16K9*Ada 19e8 22|3r6 4r6 4r24 23r4
+16K9*Ada 19e8 22|3r6 4r6 4r24 24r4
 X 2 a-calend.ads
 36K13*Calendar 358e17 22|4w10 4r28
-38I9*Time 22|12r12
-52V13*Clock{38I9} 22|12r20
+38I9*Time 22|13r12
+52V13*Clock{38I9} 22|13r20
 X 16 a-textio.ads
-48K13*Text_IO 506e16 22|3w10 23r8
-263U14*Put_Line 22|23r16
+48K13*Text_IO 506e16 22|3w10 24r8
+263U14*Put_Line 22|24r16
 X 18 formula1.ads
-6K9*Formula1 155e13 22|1r6 5w6 5r20
-19F9*Real_T<short_float> 22|13r12 14r15 17r13 18r16
+6K9*Formula1 158e13 22|1r6 5r6 5r28 6w6 6r20
+19F9*Real_T<short_float> 22|14r12 15r15 18r13 19r16
 X 19 formula1-startup.ads
-3K18*Startup 12e21 22|1w15
+3K18*Startup 12e21 22|1w15 5w15 5r37
+10U14*Race_Startup 22|17r4
 X 22 main.adb
-8U11*Main 8b11 25l5 25t9
-10i4 Int{integer} 11r26 19r23 20m4 22m4
-11f4 Flo{float} 19m4 19r11 20r19 21m4 21r11 22r19
-12i4 Timee{2|38I9}
-13f4 Speed{18|19F9} 17m4
-14f4 Distance{18|19F9} 18m4
+9U11*Main 9b11 26l5 26t9
+11i4 Int{integer} 12r26 20r23 21m4 23m4
+12f4 Flo{float} 20m4 20r11 21r19 22m4 22r11 23r19
+13i4 Timee{2|38I9}
+14f4 Speed{18|19F9} 18m4
+15f4 Distance{18|19F9} 19m4
 
