@@ -10,7 +10,7 @@ package Formula1.Subsegment is
    protected type Subsegment_T (Tot_Lanes : Num_Lanes_Seg_T) is
 
       -- procedura che mi restituisce il tempo di percoerrenza del segmento
-      procedure Get_Driving_Time (Exit_Duration : in out Duration);
+      procedure Get_Driving_Time (Expected_Exit_Duration : in Duration; Real_Exit_Duration : out Duration);
 
    private
 

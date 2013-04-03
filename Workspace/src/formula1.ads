@@ -16,7 +16,7 @@ package Formula1 is
    --type Distance_T is digits 2 range 0.0 .. 100000.0;
 
    -- tipo per distanze e velocità
-   type Real_T is digits 2 range 0.0..1000000.0;
+   type Real_T is digits 2 range -1000000.0..1000000.0;
 
 
    -- sottotipo per la lunghezza del segmento

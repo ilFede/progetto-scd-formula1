@@ -8,7 +8,7 @@ R nnnnnnnnnnnnnnnnnnnnnvvvnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnvnvnnnnnnnnnnnnnnnn
 U formula1.segment%b	formula1-segment.adb	6604bf23 NE OO PK
 W formula1%s		formula1.adb		formula1.ali
 
-U formula1.segment%s	formula1-segment.ads	74b949ef EE OO PK
+U formula1.segment%s	formula1-segment.ads	4d6fe1e8 EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.generic_array_sort%s
@@ -50,10 +50,10 @@ D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
 D a-uncdea.ads		20070406091342 dc667e6d
-D formula1.ads		20130322115917 cb1e8809
+D formula1.ads		20130324203825 9cbbfb80
 D formula1-segment.ads	20130321171914 d5ded330
 D formula1-segment.adb	20130321122913 b3da6c13
-D formula1-subsegment.ads  20130321125702 9019d053
+D formula1-subsegment.ads  20130326170350 a9cf7854
 D interfac.ads		20090409232307 a69cad5c
 D i-c.ads		20070406091342 bc3ef662
 D i-cstrea.ads		20090409232307 e1e064a9

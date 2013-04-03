@@ -5,7 +5,7 @@ A -gnatA
 P SS ZX
 R nnnvnnnnnnnnvnnnnnnnnvvvnnnnvnnvvnnnnnvnnvnnnnnnnnnnnnnvnnvnvnnnnnnnnnnnnnnnn
 
-U formula1.track%b	formula1-track.adb	6642033d NE OO PK
+U formula1.track%b	formula1-track.adb	bdf7dae8 NE OO PK
 W formula1%s		formula1.adb		formula1.ali
 W formula1.subsegment%s	formula1-subsegment.adb	formula1-subsegment.ali
 W system%s		system.ads		system.ali
@@ -15,7 +15,7 @@ W system.val_enum%s	s-valenu.adb		s-valenu.ali
 W system.val_int%s	s-valint.adb		s-valint.ali
 W system.val_real%s	s-valrea.adb		s-valrea.ali
 
-U formula1.track%s	formula1-track.ads	601935c2 EE OO PK
+U formula1.track%s	formula1-track.ads	59cf9dc5 EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.vectors%s
@@ -47,11 +47,11 @@ D a-strmap.ads		20090409232307 5253a637
 D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
-D formula1.ads		20130322115917 cb1e8809
+D formula1.ads		20130324203825 9cbbfb80
 D formula1-segment.ads	20130321171914 d5ded330
-D formula1-subsegment.ads  20130321125702 9019d053
+D formula1-subsegment.ads  20130326170350 a9cf7854
 D formula1-track.ads	20130322083712 14a07c2d
-D formula1-track.adb	20130322092014 e2fbaf43
+D formula1-track.adb	20130403105301 0098de91
 D interfac.ads		20090409232307 a69cad5c
 D i-c.ads		20070406091342 bc3ef662
 D i-cstrea.ads		20090409232307 e1e064a9
@@ -96,12 +96,12 @@ X 6 a-convec.ads
 47I12*Extended_Index{integer}
 53R9*Vector 21|15r39[19|33] 22|11r43[18|45] 19r50[19|33] 33r69[20|29] 35r69[20|29]
 101V13*Element{18|42P9} 22|38r48[18|45] 42r73[18|29] 43r66[18|29] 44r66[18|29]
-. 45r71[18|29] 46r85[18|29]
+. 45r71[18|29] 46r85[18|29] 95r81[19|33] 95r125[19|33] 95r169[19|33]
 197U14*Append 22|65r39[20|29] 87r37[19|33]
 237V13*First_Index{integer} 22|16r36[18|45]
 243V13*Last_Index{47I12[18|45]} 22|17r35[18|45]
 X 18 formula1.ads
-6K9*Formula1 158e13 21|2w6 3r6 3r28 4r6 6r9 29r5 22|1r6 1r31 3r14 100r5
+6K9*Formula1 158e13 21|2w6 3r6 3r28 4r6 6r9 29r5 22|1r6 1r31 3r14 102r5
 19F9*Real_T<short_float> 21|17r20 22|28r49 29r49 43r30 44r30
 26P9*String_Ref_T(string)
 42P9*String_Vector_Ref_T(6|53R9[29]) 22|34r49
@@ -117,7 +117,7 @@ X 19 formula1-segment.ads
 8R9*Segment_T 27e17 22|24r49
 12i10*Code{natural} 22|69m21
 14e10*Tipology{18|70E9} 22|70m21
-16f10*Length{18|19F9} 22|71m21 91r70
+16f10*Length{18|19F9} 22|71m21 91r70 95r92 95r136 95r180
 18f10*Speed{18|19F9} 22|72m21
 20i10*Tot_Lanes{18|73I12} 22|73m21
 22e10*Has_Time_Check{18|76E9} 22|74m21
@@ -131,19 +131,20 @@ X 20 formula1-subsegment.ads
 26P9*Subsegment_Ref_T(10W19) 22|59r36
 29K12*Subsegment_Vector_T[6|43] 22|33r49 35r49
 X 21 formula1-track.ads
-6K18*Track 18|6k9 21|29l14 29e19 22|3b23 100l14 100t19
+6K18*Track 18|6k9 21|29l14 29e19 22|3b23 102l14 102t19
 9R9*Track_T 18e14 21r31 27r17
-13i7*Tot_Segments{natural} 22|95m18
-15r7*Segment_List{6|53R9[19|33]} 22|87m24
-17f7*Lap_Length{18|19F9} 22|91m24 91r49
+13i7*Tot_Segments{natural} 22|97m18
+15r7*Segment_List{6|53R9[19|33]} 22|87m24 95r68 95r112 95r156
+17f7*Lap_Length{18|19F9} 22|91m24 91r49 95m18 95r43
 21P9*Track_Ref_T(9R9)
-24U14*Build_Track 24>27 22|6b14 97l8 97t19
+24U14*Build_Track 24>27 22|6b14 99l8 99t19
 24s27 Track_Filename{string} 22|6b27 14r45
-27r4*Track_Race{9R9} 22|87m13 91m13 91r38 95m7
+27r4*Track_Race{9R9} 22|87m13 91m13 91r38 95m7 95r32 95r57 95r101 95r145
+. 97m7
 X 22 formula1-track.adb
 7i7 Start_Index{integer} 16m7 21r16
 8i7 Stop_Index{integer} 17m7 21r31
-9i7 N_Seg{natural} 40r29 89m13 89r22 95r34
+9i7 N_Seg{natural} 40r29 89m13 89r22 97r34
 10p7 Segment_Vector_Ref{19|38P9} 19m7
 11r7 Configuration{6|53R9[18|45]} 14m61 16r22 17r21 38r34
 21i11 I{integer} 38r57

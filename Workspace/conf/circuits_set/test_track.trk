@@ -27,34 +27,35 @@
 ####### Inizio configurazione circuito #######
 #
 #Segmenti dei box
-dec 500 27 1 no
-box 2000 27 1 no
-acc 500 100 1 no
+dec 250 27 1 no
+box 1000 27 1 no
+acc 250 100 1 no
 #Primo rettileo (Traguardo)
-acc 4000 100 2 yes
-dec 150 45 2 no
+acc 1500 100 2 yes
+dec 150 30 2 no
 #Prima curva
-const 1000 45 1 no
+const 400 30 1 no
 #Secondo rettilineo
-acc 400 100 2 no
-dec 50 30 2 yes
+acc 200 100 2 no
+dec 100 20 2 yes
 #Seconda curva
-const 200 30 1 no
+const 100 20 1 no
 #Terzo rettilineo
-acc 400 100 2 no
-dec 50 30 2 no
+acc 150 100 2 no
+dec 100 20 2 no
 #Terza curva
-const 200 30 1 no
+const 200 20 1 no
 #Quarto rettilineo
-acc 2300 100 2 no
-dec 150 30 2 yes
+acc 400 100 2 no
+dec 100 30 2 yes
 #Quarta curva
-const 200 30 1 no
+const 70 30 1 no
 #Quinto rettilineo
-acc 1000 100 2 no
-dec 140 55 1 no
+acc 500 100 2 no
+dec 100 45 1 no
 #Quinta curva
-const 300 55 1 no
+const 100 45 1 no
+#Lunghezza totale 
 ####### Fine configurazione circuito #######
 
 
