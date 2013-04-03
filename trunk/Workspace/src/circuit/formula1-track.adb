@@ -87,10 +87,12 @@ package body Formula1.Track is
 	    Track_Race.Segment_List.Append (Segment);
 	    -- aggiorno il numero di segmenti del circuito
 	    N_Seg := N_Seg + 1;
-            -- aggiorno la lunghezza del circuito
+	    -- aggiorno la lunghezza del circuito
             Track_Race.Lap_Length := Track_Race.Lap_Length + Segment.Length;
 	 end;
       end loop;
+      -- sottraggo la corsia dei box (che è lunga come il rettilineo) dalla lunghezza del circuito
+      Track_Race.Lap_Length := Track_Race.Lap_Length - (Track_Race.Segment_List.Element(0).Length + Track_Race.Segment_List.Element(1).Length + Track_Race.Segment_List.Element(2).Length);
       -- configuro il circuito
       Track_Race.Tot_Segments := N_Seg;
       -- Track_Race.Segment_List_Ref := Segment_Vector_Ref;

@@ -26,15 +26,15 @@
 ####### Inizio configurazione vettura #######
 #
 #Costruttore
-Redbull
+Ferrari
 #Coefficente di accelerazione
-10
+9
 #Coefficente di decelarazione
-1
+10
 #Velocità massima
 98
 #Coefficente di tenuta
-5
+9
 #Consumo
 1.3
 ####### Fine configurazione vettura #######

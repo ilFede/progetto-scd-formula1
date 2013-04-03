@@ -23,6 +23,8 @@ package body Formula1.Pilot is
       Car                : Car_T;
       -- decelazione effettiva dell'auto
       Effective_Deceleration : Real_T;
+      -- penalità per il meteo, se piove aggiungo del tempo
+      Meteo_Penality : Real_T := 0.0;
 
       -- numero totale di giri
       Num_Laps    : Positive;
@@ -30,13 +32,13 @@ package body Formula1.Pilot is
       Num_Tot_Seg : Positive;
 
       -- velocità di entrata nel segmento
-      Segment_Enter_Speed     : Real_T;
+      Segment_Enter_Speed         : Real_T;
       -- velocità di uscita dal segmento
-      Segment_Exit_Speed      : Real_T;
-      -- tempo di percorrenza del segmento
-      Segment_Driving_Time    : Duration;
-      -- tempo di percorrenza del sottosegmento
-      Subsegment_Driving_Time : Duration;
+      Segment_Exit_Speed          : Real_T;
+      -- durata di percorrenza del segmento
+      Expected_Segment_Driving_Duration    : Duration;
+      -- durata di percorrenza del sottosegmento
+      Expected_Subsegment_Driving_Duration : Duration;
 
       -- flag che indica se sono passato per i box
       Pit_Stop         : Boolean := false;
@@ -50,7 +52,7 @@ package body Formula1.Pilot is
       --Actual_Lane : Num_Lanes_Seg_T;
 
       -- variabile che indica se il pilota è in gara
-      On_Race : Boolean := true;
+      On_Race          : Boolean := true;
 
       ---------------------------------------------------
       -- DEFINIZIONE DELLE PROCEDURE E FUNZIONI DI APPOGGIO
@@ -104,6 +106,8 @@ package body Formula1.Pilot is
 	 -- configuro i ritardi di accelerazione e gli anticipi di frenata
 	 -- numero di pit stop totali e numero di quelli fatti
 	 Num_Tot_Pit_Stop := Strategy.Last_Index;
+	 -- carico la benzina iniziale
+	 Car.Fuel_Level := Strategy.all.Element (0);
       end Configure_Pilot_And_Car;
       --+--------
 
@@ -147,7 +151,9 @@ package body Formula1.Pilot is
 	 if (Segment_Exit_Speed > Car.Max_Speed) then
 	    Segment_Exit_Speed := Car.Max_Speed;
 	 end if;
-	 Acceleration_Time := Duration (Segment_Length) / Duration (((Segment_Enter_Speed + Segment_Exit_Speed) / 3.0) * 2.0);
+	 Acceleration_Time := Duration (Segment_Length / (((Segment_Enter_Speed + Segment_Exit_Speed) / 2.0) * 1.0));
+         -- aggiungo la penalità del meteo
+         Acceleration_Time := Acceleration_Time + ((Acceleration_Time / 100) * Duration(Meteo_Penality));
       end Do_Acceleration;
       --+--------
 
@@ -186,7 +192,8 @@ package body Formula1.Pilot is
 	 Deceleration_Time := Deceleration_Time + Get_Braking_Time (Segment_Enter_Speed, Segment_Exit_Speed);
 	 -- aggiungo il tempo per percorrere il tratto del segmento dopo la frenata anticipata
 	 Deceleration_Time := Deceleration_Time + Duration (Before_Brake_Space / Segment_Exit_Speed);
-	 -- tempo di decelerazione
+	 -- aggiungo la penalità per il meteo
+	 Deceleration_Time := Deceleration_Time + ((Deceleration_Time / 100) * Duration (Meteo_Penality));
       end Do_Deceleration;
       --+--------
 
@@ -222,12 +229,17 @@ package body Formula1.Pilot is
       Segment_Exit_Speed := 0.0;
       -- calcolo il valore effettivo di decelerazione
       Effective_Deceleration := Standard_Deceleration - ((Standard_Deceleration / 100.0) * (Real_T (Car.Coeff_Deceleration) / 2.0));
+      -- calcolo la penalità per il meteo
+      if (The_Race.Meteo = dry) then
+	 Meteo_Penality := (Real_T(Coeff_Roadholding_T'Last - Car.Coeff_Roadholding) / 2.0) + 10.0;
+      else
+	 Meteo_Penality := 0.0;
+      end if;
 
-      --
       -- imposto la corsia attuale
       -- Actual_Lane := 1;
       -- calcolo il carburante necessario per un giro di pista
-      Fuel_For_Lap := Car.Consumption * Float (The_Race.Track.Lap_Length);
+      Fuel_For_Lap := Car.Consumption * Float (The_Race.Track.Lap_Length) / 1000.0;
       for Lap in 1 .. Num_Laps loop
 	 declare
 	    -- segmento da cui partire (indica se nel giro entro ai box o se continuo normalmente)
@@ -261,24 +273,28 @@ package body Formula1.Pilot is
 
 		     if Actual_Segment.Tipology = dec then
 			-- corsia decelerazione box
-			Do_Deceleration (Actual_Length, Segment_Driving_Time);
+			Do_Deceleration (Actual_Length, Expected_Segment_Driving_Duration);
 			-- faccio il firnimento
-			Car.Fuel_Level := Strategy (Num_Pit_Stop);
+			Car.Fuel_Level := Strategy.all.Element (Num_Pit_Stop);
 			null;
 		     elsif Actual_Segment.Tipology = box then
 			-- corsia box
-			Segment_Driving_Time := Do_Box (Actual_Length);
+			Expected_Segment_Driving_Duration := Do_Box (Actual_Length);
 			null;
 		     else
 			-- corsia di accelerazione, entro nel terzo segmento
-			Do_Acceleration (Actual_Length, Segment_Driving_Time);
+			Do_Acceleration (Actual_Length, Expected_Segment_Driving_Duration);
 		     end if;
 		     -- devo attraversare tutti i sottosegmenti
-		     Subsegment_Driving_Time := Segment_Driving_Time / Duration (Actual_Segment.Tot_Subsegments);
-		     for Subsegment_Index in 0 .. Actual_Segment.Tot_Subsegments loop
-			Actual_Segment.Subsegment_List.Element (Subsegment_Index).all.Get_Driving_Time (Subsegment_Driving_Time);
-			-- sospendo per la durata dell'atraversamento
-			delay until (Clock + Segment_Driving_Time);
+		     Expected_Subsegment_Driving_Duration := Expected_Segment_Driving_Duration / Duration (Actual_Segment.Tot_Subsegments);
+		     for Subsegment_Index in 0 .. (Actual_Segment.Tot_Subsegments - 1) loop
+			declare
+			   Real_Subsegment_Driving_Duration : Duration;
+			begin
+			   Actual_Segment.Subsegment_List.Element (Subsegment_Index).all.Get_Driving_Time (Expected_Subsegment_Driving_Duration, Real_Subsegment_Driving_Duration);
+			   -- sospendo per la durata dell'atraversamento
+			   delay until (Clock + Real_Subsegment_Driving_Duration);
+			end;
 		     end loop;
 		     Put_Line ("Pilota " & Name.all & " uscito dal segmento numero: " & Integer'Image (Segment_Index));
 
@@ -305,29 +321,34 @@ package body Formula1.Pilot is
 		  Segment_Exit_Speed := The_Race.Track.Segment_List.Element ((Segment_Index + 1) mod Num_Tot_Seg).Speed;
 		  if Actual_Segment.Tipology = dec then
 		     -- frenata
-		     Do_Deceleration (Actual_Length, Segment_Driving_Time);
+		     Do_Deceleration (Actual_Length, Expected_Segment_Driving_Duration);
 		  elsif Actual_Segment.Tipology = const then
 		     -- curva o tratto a velocità costante
-		     Segment_Driving_Time := Do_Constant (Actual_Length);
+		     Expected_Segment_Driving_Duration := Do_Constant (Actual_Length);
 		  elsif Actual_Segment.Tipology = acc then
 		     -- accelerazione
-		     Do_Acceleration (Actual_Length, Segment_Driving_Time);
+		     Do_Acceleration (Actual_Length, Expected_Segment_Driving_Duration);
 		  end if;
 		  -- devo attraversare tutti i sottosegmenti
-		  Subsegment_Driving_Time := Segment_Driving_Time / Duration (Actual_Segment.Tot_Subsegments);
-		  for Subsegment_Index in 0 .. Actual_Segment.Tot_Subsegments loop
-		     Actual_Segment.Subsegment_List.Element (Subsegment_Index).all.Get_Driving_Time (Subsegment_Driving_Time);
-		     -- sospendo per la durata dell'attraversamento
-		     delay until (Clock + Segment_Driving_Time);
+		  Expected_Subsegment_Driving_Duration := Duration (Actual_Segment.Tot_Subsegments);
+		  Expected_Subsegment_Driving_Duration := Expected_Segment_Driving_Duration / Duration (Actual_Segment.Tot_Subsegments);
+		  for Subsegment_Index in 0 .. (Actual_Segment.Tot_Subsegments - 1) loop
+		     declare
+			Real_Subsegment_Driving_Duration : Duration;
+		     begin
+			Actual_Segment.Subsegment_List.Element (Subsegment_Index).all.Get_Driving_Time (Expected_Subsegment_Driving_Duration, Real_Subsegment_Driving_Duration);
+			-- sospendo per la durata dell'attraversamento
+			delay until (Clock + Real_Subsegment_Driving_Duration);
+		     end;
 		  end loop;
 		  Put_Line (Name.all & " uscito dal segmento numero: " & Integer'Image (Segment_Index));
 		  -- aggiorno i dati sulla benzina
-                  Car.Fuel_Level := Car.Fuel_Level - Fuel_For_Lap;
+		  Car.Fuel_Level := Car.Fuel_Level - Fuel_For_Lap;
 	       end;
 	    end loop;
 	 end;
       end loop;
-      null;
+      Put_Line (Name.all & " termina");
    end Pilot_T;
    --+--------
 

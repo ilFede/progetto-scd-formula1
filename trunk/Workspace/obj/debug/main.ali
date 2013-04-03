@@ -6,7 +6,7 @@ A -gnatA
 P SS ZX
 R nnnnnvvnnnnnnnnnnnnnnvvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnn
 
-U main%b		main.adb		bbc8de67 NE OO SU
+U main%b		main.adb		ec6dadee NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -30,7 +30,7 @@ D a-strmap.ads		20090409232307 5253a637
 D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
-D formula1.ads		20130322115917 cb1e8809
+D formula1.ads		20130324203825 9cbbfb80
 D formula1-startup.ads	20130322090207 e0f9e4be
 D interfac.ads		20090409232307 a69cad5c
 D i-cstrea.ads		20090409232307 e1e064a9

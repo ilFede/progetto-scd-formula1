@@ -17,7 +17,7 @@ W system.string_ops%s	s-strops.adb		s-strops.ali
 W system.val_int%s	s-valint.adb		s-valint.ali
 W system.val_real%s	s-valrea.adb		s-valrea.ali
 
-U formula1.car%s	formula1-car.ads	b04b4f6e EE NE OO PK
+U formula1.car%s	formula1-car.ads	e7ee3ce7 EE NE OO PK
 W formula1%s		formula1.adb		formula1.ali
 
 D ada.ads		20070406091342 9c7dd3ea
@@ -36,7 +36,7 @@ D a-strmap.ads		20090409232307 5253a637
 D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
-D formula1.ads		20130322115917 cb1e8809
+D formula1.ads		20130324203825 9cbbfb80
 D formula1-car.ads	20130321173702 7b55c767
 D formula1-car.adb	20130321173754 59162099
 D interfac.ads		20090409232307 a69cad5c

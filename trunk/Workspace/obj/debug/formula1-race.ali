@@ -12,7 +12,7 @@ W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 W system.val_enum%s	s-valenu.adb		s-valenu.ali
 W system.val_int%s	s-valint.adb		s-valint.ali
 
-U formula1.race%s	formula1-race.ads	7fdcf7b5 EE OO PK
+U formula1.race%s	formula1-race.ads	2879843c EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.vectors%s
@@ -42,11 +42,11 @@ D a-strmap.ads		20090409232307 5253a637
 D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
-D formula1.ads		20130322115917 cb1e8809
+D formula1.ads		20130324203825 9cbbfb80
 D formula1-race.ads	20130322091927 911c491d
 D formula1-race.adb	20130320135732 47267c26
 D formula1-segment.ads	20130321171914 d5ded330
-D formula1-subsegment.ads  20130321125702 9019d053
+D formula1-subsegment.ads  20130326170350 a9cf7854
 D formula1-track.ads	20130322083712 14a07c2d
 D interfac.ads		20090409232307 a69cad5c
 D i-c.ads		20070406091342 bc3ef662
