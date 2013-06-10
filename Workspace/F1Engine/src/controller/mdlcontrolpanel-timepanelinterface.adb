@@ -784,39 +784,44 @@ package body MDLControlPanel.TimePanelInterface is
         (Request_Ü);
    end sendStartRace;
 
-   sendFuelLevel_Arg_Name_number_Ü : constant PolyORB.Types.Identifier :=
+   sendFuelAndTires_Arg_Name_number_Ü : constant PolyORB.Types.Identifier :=
      PolyORB.Types.To_PolyORB_String
         ("number");
 
-   sendFuelLevel_Arg_Name_fuel_Ü : constant PolyORB.Types.Identifier :=
+   sendFuelAndTires_Arg_Name_fuel_Ü : constant PolyORB.Types.Identifier :=
      PolyORB.Types.To_PolyORB_String
         ("fuel");
 
-   sendFuelLevel_Result_Name_Ü : constant PolyORB.Types.Identifier :=
+   sendFuelAndTires_Arg_Name_tires_Ü : constant PolyORB.Types.Identifier :=
+     PolyORB.Types.To_PolyORB_String
+        ("tires");
+
+   sendFuelAndTires_Result_Name_Ü : constant PolyORB.Types.Identifier :=
      PolyORB.Types.To_PolyORB_String
         ("Result");
 
-   ----------------------------
-   -- sendFuelLevel_Result_Ü --
-   ----------------------------
+   -------------------------------
+   -- sendFuelAndTires_Result_Ü --
+   -------------------------------
 
-   function sendFuelLevel_Result_Ü return PolyORB.Any.NamedValue is
-      pragma Inline (sendFuelLevel_Result_Ü);
+   function sendFuelAndTires_Result_Ü return PolyORB.Any.NamedValue is
+      pragma Inline (sendFuelAndTires_Result_Ü);
    begin
-      return (Name => sendFuelLevel_Result_Name_Ü,
+      return (Name => sendFuelAndTires_Result_Name_Ü,
       Argument => CORBA.Internals.Get_Empty_Any
         (CORBA.TC_Void),
       Arg_Modes => 0);
-   end sendFuelLevel_Result_Ü;
+   end sendFuelAndTires_Result_Ü;
 
-   -------------------
-   -- sendFuelLevel --
-   -------------------
+   ----------------------
+   -- sendFuelAndTires --
+   ----------------------
 
-   procedure sendFuelLevel
+   procedure sendFuelAndTires
      (Self : Ref;
       number : CORBA.Long;
-      fuel : CORBA.String)
+      fuel : CORBA.String;
+      tires : CORBA.Long)
    is
       Argument_List_Ü : PolyORB.Any.NVList.Ref;
       Arg_CC_number_Ü : aliased PolyORB.Any.Content'Class :=
@@ -833,9 +838,16 @@ package body MDLControlPanel.TimePanelInterface is
         CORBA.Internals.Get_Wrapper_Any
            (CORBA.TC_String,
             Arg_CC_fuel_Ü'Unchecked_Access);
+      Arg_CC_tires_Ü : aliased PolyORB.Any.Content'Class :=
+        CORBA.Wrap
+           (tires'Unrestricted_Access);
+      Arg_Any_tires_Ü : constant CORBA.Any :=
+        CORBA.Internals.Get_Wrapper_Any
+           (CORBA.TC_Long,
+            Arg_CC_tires_Ü'Unchecked_Access);
       Request_Ü : aliased PolyORB.Requests.Request;
       Result_Nv_Ü : PolyORB.Any.NamedValue :=
-        sendFuelLevel_Result_Ü;
+        sendFuelAndTires_Result_Ü;
    begin
       if CORBA.Object.Is_Nil
         (CORBA.Object.Ref
@@ -850,15 +862,21 @@ package body MDLControlPanel.TimePanelInterface is
       --  Fill the Argument list
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
-         sendFuelLevel_Arg_Name_number_Ü,
+         sendFuelAndTires_Arg_Name_number_Ü,
          PolyORB.Any.Any
            (Arg_Any_number_Ü),
          PolyORB.Any.ARG_IN);
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
-         sendFuelLevel_Arg_Name_fuel_Ü,
+         sendFuelAndTires_Arg_Name_fuel_Ü,
          PolyORB.Any.Any
            (Arg_Any_fuel_Ü),
+         PolyORB.Any.ARG_IN);
+      PolyORB.Any.NVList.Add_Item
+        (Argument_List_Ü,
+         sendFuelAndTires_Arg_Name_tires_Ü,
+         PolyORB.Any.Any
+           (Arg_Any_tires_Ü),
          PolyORB.Any.ARG_IN);
       --  Creating the request
       PolyORB.Requests.Setup_Request
@@ -866,7 +884,7 @@ package body MDLControlPanel.TimePanelInterface is
          Target => CORBA.Object.Internals.To_PolyORB_Ref
            (CORBA.Object.Ref
               (Self)),
-         Operation => "sendFuelLevel",
+         Operation => "sendFuelAndTires",
          Arg_List => Argument_List_Ü,
          Result => Result_Nv_Ü);
       --  Invoking the request (synchronously or asynchronously)
@@ -877,7 +895,7 @@ package body MDLControlPanel.TimePanelInterface is
       --  Raise exception, if needed
       PolyORB.CORBA_P.Exceptions.Request_Raise_Occurrence
         (Request_Ü);
-   end sendFuelLevel;
+   end sendFuelAndTires;
 
    sendFinishRace_Arg_Name_number_Ü : constant PolyORB.Types.Identifier :=
      PolyORB.Types.To_PolyORB_String

@@ -12,7 +12,7 @@ W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 W system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
 W system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
 
-U formula1.grid%s	formula1-grid.ads	fa81e59e EE OO PK
+U formula1.grid%s	formula1-grid.ads	93ca46dd EE OO PK
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.finalization.list_controller%s  a-filico.adb  a-filico.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -49,7 +49,7 @@ D a-textio.ads		20091028140912 386df5d4
 D a-unccon.ads		20070406091342 f9eb8f06
 D a-uncdea.ads		20070406091342 f15a5ed1
 D corba.ads		20120514092039 5b6176ff
-D formula1.ads		20130609234450 1fc235bb
+D formula1.ads		20130610113645 768996f8
 D formula1-grid.ads	20130604090729 e543d025
 D formula1-grid.adb	20130604090729 88ed0af4
 D interfac.ads		20090409150019 f77d8799
@@ -89,7 +89,7 @@ D s-traent.ads		20090417130712 5221ee41
 D s-unstyp.ads		20090409150019 6ae15c76
 D s-wchcon.ads		20090417130712 bfeb2e3d
 X 25 formula1.ads
-8K9*Formula1 167e13 26|1r9 21r5 27|1r14 33r5
+8K9*Formula1 176e13 26|1r9 21r5 27|1r14 33r5
 X 26 formula1-grid.ads
 1K18*Grid 25|8k9 26|21l14 21e18 27|1b23 33l14 33t18
 4W19*Grid_T 17l8 17e14 19r30 27|3b19 31l8 31t14

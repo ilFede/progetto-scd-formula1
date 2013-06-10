@@ -151,8 +151,8 @@
     \end{longtable}
     
   
-  \chapter{Progettazione di massima}
-    \section{Elenco entità coinvolte}
+  \chapter{Progettazione}
+    \section{Entità coinvolte}
       Durante la fase di progettazione sono state individuate le seguenti entità costitutive:
       
       \begin{itemize}

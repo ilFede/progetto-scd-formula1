@@ -8,7 +8,7 @@ module MDLControlPanel {
     void exitBox (in long Number, in string fuel);
     void sendRaceDescription (in string name, in string lenght, in string numLap, in string meteo); 
     void sendStartRace();
-    void sendFuelLevel(in long number, in string fuel);
+    void sendFuelAndTires(in long number, in string fuel, in long tires);
     void sendFinishRace(in long number, in string time, in long reason);
   };	
 };

@@ -1,9 +1,9 @@
 V "GNAT Lib v4.6"
 A -gnatA
 P SS ZX
-R nnnvvnnvnvvnnnnnnnvvnvnvvvnnnnnvnnvnnnnnnvnnvnnnnnnvnnnnnnvnnvnvnnnnnnnnnnnnnv1+nn
+R nnnvvnnvnvnnnnnnnnvvnvnvvvnnnnnvnnvnnnnnnvnnvnnnnnnvnnnnnnvnnvnvnnnnnnnnnnnnnv1+nn
 
-U formula1.pilot%b	formula1-pilot.adb	9ac41be9 OO PK
+U formula1.pilot%b	formula1-pilot.adb	9d90d022 OO PK
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
@@ -23,7 +23,7 @@ W system.arith_64%s	s-arit64.adb		s-arit64.ali
 W system.concat_2%s	s-conca2.adb		s-conca2.ali
 W system.concat_3%s	s-conca3.adb		s-conca3.ali
 W system.concat_4%s	s-conca4.adb		s-conca4.ali
-W system.concat_6%s	s-conca6.adb		s-conca6.ali
+W system.concat_8%s	s-conca8.adb		s-conca8.ali
 W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
 W system.finalization_root%s  s-finroo.adb	s-finroo.ali
 W system.img_int%s	s-imgint.adb		s-imgint.ali
@@ -38,7 +38,7 @@ W system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
 W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 W system.val_int%s	s-valint.adb		s-valint.ali
 
-U formula1.pilot%s	formula1-pilot.ads	7f69bf4a EE OO PK
+U formula1.pilot%s	formula1-pilot.ads	598720a8 EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.generic_array_sort%s
@@ -113,12 +113,12 @@ D corba-policy.ads	20120514092038 6f47498d
 D corba-request.ads	20120514092038 b6132a43
 D corba-sequences.ads	20120514092039 f2f01446
 D corba-sequences-unbounded.ads  20120514092039 3997a2a3
-D formula1.ads		20130609234450 1fc235bb
-D formula1-car.ads	20130603105135 ee76f109
-D formula1-controller.ads  20130609225407 08b73b1b
+D formula1.ads		20130610113645 768996f8
+D formula1-car.ads	20130610112243 893c8227
+D formula1-controller.ads  20130610113646 be792dc4
 D formula1-grid.ads	20130604090729 e543d025
-D formula1-pilot.ads	20130603110912 e20e0f4b
-D formula1-pilot.adb	20130609233129 7ac6aaf0
+D formula1-pilot.ads	20130610112413 1b652535
+D formula1-pilot.adb	20130610115552 e3b3386b
 D formula1-race.ads	20130609220207 23bce151
 D formula1-segment.ads	20130604091016 4faeb658
 D formula1-segmentrp.ads  20130609162003 4d331a44
@@ -126,9 +126,9 @@ D formula1-track.ads	20130604090729 3b9619fe
 D interfac.ads		20090409150019 f77d8799
 D i-c.ads		20101007125900 809c38c4
 D i-cstrea.ads		20100622165701 1bd72c32
-D mdlcontrolpanel.ads	20130609234755 7d2d71fb
-D mdlcontrolpanel-timepanelinterface.ads  20130609234755 e15970b9
-D mdlcontrolpanel-timepanelinterface-helper.ads  20130609234755 1fec3a1a
+D mdlcontrolpanel.ads	20130610115558 7d2d71fb
+D mdlcontrolpanel-timepanelinterface.ads  20130610115558 365b996c
+D mdlcontrolpanel-timepanelinterface-helper.ads  20130610115558 1fec3a1a
 D polyorb.ads		20120514092109 1b2dc832
 D polyorb-annotations.ads  20120514092100 177ede12
 D polyorb-any.ads	20120514092101 06c36295
@@ -173,7 +173,7 @@ D s-arit64.ads		20090409150019 a011a169
 D s-conca2.ads		20090420091404 fbd0f2fc
 D s-conca3.ads		20090420091404 762a026a
 D s-conca4.ads		20090420091404 025fe3be
-D s-conca6.ads		20090420091404 c7caf514
+D s-conca8.ads		20090420091404 ea110f26
 D s-crtl.ads		20100617122610 ac77b159
 D s-exctab.ads		20090417131547 66e51330
 D s-ficobl.ads		20100909103250 443b9d66
@@ -207,14 +207,14 @@ D s-unstyp.ads		20090409150019 6ae15c76
 D s-valint.ads		20090409150019 48a52a3f
 D s-wchcon.ads		20090417130712 bfeb2e3d
 X 1 ada.ads
-16K9*Ada 19e8 50|1r6 2r6 3r6 19r34 51|5r6 5r27 7r6 10r6 13r6 13r24 145r41
-. 151r41
+16K9*Ada 19e8 50|1r6 2r6 3r6 19r34 51|5r6 5r27 7r6 10r6 13r6 13r24 159r41
+. 165r41
 X 2 a-calend.ads
 36K13*Calendar 358e17 51|13w10 13r28
-38I9*Time 51|53r32 73r24
-52V13*Clock{38I9} 51|290s31 324s110 364s107 369s89 405s81
-95V13*"+"{38I9} 51|324s108 364s105
-97V13*"-"{duration} 51|369s95 369s252 405s87
+38I9*Time 51|53r32 81r24
+52V13*Clock{38I9} 51|304s31 343s110 383s107 388s89 431s81
+95V13*"+"{38I9} 51|343s108 383s105
+97V13*"-"{duration} 51|388s95 388s252 431s87
 X 6 a-comlin.ads
 38K13*Command_Line 139e21 51|7w10
 X 7 a-contai.ads
@@ -224,195 +224,201 @@ X 9 a-convec.ads
 39+9 Element_Type 50|20r7
 43k24*Vectors 380e27 50|3w21 19r49
 47I12*Extended_Index{integer}
-53R9*Vector 51|120r49[46|47]
-101V13*Element{46|44P9} 51|124s65[46|47] 124s81[46|31] 125s46[46|47] 125s62[46|31]
-. 126s49[46|47] 126s65[46|31] 127s88[46|47] 127s104[46|31] 128s88[46|47]
-. 128s104[46|31] 136s98[46|36] 139s45[46|36] 303s80[53|28] 309s72[53|28]
-. 315s60[46|36] 344s77[53|28] 351s69[53|28]
-243V13*Last_Index{47I12[46|36]} 51|133s43[46|36] 135s37[46|36] 342s79[53|28]
+53R9*Vector 51|128r49[46|47]
+101V13*Element{46|44P9} 51|132s65[46|47] 132s81[46|31] 133s46[46|47] 133s62[46|31]
+. 134s49[46|47] 134s65[46|31] 135s88[46|47] 135s104[46|31] 136s88[46|47]
+. 136s104[46|31] 144s100[46|36] 148s51[46|36] 317s80[53|28] 323s72[53|28]
+. 363s77[53|28] 370s69[53|28] 410s50[46|36]
+243V13*Last_Index{47I12[46|36]} 51|141s43[46|36] 143s37[46|36] 361s79[53|28]
 X 11 a-except.ads
 55K13*Exceptions 370e19 51|5w10 5r31
-77V13*Exception_Name{string} 51|409s20
-99V13*Exception_Message{string} 51|410s15
+77V13*Exception_Name{string} 51|435s20
+99V13*Exception_Message{string} 51|436s15
 X 15 a-numeri.ads
-16K13*Numerics 32e17 50|1r10 51|10r10 145r45 151r45
+16K13*Numerics 32e17 50|1r10 51|10r10 159r45 165r45
 X 16 a-nuelfu.ads
-18K22*Elementary_Functions[17|19] 51|10w19 145r54 151r54
+18K22*Elementary_Functions[17|19] 51|10w19 159r54 165r54
 X 17 a-ngelfu.ads
 19k22*Generic_Elementary_Functions 73e46 50|1w19
-24V13*Log{float} 51|145s75[16|18]
-24f22 X{float} 51|145r94[16|18]
-24f25 Base{float} 51|145r80[16|18]
-25V13*Exp{float} 51|151s75[16|18]
+24V13*Log{float} 51|159s75[16|18]
+24f22 X{float} 51|159r94[16|18]
+24f25 Base{float} 51|159r80[16|18]
+25V13*Exp{float} 51|165s75[16|18]
 X 30 a-textio.ads
-243U14*Put 51|410s10
-264U14*Put_Line 51|280s7 297s16 306s22 327s22 331s16 348s19 372s19 403s7
-. 408s10 409s10
+243U14*Put 51|436s10
+264U14*Put_Line 51|294s7 311s16 320s22 346s22 350s16 367s19 391s19 429s7
+. 434s10 435s10
 X 33 corba.ads
-49K9*CORBA 1029e10 51|1w6 23r28 68r26 76r23 124r20 369r116
-61I12*Long<56|45I9> 51|23r34 68r32 76r29 124r26 369r122
+49K9*CORBA 1029e10 51|1w6 23r28 76r26 84r23 132r20 388r116
+61I12*Long<56|45I9> 51|23r34 76r32 84r29 132r26 388r122
 X 46 formula1.ads
-8K9*Formula1 167e13 50|4r6 4r31 5r6 5r25 7r9 23r5 51|9r6 9r24 11r6 11r25
-. 12r6 12r28 15r14 414r5
-21F9*Real_T<short_float> 51|35r32 37r24 47r46 49r46 89r52 89r67 91r49 91r64
-. 93r49 93r68 93r83 96r54 98r51 98r73 98r88 100r50 100r72 104r54 108r41 111r46
-. 143r52 143r67 145r17 145r33 149r49 149r64 151r17 155r49 155r68 155r83 156r18
-. 158r19 163r54 165r39 165r49 165r85 166r39 172r85 183r51 183r73 183r88 185r22
-. 187r22 192r17 196r50 196r72 202r55 204r32 204r42 208r32 208r71 210r32 223r41
-. 229r46 259r93 262r29 304r39 345r36
+8K9*Formula1 176e13 50|4r6 4r31 5r6 5r25 7r9 23r5 51|9r6 9r24 11r6 11r25
+. 12r6 12r28 15r14 440r5
+21F9*Real_T<short_float> 51|35r32 37r24 47r46 49r46 97r52 97r67 99r49 99r64
+. 101r49 101r68 101r83 104r54 106r51 106r73 106r88 108r50 108r72 112r54 116r41
+. 119r46 157r52 157r67 159r17 159r33 163r49 163r64 165r17 169r49 169r68 169r83
+. 170r18 172r19 177r54 179r39 179r49 179r85 180r39 186r85 197r51 197r73 197r88
+. 199r22 201r22 206r17 210r50 210r72 216r55 218r32 218r42 222r32 222r71 224r32
+. 237r41 243r46 273r93 276r29 318r39 364r36
 28P9*String_Ref_T(string) 51|25r28 27r17 39r26
-41P10*Float_Vector_Ref_T(9|53R9[36]) 50|13r51
+41P10*Integer_Vector_Ref_T(9|53R9[36]) 50|13r51
 44P9*String_Vector_Ref_T(9|53R9[31])
-47K12*Configuration_T[9|43] 51|120r33
+47K12*Configuration_T[9|43] 51|128r33
 52P9*Configuration_Vect_Ref_T(9|53R9[47]) 50|11r49 12r49
-62n21*dry{62E9} 51|261r28
-72n28*acc{72E9} 51|359r51
-72n33*const{72E9} 51|356r51
-72n40*dec{72E9} 51|311r51 353r48
-72n45*box{72E9} 51|316r54
+62n21*dry{62E9} 51|275r28
+72n28*acc{72E9} 51|378r51
+72n33*const{72E9} 51|375r51
+72n40*dec{72E9} 51|325r51 372r48
+72n45*box{72E9} 51|328r54
 78I12*Has_Time_Check_T{33|61I12}
-88I12*Skill_Acceleration_T{positive} 51|29r28 127r32 165r93
-91I12*Skill_Deceleration_T{positive} 51|31r28 128r32 208r79
-94i4*Race_Start_Time{2|38I9} 51|369r254 405r89
-101I12*Coeff_Acceleration_T{positive} 51|172r93
+88I12*Skill_Acceleration_T{positive} 51|29r28 135r32 179r93
+91I12*Skill_Deceleration_T{positive} 51|31r28 136r32 222r79
+94i4*Race_Start_Time{2|38I9} 51|388r254 431r89
+101I12*Coeff_Acceleration_T{positive} 51|186r93
 104I12*Coeff_Deceleration_T{positive}
-107I12*Coeff_Roadholding_T{positive} 51|233r74 262r37
-110F12*Car_Consumption_T{float}
-113f4*Standard_Deceleration{21F9} 51|259r33 259r59
-123f4*Alpha{21F9} 51|145r25 151r95
-124f4*Beta{21F9} 51|145r117 151r32
+107I12*Coeff_Roadholding_T{positive} 51|247r74 276r37
+110I12*Coeff_Tire_Wear_T{positive}
+113I12*Tires_Condition_T{33|61I12}
+119F12*Car_Consumption_T{float}
+122f4*Standard_Deceleration{21F9} 51|273r33 273r59
+132f4*Alpha{21F9} 51|159r25 165r95
+133f4*Beta{21F9} 51|159r117 165r32
 X 47 formula1-car.ads
-2K18*Car 30e17 51|9w15 9r33
-5R9*Car_T 22e17 51|33r28
-9p10*Manufacturer_Ref{46|28P9} 51|274m63 280r50
-11i10*Coeff_Acceleration{46|101I12} 51|172r125
-13i10*Coeff_Deceleration{46|104I12} 51|259r105
-15f10*Max_Speed{46|21F9} 51|174r39 175r39
-17i10*Coeff_Roadholding{46|107I12} 51|233r105 262r68
-19f10*Consumption{46|110F12} 51|268r27
-21f10*Fuel_Level{float} 51|139m14 274r127 315m29 332r81 376m17 376r35 378r86
-. 385r21 389r24
-28U14*Build_Car 51|130s10
+2K18*Car 36e17 51|9w15 9r33
+5R9*Car_T 28e17 51|33r28
+9p10*Manufacturer_Ref{46|28P9} 51|288m63 294r50
+11i10*Coeff_Acceleration{46|101I12} 51|186r125
+13i10*Coeff_Deceleration{46|104I12} 51|273r105
+15f10*Max_Speed{46|21F9} 51|188r39 189r39
+17i10*Coeff_Roadholding{46|107I12} 51|247r105 276r68
+19i10*Coeff_Tire_Wear{46|110I12} 51|150r37 151r37
+21f10*Consumption{46|119F12} 51|282r27
+23f10*Fuel_Level{float} 51|148m14 288r127 351r81 395m17 395r35 403r90 416r21
+27i10*Tires_Condition{46|113I12} 51|153m14 233r152 330m29 398m20 400m20 403m108
+34U14*Build_Car 51|138s10
 X 48 formula1-controller.ads
 7K18*Controller 49e24 50|4w15 4r40
-16U17 Add_Pilot 51|274s26
-19U17 Send_Time 51|369s41
-22U17 Enter_Box 51|299s35
-25U17 Exit_Box 51|332s35
-34U17 Send_Fuel_Level 51|378s32
-37U17 Send_Finish_Race 51|405s26
+16U17 Add_Pilot 51|288s26
+19U17 Send_Time 51|388s41
+22U17 Enter_Box 51|313s35
+25U17 Exit_Box 51|351s35
+34U17 Send_Fuel_And_Tires 51|403s32
+37U17 Send_Finish_Race 51|431s26
 46P9*Controller_Ref_T(10W19) 50|10r40
 X 49 formula1-grid.ads
 1K18*Grid 21e18 50|5w15 5r34
-5Y13 Place_On_Grid 51|281s35
+5Y13 Place_On_Grid 51|295s35
 19P9*Grid_Ref_T(4W19)
 X 50 formula1-pilot.ads
-7K18*Pilot 46|8k9 50|23l14 23e19 51|15b23 414l14 414t19
-10T14*Pilot_T 10d23 11d23 12d23 13d23 16r31 51|17b14 411l8 411t15
-10p23 Controller_Ref{48|46P9} 51|274r7 299r16 332r16 369r22 378r13 405r7
-11p23 Pilot_Configuration_Ref{46|52P9} 51|124r37 125r18 126r21 127r60 128r60
-12p23 Car_Configuration_Ref{46|52P9} 51|130r21
-13p23 Strategy_Ref{46|41P10} 51|133r30 135r24 136r81 139r28 315r43
+7K18*Pilot 46|8k9 50|23l14 23e19 51|15b23 440l14 440t19
+10T14*Pilot_T 10d23 11d23 12d23 13d23 16r31 51|17b14 437l8 437t15
+10p23 Controller_Ref{48|46P9} 51|288r7 313r16 351r16 388r22 403r13 431r7
+11p23 Pilot_Configuration_Ref{46|52P9} 51|132r37 133r18 134r21 135r60 136r60
+12p23 Car_Configuration_Ref{46|52P9} 51|138r21
+13p23 Strategy_Ref{46|41P10} 51|141r30 143r24 144r83 148r34 410r33
 16P9*Pilot_Ref_T(10T14) 20r23
 19K12*Pilot_Vector_T[9|43]
 X 51 formula1-pilot.adb
-23i7 Number{33|61I12} 124m10 274r36 299r45 332r44 369r52 378r49 405r44
-25p7 Name{46|28P9} 125m10 274r44 331r35 403r17
-27p7 Surname{46|28P9} 126m10 274r50 280r25 297r35 306r41 327r41 348r38 372r38
-29i7 Skill_Acceleration{46|88I12} 127m10 165r121
-31i7 Skill_Deceleration{46|91I12} 128m10 208r107
-33r7 Car{47|5R9} 130m48 139m10 172r121 174r35 175r35 233r101 259r101 262r64
-. 268r23 274r59 274r123 280r46 315m25 332r77 376m13 376r31 378r82 385r17
-. 389r20
-35f7 Effective_Deceleration{46|21F9} 191r29 191r78 191r103 191r155 198r59
-. 259m7
-37f7 Meteo_Penality{46|21F9} 179r90 219r90 262m10 264m10
-39p7 Strategy_Str_Ref{46|28P9} 136m13 136r46 274r81
-42i7 Num_Laps{positive} 250m7 285r44
-44i7 Num_Tot_Seg{positive} 252m7 309r105 351r102
-47f7 Segment_Enter_Speed{46|21F9} 170r49 177r61 204r69 213r62 215r69 225r44
-. 231r63 256m7 308m22 350m19
-49f7 Segment_Exit_Speed{46|21F9} 170m10 172m10 172r32 172r55 174r14 175m13
-. 177r83 204r90 215r90 217r82 257m7 308r45 309m22 350r42 351m19
-51o7 Expected_Segment_Driving_Duration{duration} 313m57 318m25 321m57 324r74
-. 355m54 358m22 361m54 364r71
-53i7 Real_Segment_Exit_Time{2|38I9} 324m117 326r35 364m114 366r32 369r229
-56b7 Pit_Stop{boolean} 254m7 296r17 334m16 388m16 394m16
-58i7 Num_Tot_Pit_Stop{natural} 133m10 385r68 389r71
-60i7 Num_Pit_Stop{natural} 315r69 385r53 387m16 387r32 389r56
-62f7 Fuel_For_Lap{float} 268m7 280r132 376r48 385r34 389r37
-65b7 On_Race{boolean} 391m16 400r23
-68i7 Ticket{33|61I12} 324m141 364m138 369r194
-73i7 Lap_Start_Time{2|38I9} 290m13 369r97
-76i7 Finish_Reason{33|61I12} 392m16 405r109
-86U17 Configure_Pilot_And_Car 118b17 140l11 140t34 248s7
-89V16 Get_Speed_From_Distance{46|21F9} 89>41 143b16 146l11 146t34 159s17
-89f41 Distance{46|21F9} 143b41 145r106
-91V16 Get_Distance_From_Speed{46|21F9} 91>41 149b16 152l11 152t34 158s27
-91f41 Speed{46|21F9} 149b41 151r87
-93V16 Get_Final_Speed{46|21F9} 93>33 93>57 155b16 160l11 160t26 170s32
-93f33 Initial_Speed{46|21F9} 155b33 158r52
-93f57 Distance{46|21F9} 155b57 159r42
-96U17 Do_Acceleration 96>34 96<62 163b17 180l11 180t26 321s25 361s22
-96f34 Segment_Length{46|21F9} 163b34 165r58 166r49 170r70 177r41
-96o62 Acceleration_Time{duration} 163b62 177m10 179m10 179r31 179r53
-98V16 Get_Braking_Space{46|21F9} 98>35 98>59 183b16 193l11 193t28 204s50
-98f35 Initial_Speed{46|21F9} 183b35 185r46 191r128
-98f59 Final_Speed{46|21F9} 183b59 185r32
-100V16 Get_Braking_Time{duration} 100>34 100>58 196b16 199l11 199t27 215s51
-100f34 Initial_Speed{46|21F9} 196b34 198r28
-100f58 Final_Speed{46|21F9} 196b58 198r44
-104U17 Do_Deceleration 104>34 104<62 202b18 220l11 220t26 313s25 355s22
-104f34 Segment_Length{46|21F9} 202b35 208r45 210r42
-104o62 Deceleration_Time{duration} 202b63 213m10 215m10 215r31 217m10 217r31
-. 219m10 219r31 219r53
-108V16 Do_Box{duration} 108>24 223b16 226l11 226t17 318s62
-108f24 Segment_Length{46|21F9} 223b24 225r27
-111V16 Do_Constant{duration} 111>29 229b16 234l11 234t22 358s59
-111f29 Segment_Length{46|21F9} 229b29 231r46
-120r10 Configuration{9|53R9[46|47]}
-135i14 k{integer} 136r107
-156f10 Shift{46|21F9} 158m10 159r53
-165f10 Before_Acceleration_Space{46|21F9} 166r66
-166f10 Acceleation_Space{46|21F9}
-185f10 Delta_V{46|21F9} 191r56 191r66 191r145
-187f10 Dec_Space{46|21F9} 191m10 192r25
-204f10 Braking_Space{46|21F9} 210r60
-208f10 Before_Brake_Space{46|21F9} 210r76 213r41 217r61
-210f10 After_Brake_Space{46|21F9}
-231o10 Travel_Time{duration} 233r17 233r41
-285i11 Lap_Number{integer} 369r149
-288i13 Start_Segment{natural} 336m16 339m16 342r34
-301i20 Segment_Index{integer} 303r89 306r105 309r82 327r104
-303r22 Actual_Segment{53|8R9} 304r49 311r25 316r28 324r22
-304f22 Actual_Length{46|21F9} 313r42 318r70 321r42
-342i17 Segment_Index{integer} 344r86 348r102 351r79 372r101
-344r19 Actual_Segment{53|8R9} 345r46 353r22 356r25 359r25 364r19 368r23 369r163
-345f19 Actual_Length{46|21F9} 355r39 358r72 361r39
-407r12 Error{11|68R9} 409r36 410r34
+23i7 Number{33|61I12} 132m10 288r36 313r45 351r44 388r52 403r53 431r44
+25p7 Name{46|28P9} 133m10 288r44 350r35 429r17
+27p7 Surname{46|28P9} 134m10 288r50 294r25 311r35 320r41 346r41 367r38 391r38
+29i7 Skill_Acceleration{46|88I12} 135m10 179r121
+31i7 Skill_Deceleration{46|91I12} 136m10 222r107
+33r7 Car{47|5R9} 138m48 148m10 150r33 151r33 153m10 186r121 188r35 189r35
+. 233r148 247r101 273r101 276r64 282r23 288r59 288r123 294r46 330m25 351r77
+. 395m13 395r31 398m16 400m16 403r86 403r104 416r17
+35f7 Effective_Deceleration{46|21F9} 205r29 205r78 205r103 205r155 212r59
+. 273m7
+37f7 Meteo_Penality{46|21F9} 193r90 233r90 276m10 278m10
+39p7 Strategy_Str_Ref{46|28P9} 144m13 144r46 146m10 146r42 288r81 294r79
+42i7 Num_Laps{positive} 264m7 299r44
+44i7 Num_Tot_Seg{positive} 266m7 323r105 370r102
+47f7 Segment_Enter_Speed{46|21F9} 184r49 191r61 218r69 227r62 229r69 239r44
+. 245r63 270m7 322m22 369m19
+49f7 Segment_Exit_Speed{46|21F9} 184m10 186m10 186r32 186r55 188r14 189m13
+. 191r83 218r90 229r90 231r82 271m7 322r45 323m22 369r42 370m19
+51o7 Expected_Segment_Driving_Duration{duration} 327m57 335m25 340m57 343r74
+. 374m54 377m22 380m54 383r71
+53i7 Real_Segment_Exit_Time{2|38I9} 343m117 345r35 383m114 385r32 388r229
+56b7 Pit_Stop{boolean} 268m7 310r17 353m16 412m19
+58i7 Num_Tot_Pit_Stop{natural} 141m10 409r32
+60i7 Num_Pit_Stop{natural} 332m25 332r41 409r17 410r58
+62f7 Fuel_For_Lap{float} 282m7 294r161 395r48 416r34
+64i7 Poor_Tire_Threshold{integer} 150m10 399r57
+66i7 Worn_Tire_Threshold{integer} 151m10 397r54
+70i7 Last_Pit_Lap_Number{integer} 333m25 397r31 399r34
+73b7 On_Race{boolean} 418m16 426r23
+76i7 Ticket{33|61I12} 343m141 383m138 388r194
+81i7 Lap_Start_Time{2|38I9} 304m13 388r97
+84i7 Finish_Reason{33|61I12} 419m16 431r109
+94U17 Configure_Pilot_And_Car 126b17 154l11 154t34 262s7
+97V16 Get_Speed_From_Distance{46|21F9} 97>41 157b16 160l11 160t34 173s17
+97f41 Distance{46|21F9} 157b41 159r106
+99V16 Get_Distance_From_Speed{46|21F9} 99>41 163b16 166l11 166t34 172s27
+99f41 Speed{46|21F9} 163b41 165r87
+101V16 Get_Final_Speed{46|21F9} 101>33 101>57 169b16 174l11 174t26 184s32
+101f33 Initial_Speed{46|21F9} 169b33 172r52
+101f57 Distance{46|21F9} 169b57 173r42
+104U17 Do_Acceleration 104>34 104<62 177b17 194l11 194t26 340s25 380s22
+104f34 Segment_Length{46|21F9} 177b34 179r58 180r49 184r70 191r41
+104o62 Acceleration_Time{duration} 177b62 191m10 193m10 193r31 193r53
+106V16 Get_Braking_Space{46|21F9} 106>35 106>59 197b16 207l11 207t28 218s50
+106f35 Initial_Speed{46|21F9} 197b35 199r46 205r128
+106f59 Final_Speed{46|21F9} 197b59 199r32
+108V16 Get_Braking_Time{duration} 108>34 108>58 210b16 213l11 213t27 229s51
+108f34 Initial_Speed{46|21F9} 210b34 212r28
+108f58 Final_Speed{46|21F9} 210b58 212r44
+112U17 Do_Deceleration 112>34 112<62 216b18 234l11 234t26 327s25 374s22
+112f34 Segment_Length{46|21F9} 216b35 222r45 224r42
+112o62 Deceleration_Time{duration} 216b63 227m10 229m10 229r31 231m10 231r31
+. 233m10 233r31 233r53 233r111
+116V16 Do_Box{duration} 116>24 237b16 240l11 240t17 335s62
+116f24 Segment_Length{46|21F9} 237b24 239r27
+119V16 Do_Constant{duration} 119>29 243b16 248l11 248t22 377s59
+119f29 Segment_Length{46|21F9} 243b29 245r46
+128r10 Configuration{9|53R9[46|47]}
+143i14 k{integer} 144r109
+170f10 Shift{46|21F9} 172m10 173r53
+179f10 Before_Acceleration_Space{46|21F9} 180r66
+180f10 Acceleation_Space{46|21F9}
+199f10 Delta_V{46|21F9} 205r56 205r66 205r145
+201f10 Dec_Space{46|21F9} 205m10 206r25
+218f10 Braking_Space{46|21F9} 224r60
+222f10 Before_Brake_Space{46|21F9} 224r76 227r41 231r61
+224f10 After_Brake_Space{46|21F9}
+245o10 Travel_Time{duration} 247r17 247r41
+299i11 Lap_Number{integer} 333r48 388r149 397r18 399r21 410r20
+302i13 Start_Segment{natural} 355m16 358m16 361r34
+315i20 Segment_Index{integer} 317r89 320r105 323r82 346r104
+317r22 Actual_Segment{53|8R9} 318r49 325r25 328r28 343r22
+318f22 Actual_Length{46|21F9} 327r42 335r70 340r42
+361i17 Segment_Index{integer} 363r86 367r102 370r79 391r101
+363r19 Actual_Segment{53|8R9} 364r46 372r22 375r25 378r25 383r19 387r23 388r163
+364f19 Actual_Length{46|21F9} 374r39 377r72 380r39
+433r12 Error{11|68R9} 435r36 436r34
 X 52 formula1-race.ads
 4K18*Race 51|11w15 11r34 52|30e21
-12r10*Track{55|9R9} 51|252r31 268r57 281r16 303r61 309r53 342r60 344r58 351r50
-14i10*Num_Laps{positive} 51|250r28
-16e10*Meteo{46|62E9} 51|261r20
-29r4*The_Race{8R9} 51|250r19 252r22 261r11 268r48 281r7 303r52 309r44 342r51
-. 344r49 351r41
+12r10*Track{55|9R9} 51|266r31 282r57 295r16 317r61 323r53 361r60 363r58 370r50
+14i10*Num_Laps{positive} 51|264r28
+16e10*Meteo{46|62E9} 51|275r20
+29r4*The_Race{8R9} 51|264r19 266r22 275r11 282r48 295r7 317r52 323r44 361r51
+. 363r49 370r41
 X 53 formula1-segment.ads
 6K18*Segment 51|12w15 12r37 53|35e21
-8R9*Segment_T 51|303r39 344r36 53|25e17
-14e10*Tipology{46|72E9} 51|311r40 316r43 353r37 356r40 359r40
-16f10*Length{46|21F9} 51|304r64 345r61
-18f10*Speed{46|21F9} 51|309r118 351r115
-22i10*Has_Time_Check{46|78I12} 51|368r38 369m178
-24p10*Segment_RP_Ref{54|30P9} 51|324r37 364r34
+8R9*Segment_T 51|317r39 363r36 53|25e17
+14e10*Tipology{46|72E9} 51|325r40 328r43 372r37 375r40 378r40
+16f10*Length{46|21F9} 51|318r64 364r61
+18f10*Speed{46|21F9} 51|323r118 370r115
+22i10*Has_Time_Check{46|78I12} 51|387r38 388m178
+24p10*Segment_RP_Ref{54|30P9} 51|343r37 383r34
 X 54 formula1-segmentrp.ads
-14U17 Get_Driving_Time 51|324s56 364s53
+14U17 Get_Driving_Time 51|343s56 383s53
 30P9*Segment_RP_Ref_T(11W19)
 X 55 formula1-track.ads
-15i7*Tot_Segments{natural} 51|252r37
-17r7*Segment_List{9|53R9[53|28]} 51|303r67 309r59 342r66 344r64 351r56
-19p7*Grid_Ref{49|19P9} 51|281r22
-21f7*Lap_Length{46|21F9} 51|268r63
+15i7*Tot_Segments{natural} 51|266r37
+17r7*Segment_List{9|53R9[53|28]} 51|317r67 323r59 361r66 363r64 370r56
+19p7*Grid_Ref{49|19P9} 51|295r22
+21f7*Lap_Length{46|21F9} 51|282r63
 X 56 interfac.ads
 45I9*Integer_32<integer>
 57M9*Unsigned_32

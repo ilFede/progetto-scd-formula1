@@ -1,9 +1,9 @@
 V "GNAT Lib v4.6"
 A -gnatA
 P SS ZX
-R nnnnnnnvnnnnnnnnnnnnnnnnnvvnnnnnnnnnvnnnnvnnvnnnnnnnnnnnnnnnnvnvnnnnnnnnnnnnnnnn
+R nnnnnnnvnnnnnnnnnnvnnvnnnvvnnnnnnnnnvnnnnvnnvnnnnnnnnnnnnnnnnvnvnnnnnnnnnnnnnnnn
 
-U formula1.controller%b	formula1-controller.adb	4553d275 NE OO PK
+U formula1.controller%b	formula1-controller.adb	61dfb102 NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.command_line%s	a-comlin.adb		a-comlin.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -20,7 +20,7 @@ W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 
-U formula1.controller%s	formula1-controller.ads	8c00fcf7 EE OO PK
+U formula1.controller%s	formula1-controller.ads	8487a0be EE OO PK
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.finalization.list_controller%s  a-filico.adb  a-filico.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -74,15 +74,15 @@ D corba-policy.ads	20120514092038 6f47498d
 D corba-request.ads	20120514092038 b6132a43
 D corba-sequences.ads	20120514092039 f2f01446
 D corba-sequences-unbounded.ads  20120514092039 3997a2a3
-D formula1.ads		20130609234450 1fc235bb
-D formula1-controller.ads  20130609225407 08b73b1b
-D formula1-controller.adb  20130609230217 e830d532
+D formula1.ads		20130610113645 768996f8
+D formula1-controller.ads  20130610113646 be792dc4
+D formula1-controller.adb  20130610113627 ad70494f
 D interfac.ads		20090409150019 f77d8799
 D i-c.ads		20101007125900 809c38c4
 D i-cstrea.ads		20100622165701 1bd72c32
-D mdlcontrolpanel.ads	20130609234755 7d2d71fb
-D mdlcontrolpanel-timepanelinterface.ads  20130609234755 e15970b9
-D mdlcontrolpanel-timepanelinterface-helper.ads  20130609234755 1fec3a1a
+D mdlcontrolpanel.ads	20130610115558 7d2d71fb
+D mdlcontrolpanel-timepanelinterface.ads  20130610115558 365b996c
+D mdlcontrolpanel-timepanelinterface-helper.ads  20130610115558 1fec3a1a
 D polyorb.ads		20120514092109 1b2dc832
 D polyorb-annotations.ads  20120514092100 177ede12
 D polyorb-any.ads	20120514092101 06c36295
@@ -152,86 +152,89 @@ X 1 ada.ads
 16K9*Ada 19e8 41|4r6 4r28 7r6
 X 5 a-comlin.ads
 38K13*Command_Line 139e21 41|4w10 4r32 7w10
+X 23 a-textio.ads
+264U14*Put_Line 41|20s13 31s13 41s13 51s13 61s13 71s13 81s13 91s13 100s13
 X 26 corba.ads
 49K9*CORBA 1029e10 40|1w6 2r6 16r46 19r46 19r95 19r129 19r153 22r46 25r45
-. 34r52 37r53 37r101 41|3w6 16r10 17r10 17r38 22r46 24r83 24r149 24r188 24r236
-. 31r46 31r95 31r129 31r153 33r95 33r164 39r46 47r45 49r81 57r78 57r120 57r156
-. 57r193 71r52 73r87 78r53 78r101 80r88
-61I12*Long<42|45I9> 40|16r52 19r52 19r101 19r135 19r159 22r52 25r51 34r58
-. 37r59 37r107 41|22r52 31r52 31r101 31r135 31r159 39r52 47r51 71r58 78r59
-. 78r107
-134V13*To_CORBA_String{74+9} 41|17s44 24s89 24s155 24s194 24s242 33s101 33s170
-. 49s87 57s84 57s126 57s162 57s199 73s93 80s94
+. 34r56 34r114 37r53 37r101 41|3w6 16r10 17r10 17r38 25r46 27r83 27r149 27r188
+. 27r236 36r46 36r95 36r129 36r153 38r95 38r164 46r46 56r45 58r81 68r78 68r120
+. 68r156 68r193 86r56 86r114 88r90 95r53 95r101 97r88
+61I12*Long<42|45I9> 40|16r52 19r52 19r101 19r135 19r159 22r52 25r51 34r62
+. 34r120 37r59 37r107 41|25r52 36r52 36r101 36r135 36r159 46r52 56r51 86r62
+. 86r120 95r59 95r107
+134V13*To_CORBA_String{74+9} 41|17s44 27s89 27s155 27s194 27s242 38s101 38s170
+. 58s87 68s84 68s126 68s162 68s199 88s96 97s94
 X 34 corba-orb.ads
 47K15*ORB 248e14 40|2w12 41|16r16 17r16
 112U14*String_To_Object 41|17s20
 227U14*Initialize 41|16s20
 X 39 formula1.ads
-8K9*Formula1 167e13 40|7r9 49r5 41|9r14 87r5
+8K9*Formula1 176e13 40|7r9 49r5 41|9r14 106r5
 28P9*String_Ref_T(string) 40|13r45 16r74 16r107 16r136 16r174 16r212 19r68
-. 19r179 25r73 28r62 28r88 28r116 28r141 34r80 37r75 41|14r45 22r74 22r107
-. 22r136 22r174 22r212 31r68 31r179 47r73 55r62 55r88 55r116 55r141 71r80
-. 78r75
+. 19r179 25r73 28r62 28r88 28r116 28r141 34r84 37r75 41|14r45 25r74 25r107
+. 25r136 25r174 25r212 36r68 36r179 56r73 66r62 66r88 66r116 66r141 86r84
+. 95r75
 X 40 formula1-controller.ads
-7K18*Controller 39|8k9 40|49l14 49e24 41|9b23 87l14 87t24
-10W19*Controller_T 44l8 44e20 46r36 41|11b19 85l8 85t20
-13U17 Inizialize_Corba 13>35 41|14b17 18l11 18t27
+7K18*Controller 39|8k9 40|49l14 49e24 41|9b23 106l14 106t24
+10W19*Controller_T 44l8 44e20 46r36 41|11b19 104l8 104t20
+13U17 Inizialize_Corba 13>35 41|14b17 21l11 21t27
 13p35 IOR_Ref{39|28P9} 41|14b35 17r61
-16U17 Add_Pilot 16>28 16>58 16>88 16>121 16>150 16>188 41|22b17 27l11 27t20
-16i28 Pilot_Number{26|61I12} 41|22b28 24r69
-16p58 Pilot_Name{39|28P9} 41|22b58 24r106
-16p88 Pilot_Surname{39|28P9} 41|22b88 24r129
-16p121 Pilot_Car{39|28P9} 41|22b121 24r172
-16p150 Pilot_Strategy_Str{39|28P9} 41|22b150 24r211
-16p188 Car_Fuel_Level_Ref{39|28P9} 41|22b188 24r259
-19U17 Send_Time 19>28 19>58 19>82 19>107 19>141 19>165 41|31b17 35l11 35t20
-19i28 Pilot_Number{26|61I12} 41|31b28 33r81
-19p58 Time{39|28P9} 41|31b58 33r118
-19i82 Num_Lap{26|61I12} 41|31b82 33r129
-19i107 Num_Intermediate{26|61I12} 41|31b107 33r138
-19i141 Ticket{26|61I12} 41|31b141 33r156
-19p165 Tot_Time{39|28P9} 41|31b165 33r187
-22U17 Enter_Box 22>28 41|39b17 43t10
-22i28 Pilot_Number{26|61I12} 41|39b28 41r68
-25U17 Exit_Box 25>27 25>57 41|47b17 51t10
-25i27 Pilot_Number{26|61I12} 41|47b27 49r67
-25p57 Fuel_Level{39|28P9} 41|47b57 49r103
-28U17 Send_Circuiti_Description 28>44 28>76 28>102 28>130 41|55b17 59l11
-. 59t36
-28p44 Circuit_Name{39|28P9} 41|55b44 57r101
-28p76 Length{39|28P9} 41|55b76 57r143
-28p102 Num_Laps{39|28P9} 41|55b102 57r178
-28p130 Meteo{39|28P9} 41|55b130 57r215
-31U17 Send_Start_Race 41|63b17 67l11 67t26
-34U17 Send_Fuel_Level 34>34 34>64 41|71b17 75t10
-34i34 Pilot_Number{26|61I12} 41|71b34 73r73
-34p64 Fuel_Level{39|28P9} 41|71b64 73r110
-37U17 Send_Finish_Race 37>35 37>65 37>89 41|78b17 82l11 82t27
-37i35 Pilot_Number{26|61I12} 41|78b35 80r74
-37p65 Time{39|28P9} 41|78b65 80r111
-37i89 Reason{26|61I12} 41|78b89 80r122
-41r7 MyInterface{46|18R9} 41|17r75 24r56 33r68 41r55 49r54 57r65 65r60 73r60
-. 80r61
+16U17 Add_Pilot 16>28 16>58 16>88 16>121 16>150 16>188 41|25b17 32l11 32t20
+16i28 Pilot_Number{26|61I12} 41|25b28 27r69
+16p58 Pilot_Name{39|28P9} 41|25b58 27r106
+16p88 Pilot_Surname{39|28P9} 41|25b88 27r129
+16p121 Pilot_Car{39|28P9} 41|25b121 27r172
+16p150 Pilot_Strategy_Str{39|28P9} 41|25b150 27r211
+16p188 Car_Fuel_Level_Ref{39|28P9} 41|25b188 27r259
+19U17 Send_Time 19>28 19>58 19>82 19>107 19>141 19>165 41|36b17 42l11 42t20
+19i28 Pilot_Number{26|61I12} 41|36b28 38r81
+19p58 Time{39|28P9} 41|36b58 38r118
+19i82 Num_Lap{26|61I12} 41|36b82 38r129
+19i107 Num_Intermediate{26|61I12} 41|36b107 38r138
+19i141 Ticket{26|61I12} 41|36b141 38r156
+19p165 Tot_Time{39|28P9} 41|36b165 38r187
+22U17 Enter_Box 22>28 41|46b17 52t10
+22i28 Pilot_Number{26|61I12} 41|46b28 48r68
+25U17 Exit_Box 25>27 25>57 41|56b17 62t10
+25i27 Pilot_Number{26|61I12} 41|56b27 58r67
+25p57 Fuel_Level{39|28P9} 41|56b57 58r103
+28U17 Send_Circuiti_Description 28>44 28>76 28>102 28>130 41|66b17 72l11
+. 72t36
+28p44 Circuit_Name{39|28P9} 41|66b44 68r101
+28p76 Length{39|28P9} 41|66b76 68r143
+28p102 Num_Laps{39|28P9} 41|66b102 68r178
+28p130 Meteo{39|28P9} 41|66b130 68r215
+31U17 Send_Start_Race 41|76b17 82l11 82t26
+34U17 Send_Fuel_And_Tires 34>38 34>68 34>98 41|86b17 92t10
+34i38 Pilot_Number{26|61I12} 41|86b38 88r76
+34p68 Fuel_Level{39|28P9} 41|86b68 88r113
+34i98 Tires_Wear{26|61I12} 41|86b98 88r130
+37U17 Send_Finish_Race 37>35 37>65 37>89 41|95b17 101l11 101t27
+37i35 Pilot_Number{26|61I12} 41|95b35 97r74
+37p65 Time{39|28P9} 41|95b65 97r111
+37i89 Reason{26|61I12} 41|95b89 97r122
+41r7 MyInterface{46|18R9} 41|17r75 27r56 38r68 48r55 58r54 68r65 78r60 88r63
+. 97r61
 46P9*Controller_Ref_T(10W19)
 X 42 interfac.ads
 45I9*Integer_32<integer>
 57M9*Unsigned_32
 103V13*Shift_Left{57M9} 84|37i18
 X 45 mdlcontrolpanel.ads
-13K9*MDLControlPanel 40|4r6 5r6 41r21 41|1r6 2r6 24r10 33r10 41r10 49r10
-. 57r10 65r10 73r10 80r10 45|18e20
+13K9*MDLControlPanel 40|4r6 5r6 41r21 41|1r6 2r6 27r10 38r10 48r10 58r10
+. 68r10 78r10 88r10 97r10 45|18e20
 X 46 mdlcontrolpanel-timepanelinterface.ads
-16K25*TimePanelInterface 40|4w22 5r22 41r37 41|1w22 2r22 24r26 33r26 41r26
-. 49r26 57r26 65r26 73r26 80r26 46|113e39
+16K25*TimePanelInterface 40|4w22 5r22 41r37 41|1w22 2r22 27r26 38r26 48r26
+. 58r26 68r26 78r26 88r26 97r26 46|114e39
 18R9*Ref<33|49R9> 40|41r56 46|19e43
-32U14*sendPilot 41|24s45
-43U14*sendPilotIntermediate 41|33s45
-55U14*enterBox 41|41s45
-62U14*exitBox 41|49s45
-70U14*sendRaceDescription 41|57s45
-80U14*sendStartRace 41|65s45
-86U14*sendFuelLevel 41|73s45
-94U14*sendFinishRace 41|80s45
+32U14*sendPilot 41|27s45
+43U14*sendPilotIntermediate 41|38s45
+55U14*enterBox 41|48s45
+62U14*exitBox 41|58s45
+70U14*sendRaceDescription 41|68s45
+80U14*sendStartRace 41|78s45
+86U14*sendFuelAndTires 41|88s45
+95U14*sendFinishRace 41|97s45
 X 47 mdlcontrolpanel-timepanelinterface-helper.ads
 15K44*Helper 40|5w41 41|2w41 47|42e46
 X 50 polyorb-any.ads

@@ -45,7 +45,7 @@ package body Formula1.Startup is
       for I in Competitor_Configuration.First_Index + 3 .. Competitor_Configuration.Last_Index loop
 	 declare
 	    Configuration       : String_Vector_Ref_T := Competitor_Configuration.Element (I);
-	    Strategy            : Float_Vector_Ref_T := new Float_Vector_T.Vector;
+	    Strategy            : Integer_Vector_Ref_T := new Integer_Vector_T.Vector;
 	    Pilot_Filename_Ref : String_Ref_T := Configuration.Element (0);
 	    Car_Filename_Ref  : String_Ref_T := Configuration.Element (1);
             Pilot_Configuration_Ref : Configuration_Vect_Ref_T := new Configuration_T.Vector;
@@ -58,7 +58,7 @@ package body Formula1.Startup is
             Read_Config_File (Cars_Set_Path & Car_Filename_Ref.all, Car_Configuration_Ref.all);
 	    --	    -- leggo la stetegia
 	    for J in 2 .. Configuration.Last_Index loop
-	       Strategy.Append (Float'Value (Configuration.Element (J).all));
+	       Strategy.Append (Integer'Value (Configuration.Element (J).all));
 	    end loop;
 	    --	    -- creo il pilota e lo appendo al vettore di piloti
 	    Pilot_Ref := new Pilot_T (Controller_Ref, Pilot_Configuration_Ref, Car_Configuration_Ref, Strategy);

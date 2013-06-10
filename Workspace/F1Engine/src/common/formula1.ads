@@ -32,13 +32,13 @@ package Formula1 is
      (Element_Type => String_Ref_T,
       Index_Type   => Natural);
 
-   -- array float usato per le strategie
-   package Float_Vector_T is new Ada.Containers.Vectors
-     (Element_Type => Float,
+   -- array integer usato per le strategie
+   package Integer_Vector_T is new Ada.Containers.Vectors
+     (Element_Type => Integer,
       Index_Type   => Natural);
 
    -- accesso per Float_Vector_T
-    type Float_Vector_Ref_T is access Float_Vector_T.Vector;
+    type Integer_Vector_Ref_T is access Integer_Vector_T.Vector;
 
    -- riferimento per accedere all'array di stringhe
    type String_Vector_Ref_T is access String_Vector_T.Vector;
@@ -105,6 +105,15 @@ package Formula1 is
 
    -- sottotipo per il coefficente di tenuta
    subtype Coeff_Roadholding_T is Positive range 1..10;
+
+-- sottotipo per il coefficente di usrura gomme
+   subtype Coeff_Tire_Wear_T is Positive range 1..10;
+
+   -- sottotipo per le condizioni delle gomme
+   subtype Tires_Condition_T is Corba.Long range 0..2;
+   -- 0 => Buone
+   -- 1 => Mediocri
+   -- 2 => Consumate
 
    -- sottotipo per il consumo di carburante
    subtype Car_Consumption_T is Float range 0.0..300.0;

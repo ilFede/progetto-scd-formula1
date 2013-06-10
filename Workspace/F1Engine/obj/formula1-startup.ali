@@ -3,7 +3,7 @@ A -gnatA
 P SS ZX
 R nnnvnnnvnvnnnnnvnnnnnnnvvvnnnnnvnvvvnnnvnnnnvnnvnvnvnnnnnnvnnvnnnnnnnnnnnv1+nnnv1+nn
 
-U formula1.startup%b	formula1-startup.adb	bc339b81 NE OO PK
+U formula1.startup%b	formula1-startup.adb	39ef4337 NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
@@ -32,7 +32,7 @@ W system.tasking%s	s-taskin.adb		s-taskin.ali
 W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 W system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
 W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
-W system.val_real%s	s-valrea.adb		s-valrea.ali
+W system.val_int%s	s-valint.adb		s-valint.ali
 
 U formula1.startup%s	formula1-startup.ads	21ca4fb3 EE NE OO PK
 W formula1%s		formula1.adb		formula1.ali
@@ -78,22 +78,22 @@ D corba-policy.ads	20120514092038 6f47498d
 D corba-request.ads	20120514092038 b6132a43
 D corba-sequences.ads	20120514092039 f2f01446
 D corba-sequences-unbounded.ads  20120514092039 3997a2a3
-D formula1.ads		20130609234450 1fc235bb
-D formula1-controller.ads  20130609225407 08b73b1b
+D formula1.ads		20130610113645 768996f8
+D formula1-controller.ads  20130610113646 be792dc4
 D formula1-grid.ads	20130604090729 e543d025
-D formula1-pilot.ads	20130603110912 e20e0f4b
+D formula1-pilot.ads	20130610112413 1b652535
 D formula1-race.ads	20130609220207 23bce151
 D formula1-segment.ads	20130604091016 4faeb658
 D formula1-segmentrp.ads  20130609162003 4d331a44
 D formula1-startup.ads	20130609221630 21ca4fb3
-D formula1-startup.adb	20130609232752 46a5848b
+D formula1-startup.adb	20130610112350 8cdc609c
 D formula1-track.ads	20130604090729 3b9619fe
 D interfac.ads		20090409150019 f77d8799
 D i-c.ads		20101007125900 809c38c4
 D i-cstrea.ads		20100622165701 1bd72c32
-D mdlcontrolpanel.ads	20130609234755 7d2d71fb
-D mdlcontrolpanel-timepanelinterface.ads  20130609234755 e15970b9
-D mdlcontrolpanel-timepanelinterface-helper.ads  20130609234755 1fec3a1a
+D mdlcontrolpanel.ads	20130610115558 7d2d71fb
+D mdlcontrolpanel-timepanelinterface.ads  20130610115558 365b996c
+D mdlcontrolpanel-timepanelinterface-helper.ads  20130610115558 1fec3a1a
 D polyorb.ads		20120514092109 1b2dc832
 D polyorb-annotations.ads  20120514092100 177ede12
 D polyorb-any.ads	20120514092101 06c36295
@@ -176,7 +176,7 @@ D s-tpobop.ads		20090409150019 5f548bb3
 D s-tassta.ads		20101018103456 e88ef99e
 D s-traent.ads		20090417130712 5221ee41
 D s-unstyp.ads		20090409150019 6ae15c76
-D s-valrea.ads		20090409150019 fe297711
+D s-valint.ads		20090409150019 48a52a3f
 D s-wchcon.ads		20090417130712 bfeb2e3d
 X 1 ada.ads
 16K9*Ada 19e8 50|7r6 7r24 76r10
@@ -186,10 +186,10 @@ X 2 a-calend.ads
 52V13*Clock{38I9} 50|82s26
 X 7 a-convec.ads
 47I12*Extended_Index{integer}
-53R9*Vector 50|16r50[42|47] 18r45[42|47] 20r44[45|19] 48r76[42|36] 51r87[42|47]
+53R9*Vector 50|16r50[42|47] 18r45[42|47] 20r44[45|19] 48r80[42|36] 51r87[42|47]
 . 52r85[42|47]
 101V13*Element{42|44P9} 50|33s62[42|47] 47s83[42|47] 49s64[42|31] 50s63[42|31]
-. 61s60[42|31]
+. 61s62[42|31]
 197U14*Append 50|33s30[42|47] 61s25[42|36]
 237V13*First_Index{integer} 50|32s41[42|47] 32s82[42|47] 45s41[42|47]
 243V13*Last_Index{47I12[42|47]} 50|42s75[42|47] 45s85[42|47] 60s41[42|31]
@@ -202,21 +202,21 @@ X 29 corba.ads
 X 37 corba-orb.ads
 47K15*ORB 248e14 50|3w12
 X 42 formula1.ads
-8K9*Formula1 167e13 49|1w6 1r20 3r9 11r5 50|1r6 1r26 2r6 2r25 5r6 5r31 6r6
+8K9*Formula1 176e13 49|1w6 1r20 3r9 11r5 50|1r6 1r26 2r6 2r25 5r6 5r31 6r6
 . 6r25 10r14 14r53 99r5
 21F9*Real_T<short_float> 50|38r85
 28P9*String_Ref_T(string) 49|9r58 9r89 50|12r58 12r89 49r34 50r33
-36K12*Float_Vector_T[7|43] 50|48r61
-41P10*Float_Vector_Ref_T(7|53R9[36]) 50|48r35
+36K12*Integer_Vector_T[7|43] 50|48r63
+41P10*Integer_Vector_Ref_T(7|53R9[36]) 50|48r35
 44P9*String_Vector_Ref_T(7|53R9[31]) 50|47r35
 47K12*Configuration_T[7|43] 50|16r34 18r29 51r71 52r69
 52P9*Configuration_Vect_Ref_T(7|53R9[47]) 50|51r39 52r37
 62E9*Meteo_T 62e30 50|38r188
 94i4*Race_Start_Time{2|38I9} 50|82m7
-131a4*Race_Config_Path{string} 50|30r25
-134a4*Pilots_Set_Path{string} 50|56r31
-137a4*Cars_Set_Path{string} 50|58r31
-161U14*Read_Config_File 50|30s7 56s13 58s13
+140a4*Race_Config_Path{string} 50|30r25
+143a4*Pilots_Set_Path{string} 50|56r31
+146a4*Cars_Set_Path{string} 50|58r31
+170U14*Read_Config_File 50|30s7 56s13 58s13
 X 43 formula1-controller.ads
 7K18*Controller 49e24 50|5w15 5r40 14r62
 10W19*Controller_T 44e20 50|14r73
@@ -258,13 +258,13 @@ X 50 formula1-startup.adb
 24b7 Available{boolean} 76m41 77r20
 32i11 J{integer} 33r70
 45i11 I{integer} 47r92
-47p13 Configuration{42|44P9} 49r50 50r49 60r27 61r46
+47p13 Configuration{42|44P9} 49r50 50r49 60r27 61r48
 48p13 Strategy{42|41P10} 61r16 64r103
 49p13 Pilot_Filename_Ref{42|28P9} 56r49
 50p13 Car_Filename_Ref{42|28P9} 58r47
 51p13 Pilot_Configuration_Ref{42|52P9} 56r73 64r55
 52p13 Car_Configuration_Ref{42|52P9} 58r69 64r80
-60i17 J{integer} 61r69
+60i17 J{integer} 61r71
 X 51 formula1-track.ads
 13p7*Name{42|28P9} 50|38m67
 19p7*Grid_Ref{44|19P9} 50|42r22 70r22 84r22

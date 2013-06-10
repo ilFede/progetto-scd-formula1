@@ -10,7 +10,7 @@ W interfaces%s		interfac.ads		interfac.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 
-U formula1.segmentrp%s	formula1-segmentrp.ads	746b4939 EE NE OO PK
+U formula1.segmentrp%s	formula1-segmentrp.ads	1d20ea7a EE NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
@@ -45,7 +45,7 @@ D a-textio.ads		20091028140912 386df5d4
 D a-unccon.ads		20070406091342 f9eb8f06
 D a-uncdea.ads		20070406091342 f15a5ed1
 D corba.ads		20120514092039 5b6176ff
-D formula1.ads		20130609234450 1fc235bb
+D formula1.ads		20130610113645 768996f8
 D formula1-segmentrp.ads  20130609162003 4d331a44
 D formula1-segmentrp.adb  20130609164937 0eaea154
 D interfac.ads		20090409150019 f77d8799
@@ -99,7 +99,7 @@ X 24 corba.ads
 49K9*CORBA 1029e10 26|1w6 14r108 25r16 27|5r108
 61I12*Long<28|45I9> 26|14r114 25r22 27|5r114
 X 25 formula1.ads
-8K9*Formula1 167e13 26|5r9 32r5 27|1r14 39r5
+8K9*Formula1 176e13 26|5r9 32r5 27|1r14 39r5
 75I12*Num_Lanes_Seg_T{positive} 26|11r45 19r25
 81o4*Min_Gap{duration} 27|26r44 27r42
 X 26 formula1-segmentrp.ads
