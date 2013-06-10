@@ -1,0 +1,14 @@
+module MDLControlPanel {
+  interface TimePanelInterface
+  {
+    long test (in long num);
+    void sendPilot (in long num, in string name, in string car,  in string strategyStr, in string fuel);
+    void sendPilotIntermediate (in long Number, in string time, in long numLap, in long numIntermediate, in long ticket, in string totTime);
+    void enterBox (in long Number);
+    void exitBox (in long Number, in string fuel);
+    void sendRaceDescription (in string name, in string lenght, in string numLap, in string meteo); 
+    void sendStartRace();
+    void sendFuelLevel(in long number, in string fuel);
+    void sendFinishRace(in long number, in string time, in long reason);
+  };	
+};

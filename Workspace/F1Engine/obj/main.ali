@@ -1,0 +1,120 @@
+V "GNAT Lib v4.6"
+M P AB W=b
+A -gnatA
+P SS ZX
+R nnnvnnnvnvnnnnnnnnnnnnnnvvnnnnnvnnnnnnnnnvnnvnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+
+U main%b		main.adb		4eef0c36 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.calendar%s	a-calend.adb		a-calend.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W corba%s		corba.adb		corba.ali
+W formula1%s		formula1.adb		formula1.ali
+W formula1.startup%s	formula1-startup.adb	formula1-startup.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.val_int%s	s-valint.adb		s-valint.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-calend.ads		20090409150019 343c83dd
+D a-charac.ads		20070912115821 2d3ec45b
+D a-chlat1.ads		20070912115821 2825df20
+D a-comlin.ads		20100623092347 e0accaa5
+D a-contai.ads		20101025135029 61e5e089
+D a-convec.ads		20090416105848 49c793e4
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-stream.ads		20090409150019 2ca4ee37
+D a-string.ads		20070406091342 90ac6797
+D a-strfix.ads		20101008130255 d07c346e
+D a-strmap.ads		20090409150019 9cb836fb
+D a-strsup.ads		20101008130255 2a485698
+D a-strunb.ads		20101220072657 e684739b
+D a-stwima.ads		20090409150019 a17edcba
+D a-stwisu.ads		20101008130255 6b1944a5
+D a-stwiun.ads		20101220173206 141d91a6
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-unccon.ads		20070406091342 f9eb8f06
+D a-uncdea.ads		20070406091342 f15a5ed1
+D corba.ads		20120514092039 5b6176ff
+D formula1.ads		20130609234450 1fc235bb
+D formula1-startup.ads	20130609221630 21ca4fb3
+D interfac.ads		20090409150019 f77d8799
+D i-cstrea.ads		20100622165701 1bd72c32
+D main.adb		20130609232752 e6b1f3de
+D polyorb.ads		20120514092109 1b2dc832
+D polyorb-any.ads	20120514092101 06c36295
+D polyorb-errors.ads	20120514092102 ab5de59c
+D polyorb-smart_pointers.ads  20120514092117 f3f72a41
+D polyorb-types.ads	20120514092113 f453197c
+D system.ads		20130419124036 23e1f70b
+D s-conca2.ads		20090420091404 fbd0f2fc
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-valint.ads		20090409150019 48a52a3f
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 30|3r6 4r5 7r6 8r5 9r6 9r24 16r17 28r4 29r30 31r14 33r27 38r4
+. 39r44
+X 2 a-calend.ads
+36K13*Calendar 358e17 30|9w10 9r28
+38I9*Time 30|23r14
+52V13*Clock{38I9} 30|23s22
+X 5 a-comlin.ads
+38K13*Command_Line 139e21 30|3w10 4r9 39r48
+48V13*Argument{string} 30|39s61
+X 22 a-textio.ads
+49K13*Text_IO 472e16 30|7w10 8r9 16r21 28r8 29r34 31r18 33r31 38r8
+52P9*File_Type(370R9) 30|16r29
+53n23*In_File{53E9} 30|29r42
+93U14*Open 30|28s16
+94p7 File{52P9} 30|28r22
+95e7 Mode{53E9} 30|29r22
+96s7 Name{string} 30|30r22
+99U14*Close 30|38s16
+184V13*End_Of_File{boolean} 30|31s26
+254V13*Get_Line{string} 30|33s39
+X 25 corba.ads
+49K9*CORBA 1029e10 30|12w6 12r17 25r11 25r25
+61I12*Long<28|45I9> 30|25r17 25r31
+X 26 formula1.ads
+8K9*Formula1 167e13 30|1r6 10r6 10r28 11w6 11r20
+28P9*String_Ref_T(string) 30|18r18 19r31
+143a4*IOR_Set_Path{string} 30|30r30
+X 27 formula1-startup.ads
+3K18*Startup 11e21 30|1w15 10w15 10r37
+9U14*Race_Startup 30|40s4
+X 28 interfac.ads
+45I9*Integer_32<integer>
+X 30 main.adb
+14U11*Main 14b11 42l5 42t9
+15a4 Filename{string} 30r45
+16p4 File{22|52P9} 28m30 31r39 33r49 38m23
+17i4 Line_Count{natural}
+18p4 IOR_Str_Ref{26|28P9} 35m10 35r37 40r44
+19p4 Race_Config_Filename_Ref{26|28P9} 39m4 40r18
+21i4 Int{integer} 22r26
+22f4 Flo{float}
+23i4 NowTime{2|38I9}
+24a4 cio{string}
+25i4 test{25|61I12}
+33a10 Line{string} 35r55
+

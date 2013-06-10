@@ -1,0 +1,125 @@
+V "GNAT Lib v4.6"
+A -gnatA
+P SS ZX
+R nnvvnnnvvnnvnnnnnnvvnvnnvvvnnvnvnnvnnnnnnvnnvnvnnnnnnvnnnnvnvvnvnnnnnnnnnnnnnnnn
+
+U formula1.segment%s	formula1-segment.ads	4b5a3ff8 EE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.containers.generic_array_sort%s
+W ada.containers.vectors%s
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.finalization%s	a-finali.adb		a-finali.ali
+W ada.finalization.list_controller%s  a-filico.adb  a-filico.ali
+W ada.streams%s		a-stream.ads		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.unchecked_deallocation%s
+W formula1%s		formula1.adb		formula1.ali
+W formula1.segmentrp%s	formula1-segmentrp.adb	formula1-segmentrp.ali
+W system%s		system.ads		system.ali
+W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
+W system.finalization_root%s  s-finroo.adb	s-finroo.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-calend.ads		20090409150019 343c83dd
+D a-charac.ads		20070912115821 2d3ec45b
+D a-chlat1.ads		20070912115821 2825df20
+D a-contai.ads		20101025135029 61e5e089
+D a-cgarso.ads		20070406091342 9129bfa8
+D a-convec.ads		20090416105848 49c793e4
+D a-convec.adb		20101220072657 70f4024c
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-stream.ads		20090409150019 2ca4ee37
+D a-string.ads		20070406091342 90ac6797
+D a-strfix.ads		20101008130255 d07c346e
+D a-strmap.ads		20090409150019 9cb836fb
+D a-strsup.ads		20101008130255 2a485698
+D a-strunb.ads		20101220072657 e684739b
+D a-stwima.ads		20090409150019 a17edcba
+D a-stwisu.ads		20101008130255 6b1944a5
+D a-stwiun.ads		20101220173206 141d91a6
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-unccon.ads		20070406091342 f9eb8f06
+D a-uncdea.ads		20070406091342 f15a5ed1
+D corba.ads		20120514092039 5b6176ff
+D formula1.ads		20130609234450 1fc235bb
+D formula1-segment.ads	20130604091016 4faeb658
+D formula1-segmentrp.ads  20130609162003 4d331a44
+D interfac.ads		20090409150019 f77d8799
+D i-c.ads		20101007125900 809c38c4
+D i-cstrea.ads		20100622165701 1bd72c32
+D polyorb.ads		20120514092109 1b2dc832
+D polyorb-any.ads	20120514092101 06c36295
+D polyorb-errors.ads	20120514092102 ab5de59c
+D polyorb-smart_pointers.ads  20120514092117 f3f72a41
+D polyorb-types.ads	20120514092113 f453197c
+D system.ads		20130419124036 23e1f70b
+D s-atacco.ads		20090409150019 1dc856ad
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-linux.ads		20090730092306 47911ab1
+D s-multip.ads		20101011073009 38ac9f73
+D s-osinte.ads		20101127183452 6e2d2e09
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stausa.ads		20101018101807 bba781f7
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-tasinf.ads		20090409150019 21316953
+D s-taspri.ads		20080408071349 af44aca8
+D s-taskin.ads		20101021101406 b2eaee08
+D s-taprob.ads		20090409150019 502249e3
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 28|3r6 28r36
+X 5 a-contai.ads
+16K13*Containers 24e19 28|3r10 28r40
+X 7 a-convec.ads
+38I9 Index_Type 28|30r7
+39+9 Element_Type 28|29r7
+43k24*Vectors 380e27 28|3w21 28r51
+53R9*Vector 28|33r57[28]
+X 26 corba.ads
+61I12*Long<30|45I9>
+X 27 formula1.ads
+8K9*Formula1 167e13 28|1r6 1r30 2w6 2r20 6r9 35r5
+21F9*Real_T<short_float> 28|16r30 18r30
+72E9*Segment_Type_T 72e49 28|14r30
+75I12*Num_Lanes_Seg_T{positive} 28|20r30
+78I12*Has_Time_Check_T{26|61I12} 28|22r27
+X 28 formula1-segment.ads
+6K18*Segment 27|8k9 28|35l14 35e21
+8R9*Segment_T 25e17 29r23
+12i10*Code{natural}
+14e10*Tipology{27|72E9}
+16f10*Length{27|21F9}
+18f10*Speed{27|21F9}
+20i10*Tot_Lanes{27|75I12}
+22i10*Has_Time_Check{27|78I12}
+24p10*Segment_RP_Ref{29|30P9}
+28K12*Segment_Vector_T[7|43] 33r40
+33P9*Segment_Vector_Ref_T(7|53R9[28])
+X 29 formula1-segmentrp.ads
+5K18*SegmentRP 28|1w15 1r39 29|32e23
+30P9*Segment_RP_Ref_T(11W19) 28|24r29
+X 30 interfac.ads
+45I9*Integer_32<integer>
+

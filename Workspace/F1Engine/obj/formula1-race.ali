@@ -1,0 +1,131 @@
+V "GNAT Lib v4.6"
+A -gnatA
+P SS ZX
+R nnnnnnnvnnnnnnnvnnvnnvnnnvvnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnvnnvnvnnnnnnnnnnnnnnnn
+
+U formula1.race%b	formula1-race.adb	5227de4a NE OO PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W formula1%s		formula1.adb		formula1.ali
+W system%s		system.ads		system.ali
+W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.val_enum%s	s-valenu.adb		s-valenu.ali
+W system.val_int%s	s-valint.adb		s-valint.ali
+
+U formula1.race%s	formula1-race.ads	4e2f5ef0 EE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.containers.vectors%s
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W formula1%s		formula1.adb		formula1.ali
+W formula1.track%s	formula1-track.adb	formula1-track.ali
+W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
+W system.finalization_root%s  s-finroo.adb	s-finroo.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-calend.ads		20090409150019 343c83dd
+D a-charac.ads		20070912115821 2d3ec45b
+D a-chlat1.ads		20070912115821 2825df20
+D a-contai.ads		20101025135029 61e5e089
+D a-convec.ads		20090416105848 49c793e4
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-stream.ads		20090409150019 2ca4ee37
+D a-string.ads		20070406091342 90ac6797
+D a-strfix.ads		20101008130255 d07c346e
+D a-strmap.ads		20090409150019 9cb836fb
+D a-strsup.ads		20101008130255 2a485698
+D a-strunb.ads		20101220072657 e684739b
+D a-stwima.ads		20090409150019 a17edcba
+D a-stwisu.ads		20101008130255 6b1944a5
+D a-stwiun.ads		20101220173206 141d91a6
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-unccon.ads		20070406091342 f9eb8f06
+D a-uncdea.ads		20070406091342 f15a5ed1
+D corba.ads		20120514092039 5b6176ff
+D formula1.ads		20130609234450 1fc235bb
+D formula1-grid.ads	20130604090729 e543d025
+D formula1-race.ads	20130609220207 23bce151
+D formula1-race.adb	20130609220152 719b3f1b
+D formula1-segment.ads	20130604091016 4faeb658
+D formula1-segmentrp.ads  20130609162003 4d331a44
+D formula1-track.ads	20130604090729 3b9619fe
+D interfac.ads		20090409150019 f77d8799
+D i-c.ads		20101007125900 809c38c4
+D i-cstrea.ads		20100622165701 1bd72c32
+D polyorb.ads		20120514092109 1b2dc832
+D polyorb-any.ads	20120514092101 06c36295
+D polyorb-errors.ads	20120514092102 ab5de59c
+D polyorb-smart_pointers.ads  20120514092117 f3f72a41
+D polyorb-types.ads	20120514092113 f453197c
+D system.ads		20130419124036 23e1f70b
+D s-atacco.ads		20090409150019 1dc856ad
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-linux.ads		20090730092306 47911ab1
+D s-multip.ads		20101011073009 38ac9f73
+D s-osinte.ads		20101127183452 6e2d2e09
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stausa.ads		20101018101807 bba781f7
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-tasinf.ads		20090409150019 21316953
+D s-taspri.ads		20080408071349 af44aca8
+D s-taskin.ads		20101021101406 b2eaee08
+D s-taprob.ads		20090409150019 502249e3
+D s-tpoben.ads		20090409150019 e8374469
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-valenu.ads		20090409150019 bb1a4295
+D s-valint.ads		20090409150019 48a52a3f
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 27|1r6
+X 5 a-contai.ads
+16K13*Containers 24e19 27|1r10
+X 6 a-convec.ads
+43k24*Vectors 380e27 27|1w21
+53R9*Vector 27|23r61[25|47] 28|4r61[25|47]
+101V13*Element{25|44P9} 28|12s45[25|47] 12s60[25|31] 14s57[25|47] 14s72[25|31]
+. 16s54[25|47] 16s70[25|31]
+X 25 formula1.ads
+8K9*Formula1 167e13 27|2r6 2r26 4r9 30r8 28|1r14 34r5
+28P9*String_Ref_T(string) 28|7r30
+44P9*String_Vector_Ref_T(6|53R9[31])
+47K12*Configuration_T[6|43] 27|23r45 28|4r45
+62E9*Meteo_T 62e30 27|16r22 28|16r25
+X 27 formula1-race.ads
+4K18*Race 25|8k9 27|30l17 30e21 28|1b23 34l14 34t18
+8R9*Race_T 17e17 29r15
+12r10*Track{31|9R9} 28|20m16
+14i10*Num_Laps{positive} 28|14m16
+16e10*Meteo{25|62E9} 28|16m16
+23U14*Build_Race 23>26 28|4b14 24l8 24t18
+23r26 Configuration{6|53R9[25|47]} 28|4b26 12r31 14r43 16r40
+26U14*Start_Race 28|28b14 31l8 31t18
+29r4*The_Race{8R9} 28|14m7 16m7 20m7
+X 28 formula1-race.adb
+7p7 Circuit_Filename_Ref{25|28P9} 12m7 18r20
+X 31 formula1-track.ads
+6K18*Track 27|2w15 2r35 31|30e19
+9R9*Track_T 27|12r18 31|22e14
+25U14*Build_Track 28|18s7
+28r4*Track_Race{9R9} 28|20r25
+
