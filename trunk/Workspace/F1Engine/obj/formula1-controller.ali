@@ -1,0 +1,251 @@
+V "GNAT Lib v4.6"
+A -gnatA
+P SS ZX
+R nnnnnnnvnnnnnnnnnnnnnnnnnvvnnnnnnnnnvnnnnvnnvnnnnnnnnnnnnnnnnvnvnnnnnnnnnnnnnnnn
+
+U formula1.controller%b	formula1-controller.adb	4553d275 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W corba%s		corba.adb		corba.ali
+W formula1%s		formula1.adb		formula1.ali
+W mdlcontrolpanel%s	mdlcontrolpanel.ads	mdlcontrolpanel.ali
+W mdlcontrolpanel.timepanelinterface%s  mdlcontrolpanel-timepanelinterface.adb  mdlcontrolpanel-timepanelinterface.ali
+W mdlcontrolpanel.timepanelinterface.helper%s  mdlcontrolpanel-timepanelinterface-helper.adb  mdlcontrolpanel-timepanelinterface-helper.ali
+W system%s		system.ads		system.ali
+W system.concat_3%s	s-conca3.adb		s-conca3.ali
+W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
+W system.finalization_root%s  s-finroo.adb	s-finroo.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+
+U formula1.controller%s	formula1-controller.ads	8c00fcf7 EE OO PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.finalization.list_controller%s  a-filico.adb  a-filico.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W corba%s		corba.adb		corba.ali
+W corba.orb%s		corba-orb.adb		corba-orb.ali
+W formula1%s		formula1.adb		formula1.ali
+W mdlcontrolpanel%s	mdlcontrolpanel.ads	mdlcontrolpanel.ali
+W mdlcontrolpanel.timepanelinterface%s  mdlcontrolpanel-timepanelinterface.adb  mdlcontrolpanel-timepanelinterface.ali
+W mdlcontrolpanel.timepanelinterface.helper%s  mdlcontrolpanel-timepanelinterface-helper.adb  mdlcontrolpanel-timepanelinterface-helper.ali
+W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
+W system.finalization_root%s  s-finroo.adb	s-finroo.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-calend.ads		20090409150019 343c83dd
+D a-charac.ads		20070912115821 2d3ec45b
+D a-chlat1.ads		20070912115821 2825df20
+D a-comlin.ads		20100623092347 e0accaa5
+D a-contai.ads		20101025135029 61e5e089
+D a-convec.ads		20090416105848 49c793e4
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-stream.ads		20090409150019 2ca4ee37
+D a-string.ads		20070406091342 90ac6797
+D a-strfix.ads		20101008130255 d07c346e
+D a-strmap.ads		20090409150019 9cb836fb
+D a-strsup.ads		20101008130255 2a485698
+D a-strunb.ads		20101220072657 e684739b
+D a-stwima.ads		20090409150019 a17edcba
+D a-stwisu.ads		20101008130255 6b1944a5
+D a-stwiun.ads		20101220173206 141d91a6
+D a-tags.ads		20101021101406 c7695348
+D a-tgdico.ads		20070406091342 764e0706
+D a-textio.ads		20091028140912 386df5d4
+D a-unccon.ads		20070406091342 f9eb8f06
+D a-uncdea.ads		20070406091342 f15a5ed1
+D corba.ads		20120514092039 5b6176ff
+D corba-abstractbase.ads  20120514092036 b9067a3f
+D corba-context.ads	20120514092037 f0631c31
+D corba-contextlist.ads	20120514092037 632b1e07
+D corba-exceptionlist.ads  20120514092037 c98f1237
+D corba-impl.ads	20120514092038 6f78d784
+D corba-nvlist.ads	20120514092038 88f6a71e
+D corba-object.ads	20120514092038 8df91d71
+D corba-orb.ads		20120514092038 3ea1ce0b
+D corba-policy.ads	20120514092038 6f47498d
+D corba-request.ads	20120514092038 b6132a43
+D corba-sequences.ads	20120514092039 f2f01446
+D corba-sequences-unbounded.ads  20120514092039 3997a2a3
+D formula1.ads		20130609234450 1fc235bb
+D formula1-controller.ads  20130609225407 08b73b1b
+D formula1-controller.adb  20130609230217 e830d532
+D interfac.ads		20090409150019 f77d8799
+D i-c.ads		20101007125900 809c38c4
+D i-cstrea.ads		20100622165701 1bd72c32
+D mdlcontrolpanel.ads	20130609234755 7d2d71fb
+D mdlcontrolpanel-timepanelinterface.ads  20130609234755 e15970b9
+D mdlcontrolpanel-timepanelinterface-helper.ads  20130609234755 1fec3a1a
+D polyorb.ads		20120514092109 1b2dc832
+D polyorb-annotations.ads  20120514092100 177ede12
+D polyorb-any.ads	20120514092101 06c36295
+D polyorb-any-exceptionlist.ads  20120514092100 ab9b596a
+D polyorb-any-nvlist.ads  20120514092101 3479a3ce
+D polyorb-asynch_ev.ads	20120514092101 f3430136
+D polyorb-binding_data.ads  20120514092101 963ae14d
+D polyorb-binding_objects.ads  20120514092101 ceccc4e5
+D polyorb-buffers.ads	20120514092101 b4d604b0
+D polyorb-components.ads  20120514092101 3f79f8ff
+D polyorb-errors.ads	20120514092102 ab5de59c
+D polyorb-filters.ads	20120514092102 be81b6b9
+D polyorb-jobs.ads	20120514092103 4abbbf82
+D polyorb-objects.ads	20120514092104 5cc5684f
+D polyorb-opaque.ads	20120514092104 96880399
+D polyorb-opaque-chunk_pools.ads  20120514092104 642fce91
+D polyorb-qos.ads	20120514092110 b83460cc
+D polyorb-references.ads  20120514092114 7052ce92
+D polyorb-requests.ads	20120514092110 a033b92a
+D polyorb-sequences.ads	20120514092115 f6dbc651
+D polyorb-sequences-unbounded.ads  20120514092109 bc551b1d
+D polyorb-servants.ads	20120514092115 4aade96c
+D polyorb-smart_pointers.ads  20120514092117 f3f72a41
+D polyorb-smart_pointers-controlled_entities.ads  20120514092110 f55c3cd2
+D polyorb-std.ads	20120514092112 23bf306e
+D polyorb-task_info.ads	20120514092105 7ec1cd90
+D polyorb-tasking.ads	20120514092111 d815d5f1
+D polyorb-tasking-abortables.ads  20120514092112 526978d4
+D polyorb-tasking-condition_variables.ads  20120514092115 deccbc14
+D polyorb-tasking-mutexes.ads  20120514092117 3103553b
+D polyorb-tasking-threads.ads  20120514092117 c3cd59ed
+D polyorb-transport.ads	20120514092117 91ef09de
+D polyorb-types.ads	20120514092113 f453197c
+D polyorb-utils.ads	20120514092113 6c128a8b
+D polyorb-utils-chained_lists.ads  20120514092117 3294f8a3
+D polyorb-utils-ilists.ads  20120514092107 d241f94c
+D polyorb-utils-simple_flags.ads  20120514092117 3140190a
+D polyorb-utils-strings.ads  20120514092117 dae37d40
+D system.ads		20130419124036 23e1f70b
+D s-atacco.ads		20090409150019 1dc856ad
+D s-conca3.ads		20090420091404 762a026a
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-linux.ads		20090730092306 47911ab1
+D s-multip.ads		20101011073009 38ac9f73
+D s-osinte.ads		20101127183452 6e2d2e09
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stausa.ads		20101018101807 bba781f7
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-tasinf.ads		20090409150019 21316953
+D s-taspri.ads		20080408071349 af44aca8
+D s-taskin.ads		20101021101406 b2eaee08
+D s-taprob.ads		20090409150019 502249e3
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 41|4r6 4r28 7r6
+X 5 a-comlin.ads
+38K13*Command_Line 139e21 41|4w10 4r32 7w10
+X 26 corba.ads
+49K9*CORBA 1029e10 40|1w6 2r6 16r46 19r46 19r95 19r129 19r153 22r46 25r45
+. 34r52 37r53 37r101 41|3w6 16r10 17r10 17r38 22r46 24r83 24r149 24r188 24r236
+. 31r46 31r95 31r129 31r153 33r95 33r164 39r46 47r45 49r81 57r78 57r120 57r156
+. 57r193 71r52 73r87 78r53 78r101 80r88
+61I12*Long<42|45I9> 40|16r52 19r52 19r101 19r135 19r159 22r52 25r51 34r58
+. 37r59 37r107 41|22r52 31r52 31r101 31r135 31r159 39r52 47r51 71r58 78r59
+. 78r107
+134V13*To_CORBA_String{74+9} 41|17s44 24s89 24s155 24s194 24s242 33s101 33s170
+. 49s87 57s84 57s126 57s162 57s199 73s93 80s94
+X 34 corba-orb.ads
+47K15*ORB 248e14 40|2w12 41|16r16 17r16
+112U14*String_To_Object 41|17s20
+227U14*Initialize 41|16s20
+X 39 formula1.ads
+8K9*Formula1 167e13 40|7r9 49r5 41|9r14 87r5
+28P9*String_Ref_T(string) 40|13r45 16r74 16r107 16r136 16r174 16r212 19r68
+. 19r179 25r73 28r62 28r88 28r116 28r141 34r80 37r75 41|14r45 22r74 22r107
+. 22r136 22r174 22r212 31r68 31r179 47r73 55r62 55r88 55r116 55r141 71r80
+. 78r75
+X 40 formula1-controller.ads
+7K18*Controller 39|8k9 40|49l14 49e24 41|9b23 87l14 87t24
+10W19*Controller_T 44l8 44e20 46r36 41|11b19 85l8 85t20
+13U17 Inizialize_Corba 13>35 41|14b17 18l11 18t27
+13p35 IOR_Ref{39|28P9} 41|14b35 17r61
+16U17 Add_Pilot 16>28 16>58 16>88 16>121 16>150 16>188 41|22b17 27l11 27t20
+16i28 Pilot_Number{26|61I12} 41|22b28 24r69
+16p58 Pilot_Name{39|28P9} 41|22b58 24r106
+16p88 Pilot_Surname{39|28P9} 41|22b88 24r129
+16p121 Pilot_Car{39|28P9} 41|22b121 24r172
+16p150 Pilot_Strategy_Str{39|28P9} 41|22b150 24r211
+16p188 Car_Fuel_Level_Ref{39|28P9} 41|22b188 24r259
+19U17 Send_Time 19>28 19>58 19>82 19>107 19>141 19>165 41|31b17 35l11 35t20
+19i28 Pilot_Number{26|61I12} 41|31b28 33r81
+19p58 Time{39|28P9} 41|31b58 33r118
+19i82 Num_Lap{26|61I12} 41|31b82 33r129
+19i107 Num_Intermediate{26|61I12} 41|31b107 33r138
+19i141 Ticket{26|61I12} 41|31b141 33r156
+19p165 Tot_Time{39|28P9} 41|31b165 33r187
+22U17 Enter_Box 22>28 41|39b17 43t10
+22i28 Pilot_Number{26|61I12} 41|39b28 41r68
+25U17 Exit_Box 25>27 25>57 41|47b17 51t10
+25i27 Pilot_Number{26|61I12} 41|47b27 49r67
+25p57 Fuel_Level{39|28P9} 41|47b57 49r103
+28U17 Send_Circuiti_Description 28>44 28>76 28>102 28>130 41|55b17 59l11
+. 59t36
+28p44 Circuit_Name{39|28P9} 41|55b44 57r101
+28p76 Length{39|28P9} 41|55b76 57r143
+28p102 Num_Laps{39|28P9} 41|55b102 57r178
+28p130 Meteo{39|28P9} 41|55b130 57r215
+31U17 Send_Start_Race 41|63b17 67l11 67t26
+34U17 Send_Fuel_Level 34>34 34>64 41|71b17 75t10
+34i34 Pilot_Number{26|61I12} 41|71b34 73r73
+34p64 Fuel_Level{39|28P9} 41|71b64 73r110
+37U17 Send_Finish_Race 37>35 37>65 37>89 41|78b17 82l11 82t27
+37i35 Pilot_Number{26|61I12} 41|78b35 80r74
+37p65 Time{39|28P9} 41|78b65 80r111
+37i89 Reason{26|61I12} 41|78b89 80r122
+41r7 MyInterface{46|18R9} 41|17r75 24r56 33r68 41r55 49r54 57r65 65r60 73r60
+. 80r61
+46P9*Controller_Ref_T(10W19)
+X 42 interfac.ads
+45I9*Integer_32<integer>
+57M9*Unsigned_32
+103V13*Shift_Left{57M9} 84|37i18
+X 45 mdlcontrolpanel.ads
+13K9*MDLControlPanel 40|4r6 5r6 41r21 41|1r6 2r6 24r10 33r10 41r10 49r10
+. 57r10 65r10 73r10 80r10 45|18e20
+X 46 mdlcontrolpanel-timepanelinterface.ads
+16K25*TimePanelInterface 40|4w22 5r22 41r37 41|1w22 2r22 24r26 33r26 41r26
+. 49r26 57r26 65r26 73r26 80r26 46|113e39
+18R9*Ref<33|49R9> 40|41r56 46|19e43
+32U14*sendPilot 41|24s45
+43U14*sendPilotIntermediate 41|33s45
+55U14*enterBox 41|41s45
+62U14*exitBox 41|49s45
+70U14*sendRaceDescription 41|57s45
+80U14*sendStartRace 41|65s45
+86U14*sendFuelLevel 41|73s45
+94U14*sendFinishRace 41|80s45
+X 47 mdlcontrolpanel-timepanelinterface-helper.ads
+15K44*Helper 40|5w41 41|2w41 47|42e46
+X 50 polyorb-any.ads
+218V27*"="=220:32{boolean}<70|150p9> 82|41i18
+X 63 polyorb-opaque-chunk_pools.ads
+46R9*Chunk
+47P9*Chunk_Access(46R9)
+98V13 Link(47P9[56|357]) 83|54i21[56|357]
+X 73 polyorb-task_info.ads
+70R9*Task_Info
+71P9*Task_Info_Access(70R9)
+255V13 Link(71P9) 83|54i21
+X 82 polyorb-utils-chained_lists.ads
+133R9 Node
+134P9 Node_Access(133R9)
+157V13 Link(134P9) 83|54i21
+

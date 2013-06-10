@@ -1,0 +1,104 @@
+V "GNAT Lib v4.6"
+A -gnatA
+P SS ZX
+R nnnnnnnvnnnnnnnnnnnnnnnnvvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+
+U formula1.car%b	formula1-car.adb	222b6b82 NE OO PK
+W ada.tags%s		a-tags.adb		a-tags.ali
+W formula1%s		formula1.adb		formula1.ali
+W system.val_int%s	s-valint.adb		s-valint.ali
+W system.val_real%s	s-valrea.adb		s-valrea.ali
+
+U formula1.car%s	formula1-car.ads	f1b4c4b2 EE NE OO PK
+W formula1%s		formula1.adb		formula1.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-calend.ads		20090409150019 343c83dd
+D a-charac.ads		20070912115821 2d3ec45b
+D a-chlat1.ads		20070912115821 2825df20
+D a-contai.ads		20101025135029 61e5e089
+D a-convec.ads		20090416105848 49c793e4
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-stream.ads		20090409150019 2ca4ee37
+D a-string.ads		20070406091342 90ac6797
+D a-strfix.ads		20101008130255 d07c346e
+D a-strmap.ads		20090409150019 9cb836fb
+D a-strsup.ads		20101008130255 2a485698
+D a-strunb.ads		20101220072657 e684739b
+D a-stwima.ads		20090409150019 a17edcba
+D a-stwisu.ads		20101008130255 6b1944a5
+D a-stwiun.ads		20101220173206 141d91a6
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-unccon.ads		20070406091342 f9eb8f06
+D a-uncdea.ads		20070406091342 f15a5ed1
+D corba.ads		20120514092039 5b6176ff
+D formula1.ads		20130609234450 1fc235bb
+D formula1-car.ads	20130603105135 ee76f109
+D formula1-car.adb	20130603105134 cc5d9a8b
+D interfac.ads		20090409150019 f77d8799
+D i-cstrea.ads		20100622165701 1bd72c32
+D polyorb.ads		20120514092109 1b2dc832
+D polyorb-any.ads	20120514092101 06c36295
+D polyorb-errors.ads	20120514092102 ab5de59c
+D polyorb-smart_pointers.ads  20120514092117 f3f72a41
+D polyorb-types.ads	20120514092113 f453197c
+D system.ads		20130419124036 23e1f70b
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-valint.ads		20090409150019 48a52a3f
+D s-valrea.ads		20090409150019 fe297711
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 6 a-convec.ads
+53R9*Vector 26|28r64[25|47] 27|4r64[25|47]
+101V13*Element{25|44P9} 27|19s47[25|47] 19s63[25|31] 20s79[25|47] 20s95[25|31]
+. 21s79[25|47] 21s95[25|31] 22s56[25|47] 22s72[25|31] 23s77[25|47] 23s93[25|31]
+. 24s57[25|47] 24s73[25|31]
+X 25 formula1.ads
+8K9*Formula1 167e13 26|2r9 30r5 27|1r14 38r5
+21F9*Real_T<short_float> 26|15r31 27|12r34 22r24
+28P9*String_Ref_T(string) 26|9r35 27|6r34
+44P9*String_Vector_Ref_T(6|53R9[31])
+47K12*Configuration_T[6|43] 26|28r48 27|4r48
+101I12*Coeff_Acceleration_T{positive} 26|11r31 27|8r34 20r33
+104I12*Coeff_Deceleration_T{positive} 26|13r31 27|10r34 21r33
+107I12*Coeff_Roadholding_T{positive} 26|17r31 27|14r34 23r32
+110F12*Car_Consumption_T{float} 26|19r31 27|16r34
+X 26 formula1-car.ads
+2K18*Car 25|8k9 26|30l14 30e17 27|1b23 38l14 38t17
+5R9*Car_T 22e17 28r85 27|4r85
+9p10*Manufacturer_Ref{25|28P9} 27|28m11
+11i10*Coeff_Acceleration{25|101I12} 27|29m11
+13i10*Coeff_Deceleration{25|104I12} 27|30m11
+15f10*Max_Speed{25|21F9} 27|31m11
+17i10*Coeff_Roadholding{25|107I12} 27|32m11
+19f10*Consumption{25|110F12} 27|33m11
+21f10*Fuel_Level{float} 27|34m11
+28U14*Build_Car 28>25 28=72 27|4b14 35l8 35t17
+28r25 Car_Configuration{6|53R9[25|47]} 27|4b25 19r29 20r61 21r61 22r38 23r59
+. 24r39
+28r72 Car{5R9} 27|4b72 28m7 29m7 30m7 31m7 32m7 33m7 34m7
+X 27 formula1-car.adb
+6p7 Car_Manufacter_Ref{25|28P9} 19m7 28r31
+8i7 Car_Coeff_Acceleration{25|101I12} 20m7 29r33
+10i7 Car_Coeff_Deceleration{25|104I12} 21m7 30r33
+12f7 Car_Max_Speed{25|21F9} 22m7 31r24
+14i7 Car_Coeff_Roadholding{25|107I12} 23m7 32r33
+16f7 Car_Consumption{25|110F12} 24m7 33r26
+

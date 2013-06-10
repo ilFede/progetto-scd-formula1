@@ -1,0 +1,62 @@
+#File che descrive un circuito.
+#
+#Ogni riga rappresenta un segmento, che è caratterizzato dai seguenti parametri separati da spazio
+#   -Segment_Type (dec, acc, const, box)
+#   -Lenght (Integer 1..∞)
+#   -Speed (Float 1..∞) 
+#   -Num_Lane (Integer 1..2)
+#   -Has_Time_Check (Positive 0..4)
+#   
+#Segment_Type identifica il tipo di segmento (acc => accelerazione, const => curva, dec => decellerazione, box => box). 
+#I box devono occupare i primi 3 segmenti (decelerazione, box e accelerazione) e devono avere complessivamente una lunghezza
+#pari al segmento di partenza (che è alla terza posizione).
+#
+#Lenght indica la lunghezza del segmento in metri
+#
+#Speed indica la velocità (m/s) massima in caso di un segmento di accelerazione, la velocità di uscita in caso di 
+#un segmento di decelarazione o la velocità di percorrenza in caso di segmento a velocità costante.
+#Se un segmento di decelerazione precede un segmento a velocità costante, dovranno avere l'attributo Velocità uguale
+#
+#Num_Lane indica il numero di corsie del segmento
+#
+#Has_Time_Check indica se il segmento viene usato per la rilevazione dei tempi, devono essere in tutto 4. Indica anche il numero dell'intermedio
+#
+#Non insere spazi a inizio riga
+#I commenti devono iniziare a inizio riga
+#
+####### Inizio configurazione circuito #######
+#Nome del traciato
+Circuito 1
+#Segmenti dei box
+dec 250 27 1 0
+box 1000 27 1 0
+acc 250 100 1 0
+#Primo rettileo (Traguardo)
+acc 1500 100 2 0
+dec 150 30 2 0
+#Prima curva
+const 400 30 1 1
+#Secondo rettilineo
+acc 200 100 2 0
+dec 100 20 2 0
+#Seconda curva
+const 100 20 1 0
+#Terzo rettilineo
+acc 150 100 2 2
+dec 100 20 2 0
+#Terza curva
+const 200 20 1 0
+#Quarto rettilineo
+acc 400 100 2 3
+dec 100 30 2 0
+#Quarta curva
+const 70 30 1 0
+#Quinto rettilineo
+acc 500 100 2 0
+dec 100 45 1 0
+#Quinta curva
+const 100 45 1 4
+#Lunghezza totale 4170m
+####### Fine configurazione circuito #######
+
+

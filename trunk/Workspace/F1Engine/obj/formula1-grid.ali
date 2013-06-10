@@ -1,0 +1,106 @@
+V "GNAT Lib v4.6"
+A -gnatA
+P SS ZX
+R vnnnnnnvnnnnnnnnnnvnnvnnnvvnvnnvnnnnvnnnvnnnvnnnnnnnnnnnnnnnnvnvnnnv3nnnnnnnnnnnn
+
+U formula1.grid%b	formula1-grid.adb	6daedad1 NE OO PK
+W ada.tags%s		a-tags.adb		a-tags.ali
+W formula1%s		formula1.adb		formula1.ali
+W system%s		system.ads		system.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+W system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
+
+U formula1.grid%s	formula1-grid.ads	fa81e59e EE OO PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.finalization.list_controller%s  a-filico.adb  a-filico.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W formula1%s		formula1.adb		formula1.ali
+W system%s		system.ads		system.ali
+W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
+W system.finalization_root%s  s-finroo.adb	s-finroo.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-calend.ads		20090409150019 343c83dd
+D a-charac.ads		20070912115821 2d3ec45b
+D a-chlat1.ads		20070912115821 2825df20
+D a-contai.ads		20101025135029 61e5e089
+D a-convec.ads		20090416105848 49c793e4
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-stream.ads		20090409150019 2ca4ee37
+D a-string.ads		20070406091342 90ac6797
+D a-strfix.ads		20101008130255 d07c346e
+D a-strmap.ads		20090409150019 9cb836fb
+D a-strsup.ads		20101008130255 2a485698
+D a-strunb.ads		20101220072657 e684739b
+D a-stwima.ads		20090409150019 a17edcba
+D a-stwisu.ads		20101008130255 6b1944a5
+D a-stwiun.ads		20101220173206 141d91a6
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-unccon.ads		20070406091342 f9eb8f06
+D a-uncdea.ads		20070406091342 f15a5ed1
+D corba.ads		20120514092039 5b6176ff
+D formula1.ads		20130609234450 1fc235bb
+D formula1-grid.ads	20130604090729 e543d025
+D formula1-grid.adb	20130604090729 88ed0af4
+D interfac.ads		20090409150019 f77d8799
+D i-c.ads		20101007125900 809c38c4
+D i-cstrea.ads		20100622165701 1bd72c32
+D polyorb.ads		20120514092109 1b2dc832
+D polyorb-any.ads	20120514092101 06c36295
+D polyorb-errors.ads	20120514092102 ab5de59c
+D polyorb-smart_pointers.ads  20120514092117 f3f72a41
+D polyorb-types.ads	20120514092113 f453197c
+D system.ads		20130419124036 23e1f70b
+D s-atacco.ads		20090409150019 1dc856ad
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-linux.ads		20090730092306 47911ab1
+D s-multip.ads		20101011073009 38ac9f73
+D s-osinte.ads		20101127183452 6e2d2e09
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stausa.ads		20101018101807 bba781f7
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-tasinf.ads		20090409150019 21316953
+D s-taspri.ads		20080408071349 af44aca8
+D s-taskin.ads		20101021101406 b2eaee08
+D s-taprob.ads		20090409150019 502249e3
+D s-tpoben.ads		20090409150019 e8374469
+D s-tpobop.ads		20090409150019 5f548bb3
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 25 formula1.ads
+8K9*Formula1 167e13 26|1r9 21r5 27|1r14 33r5
+X 26 formula1-grid.ads
+1K18*Grid 25|8k9 26|21l14 21e18 27|1b23 33l14 33t18
+4W19*Grid_T 17l8 17e14 19r30 27|3b19 31l8 31t14
+5Y13 Place_On_Grid 27|5b13 9l11 9t24
+6Y13 Wait_To_Start 27|8r18 11b13 14l11 14t24
+7Y13 Wait_To_Pilots 27|16b13 19l11 19t25
+8U17 Start_Race 27|21b17 24l11 24t21
+9U17 Set_Num_Pilots 9>33 27|26b17 29l11 29t25
+9i33 Num{integer} 27|26b33 28r41
+13b7 On_Race{boolean} 27|11r32 23r10
+14i7 Expected_Num_Pilots_On_Grid{integer} 27|16r61 28r10
+15i7 Actual_Num_Pilots_On_Grid{integer} 27|7r10 7r39 16r33
+19P9*Grid_Ref_T(4W19)
+

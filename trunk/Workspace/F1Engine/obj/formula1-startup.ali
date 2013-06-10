@@ -1,0 +1,298 @@
+V "GNAT Lib v4.6"
+A -gnatA
+P SS ZX
+R nnnvnnnvnvnnnnnvnnnnnnnvvvnnnnnvnvvvnnnvnnnnvnnvnvnvnnnnnnvnnvnnnnnnnnnnnv1+nnnv1+nn
+
+U formula1.startup%b	formula1-startup.adb	bc339b81 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.calendar%s	a-calend.adb		a-calend.ali
+W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W corba%s		corba.adb		corba.ali
+W corba.orb%s		corba-orb.adb		corba-orb.ali
+W formula1%s		formula1.adb		formula1.ali
+W formula1.controller%s	formula1-controller.adb	formula1-controller.ali
+W formula1.grid%s	formula1-grid.adb	formula1-grid.ali
+W formula1.pilot%s	formula1-pilot.adb	formula1-pilot.ali
+W formula1.race%s	formula1-race.adb	formula1-race.ali
+W interfaces%s		interfac.ads		interfac.ali
+W polyorb%s		polyorb.ads		polyorb.ali
+W polyorb.setup%s	polyorb-setup.ads	polyorb-setup.ali
+W polyorb.setup.client%s  polyorb-setup-client.ads  polyorb-setup-client.ali
+W system%s		system.ads		system.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
+W system.finalization_root%s  s-finroo.adb	s-finroo.ali
+W system.img_enum_new%s	s-imenne.adb		s-imenne.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.img_real%s	s-imgrea.adb		s-imgrea.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+W system.val_real%s	s-valrea.adb		s-valrea.ali
+
+U formula1.startup%s	formula1-startup.ads	21ca4fb3 EE NE OO PK
+W formula1%s		formula1.adb		formula1.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-calend.ads		20090409150019 343c83dd
+D a-caldel.ads		20090409150019 9f20b83d
+D a-charac.ads		20070912115821 2d3ec45b
+D a-chlat1.ads		20070912115821 2825df20
+D a-contai.ads		20101025135029 61e5e089
+D a-convec.ads		20090416105848 49c793e4
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-numeri.ads		20080324174807 bb51c45a
+D a-ngelfu.ads		20070406091342 47731de9
+D a-reatim.ads		20090409150019 63f07669
+D a-stream.ads		20090409150019 2ca4ee37
+D a-string.ads		20070406091342 90ac6797
+D a-strfix.ads		20101008130255 d07c346e
+D a-strmap.ads		20090409150019 9cb836fb
+D a-strsup.ads		20101008130255 2a485698
+D a-strunb.ads		20101220072657 e684739b
+D a-stwima.ads		20090409150019 a17edcba
+D a-stwisu.ads		20101008130255 6b1944a5
+D a-stwiun.ads		20101220173206 141d91a6
+D a-tags.ads		20101021101406 c7695348
+D a-tgdico.ads		20070406091342 764e0706
+D a-textio.ads		20091028140912 386df5d4
+D a-unccon.ads		20070406091342 f9eb8f06
+D a-uncdea.ads		20070406091342 f15a5ed1
+D corba.ads		20120514092039 5b6176ff
+D corba-abstractbase.ads  20120514092036 b9067a3f
+D corba-context.ads	20120514092037 f0631c31
+D corba-contextlist.ads	20120514092037 632b1e07
+D corba-exceptionlist.ads  20120514092037 c98f1237
+D corba-impl.ads	20120514092038 6f78d784
+D corba-nvlist.ads	20120514092038 88f6a71e
+D corba-object.ads	20120514092038 8df91d71
+D corba-orb.ads		20120514092038 3ea1ce0b
+D corba-policy.ads	20120514092038 6f47498d
+D corba-request.ads	20120514092038 b6132a43
+D corba-sequences.ads	20120514092039 f2f01446
+D corba-sequences-unbounded.ads  20120514092039 3997a2a3
+D formula1.ads		20130609234450 1fc235bb
+D formula1-controller.ads  20130609225407 08b73b1b
+D formula1-grid.ads	20130604090729 e543d025
+D formula1-pilot.ads	20130603110912 e20e0f4b
+D formula1-race.ads	20130609220207 23bce151
+D formula1-segment.ads	20130604091016 4faeb658
+D formula1-segmentrp.ads  20130609162003 4d331a44
+D formula1-startup.ads	20130609221630 21ca4fb3
+D formula1-startup.adb	20130609232752 46a5848b
+D formula1-track.ads	20130604090729 3b9619fe
+D interfac.ads		20090409150019 f77d8799
+D i-c.ads		20101007125900 809c38c4
+D i-cstrea.ads		20100622165701 1bd72c32
+D mdlcontrolpanel.ads	20130609234755 7d2d71fb
+D mdlcontrolpanel-timepanelinterface.ads  20130609234755 e15970b9
+D mdlcontrolpanel-timepanelinterface-helper.ads  20130609234755 1fec3a1a
+D polyorb.ads		20120514092109 1b2dc832
+D polyorb-annotations.ads  20120514092100 177ede12
+D polyorb-any.ads	20120514092101 06c36295
+D polyorb-any-exceptionlist.ads  20120514092100 ab9b596a
+D polyorb-any-nvlist.ads  20120514092101 3479a3ce
+D polyorb-asynch_ev.ads	20120514092101 f3430136
+D polyorb-binding_data.ads  20120514092101 963ae14d
+D polyorb-binding_objects.ads  20120514092101 ceccc4e5
+D polyorb-binding_objects-lists.ads  20120514092101 c0b24d0d
+D polyorb-buffers.ads	20120514092101 b4d604b0
+D polyorb-components.ads  20120514092101 3f79f8ff
+D polyorb-errors.ads	20120514092102 ab5de59c
+D polyorb-filters.ads	20120514092102 be81b6b9
+D polyorb-jobs.ads	20120514092103 4abbbf82
+D polyorb-log.ads	20120514092103 9c4bb0cf
+D polyorb-obj_adapters.ads  20120514092103 21275526
+D polyorb-objects.ads	20120514092104 5cc5684f
+D polyorb-opaque.ads	20120514092104 96880399
+D polyorb-opaque-chunk_pools.ads  20120514092104 642fce91
+D polyorb-orb.ads	20120514092104 3e1c8871
+D polyorb-orb_controller.ads  20120514092113 3263531b
+D polyorb-qos.ads	20120514092110 b83460cc
+D polyorb-references.ads  20120514092114 7052ce92
+D polyorb-representations.ads  20120514092105 2b7563ab
+D polyorb-request_scheduler.ads  20120514092109 10f19e55
+D polyorb-requests.ads	20120514092110 a033b92a
+D polyorb-sequences.ads	20120514092115 f6dbc651
+D polyorb-sequences-unbounded.ads  20120514092109 bc551b1d
+D polyorb-servants.ads	20120514092115 4aade96c
+D polyorb-setup.ads	20120514092109 cb33b4b9
+D polyorb-setup-client.ads  20120514092056 fd87184b
+D polyorb-setup-no_tasking_client.ads  20120514092056 622fe23a
+D polyorb-smart_pointers.ads  20120514092117 f3f72a41
+D polyorb-smart_pointers-controlled_entities.ads  20120514092110 f55c3cd2
+D polyorb-std.ads	20120514092112 23bf306e
+D polyorb-task_info.ads	20120514092105 7ec1cd90
+D polyorb-tasking.ads	20120514092111 d815d5f1
+D polyorb-tasking-abortables.ads  20120514092112 526978d4
+D polyorb-tasking-condition_variables.ads  20120514092115 deccbc14
+D polyorb-tasking-idle_tasks_managers.ads  20120514092115 9c87ff2e
+D polyorb-tasking-mutexes.ads  20120514092117 3103553b
+D polyorb-tasking-threads.ads  20120514092117 c3cd59ed
+D polyorb-transport.ads	20120514092117 91ef09de
+D polyorb-types.ads	20120514092113 f453197c
+D polyorb-utils.ads	20120514092113 6c128a8b
+D polyorb-utils-chained_lists.ads  20120514092117 3294f8a3
+D polyorb-utils-ilists.ads  20120514092107 d241f94c
+D polyorb-utils-simple_flags.ads  20120514092117 3140190a
+D polyorb-utils-strings.ads  20120514092117 dae37d40
+D system.ads		20130419124036 23e1f70b
+D s-atacco.ads		20090409150019 1dc856ad
+D s-conca2.ads		20090420091404 fbd0f2fc
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-imenne.ads		20090417131547 8707cbf0
+D s-imgint.ads		20090409150019 02dbe0c2
+D s-imgrea.ads		20090409150019 c7a851e2
+D s-linux.ads		20090730092306 47911ab1
+D s-multip.ads		20101011073009 38ac9f73
+D s-osinte.ads		20101127183452 6e2d2e09
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stausa.ads		20101018101807 bba781f7
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-tasinf.ads		20090409150019 21316953
+D s-taspri.ads		20080408071349 af44aca8
+D s-taprop.ads		20090409150019 07f79e46
+D s-taskin.ads		20101021101406 b2eaee08
+D s-taprob.ads		20090409150019 502249e3
+D s-tpoben.ads		20090409150019 e8374469
+D s-tpobop.ads		20090409150019 5f548bb3
+D s-tassta.ads		20101018103456 e88ef99e
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-valrea.ads		20090409150019 fe297711
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 50|7r6 7r24 76r10
+X 2 a-calend.ads
+36K13*Calendar 358e17 50|7w10 7r28
+38I9*Time
+52V13*Clock{38I9} 50|82s26
+X 7 a-convec.ads
+47I12*Extended_Index{integer}
+53R9*Vector 50|16r50[42|47] 18r45[42|47] 20r44[45|19] 48r76[42|36] 51r87[42|47]
+. 52r85[42|47]
+101V13*Element{42|44P9} 50|33s62[42|47] 47s83[42|47] 49s64[42|31] 50s63[42|31]
+. 61s60[42|31]
+197U14*Append 50|33s30[42|47] 61s25[42|36]
+237V13*First_Index{integer} 50|32s41[42|47] 32s82[42|47] 45s41[42|47]
+243V13*Last_Index{47I12[42|47]} 50|42s75[42|47] 45s85[42|47] 60s41[42|31]
+X 26 a-textio.ads
+49K13*Text_IO 472e16 50|76r14
+232U14*Get_Immediate 50|76s22
+264U14*Put_Line 50|44s7 73s7 80s7
+X 29 corba.ads
+49K9*CORBA 1029e10 50|3r6
+X 37 corba-orb.ads
+47K15*ORB 248e14 50|3w12
+X 42 formula1.ads
+8K9*Formula1 167e13 49|1w6 1r20 3r9 11r5 50|1r6 1r26 2r6 2r25 5r6 5r31 6r6
+. 6r25 10r14 14r53 99r5
+21F9*Real_T<short_float> 50|38r85
+28P9*String_Ref_T(string) 49|9r58 9r89 50|12r58 12r89 49r34 50r33
+36K12*Float_Vector_T[7|43] 50|48r61
+41P10*Float_Vector_Ref_T(7|53R9[36]) 50|48r35
+44P9*String_Vector_Ref_T(7|53R9[31]) 50|47r35
+47K12*Configuration_T[7|43] 50|16r34 18r29 51r71 52r69
+52P9*Configuration_Vect_Ref_T(7|53R9[47]) 50|51r39 52r37
+62E9*Meteo_T 62e30 50|38r188
+94i4*Race_Start_Time{2|38I9} 50|82m7
+131a4*Race_Config_Path{string} 50|30r25
+134a4*Pilots_Set_Path{string} 50|56r31
+137a4*Cars_Set_Path{string} 50|58r31
+161U14*Read_Config_File 50|30s7 56s13 58s13
+X 43 formula1-controller.ads
+7K18*Controller 49e24 50|5w15 5r40 14r62
+10W19*Controller_T 44e20 50|14r73
+13U17 Inizialize_Corba 50|28s22
+28U17 Send_Circuiti_Description 50|38s26
+31U17 Send_Start_Race 50|86s26
+46P9*Controller_Ref_T(10W19) 50|14r29
+X 44 formula1-grid.ads
+1K18*Grid 21e18 50|6w15 6r34
+7Y13 Wait_To_Pilots 50|70s35
+8U17 Start_Race 50|84s31
+9U17 Set_Num_Pilots 50|42s35
+19P9*Grid_Ref_T(4W19)
+X 45 formula1-pilot.ads
+7K18*Pilot 23e19 50|1w15 1r35
+10T14*Pilot_T 50|64r30
+16P9*Pilot_Ref_T(10T14) 50|21r29
+19K12*Pilot_Vector_T[7|43] 50|20r29
+X 46 formula1-race.ads
+4K18*Race 30e21 50|2w15 2r34
+12r10*Track{51|9R9} 50|38m61 38r107 42r16 70r16 84m16
+14i10*Num_Laps{positive} 50|38r163
+16e10*Meteo{42|62E9} 50|38r211
+23U14*Build_Race 50|36s7
+29r4*The_Race{8R9} 50|38r52 38r98 38r154 38r202 42r7 70r7 84r7
+X 49 formula1-startup.ads
+3K18*Startup 42|8k9 49|11l14 11e21 50|10b23 99l14 99t21
+9U14*Race_Startup 9>28 9>72 50|12b14 98l8 98t20
+9p28 Race_Config_Filename_Ref{42|28P9} 50|12b28 30r44
+9p72 IOR_Str_Ref{42|28P9} 50|12b72 28r40
+X 50 formula1-startup.adb
+14p7 Controller_Ref{43|46P9} 28r7 38r7 64r39 86r7
+16r7 Competitor_Configuration{7|53R9[42|47]} 30m74 32r16 32r57 33r37 42r50
+. 45r16 45r60 47r58
+18r7 Track_Configuration{7|53R9[42|47]} 33m10 36r19
+20r7 Pilot_Vett{7|53R9[45|19]}
+21p7 Pilot_Ref{45|16P9} 64m13
+23e7 Ch{character} 76m37
+24b7 Available{boolean} 76m41 77r20
+32i11 J{integer} 33r70
+45i11 I{integer} 47r92
+47p13 Configuration{42|44P9} 49r50 50r49 60r27 61r46
+48p13 Strategy{42|41P10} 61r16 64r103
+49p13 Pilot_Filename_Ref{42|28P9} 56r49
+50p13 Car_Filename_Ref{42|28P9} 58r47
+51p13 Pilot_Configuration_Ref{42|52P9} 56r73 64r55
+52p13 Car_Configuration_Ref{42|52P9} 58r69 64r80
+60i17 J{integer} 61r69
+X 51 formula1-track.ads
+13p7*Name{42|28P9} 50|38m67
+19p7*Grid_Ref{44|19P9} 50|42r22 70r22 84r22
+21f7*Lap_Length{42|21F9} 50|38r113
+X 52 interfac.ads
+57M9*Unsigned_32
+103V13*Shift_Left{57M9} 105|37i18
+X 58 polyorb.ads
+35K9*PolyORB 50|4r6 58|37e12
+X 60 polyorb-any.ads
+218V27*"="=220:32{boolean}<90|150p9> 103|41i18
+X 65 polyorb-binding_objects.ads
+52P9*Binding_Object_Access(50R9)
+56V13*Link(52P9) 104|54i21
+X 76 polyorb-opaque-chunk_pools.ads
+46R9*Chunk
+47P9*Chunk_Access(46R9[67|357])
+98V13 Link(47P9[67|357]) 104|54i21[67|357]
+X 87 polyorb-setup.ads
+38K17*Setup 50|4r14 87|46e18
+X 88 polyorb-setup-client.ads
+38K23*Client=38:52 50|4w20
+X 93 polyorb-task_info.ads
+70R9*Task_Info
+71P9*Task_Info_Access(70R9)
+255V13 Link(71P9) 104|54i21
+X 103 polyorb-utils-chained_lists.ads
+133R9 Node
+134P9 Node_Access(133R9[97|80])
+157V13 Link(134P9[62|74]) 104|54i21[62|74]
+
