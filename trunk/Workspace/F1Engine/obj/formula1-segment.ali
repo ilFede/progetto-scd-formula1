@@ -51,7 +51,7 @@ D a-textio.ads		20091028140912 386df5d4
 D a-unccon.ads		20070406091342 f9eb8f06
 D a-uncdea.ads		20070406091342 f15a5ed1
 D corba.ads		20120514092039 5b6176ff
-D formula1.ads		20130609234450 1fc235bb
+D formula1.ads		20130610113645 768996f8
 D formula1-segment.ads	20130604091016 4faeb658
 D formula1-segmentrp.ads  20130609162003 4d331a44
 D interfac.ads		20090409150019 f77d8799
@@ -100,7 +100,7 @@ X 7 a-convec.ads
 X 26 corba.ads
 61I12*Long<30|45I9>
 X 27 formula1.ads
-8K9*Formula1 167e13 28|1r6 1r30 2w6 2r20 6r9 35r5
+8K9*Formula1 176e13 28|1r6 1r30 2w6 2r20 6r9 35r5
 21F9*Real_T<short_float> 28|16r30 18r30
 72E9*Segment_Type_T 72e49 28|14r30
 75I12*Num_Lanes_Seg_T{positive} 28|20r30

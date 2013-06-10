@@ -30,6 +30,9 @@ import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.SwingConstants;
+
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
@@ -41,7 +44,7 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 	private String[] mainColumnNames = { "Nome Pilota", "Numero",
 			"Costruttore", "1° Intermedio", "2° Intermedio", "3° Intermedio",
 			"Tempo ultimo giro", "Dist. dal primo", "#Giri",
-			"Stato del pilota", "#Soste", "Carburante", "Strategia",
+			"Stato del pilota", "#Soste", "Carburante", "Stato gomme", "Strategia",
 			"Tempo gara", "#Int", "#Ticket", "#Sort" };
 	private String[] posColumnNames = { "Pos" };
 	private long[][] intermediateMatrix;
@@ -200,7 +203,10 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 		// posDataModel.addRow(row);
 		// }
 		// tblTimes.getComponent(0).setVisible(false);
-		frmMain.setSize(1400, 600);
+		GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+		int width = gd.getDisplayMode().getWidth();
+		int height = 500;
+		frmMain.setSize(width, height);
 		frmMain.setVisible(true);
 		resizeTable();
 	}
@@ -225,6 +231,8 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 		txtBestPilot.setText("");
 		txtBestTime.setText("");
 		txtRaceDescription.setText("");
+		totPilotNumber = 0;
+		totPilotFinish = 0;
 		sortTable();
 		resizeTable();
 	}
@@ -239,6 +247,7 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 	public void sendPilot(int num, String name, String car, String strategy,
 			String fuelLevel) {
 		String[] temp = strategy.split(",");
+		/**
 		String strategyStr = "";
 		for (int i = 0; i < temp.length - 1; i++) {
 			Float fObj = new Float(temp[i]);
@@ -246,10 +255,11 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 			// use toString method of Float class to convert Float into String.
 			String str = fObj.toString();
 		}
+		*/
 		Float flTemp = new Float(fuelLevel);
-		strategyStr = strategyStr.substring(0, strategyStr.length() - 2);
+		//strategyStr = strategyStr.substring(0, strategyStr.length() - 2);
 		java.lang.Object[] row = { name, num, car, "", "", "", "", "--:--:--",
-				1, "in pista", 0, flTemp.toString(), strategyStr, "", 0, 0, 0 };
+				1, "in pista", 0, flTemp.toString(), "buone", strategy, "", 0, 0, 0 };
 		timesDataModel.addRow(row);
 		totPilotNumber = totPilotNumber + 1;
 		java.lang.Object[] row2 = { totPilotNumber };
@@ -358,11 +368,11 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 				rowNumber += 1;
 			}
 		}
-		Integer numPitStop = (Integer) timesDataModel.getValueAt(rowNumber, 8);
+		Integer numPitStop = (Integer) timesDataModel.getValueAt(rowNumber, getColumIndex("#Soste"));
 		numPitStop = numPitStop + 1;
 		timesDataModel.setValueAt(numPitStop, rowNumber,
 				getColumIndex("#Soste"));
-		timesDataModel.setValueAt("Ai box", rowNumber,
+		timesDataModel.setValueAt("ai box", rowNumber,
 				getColumIndex("Stato del pilota"));
 		sortTable();
 	}
@@ -386,6 +396,7 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 		timesDataModel.setValueAt("In pista", rowNumber,
 				getColumIndex("Stato del pilota"));
 		timesDataModel.setValueAt(tmp, rowNumber, getColumIndex("Carburante"));
+		timesDataModel.setValueAt("buone", rowNumber, getColumIndex("Stato gomme"));
 		sortTable();
 	}
 
@@ -418,7 +429,7 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 	}
 
 	// notifica il livello di carburant di un pilota
-	public void sendFuelLevel(int pilotNum, String fuelLevel) {
+	public void sendFuelAndTires(int pilotNum, String fuelLevel, int tiresWear) {
 		boolean isPresent = false;
 		int rowNumber = 0;
 		int setRowNumber = 0;
@@ -434,6 +445,11 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 		}
 		float tmp = Float.valueOf(fuelLevel);
 		timesDataModel.setValueAt(tmp, rowNumber, getColumIndex("Carburante"));
+		if (tiresWear == 1){
+			timesDataModel.setValueAt("mediocri", rowNumber, getColumIndex("Stato gomme"));
+		}else if (tiresWear == 2){
+			timesDataModel.setValueAt("msurate", rowNumber, getColumIndex("Stato gomme"));
+		}
 		sortTable();
 	}
 
@@ -476,7 +492,7 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 		if (totPilotFinish == totPilotNumber) {
 			txtRaceState.setText("Gara finita!!");
 		}else{
-			txtRaceState.setText("Gara in corso" + totPilotFinish + "/" + totPilotNumber);
+			txtRaceState.setText("Gara in corso");
 		}
 		resizeTable();
 		sortTable();
@@ -491,7 +507,7 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 				sorter.setSortable(i, false);
 			}
 			List<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
-			sortKeys.add(new RowSorter.SortKey(16, SortOrder.DESCENDING));
+			sortKeys.add(new RowSorter.SortKey(17, SortOrder.DESCENDING));
 			sorter.setSortKeys(sortKeys);
 			tblTimes.setRowSorter(sorter);
 			tblTimes.setAutoCreateRowSorter(false);

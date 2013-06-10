@@ -156,10 +156,10 @@
       Durante la fase di progettazione sono state individuate le seguenti entità costitutive:
       
       \begin{itemize}
-        \item Circuito
-        \item Piloti
-        \item Controller
-        \item Gara 
+	\item Circuito
+	\item Piloti
+	\item Controller
+	\item Gara 
       \end{itemize}
       
       Di seguito verranno descritte in modo più approfondito per chiarire il loro compito all'interno del
@@ -167,88 +167,88 @@
       
     \section{Descrizione delle entità coinvolte}
       \subsection{Circuito}
-        L'entità circuito rappresenta il circuito vero e proprio nel quale si svolge la gara, dato che non deve 
-        eseguire alcuna azione si
-        tratta di una entità passiva che ha lo solo scopo di accogliere i piloti impegnati ad affrontare la
-        competizione.
-        Dovrà comunque regolamentare la loro attività garantendo che vengano rispettate delle regole di accesso congrue
-        ad una ipotetica competizione reale. 
-        Le caratteristiche e le regole che il circuito dovrà fornire saranno le seguenti:
-        
-        \begin{itemize}
-          \item Dovrà essere specificata una lunghezza del circuito
-          \item Il circuito deve avere una larghezza variabile durante la sua percorrenza, non in tutti i tratti sarà
-                ad esempio possibile eseguire un sorpasso per via dello spazio limitato
-          \item Nel circuito dovranno essere presenti sia tratti curvi che rettilinei, che avranno quindi diverse velocità
-                di percorrenza
-          \item Dovranno esserci dei punti per il rilevamento delle prestazioni
-          \item Dovrà essere presente una corsia per i box, con relative regole di accesso
+	L'entità circuito rappresenta il circuito vero e proprio nel quale si svolge la gara, dato che non deve 
+	eseguire alcuna azione si
+	tratta di una entità passiva che ha lo solo scopo di accogliere i piloti impegnati ad affrontare la
+	competizione.
+	Dovrà comunque regolamentare la loro attività garantendo che vengano rispettate delle regole di accesso congrue
+	ad una ipotetica competizione reale. 
+	Le caratteristiche e le regole che il circuito dovrà fornire saranno le seguenti:
+	
+	\begin{itemize}
+	  \item Dovrà essere specificata una lunghezza del circuito
+	  \item Il circuito deve avere una larghezza variabile durante la sua percorrenza, non in tutti i tratti sarà
+		ad esempio possibile eseguire un sorpasso per via dello spazio limitato
+	  \item Nel circuito dovranno essere presenti sia tratti curvi che rettilinei, che avranno quindi diverse velocità
+		di percorrenza
+	  \item Dovranno esserci dei punti per il rilevamento delle prestazioni
+	  \item Dovrà essere presente una corsia per i box, con relative regole di accesso
 	  \item Tutte queste opzioni dovranno poter essere configurate mediante file di configurazione
-        \end{itemize}
-        
-        Questa risorsa sarà condivisa da più piloti allo stesso tempo, sarà quindi necessario gestire
-        tutte le problematiche di concorrenza derivate.
-        
-        
-        
-        
+	\end{itemize}
+	
+	Questa risorsa sarà condivisa da più piloti allo stesso tempo, sarà quindi necessario gestire
+	tutte le problematiche di concorrenza derivate.
+	
+	
+	
+	
       
       \subsection{Piloti}
-        I piloti sono le entità che dovranno percorrere il circuito per gareggiare nella competizione,
-        la percorrenza del circuito dovrà avvenire seguendo le regole e i vincoli imposti dal circuito
-        stesso.
-        
-        Dato che nelle competizioni reali ogni pilota ha le proprie caratteristiche, come ad esempio la prontezza di riflessi
-        o la capacità di valutare i punti esatti dove effettuare le staccate \footnote{Con il termine staccata si indica 
-        la fase in cui un pilota dopo un tratto rettilineo frena bruscamente per iniziare l'inserimento in curva},
-        anche in questo caso ad ogni pilota dovranno essere associate delle caratteristiche, chiamate skill, che possano
-        modellarne il comportamento in pista.
-        I piloti avranno poi una loro personale strategia di gara, questo consentirà loro di effettuare
-        i sorpassi non solo durante la percorrenza del giro, ma anche raggiungendo un buon compromesso
-        tra numero di soste ai box e prestazioni su pista. Infatti maggiori saranno le soste e migliori saranno le prestazioni
-        sul giro, dato che il pilota avrà presumibilmente un minore quantitativo di benzina, e quindi un minor peso, nella vettura.
-        Bisognerà fare comunque attenzione che la programmazione delle soste sia tale da consentire al pilota di concludere la gara,
-        evitando che esso finisca l carburante prima del suo termine
-        
-        Le caratteristiche che dovranno avere i piloti saranno quindi:
-        
-        \begin{itemize}
+	I piloti sono le entità che dovranno percorrere il circuito per gareggiare nella competizione,
+	la percorrenza del circuito dovrà avvenire seguendo le regole e i vincoli imposti dal circuito
+	stesso.
+	
+	Dato che nelle competizioni reali ogni pilota ha le proprie caratteristiche, come ad esempio la prontezza di riflessi
+	o la capacità di valutare i punti esatti dove effettuare le staccate \footnote{Con il termine staccata si indica 
+	la fase in cui un pilota dopo un tratto rettilineo frena bruscamente per iniziare l'inserimento in curva},
+	anche in questo caso ad ogni pilota dovranno essere associate delle caratteristiche, chiamate skill, che possano
+	modellarne il comportamento in pista.
+	I piloti avranno poi una loro personale strategia di gara, questo consentirà loro di effettuare
+	i sorpassi non solo durante la percorrenza del giro, ma anche raggiungendo un buon compromesso
+	tra numero di soste ai box e prestazioni su pista. Infatti maggiori saranno le soste e migliori saranno le prestazioni
+	sul giro, dato che il pilota avrà presumibilmente un minore quantitativo di benzina, e quindi un minor peso, nella vettura.
+	Bisognerà fare comunque attenzione che la programmazione delle soste sia tale da consentire al pilota di concludere la gara,
+	evitando che esso finisca l carburante prima del suo termine
+	
+	Le caratteristiche che dovranno avere i piloti saranno quindi:
+	
+	\begin{itemize}
 	  \item Nome 
 	  \item Numero
 	  \item Skill misurante la capacità di eseguire il prima possibile le accelerazioni in uscita dalle curve
 	  \item Skill misurante la capacità di ritardare il più possibile la staccata prima di un inserimento in curva 
-	        \footnote{La staccata dovrà essere comunque effettuata in modo tale da garantire la 
-	        corretta percorrenza della curva}
+		\footnote{La staccata dovrà essere comunque effettuata in modo tale da garantire la 
+		corretta percorrenza della curva}
 	  \item Un strategia di gara che regoli le soste ai box
 	\end{itemize}
 	
-        
-        Ad ogni pilota sarà poi assegnata una vettura, anche questa dotata di determinate caratteristiche che influenzeranno il suo
-        comportamento in pista. Esse saranno:
-        
-        \begin{itemize}
-          \item Nome del costruttore
-          \item Forza frenante
-          \item Potenza di accelerazione
-          \item Tenuta in curva
-          \item Consumo per chilometro
-          \item Velocità massima
-          \item Livello attuale di carburante
-        \end{itemize}
+	
+	Ad ogni pilota sarà poi assegnata una vettura, anche questa dotata di determinate caratteristiche che influenzeranno il suo
+	comportamento in pista. Esse saranno:
+	
+	\begin{itemize}
+	  \item Nome del costruttore
+	  \item Forza frenante
+	  \item Potenza di accelerazione
+	  \item Tenuta in curva
+	  \item Consumo per chilometro
+	  \item Velocità massima
+	  \item Livello attuale di carburante
+	\end{itemize}
 
       \subsection{Controller}
-        % \<TO DO\>
-        Il controller di gara si occupa di visualizzare l'andamento della competizione, mostrando
-        i tempi su giro di ogni pilota, i tempi intermedi di ogni pilota e il tempo del giro migliore.
-        
+	% \<TO DO\>
+	Il controller di gara si occupa di visualizzare l'andamento della competizione, mostrando
+	i tempi su giro di ogni pilota, i tempi intermedi di ogni pilota e il tempo del giro migliore.
+	
       \subsection{Gara}
-        % \<TO DO\>
-        Questa entità si occupa di inizializzare l'intera competizione e di avviare la gara.
-        Contiene meteo, numero di giri, piloti.....
-          
+	% \<TO DO\>
+	Questa entità si occupa di inizializzare l'intera competizione e di avviare la gara.
+	Contiene meteo, numero di giri, piloti.....
+	  
     \section{Distribuzione}
-        % \<TO DO\>
-        
+	% \<TO DO\>
+	
   \chapter{Implementazione}
     Dato che il progetto presenta alcune problematiche di concorrenza, per la sua realizzazione è stato scelto
     di utilizzare il linguaggio di programmazione ADA.

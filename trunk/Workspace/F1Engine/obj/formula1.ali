@@ -3,7 +3,7 @@ A -gnatA
 P SS ZX
 R nnnvnnnvnvnnnnnnnnnnnnnvvvnnnnnvnnvnnnnnnvnnvnnnnnnnnnnnnnvnnvnvnnnnnnnnnnnnnnnn
 
-U formula1%b		formula1.adb		9605eccd NE OO PK
+U formula1%b		formula1.adb		ff4e4f8e NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.characters%s	a-charac.ads		a-charac.ali
 W ada.characters.latin_1%s  a-chlat1.ads	a-chlat1.ali
@@ -20,7 +20,7 @@ W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.standard_library%s  s-stalib.adb	s-stalib.ali
 
-U formula1%s		formula1.ads		41e5f550 EE OO PK
+U formula1%s		formula1.ads		28ae5613 EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
@@ -73,7 +73,7 @@ D a-tiunio.ads		20070406091342 759c6b0c
 D a-unccon.ads		20070406091342 f9eb8f06
 D a-uncdea.ads		20070406091342 f15a5ed1
 D corba.ads		20120514092039 5b6176ff
-D formula1.ads		20130609234450 1fc235bb
+D formula1.ads		20130610113645 768996f8
 D formula1.adb		20130604090727 d165a76f
 D gnat.ads		20050905075125 fd2ad2f1
 D g-arrspl.ads		20090409150019 c903d743
@@ -103,7 +103,7 @@ D s-traent.ads		20090417130712 5221ee41
 D s-unstyp.ads		20090409150019 6ae15c76
 D s-wchcon.ads		20090417130712 bfeb2e3d
 X 1 ada.ads
-16K9*Ada 19e8 29|1r6 2r6 2r23 3r6 3r23 4r6 4r29 6r6 6r24 31r35 36r34 47r35
+16K9*Ada 19e8 29|1r6 2r6 2r23 3r6 3r23 4r6 4r29 6r6 6r24 31r35 36r36 47r35
 . 30|1r6 2r6 4r6 5r5 6r6 12r11 13r11 37r26 40r7 41r33 45r17 48r49 61r7
 X 2 a-calend.ads
 36K13*Calendar 358e17 29|6w10 6r28
@@ -114,12 +114,12 @@ X 4 a-chlat1.ads
 20K24*Latin_1 298e27 30|1w21 17r40
 36e4*HT{character} 30|17r48
 X 5 a-contai.ads
-16K13*Containers 24e19 29|1r10 31r39 36r38 47r39
+16K13*Containers 24e19 29|1r10 31r39 36r40 47r39
 X 7 a-convec.ads
 38I9 Index_Type 29|33r7 38r7 49r7
 39+9 Element_Type 29|32r7 37r7 48r7
-43k24*Vectors 380e27 29|1w21 31r50 36r49 47r50
-53R9*Vector 29|41r54[36] 44r55[31] 52r60[47] 161r93[47] 30|24r41[29|31] 35r93[29|47]
+43k24*Vectors 380e27 29|1w21 31r50 36r51 47r50
+53R9*Vector 29|41r58[36] 44r55[31] 52r60[47] 170r93[47] 30|24r41[29|31] 35r93[29|47]
 . 36r42[29|31] 49r76[29|31]
 197U14*Append 30|29s35[29|31] 56s30[29|47]
 X 14 a-string.ads
@@ -145,17 +145,17 @@ X 24 a-textio.ads
 X 25 a-tiunio.ads
 25K21*Unbounded_IO 61e29 30|6w18
 X 28 corba.ads
-49K9*CORBA 1029e10 29|5w6 5r17 78r32
-61I12*Long<34|45I9> 29|78r38
+49K9*CORBA 1029e10 29|5w6 5r17 78r32 113r33
+61I12*Long<34|45I9> 29|78r38 113r39
 X 29 formula1.ads
-8K9*Formula1 167l5 167e13 30|9b14 65l5 65t13
-21F9*Real_T<short_float> 69r24 113r28 123r21 124r20
+8K9*Formula1 176l5 176e13 30|9b14 65l5 65t13
+21F9*Real_T<short_float> 69r24 122r28 132r21 133r20
 28P9*String_Ref_T(string) 32r23
 31K12*String_Vector_T[7|43] 44r39 30|24r25 36r26 49r60
-36K12*Float_Vector_T[7|43] 41r39
-41P10*Float_Vector_Ref_T(7|53R9[36])
-44P9*String_Vector_Ref_T(7|53R9[31]) 48r23 158r76 30|11r76 18r20 49r33
-47K12*Configuration_T[7|43] 52r44 161r77 30|35r77
+36K12*Integer_Vector_T[7|43] 41r41
+41P10*Integer_Vector_Ref_T(7|53R9[36])
+44P9*String_Vector_Ref_T(7|53R9[31]) 48r23 167r76 30|11r76 18r20 49r33
+47K12*Configuration_T[7|43] 52r44 170r77 30|35r77
 52P9*Configuration_Vect_Ref_T(7|53R9[47])
 55F12*Percent_T{float}
 62E9*Meteo_T 62e30
@@ -176,21 +176,23 @@ X 29 formula1.ads
 101I12*Coeff_Acceleration_T{positive}
 104I12*Coeff_Deceleration_T{positive}
 107I12*Coeff_Roadholding_T{positive}
-110F12*Car_Consumption_T{float}
-113f4*Standard_Deceleration{21F9}
-123f4*Alpha{21F9}
-124f4*Beta{21F9}
-131a4*Race_Config_Path{string}
-134a4*Pilots_Set_Path{string}
-137a4*Cars_Set_Path{string}
-140a4*Circuits_Set_Path{string}
-143a4*IOR_Set_Path{string}
-158U14*String_Tokenizer 158>32 158=49 30|11b14 32l8 32t24 54s16
-158s32 Str{string} 30|11b32 21r42
-158p49 String_Vector_Ref{44P9} 30|11b49 29r13
-161U14*Read_Config_File 161>32 161=54 30|35b14 62l8 62t24
-161s32 Filename{string} 30|35b32 42r33
-161r54 Configuration{7|53R9[47]} 30|35b54 56m16
+110I12*Coeff_Tire_Wear_T{positive}
+113I12*Tires_Condition_T{28|61I12}
+119F12*Car_Consumption_T{float}
+122f4*Standard_Deceleration{21F9}
+132f4*Alpha{21F9}
+133f4*Beta{21F9}
+140a4*Race_Config_Path{string}
+143a4*Pilots_Set_Path{string}
+146a4*Cars_Set_Path{string}
+149a4*Circuits_Set_Path{string}
+152a4*IOR_Set_Path{string}
+167U14*String_Tokenizer 167>32 167=49 30|11b14 32l8 32t24 54s16
+167s32 Str{string} 30|11b32 21r42
+167p49 String_Vector_Ref{44P9} 30|11b49 29r13
+170U14*Read_Config_File 170>32 170=54 30|35b14 62l8 62t24
+170s32 Filename{string} 30|35b32 42r33
+170r54 Configuration{7|53R9[47]} 30|35b54 56m16
 X 30 formula1.adb
 16r7 Subs{32|74R9[33|39]} 20m42 25r47 27r58
 17a7 Seps{string} 22r42

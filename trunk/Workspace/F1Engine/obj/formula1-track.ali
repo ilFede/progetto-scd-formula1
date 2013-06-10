@@ -56,7 +56,7 @@ D a-textio.ads		20091028140912 386df5d4
 D a-unccon.ads		20070406091342 f9eb8f06
 D a-uncdea.ads		20070406091342 f15a5ed1
 D corba.ads		20120514092039 5b6176ff
-D formula1.ads		20130609234450 1fc235bb
+D formula1.ads		20130610113645 768996f8
 D formula1-grid.ads	20130604090729 e543d025
 D formula1-segment.ads	20130604091016 4faeb658
 D formula1-segmentrp.ads  20130609162003 4d331a44
@@ -119,7 +119,7 @@ X 6 a-convec.ads
 X 24 corba.ads
 61I12*Long<31|45I9>
 X 25 formula1.ads
-8K9*Formula1 167e13 29|2w6 3r6 3r28 5r6 5r25 6r9 30r5 30|1r6 1r30 3r14 84r5
+8K9*Formula1 176e13 29|2w6 3r6 3r28 5r6 5r25 6r9 30r5 30|1r6 1r30 3r14 84r5
 21F9*Real_T<short_float> 29|21r20 30|41r49 42r49 55r30 56r30
 28P9*String_Ref_T(string) 29|13r14 30|21r36
 44P9*String_Vector_Ref_T(6|53R9[31]) 30|22r36 46r49
@@ -127,8 +127,8 @@ X 25 formula1.ads
 72E9*Segment_Type_T 72e49 30|39r49 54r29
 75I12*Num_Lanes_Seg_T{positive} 30|44r49
 78I12*Has_Time_Check_T{24|61I12} 30|43r49 58r39
-140a4*Circuits_Set_Path{string} 30|14r25
-161U14*Read_Config_File 30|14s7
+149a4*Circuits_Set_Path{string} 30|14r25
+170U14*Read_Config_File 30|14s7
 X 26 formula1-grid.ads
 1K18*Grid 21e18 29|5w15 5r34
 4W19*Grid_T 17e14 30|80r34

@@ -28,8 +28,8 @@
 #Nome del traciato
 Circuito 1
 #Segmenti dei box
-dec 250 27 1 0
-box 1000 27 1 0
+dec 250 15 1 0
+box 1000 15 1 0
 acc 250 100 1 0
 #Primo rettileo (Traguardo)
 acc 1500 100 2 0

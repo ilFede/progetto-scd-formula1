@@ -36,7 +36,7 @@ package body Formula1.Pilot is
       -- penalità per il meteo, se piove aggiungo del tempo
       Meteo_Penality : Real_T := 0.0;
       -- Riferimento alla stringa che rappresenta la strategia
-      Strategy_Str_Ref : String_Ref_T := new String'("");
+      Strategy_Str_Ref : String_Ref_T := new String'("[");
 
       -- numero totale di giri della gara
       Num_Laps    : Positive;
@@ -60,6 +60,14 @@ package body Formula1.Pilot is
       Num_Pit_Stop     : Natural := 0;
       -- carburante necessario per fare un giro di pista
       Fuel_For_Lap     : Float;
+      -- numero giri per avere i copertoni mediocri
+      Poor_Tire_Threshold : Integer;
+      -- numero giri per avere i copertoni usurati
+      Worn_Tire_Threshold : Integer;
+
+
+      -- giro dell'ultimo pitstop
+      Last_Pit_Lap_Number : Integer := 0;
 
       -- variabile che indica se il pilota è in gara
       On_Race          : Boolean := true;
@@ -132,11 +140,17 @@ package body Formula1.Pilot is
 	 -- numero di pit stop totali e numero di quelli fatti
 	 Num_Tot_Pit_Stop := Strategy_Ref.Last_Index;
          -- calcolo la stringa che rappresenta la strategia
-	 for k in 0 .. Strategy_Ref.Last_Index loop
-	    Strategy_Str_Ref := new String '(Strategy_Str_Ref.all & Float'Image(Strategy_Ref.all.Element (k)) & ", ");
+	 for k in 1 .. Strategy_Ref.Last_Index loop
+	    Strategy_Str_Ref := new String '(Strategy_Str_Ref.all & Integer'Image(Strategy_Ref.all.Element (k)) & ", ");
 	 end loop;
+         Strategy_Str_Ref := new String'(Strategy_Str_Ref.all & "]");
 	 -- carico la benzina iniziale
-	 Car.Fuel_Level := Strategy_Ref.all.Element (0);
+	 Car.Fuel_Level := Float(Strategy_Ref.all.Element (0));
+         -- imposto le soglie degli pneumatici
+         Poor_Tire_Threshold := Car.Coeff_Tire_Wear;
+         Worn_Tire_Threshold := Car.Coeff_Tire_Wear / 2;
+         -- imposto le condizioni degli pneumatici
+         Car.Tires_Condition := 0;
       end Configure_Pilot_And_Car;
       --+--------
 
@@ -216,7 +230,7 @@ package body Formula1.Pilot is
 	 -- aggiungo il tempo per percorrere il tratto del segmento dopo la frenata anticipata
 	 Deceleration_Time := Deceleration_Time + Duration (Before_Brake_Space / Segment_Exit_Speed);
 	 -- aggiungo la penalità per il meteo
-	 Deceleration_Time := Deceleration_Time + ((Deceleration_Time / 100) * Duration (Meteo_Penality));
+	 Deceleration_Time := Deceleration_Time + ((Deceleration_Time / 100) * Duration (Meteo_Penality)) + ((Deceleration_Time / 100) * Duration (Car.Tires_Condition * 2));
       end Do_Deceleration;
       --+--------
 
@@ -277,7 +291,7 @@ package body Formula1.Pilot is
       -- SCHIERO NELLA GRIGLIA
       ---------------------------------------------------
 
-      Put_Line("@@@ " & Surname.all & " (" & Car.Manufacturer_Ref.all & ") schierato in griglia, consumo per giro: " & Float'Image(Fuel_For_Lap));
+      Put_Line("@@@ " & Surname.all & " (" & Car.Manufacturer_Ref.all & " " & Strategy_Str_Ref.all & ") schierato in griglia, consumo per giro: " & Float'Image(Fuel_For_Lap));
       The_Race.Track.Grid_Ref.all.Place_On_Grid;
       -- arrivo qua quando la gara parte
       -- Race_Start_Time := Clock;
@@ -311,11 +325,16 @@ package body Formula1.Pilot is
 		     if Actual_Segment.Tipology = dec then
 			-- corsia decelerazione box
 			Do_Deceleration (Actual_Length, Expected_Segment_Driving_Duration);
-			-- faccio il firnimento
-			Car.Fuel_Level := Strategy_Ref.all.Element (Num_Pit_Stop);
-		     elsif Actual_Segment.Tipology = box then
-			-- corsia box
-			Expected_Segment_Driving_Duration := Do_Box (Actual_Length);
+                     elsif Actual_Segment.Tipology = box then
+                        -- cambio gli pneumatici
+                        Car.Tires_Condition := 0;
+                        -- aggiorno i dati sulle soste
+                        Num_Pit_Stop := Num_Pit_Stop + 1;
+                        Last_Pit_Lap_Number := Lap_Number;
+                        -- corsia box
+                        Expected_Segment_Driving_Duration := Do_Box (Actual_Length);
+                        -- faccio il rifornimento
+                        -- Car.Fuel_Level := Strategy_Ref.all.Element (Num_Pit_Stop);
 		     else
 			-- corsia di accelerazione, entro nel terzo segmento
 			Do_Acceleration (Actual_Length, Expected_Segment_Driving_Duration);
@@ -371,30 +390,37 @@ package body Formula1.Pilot is
 		  end if;
 		  Put_Line ("<-- " & Surname.all & " uscito dal segmento numero: " & Integer'Image (Segment_Index));
 	       end;
-	    end loop;
-	    -- aggiorno i dati sulla benzina
-	    Car.Fuel_Level := Car.Fuel_Level - Fuel_For_Lap;
-	    -- notifico i dati sulla benzina
-	    Controller_Ref.all.Send_Fuel_Level (Number, new String'(Float'Image (Car.Fuel_Level)));
+            end loop;
+            -- aggiorno i dati sulla benzina
+            Car.Fuel_Level := Car.Fuel_Level - Fuel_For_Lap;
+            -- aggioro i dati sulle gomme
+            if ((Lap_Number - Last_Pit_Lap_Number) > Worn_Tire_Threshold) then
+               Car.Tires_Condition := 1;
+            elsif ((Lap_Number - Last_Pit_Lap_Number) > Poor_Tire_Threshold) then
+               Car.Tires_Condition := 2;
+            end if;
+            -- notifico i dati sulla benzina e gomme
+            Controller_Ref.all.Send_Fuel_And_Tires (Number, new String'(Float'Image (Car.Fuel_Level)), Car.Tires_Condition);
 
             ------------------------------------------------
-            -- INIZIO CONTROLLO CARBURANTE E VERIFICA GUASTI
+            -- INIZIO VERIFICA PIT STOP, CARBURANTE E GUASTI
             ------------------------------------------------
-	    -- controllo se ho carburante sufficente per fare un giro di pista
-	    -- se non ho carburante a sufficenza e non ho previsto soste abbandono la gara
-	    if (Car.Fuel_Level < Fuel_For_Lap) and (Num_Pit_Stop < Num_Tot_Pit_Stop) then
-	       -- incremento il numero dei pit stop fatti
-	       Num_Pit_Stop := Num_Pit_Stop + 1;
-	       Pit_Stop := true;
-	    elsif (Car.Fuel_Level < Fuel_For_Lap) and (Num_Pit_Stop = Num_Tot_Pit_Stop) then
-	       -- il carburante non basta e ho finito i pit stop
-	       On_Race := false;
+            -- vedo se devo cambiare le gomme
+            if (Num_Pit_Stop < Num_Tot_Pit_Stop) then
+               if (Lap_Number = Strategy_Ref.all.Element(Num_Pit_Stop + 1)) then
+                  -- mi devo fermare
+                  Pit_Stop := true;
+               end if;
+            end if;
+            -- se non ho carburante a sufficenza abbandono la gara
+            if (Car.Fuel_Level < Fuel_For_Lap) then
+               -- il carburante non basta e ho finito i pit stop
+               On_Race := false;
                Finish_Reason := 1;
-	    else
-	       Pit_Stop := false;
-	    end if;
+            end if;
+            -- TODO controllo guasti
             ------------------------------------------------
-            -- FINE CONTROLLO CARBURANTE
+            -- FINE VERIFICA PIT STOP, CARBURANTE E GUASTI
             ------------------------------------------------
 	    -- codice che modifica il valore di OnRace e FinishReason
             exit when On_Race = false;

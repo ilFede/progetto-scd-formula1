@@ -10,7 +10,7 @@ package Formula1.Pilot is
    task type Pilot_T (Controller_Ref : Controller_Ref_T;
 		      Pilot_Configuration_Ref : Configuration_Vect_Ref_T;
 		      Car_Configuration_Ref   : Configuration_Vect_Ref_T;
-		      Strategy_Ref              : Float_Vector_Ref_T);
+		      Strategy_Ref              : Integer_Vector_Ref_T);
 
    -- tipo per l'accesso a una variabile di tipo Pilot_T
    type Pilot_Ref_T is access Pilot_T;

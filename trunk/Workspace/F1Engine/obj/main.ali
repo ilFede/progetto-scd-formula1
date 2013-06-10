@@ -4,7 +4,7 @@ A -gnatA
 P SS ZX
 R nnnvnnnvnvnnnnnnnnnnnnnnvvnnnnnvnnnnnnnnnvnnvnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
 
-U main%b		main.adb		4eef0c36 NE OO SU
+U main%b		main.adb		27a4af75 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 W ada.command_line%s	a-comlin.adb		a-comlin.ali
@@ -42,7 +42,7 @@ D a-textio.ads		20091028140912 386df5d4
 D a-unccon.ads		20070406091342 f9eb8f06
 D a-uncdea.ads		20070406091342 f15a5ed1
 D corba.ads		20120514092039 5b6176ff
-D formula1.ads		20130609234450 1fc235bb
+D formula1.ads		20130610113645 768996f8
 D formula1-startup.ads	20130609221630 21ca4fb3
 D interfac.ads		20090409150019 f77d8799
 D i-cstrea.ads		20100622165701 1bd72c32
@@ -96,9 +96,9 @@ X 25 corba.ads
 49K9*CORBA 1029e10 30|12w6 12r17 25r11 25r25
 61I12*Long<28|45I9> 30|25r17 25r31
 X 26 formula1.ads
-8K9*Formula1 167e13 30|1r6 10r6 10r28 11w6 11r20
+8K9*Formula1 176e13 30|1r6 10r6 10r28 11w6 11r20
 28P9*String_Ref_T(string) 30|18r18 19r31
-143a4*IOR_Set_Path{string} 30|30r30
+152a4*IOR_Set_Path{string} 30|30r30
 X 27 formula1-startup.ads
 3K18*Startup 11e21 30|1w15 10w15 10r37
 9U14*Race_Startup 30|40s4

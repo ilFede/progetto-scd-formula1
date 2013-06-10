@@ -83,13 +83,14 @@ package MDLControlPanel.TimePanelInterface is
    sendStartRace_Repository_Id : constant PolyORB.Std.String :=
      "IDL:MDLControlPanel/TimePanelInterface/sendStartRace:1.0";
 
-   procedure sendFuelLevel
+   procedure sendFuelAndTires
      (Self : Ref;
       number : CORBA.Long;
-      fuel : CORBA.String);
+      fuel : CORBA.String;
+      tires : CORBA.Long);
 
-   sendFuelLevel_Repository_Id : constant PolyORB.Std.String :=
-     "IDL:MDLControlPanel/TimePanelInterface/sendFuelLevel:1.0";
+   sendFuelAndTires_Repository_Id : constant PolyORB.Std.String :=
+     "IDL:MDLControlPanel/TimePanelInterface/sendFuelAndTires:1.0";
 
    procedure sendFinishRace
      (Self : Ref;

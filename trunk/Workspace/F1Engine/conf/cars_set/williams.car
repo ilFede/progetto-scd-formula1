@@ -6,7 +6,9 @@
 #   -Coeff_Deceleration : (Integer 1..10)
 #   -Max_Speed: (Integer 1..100)
 #   -Coeff_Roadholding: (Integer 1..10)
+#   -Coeff_Tire_Wear: (Integer 1..10)
 #   -Consuption: (Float 1..∞)
+#   -Max_Fule_Level: (Float 1..∞)
 #
 #Manufacter indica la casa costruttrice della vettura
 #
@@ -16,9 +18,13 @@
 #
 #Max_Speed indica la velocità massima che l'auto può raggiungere in metri al secondo
 #
-#Coeff_Roadholding indica il coeficente di tenuta, che è massimo se vale 10 e minimo se vale 1
+#Coeff_Roadholding indica il coefficente di tenuta, che è massimo se vale 10 e minimo se vale 1
+#
+#Coeff_Tire_Wear indica il coefficente di usura gomme, più alto è meno si consumano
 #
 #Consuption indica il consumo dell'auto, misurato in litri per chilometro
+#
+#Max_Fuel_Level indica la capienza del serbatoio in litri
 #
 #Non insere spazi a inizio riga
 #I commenti devono iniziare a inizio riga
@@ -35,6 +41,10 @@ Williams
 92
 #Coefficente di tenuta
 5
+#Coefficente consumo gomme
+6
 #Consumo
 1.6
+#Capienza serbatio
+240
 ####### Fine configurazione vettura #######

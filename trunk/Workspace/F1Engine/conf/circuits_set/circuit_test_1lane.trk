@@ -28,8 +28,8 @@
 #Nome del traciato
 Circuito di test monocorsia
 #Segmenti dei box
-dec 250 27 1 0
-box 500 27 1 0
+dec 250 15 1 0
+box 500 15 1 0
 acc 250 100 1 0
 #Primo rettileo (Traguardo)
 acc 1000 100 1 0

@@ -31,7 +31,7 @@ package Formula1.Controller is
       procedure Send_Start_Race;
 
       -- invia la quantità di benzina rimasta
-      procedure Send_Fuel_Level (Pilot_Number : in CORBA.Long; Fuel_Level : in String_Ref_T);
+      procedure Send_Fuel_And_Tires (Pilot_Number : in CORBA.Long; Fuel_Level : in String_Ref_T; Tires_Wear : in Corba.Long);
 
       -- notifica la fine della gara per il pilota
       procedure Send_Finish_Race (Pilot_Number : in CORBA.Long; Time : in String_Ref_T; Reason : in Corba.Long);

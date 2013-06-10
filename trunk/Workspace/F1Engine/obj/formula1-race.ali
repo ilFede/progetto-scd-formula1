@@ -15,7 +15,7 @@ W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 W system.val_enum%s	s-valenu.adb		s-valenu.ali
 W system.val_int%s	s-valint.adb		s-valint.ali
 
-U formula1.race%s	formula1-race.ads	4e2f5ef0 EE OO PK
+U formula1.race%s	formula1-race.ads	2764fdb3 EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.vectors%s
@@ -52,7 +52,7 @@ D a-textio.ads		20091028140912 386df5d4
 D a-unccon.ads		20070406091342 f9eb8f06
 D a-uncdea.ads		20070406091342 f15a5ed1
 D corba.ads		20120514092039 5b6176ff
-D formula1.ads		20130609234450 1fc235bb
+D formula1.ads		20130610113645 768996f8
 D formula1-grid.ads	20130604090729 e543d025
 D formula1-race.ads	20130609220207 23bce151
 D formula1-race.adb	20130609220152 719b3f1b
@@ -106,7 +106,7 @@ X 6 a-convec.ads
 101V13*Element{25|44P9} 28|12s45[25|47] 12s60[25|31] 14s57[25|47] 14s72[25|31]
 . 16s54[25|47] 16s70[25|31]
 X 25 formula1.ads
-8K9*Formula1 167e13 27|2r6 2r26 4r9 30r8 28|1r14 34r5
+8K9*Formula1 176e13 27|2r6 2r26 4r9 30r8 28|1r14 34r5
 28P9*String_Ref_T(string) 28|7r30
 44P9*String_Vector_Ref_T(6|53R9[31])
 47K12*Configuration_T[6|43] 27|23r45 28|4r45
