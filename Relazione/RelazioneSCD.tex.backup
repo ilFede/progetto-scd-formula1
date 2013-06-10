@@ -237,21 +237,26 @@
         \end{itemize}
 
       \subsection{Controller}
+        % \<TO DO\>
         Il controller di gara si occupa di visualizzare l'andamento della competizione, mostrando
         i tempi su giro di ogni pilota, i tempi intermedi di ogni pilota e il tempo del giro migliore.
         
       \subsection{Gara}
+        % \<TO DO\>
         Questa entità si occupa di inizializzare l'intera competizione e di avviare la gara.
+        Contiene meteo, numero di giri, piloti.....
           
     \section{Distribuzione}
-        \<TO DO\>
+        % \<TO DO\>
         
   \chapter{Implementazione}
     Dato che il progetto presenta alcune problematiche di concorrenza, per la sua realizzazione è stato scelto
     di utilizzare il linguaggio di programmazione ADA.
-    Per implentare il progetto è stato scelto un linguaggio che potesse supportare nativamente
     
-    \section{implementazione delle varie entità}
+    Di seguito verrà descritto come sono state realizzate le varie entità
+    
+    \section{Circuito}
+      
   
   \chapter{Compilazione ed esecuzione}
 
