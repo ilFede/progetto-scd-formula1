@@ -7,7 +7,7 @@ with Formula1.Grid; use Formula1.Grid;
 package Formula1.Pilot is
 
    -- task per descrivere il pilota
-   task type Pilot_T (Controller_Ref : Controller_Ref_T;
+   task type Pilot_T (Sender_Ref : Sender_Ref_T;
 		      Pilot_Configuration_Ref : Configuration_Vect_Ref_T;
 		      Car_Configuration_Ref   : Configuration_Vect_Ref_T;
 		      Strategy_Ref              : Integer_Vector_Ref_T);

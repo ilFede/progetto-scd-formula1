@@ -1,6 +1,4 @@
 with CORBA;
--- with CORBA.ORB;
--- with Formula1.Controller; use Formula1.Controller;
 
 with Ada.Exceptions;  use Ada.Exceptions;
 
@@ -285,7 +283,7 @@ package body Formula1.Pilot is
       -- REGISTRO IL PILOTA NEL MONITOR
       ---------------------------------------------------
 
-      Controller_Ref.all.Add_Pilot(Number, Name, Surname, Car.Manufacturer_Ref, Strategy_Str_Ref, new String'(Float'Image(Car.Fuel_Level)));
+      Sender_Ref.all.Add_Pilot(Number, Name, Surname, Car.Manufacturer_Ref, Strategy_Str_Ref, new String'(Float'Image(Car.Fuel_Level)));
 
       ---------------------------------------------------
       -- SCHIERO NELLA GRIGLIA
@@ -310,7 +308,7 @@ package body Formula1.Pilot is
 	    if (Pit_Stop = True) then
 	       Put_Line ("+++ " & Surname.all & " entra dai box");
                -- notifico entrata ai box
-               Controller_Ref.all.Enter_Box(Number);
+               Sender_Ref.all.Enter_Box(Number);
                -- percorro i 3 segmenti del box
 	       for Segment_Index in 0 .. 2 loop
 		  declare
@@ -348,7 +346,7 @@ package body Formula1.Pilot is
 	       end loop;
                -- notifico uscita dai box
 	       Put_Line ("--- " & Name.all & " esce dai box");
-               Controller_Ref.all.Exit_Box(Number, new String '(Float'Image(Car.Fuel_Level)));
+               Sender_Ref.all.Exit_Box(Number, new String '(Float'Image(Car.Fuel_Level)));
 	       -- metto il pit stop a false
 	       Pit_Stop := false;
 	       -- sono uscito dai box e riprendo dal segmento 4
@@ -385,8 +383,8 @@ package body Formula1.Pilot is
 		  delay until (Real_Segment_Exit_Time);
 		  -- verifico se devo notificare l'uscita dal segmento
 		  if (Actual_Segment.Has_Time_Check /= 0) then
-		     Controller_Ref.all.Send_Time (Number, (new String'(Duration'Image (Clock - Lap_Start_Time))), CORBA.Long'Value (Integer'Image (Lap_Number)), Actual_Segment.Has_Time_Check, Ticket, new String'(Duration'Image(Real_Segment_Exit_Time - Race_Start_Time)));
-		     -- Controller_Ref.all.Send_Time (Number, (new String'(Duration'Image (Clock - Lap_Start_Time))), CORBA.Long'Value (Integer'Image (Lap_Number)), Actual_Segment.Has_Time_Check, Ticket, new String'(Duration'Image(Real_Segment_Exit_Time - Race_Start_Time)));
+		     Sender_Ref.all.Send_Time (Number, (new String'(Duration'Image (Clock - Lap_Start_Time))), CORBA.Long'Value (Integer'Image (Lap_Number)), Actual_Segment.Has_Time_Check, Ticket, new String'(Duration'Image(Real_Segment_Exit_Time - Race_Start_Time)));
+		     -- Sender_Ref.all.Send_Time (Number, (new String'(Duration'Image (Clock - Lap_Start_Time))), CORBA.Long'Value (Integer'Image (Lap_Number)), Actual_Segment.Has_Time_Check, Ticket, new String'(Duration'Image(Real_Segment_Exit_Time - Race_Start_Time)));
 		  end if;
 		  Put_Line ("<-- " & Surname.all & " uscito dal segmento numero: " & Integer'Image (Segment_Index));
 	       end;
@@ -400,7 +398,7 @@ package body Formula1.Pilot is
                Car.Tires_Condition := 2;
             end if;
             -- notifico i dati sulla benzina e gomme
-            Controller_Ref.all.Send_Fuel_And_Tires (Number, new String'(Float'Image (Car.Fuel_Level)), Car.Tires_Condition);
+            Sender_Ref.all.Send_Fuel_And_Tires (Number, new String'(Float'Image (Car.Fuel_Level)), Car.Tires_Condition);
 
             ------------------------------------------------
             -- INIZIO VERIFICA PIT STOP, CARBURANTE E GUASTI
@@ -428,7 +426,7 @@ package body Formula1.Pilot is
       end loop;
       Put_Line (Name.all & " termina");
       -- notifico la fine della gara
-      Controller_Ref.all.Send_Finish_Race (Number, (new String'(Duration'Image (Clock - Race_Start_Time))), Finish_Reason);
+      Sender_Ref.all.Send_Finish_Race (Number, (new String'(Duration'Image (Clock - Race_Start_Time))), Finish_Reason);
    exception
       when Error : others =>
 	 Put_Line ("You have a problem!!");

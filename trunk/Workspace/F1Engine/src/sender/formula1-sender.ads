@@ -4,10 +4,10 @@ with CORBA.ORB;
 with MDLControlPanel.TimePanelInterface;
 with MDLControlPanel.TimePanelInterface.Helper;
 
-package Formula1.Controller is
+package Formula1.Sender is
 
    -- risorsa protetta sottosegmento
-   protected type Controller_T is
+   protected type Sender_T is
 
       -- procedura per inizializzare CORBA
       procedure Inizialize_Corba (IOR_Ref : String_Ref_T);
@@ -41,9 +41,9 @@ package Formula1.Controller is
       MyInterface : MDLControlPanel.TimePanelInterface.Ref;
 
 
-   end Controller_T;
+   end Sender_T;
 
-   type Controller_Ref_T is access Controller_T;
+   type Sender_Ref_T is access Sender_T;
 
 
-end Formula1.Controller;
+end Formula1.Sender;

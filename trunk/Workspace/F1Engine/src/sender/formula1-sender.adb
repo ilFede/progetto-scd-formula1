@@ -6,9 +6,9 @@ with Ada.Command_Line; use Ada.Command_Line;
 
 with Ada.Command_Line;
 
-package body Formula1.Controller is
+package body Formula1.Sender is
 
-   protected body Controller_T is
+   protected body Sender_T is
 
       -- inizializza CORBA
       procedure Inizialize_Corba (IOR_Ref : String_Ref_T) is
@@ -101,6 +101,6 @@ package body Formula1.Controller is
       end Send_Finish_Race;
       --+--------
 
-   end Controller_T;
+   end Sender_T;
 
-end Formula1.Controller;
+end Formula1.Sender;
