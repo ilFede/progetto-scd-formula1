@@ -2,7 +2,7 @@ with Formula1.Pilot; use Formula1.Pilot;
 with Formula1.Race; use Formula1.Race;
 with CORBA.ORB;
 with PolyORB.Setup.Client;
-with Formula1.Controller; use Formula1.Controller;
+with Formula1.Sender; use Formula1.Sender;
 with Formula1.Grid; use Formula1.Grid;
 with Ada.Calendar; use Ada.Calendar;
 
@@ -11,7 +11,7 @@ package body Formula1.Startup is
 
    procedure Race_Startup (Race_Config_Filename_Ref : in String_Ref_T; IOR_Str_Ref : in String_Ref_T) is
      --  controller per inviare i dati al monitor
-      Controller_Ref      : Controller_Ref_T := new Formula1.Controller.Controller_T;
+      Sender_Ref      : Sender_Ref_T := new Formula1.Sender.Sender_T;
       --  configurazione di un concorrente (pilota + auto)
       Competitor_Configuration : Configuration_T.Vector;
       --  configurazione tracciato
@@ -25,7 +25,7 @@ package body Formula1.Startup is
 
    begin
       -- inizializo il monitor
-      Controller_Ref.Inizialize_Corba (IOR_Str_Ref);
+      Sender_Ref.Inizialize_Corba (IOR_Str_Ref);
       -- estraggo i parametri della gara
       Read_Config_File (Race_Config_Path & Race_Config_Filename_Ref.all, Competitor_Configuration);
       -- estraggo le informazioni sul circuito
@@ -35,7 +35,7 @@ package body Formula1.Startup is
       -- costruisco il circuito
       Build_Race (Track_Configuration);
       -- Invio i dati al pannello
-      Controller_Ref.all.Send_Circuiti_Description(The_Race.Track.Name, new String'(Real_T'Image(The_Race.Track.Lap_Length)), new String'(Positive'Image(The_Race.Num_Laps)), new String '(Meteo_T'Image(The_Race.Meteo)));
+      Sender_Ref.all.Send_Circuiti_Description(The_Race.Track.Name, new String'(Real_T'Image(The_Race.Track.Lap_Length)), new String'(Positive'Image(The_Race.Num_Laps)), new String '(Meteo_T'Image(The_Race.Meteo)));
       -- istanzio e configuro i piloti
       -- Read_Config_File (Race_Config_Path & Competitors_Config_Filename, Competitor_Configuration);
       -- imposto il numero di piloti nella griglia
@@ -61,7 +61,7 @@ package body Formula1.Startup is
 	       Strategy.Append (Integer'Value (Configuration.Element (J).all));
 	    end loop;
 	    --	    -- creo il pilota e lo appendo al vettore di piloti
-	    Pilot_Ref := new Pilot_T (Controller_Ref, Pilot_Configuration_Ref, Car_Configuration_Ref, Strategy);
+	    Pilot_Ref := new Pilot_T (Sender_Ref, Pilot_Configuration_Ref, Car_Configuration_Ref, Strategy);
 	    --	    Pilot_Vett.Append (Pilot_Ref);
 	    --	    null;
 	 end;
@@ -83,7 +83,7 @@ package body Formula1.Startup is
 
       The_Race.Track.Grid_Ref.Start_Race;
 
-      Controller_Ref.all.Send_Start_Race;
+      Sender_Ref.all.Send_Start_Race;
 
       -- Plt_Ref := Build_Pilot("Vettel.plt");
       -- Car_Ref := Build_Car("Redbull.car");
