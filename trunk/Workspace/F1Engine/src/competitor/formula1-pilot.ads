@@ -1,7 +1,7 @@
 with Ada.Numerics.Generic_Elementary_Functions;
 with Ada.Containers;
 with Ada.Containers.Vectors;
-with Formula1.Controller; use Formula1.Controller;
+with Formula1.Sender; use Formula1.Sender;
 with Formula1.Grid; use Formula1.Grid;
 
 package Formula1.Pilot is

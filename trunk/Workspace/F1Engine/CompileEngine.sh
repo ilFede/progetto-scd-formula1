@@ -1,10 +1,9 @@
 #!/bin/sh
-
 echo "**** Creazione delle directory ****"
 #mkdir -p ./src/pilot/MDLControlPanel
 echo "**** Inizio compilazione middleware ****"
 cd src
-cd controller
+cd sender
 idlac -c MDLControlPanel.idl
 cd ..
 cd ..
