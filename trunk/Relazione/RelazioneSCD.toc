@@ -1,16 +1,33 @@
 \select@language {italian}
 \contentsline {chapter}{\numberline {1}Introduzione}{1}
 \contentsline {section}{\numberline {1.1}Scopo del progetto}{1}
-\contentsline {section}{\numberline {1.2}Struttura del documento}{1}
+\contentsline {section}{\numberline {1.2}Struttura del documento}{2}
 \contentsline {chapter}{\numberline {2}Analisi dei requisiti}{3}
-\contentsline {chapter}{\numberline {3}Progettazione di massima}{5}
-\contentsline {section}{\numberline {3.1}Elenco entit\IeC {\`a} coinvolte}{5}
-\contentsline {section}{\numberline {3.2}Descrizione delle entit\IeC {\`a} coinvolte}{5}
-\contentsline {subsection}{\numberline {3.2.1}Circuito}{5}
-\contentsline {subsection}{\numberline {3.2.2}Piloti}{6}
-\contentsline {subsection}{\numberline {3.2.3}Controller}{7}
-\contentsline {subsection}{\numberline {3.2.4}Gara}{7}
-\contentsline {section}{\numberline {3.3}Distribuzione}{7}
-\contentsline {chapter}{\numberline {4}Implementazione}{9}
-\contentsline {section}{\numberline {4.1}Circuito}{9}
-\contentsline {chapter}{\numberline {5}Compilazione ed esecuzione}{11}
+\contentsline {chapter}{\numberline {3}Progettazione}{5}
+\contentsline {section}{\numberline {3.1}Entit\IeC {\`a} coinvolte}{5}
+\contentsline {section}{\numberline {3.2}Gara}{5}
+\contentsline {subsubsection}{Meteo}{6}
+\contentsline {subsubsection}{Circuito}{6}
+\contentsline {section}{\numberline {3.3}Piloti}{7}
+\contentsline {subsection}{\numberline {3.3.1}Fasi della gara}{9}
+\contentsline {subsubsection}{Partenza}{9}
+\contentsline {subsubsection}{Attraversamento dei segmenti}{9}
+\contentsline {paragraph}{Tratto di acelerazione\\}{9}
+\contentsline {paragraph}{Tratto di decellerazione}{10}
+\contentsline {subsection}{\numberline {3.3.2}Simulazione accelerazione}{11}
+\contentsline {subsection}{\numberline {3.3.3}Simulazione decellerazione}{12}
+\contentsline {subsection}{\numberline {3.3.4}Simulazioe tratto a velocit\IeC {\`a} costante}{12}
+\contentsline {subsection}{\numberline {3.3.5}Srategia}{12}
+\contentsline {section}{\numberline {3.4}Sender}{13}
+\contentsline {section}{\numberline {3.5}Monitor}{14}
+\contentsline {section}{\numberline {3.6}Concorrrenza}{14}
+\contentsline {subsection}{\numberline {3.6.1}Schieramento nella griglia di partenza}{14}
+\contentsline {subsection}{\numberline {3.6.2}Acceso ai segmenti}{15}
+\contentsline {subsubsection}{Caso $T_i < T_a$}{17}
+\contentsline {subsubsection}{Caso $T_a < T_i < T_b$}{17}
+\contentsline {subsubsection}{Caso $T_i > T_b$}{18}
+\contentsline {section}{\numberline {3.7}Distribuzione}{18}
+\contentsline {chapter}{\numberline {4}Implementazione}{21}
+\contentsline {section}{\numberline {4.1}Circuito}{21}
+\contentsline {chapter}{\numberline {5}Configurazione}{23}
+\contentsline {chapter}{\numberline {6}Compilazione ed esecuzione}{25}
