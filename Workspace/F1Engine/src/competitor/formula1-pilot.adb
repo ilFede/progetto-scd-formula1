@@ -177,7 +177,7 @@ package body Formula1.Pilot is
 	 Before_Acceleration_Space  : Real_T := Real_T ((Segment_Length / 100.0) * (Real_T (Skill_Acceleration_T'Last - Skill_Acceleration)));
 	 Acceleation_Space          : Real_T := Segment_Length - Before_Acceleration_Space;
          -- penalità
-         Penality : Duration = 0;
+         Penality : Duration := Duration (0);
       begin
 	 -- calcolo la velocità finale in base senza considerare le caratteristiche dell'auto
 	 Segment_Exit_Speed := Get_Final_Speed (Segment_Enter_Speed, Segment_Length);
@@ -228,7 +228,7 @@ package body Formula1.Pilot is
 	 -- spazio prima della staccata
 	 After_Brake_Space   : Real_T := Segment_Length - (Braking_Space + Before_Brake_Space);
          -- penalità
-         Penality : Duration = 0;
+         Penality : Duration := Duration(0);
       begin
 	 -- tempo per percorrere il tratto prima dell'inizio della staccata
 	 Deceleration_Time := Duration (Before_Brake_Space / Segment_Enter_Speed);
@@ -256,7 +256,7 @@ package body Formula1.Pilot is
       function Do_Constant (Segment_Length : Real_T) return Duration is
 	 Travel_Time : Duration := Duration (Segment_Length / Segment_Enter_Speed);
          -- penalità
-         Penality : Duration = 0;
+         Penality : Duration := Duration (0);
       begin
          -- aggiungo la penalità per il la tenuta di strada (tiene conto del meteo)
 	 Penality := Penality + ((Travel_Time / 100) * Duration (Roadholding_Penality));
@@ -296,7 +296,7 @@ package body Formula1.Pilot is
       if (The_Race.Meteo = dry) then
 	 Roadholding_Penality := (Real_T (Coeff_Roadholding_T'Last - Car.Coeff_Roadholding) / 2.0) + 10.0;
       else
-	 Roadholding_Penality := Real_T (Coeff_Roadholding_T'Last - Car.Coeff_Roadholding) / 2.0);
+	 Roadholding_Penality := Real_T ((Coeff_Roadholding_T'Last - Car.Coeff_Roadholding) / 2);
       end if;
 
       -- calcolo il carburante necessario per un giro di pista

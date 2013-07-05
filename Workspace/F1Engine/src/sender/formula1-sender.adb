@@ -17,7 +17,7 @@ package body Formula1.Sender is
          CORBA.ORB.String_To_Object (CORBA.To_CORBA_String (IOR_Ref.all), MyInterface);
       exception
          when others =>
-            Put_Line ("!!!!!!!!! Impossibile inviare dati al monitor !!!!!!!!!");
+            Put_Line ("!!!!!!!!! Impossibile inizializzare il monitor !!!!!!!!!");
       end Inizialize_Corba;
       --+--------
 
@@ -26,9 +26,9 @@ package body Formula1.Sender is
       begin
          MDLControlPanel.TimePanelInterface.sendPilot (MyInterface, Pilot_Number, CORBA.To_CORBA_String (Pilot_Name.all & " " & Pilot_Surname.all), CORBA.To_CORBA_String (Pilot_Car.all), CORBA.To_CORBA_String (Pilot_Strategy_Str.all), CORBA.To_CORBA_String (Car_Fuel_Level_Ref.all));
          -- MDLControlPanel.TimePanelInterface.sendPilot (MyInterface, CORBA.To_CORBA_String(CORBA.Long'Image(Number)), CORBA.To_CORBA_String (Name.all & Surname.all));
-      exception
-         when others =>
-            Put_Line ("!!!!!!!!! Impossibile inviare dati al monitor !!!!!!!!!");
+      --exception
+        -- when others =>
+          --  Put_Line ("!!!!!!!!! Impossibile inviare dati al monitor !!!!!!!!!");
       end Add_Pilot;
       --+--------
 

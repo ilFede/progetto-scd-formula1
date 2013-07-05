@@ -3,7 +3,7 @@ A -gnatA
 P SS ZX
 R nnnvnnnvnvnnnnnvnnnnnnnvvvnnnnnvnvvvnnnvnnnnvnnvnvnvnnnnnnvnnvnnnnnnnnnnnv1+nnnv1+nn
 
-U formula1.startup%b	formula1-startup.adb	49176c29 NE OO PK
+U formula1.startup%b	formula1-startup.adb	252f14de NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
@@ -86,14 +86,14 @@ D formula1-segment.ads	20130604091016 4faeb658
 D formula1-segmentrp.ads  20130609162003 4d331a44
 D formula1-sender.ads	20130613201732 61cb592a
 D formula1-startup.ads	20130609221630 21ca4fb3
-D formula1-startup.adb	20130613202123 1bd4bcf0
+D formula1-startup.adb	20130705144913 77ecc407
 D formula1-track.ads	20130604090729 3b9619fe
 D interfac.ads		20090409150019 f77d8799
 D i-c.ads		20101007125900 809c38c4
 D i-cstrea.ads		20100622165701 1bd72c32
-D mdlcontrolpanel.ads	20130624111319 7d2d71fb
-D mdlcontrolpanel-timepanelinterface.ads  20130624111319 365b996c
-D mdlcontrolpanel-timepanelinterface-helper.ads  20130624111319 1fec3a1a
+D mdlcontrolpanel.ads	20130705145431 7d2d71fb
+D mdlcontrolpanel-timepanelinterface.ads  20130705145431 365b996c
+D mdlcontrolpanel-timepanelinterface-helper.ads  20130705145431 1fec3a1a
 D polyorb.ads		20120514092109 1b2dc832
 D polyorb-annotations.ads  20120514092100 177ede12
 D polyorb-any.ads	20120514092101 06c36295
@@ -179,96 +179,96 @@ D s-unstyp.ads		20090409150019 6ae15c76
 D s-valint.ads		20090409150019 48a52a3f
 D s-wchcon.ads		20090417130712 bfeb2e3d
 X 1 ada.ads
-16K9*Ada 19e8 50|7r6 7r24 76r10
+16K9*Ada 19e8 50|7r6 7r24 77r10
 X 2 a-calend.ads
 36K13*Calendar 358e17 50|7w10 7r28
 38I9*Time
-52V13*Clock{38I9} 50|82s26
+52V13*Clock{38I9} 50|83s26
 X 7 a-convec.ads
 47I12*Extended_Index{integer}
-53R9*Vector 50|16r50[42|47] 18r45[42|47] 20r44[44|19] 48r80[42|36] 51r87[42|47]
-. 52r85[42|47]
-101V13*Element{42|44P9} 50|33s62[42|47] 47s83[42|47] 49s64[42|31] 50s63[42|31]
-. 61s62[42|31]
-197U14*Append 50|33s30[42|47] 61s25[42|36]
-237V13*First_Index{integer} 50|32s41[42|47] 32s82[42|47] 45s41[42|47]
-243V13*Last_Index{47I12[42|47]} 50|42s75[42|47] 45s85[42|47] 60s41[42|31]
+53R9*Vector 50|16r50[42|47] 18r45[42|47] 20r44[44|19] 49r80[42|36] 52r87[42|47]
+. 53r85[42|47]
+101V13*Element{42|44P9} 50|34s62[42|47] 48s83[42|47] 50s64[42|31] 51s63[42|31]
+. 62s62[42|31]
+197U14*Append 50|34s30[42|47] 62s25[42|36]
+237V13*First_Index{integer} 50|33s41[42|47] 33s82[42|47] 46s41[42|47]
+243V13*Last_Index{47I12[42|47]} 50|43s75[42|47] 46s85[42|47] 61s41[42|31]
 X 26 a-textio.ads
-49K13*Text_IO 472e16 50|76r14
-232U14*Get_Immediate 50|76s22
-264U14*Put_Line 50|44s7 73s7 80s7
+49K13*Text_IO 472e16 50|77r14
+232U14*Get_Immediate 50|77s22
+264U14*Put_Line 50|28s7 45s7 74s7 81s7
 X 29 corba.ads
 49K9*CORBA 1029e10 50|3r6
 X 37 corba-orb.ads
 47K15*ORB 248e14 50|3w12
 X 42 formula1.ads
 8K9*Formula1 176e13 49|1w6 1r20 3r9 11r5 50|1r6 1r26 2r6 2r25 5r6 5r27 6r6
-. 6r25 10r14 14r45 99r5
-21F9*Real_T<short_float> 50|38r81
-28P9*String_Ref_T(string) 49|9r58 9r89 50|12r58 12r89 49r34 50r33
-36K12*Integer_Vector_T[7|43] 50|48r63
-41P10*Integer_Vector_Ref_T(7|53R9[36]) 50|48r35
-44P9*String_Vector_Ref_T(7|53R9[31]) 50|47r35
-47K12*Configuration_T[7|43] 50|16r34 18r29 51r71 52r69
-52P9*Configuration_Vect_Ref_T(7|53R9[47]) 50|51r39 52r37
-62E9*Meteo_T 62e30 50|38r184
-94i4*Race_Start_Time{2|38I9} 50|82m7
-140a4*Race_Config_Path{string} 50|30r25
-143a4*Pilots_Set_Path{string} 50|56r31
-146a4*Cars_Set_Path{string} 50|58r31
-170U14*Read_Config_File 50|30s7 56s13 58s13
+. 6r25 10r14 14r45 100r5
+21F9*Real_T<short_float> 50|39r81
+28P9*String_Ref_T(string) 49|9r58 9r89 50|12r58 12r89 50r34 51r33
+36K12*Integer_Vector_T[7|43] 50|49r63
+41P10*Integer_Vector_Ref_T(7|53R9[36]) 50|49r35
+44P9*String_Vector_Ref_T(7|53R9[31]) 50|48r35
+47K12*Configuration_T[7|43] 50|16r34 18r29 52r71 53r69
+52P9*Configuration_Vect_Ref_T(7|53R9[47]) 50|52r39 53r37
+62E9*Meteo_T 62e30 50|39r184
+94i4*Race_Start_Time{2|38I9} 50|83m7
+140a4*Race_Config_Path{string} 50|31r25
+143a4*Pilots_Set_Path{string} 50|57r31
+146a4*Cars_Set_Path{string} 50|59r31
+170U14*Read_Config_File 50|31s7 57s13 59s13
 X 43 formula1-grid.ads
 1K18*Grid 21e18 50|6w15 6r34
-7Y13 Wait_To_Pilots 50|70s35
-8U17 Start_Race 50|84s31
-9U17 Set_Num_Pilots 50|42s35
+7Y13 Wait_To_Pilots 50|71s35
+8U17 Start_Race 50|85s31
+9U17 Set_Num_Pilots 50|43s35
 19P9*Grid_Ref_T(4W19)
 X 44 formula1-pilot.ads
 7K18*Pilot 23e19 50|1w15 1r35
-10T14*Pilot_T 50|64r30
+10T14*Pilot_T 50|65r30
 16P9*Pilot_Ref_T(10T14) 50|21r29
 19K12*Pilot_Vector_T[7|43] 50|20r29
 X 45 formula1-race.ads
 4K18*Race 30e21 50|2w15 2r34
-12r10*Track{51|9R9} 50|38m57 38r103 42r16 70r16 84m16
-14i10*Num_Laps{positive} 50|38r159
-16e10*Meteo{42|62E9} 50|38r207
-23U14*Build_Race 50|36s7
-29r4*The_Race{8R9} 50|38r48 38r94 38r150 38r198 42r7 70r7 84r7
+12r10*Track{51|9R9} 50|39m57 39r103 43r16 71r16 85m16
+14i10*Num_Laps{positive} 50|39r159
+16e10*Meteo{42|62E9} 50|39r207
+23U14*Build_Race 50|37s7
+29r4*The_Race{8R9} 50|39r48 39r94 39r150 39r198 43r7 71r7 85r7
 X 48 formula1-sender.ads
 7K18*Sender 49e20 50|5w15 5r36 14r54
 10W19*Sender_T 44e16 50|14r61
-13U17 Inizialize_Corba 50|28s18
-28U17 Send_Circuiti_Description 50|38s22
-31U17 Send_Start_Race 50|86s22
+13U17 Inizialize_Corba 50|29s18
+28U17 Send_Circuiti_Description 50|39s22
+31U17 Send_Start_Race 50|87s22
 46P9*Sender_Ref_T(10W19) 50|14r25
 X 49 formula1-startup.ads
-3K18*Startup 42|8k9 49|11l14 11e21 50|10b23 99l14 99t21
-9U14*Race_Startup 9>28 9>72 50|12b14 98l8 98t20
-9p28 Race_Config_Filename_Ref{42|28P9} 50|12b28 30r44
-9p72 IOR_Str_Ref{42|28P9} 50|12b72 28r36
+3K18*Startup 42|8k9 49|11l14 11e21 50|10b23 100l14 100t21
+9U14*Race_Startup 9>28 9>72 50|12b14 99l8 99t20
+9p28 Race_Config_Filename_Ref{42|28P9} 50|12b28 31r44
+9p72 IOR_Str_Ref{42|28P9} 50|12b72 28r35 29r36
 X 50 formula1-startup.adb
-14p7 Sender_Ref{48|46P9} 28r7 38r7 64r39 86r7
-16r7 Competitor_Configuration{7|53R9[42|47]} 30m74 32r16 32r57 33r37 42r50
-. 45r16 45r60 47r58
-18r7 Track_Configuration{7|53R9[42|47]} 33m10 36r19
+14p7 Sender_Ref{48|46P9} 29r7 39r7 65r39 87r7
+16r7 Competitor_Configuration{7|53R9[42|47]} 31m74 33r16 33r57 34r37 43r50
+. 46r16 46r60 48r58
+18r7 Track_Configuration{7|53R9[42|47]} 34m10 37r19
 20r7 Pilot_Vett{7|53R9[44|19]}
-21p7 Pilot_Ref{44|16P9} 64m13
-23e7 Ch{character} 76m37
-24b7 Available{boolean} 76m41 77r20
-32i11 J{integer} 33r70
-45i11 I{integer} 47r92
-47p13 Configuration{42|44P9} 49r50 50r49 60r27 61r48
-48p13 Strategy{42|41P10} 61r16 64r99
-49p13 Pilot_Filename_Ref{42|28P9} 56r49
-50p13 Car_Filename_Ref{42|28P9} 58r47
-51p13 Pilot_Configuration_Ref{42|52P9} 56r73 64r51
-52p13 Car_Configuration_Ref{42|52P9} 58r69 64r76
-60i17 J{integer} 61r71
+21p7 Pilot_Ref{44|16P9} 65m13
+23e7 Ch{character} 77m37
+24b7 Available{boolean} 77m41 78r20
+33i11 J{integer} 34r70
+46i11 I{integer} 48r92
+48p13 Configuration{42|44P9} 50r50 51r49 61r27 62r48
+49p13 Strategy{42|41P10} 62r16 65r99
+50p13 Pilot_Filename_Ref{42|28P9} 57r49
+51p13 Car_Filename_Ref{42|28P9} 59r47
+52p13 Pilot_Configuration_Ref{42|52P9} 57r73 65r51
+53p13 Car_Configuration_Ref{42|52P9} 59r69 65r76
+61i17 J{integer} 62r71
 X 51 formula1-track.ads
-13p7*Name{42|28P9} 50|38m63
-19p7*Grid_Ref{43|19P9} 50|42r22 70r22 84r22
-21f7*Lap_Length{42|21F9} 50|38r109
+13p7*Name{42|28P9} 50|39m63
+19p7*Grid_Ref{43|19P9} 50|43r22 71r22 85r22
+21f7*Lap_Length{42|21F9} 50|39r109
 X 52 interfac.ads
 57M9*Unsigned_32
 103V13*Shift_Left{57M9} 105|37i18
@@ -281,7 +281,7 @@ X 65 polyorb-binding_objects.ads
 56V13*Link(52P9) 104|54i21
 X 76 polyorb-opaque-chunk_pools.ads
 46R9*Chunk
-47P9*Chunk_Access(46R9[67|357])
+47P9*Chunk_Access(46R9)
 98V13 Link(47P9[67|357]) 104|54i21[67|357]
 X 87 polyorb-setup.ads
 38K17*Setup 50|4r14 87|46e18
@@ -293,6 +293,6 @@ X 93 polyorb-task_info.ads
 255V13 Link(71P9) 104|54i21
 X 103 polyorb-utils-chained_lists.ads
 133R9 Node
-134P9 Node_Access(133R9[97|80])
+134P9 Node_Access(133R9)
 157V13 Link(134P9[62|74]) 104|54i21[62|74]
 
