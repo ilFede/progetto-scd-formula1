@@ -6,28 +6,40 @@
 \contentsline {chapter}{\numberline {3}Progettazione}{5}
 \contentsline {section}{\numberline {3.1}Entit\IeC {\`a} coinvolte}{5}
 \contentsline {section}{\numberline {3.2}Gara}{5}
-\contentsline {subsubsection}{Meteo}{6}
-\contentsline {subsubsection}{Circuito}{6}
-\contentsline {section}{\numberline {3.3}Piloti}{7}
-\contentsline {subsection}{\numberline {3.3.1}Fasi della gara}{9}
-\contentsline {subsubsection}{Partenza}{9}
-\contentsline {subsubsection}{Attraversamento dei segmenti}{9}
-\contentsline {paragraph}{Tratto di acelerazione\\}{9}
-\contentsline {paragraph}{Tratto di decellerazione}{10}
-\contentsline {subsection}{\numberline {3.3.2}Simulazione accelerazione}{11}
-\contentsline {subsection}{\numberline {3.3.3}Simulazione decellerazione}{12}
-\contentsline {subsection}{\numberline {3.3.4}Simulazioe tratto a velocit\IeC {\`a} costante}{12}
-\contentsline {subsection}{\numberline {3.3.5}Srategia}{12}
-\contentsline {section}{\numberline {3.4}Sender}{13}
-\contentsline {section}{\numberline {3.5}Monitor}{14}
-\contentsline {section}{\numberline {3.6}Concorrrenza}{14}
-\contentsline {subsection}{\numberline {3.6.1}Schieramento nella griglia di partenza}{14}
-\contentsline {subsection}{\numberline {3.6.2}Acceso ai segmenti}{15}
-\contentsline {subsubsection}{Caso $T_i < T_a$}{17}
-\contentsline {subsubsection}{Caso $T_a < T_i < T_b$}{17}
-\contentsline {subsubsection}{Caso $T_i > T_b$}{18}
-\contentsline {section}{\numberline {3.7}Distribuzione}{18}
-\contentsline {chapter}{\numberline {4}Implementazione}{21}
-\contentsline {section}{\numberline {4.1}Circuito}{21}
-\contentsline {chapter}{\numberline {5}Configurazione}{23}
-\contentsline {chapter}{\numberline {6}Compilazione ed esecuzione}{25}
+\contentsline {paragraph}{Meteo}{6}
+\contentsline {paragraph}{Circuito}{6}
+\contentsline {subsection}{\numberline {3.2.1}Segmenti}{6}
+\contentsline {paragraph}{Codice segnemento}{7}
+\contentsline {paragraph}{Tipologia}{7}
+\contentsline {paragraph}{Lunghezza}{8}
+\contentsline {paragraph}{Velocit\IeC {\`a} massima}{8}
+\contentsline {paragraph}{Numero di corsie}{8}
+\contentsline {paragraph}{Presenza fotucellula}{8}
+\contentsline {paragraph}{Risorsa protetta}{8}
+\contentsline {subsection}{\numberline {3.2.2}Circuito}{9}
+\contentsline {paragraph}{Lista dei segmenti}{9}
+\contentsline {paragraph}{Griglia di partenza}{9}
+\contentsline {subsection}{\numberline {3.2.3}Gara}{10}
+\contentsline {section}{\numberline {3.3}Piloti}{10}
+\contentsline {subsection}{\numberline {3.3.1}Fasi della gara}{11}
+\contentsline {subsubsection}{Partenza}{11}
+\contentsline {subsubsection}{Attraversamento dei segmenti}{12}
+\contentsline {paragraph}{Tratto di acelerazione\\}{12}
+\contentsline {paragraph}{Tratto di decellerazione}{13}
+\contentsline {subsection}{\numberline {3.3.2}Simulazione accelerazione}{14}
+\contentsline {subsection}{\numberline {3.3.3}Simulazione decellerazione}{15}
+\contentsline {subsection}{\numberline {3.3.4}Simulazioe tratto a velocit\IeC {\`a} costante}{15}
+\contentsline {subsection}{\numberline {3.3.5}Srategia}{15}
+\contentsline {section}{\numberline {3.4}Sender}{16}
+\contentsline {section}{\numberline {3.5}Monitor}{16}
+\contentsline {section}{\numberline {3.6}Concorrrenza}{16}
+\contentsline {subsection}{\numberline {3.6.1}Schieramento nella griglia di partenza}{17}
+\contentsline {subsection}{\numberline {3.6.2}Acceso ai segmenti}{18}
+\contentsline {subsubsection}{Caso $T_i < T_a$}{19}
+\contentsline {subsubsection}{Caso $T_a < T_i < T_b$}{20}
+\contentsline {subsubsection}{Caso $T_i > T_b$}{20}
+\contentsline {section}{\numberline {3.7}Distribuzione}{21}
+\contentsline {chapter}{\numberline {4}Implementazione}{23}
+\contentsline {section}{\numberline {4.1}Circuito}{23}
+\contentsline {chapter}{\numberline {5}Configurazione}{25}
+\contentsline {chapter}{\numberline {6}Compilazione ed esecuzione}{27}

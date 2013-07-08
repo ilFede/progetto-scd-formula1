@@ -361,9 +361,10 @@ package body Formula1.Pilot is
 			Do_Acceleration (Actual_Length, Expected_Segment_Driving_Duration);
 		     end if;
                      -- ottengo la durata reale della percorrenza del sottosegmento
-                     Actual_Segment.Segment_RP_Ref.all.Get_Driving_Time (Expected_Segment_Driving_Duration + Clock, Real_Segment_Exit_Time, Ticket);
+                     Actual_Segment.Segment_RP_Ref.all.Get_Driving_Time (Expected_Segment_Driving_Duration + Clock, Real_Segment_Exit_Time);
                      -- sospendo per la durata dell'atraversamento
 		     delay until (Real_Segment_Exit_Time);
+                     Actual_Segment.Segment_RP_Ref.all.Get_Ticket(Ticket);
 		     Put_Line ("<-- " & Surname.all & " uscito dal segmento numero: " & Integer'Image (Segment_Index));
 		  end;
 	       end loop;
@@ -401,9 +402,10 @@ package body Formula1.Pilot is
 		     Do_Acceleration (Actual_Length, Expected_Segment_Driving_Duration);
 		  end if;
 		  -- ottengo la durata reale dell'atraversamento del sottosegmento
-		  Actual_Segment.Segment_RP_Ref.all.Get_Driving_Time (Expected_Segment_Driving_Duration + Clock, Real_Segment_Exit_Time, Ticket);
+		  Actual_Segment.Segment_RP_Ref.all.Get_Driving_Time (Expected_Segment_Driving_Duration + Clock, Real_Segment_Exit_Time);
 		  -- sospendo per la durata dell'attraversamento
 		  delay until (Real_Segment_Exit_Time);
+                  Actual_Segment.Segment_RP_Ref.all.Get_Ticket(Ticket);
 		  -- verifico se devo notificare l'uscita dal segmento
 		  if (Actual_Segment.Has_Time_Check /= 0) then
 		     Sender_Ref.all.Send_Time (Number, (new String'(Duration'Image (Clock - Lap_Start_Time))), CORBA.Long'Value (Integer'Image (Lap_Number)), Actual_Segment.Has_Time_Check, Ticket, new String'(Duration'Image(Real_Segment_Exit_Time - Race_Start_Time)));

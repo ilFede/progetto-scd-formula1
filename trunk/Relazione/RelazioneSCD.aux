@@ -27,46 +27,60 @@
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Entit\IeC {\`a} coinvolte}{5}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Gara}{5}}
-\@writefile{toc}{\contentsline {subsubsection}{Meteo}{6}}
-\@writefile{toc}{\contentsline {subsubsection}{Circuito}{6}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Piloti}{7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Fasi della gara}{9}}
-\@writefile{toc}{\contentsline {subsubsection}{Partenza}{9}}
-\@writefile{toc}{\contentsline {subsubsection}{Attraversamento dei segmenti}{9}}
-\@writefile{toc}{\contentsline {paragraph}{Tratto di acelerazione\\}{9}}
-\@writefile{toc}{\contentsline {paragraph}{Tratto di decellerazione}{10}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Simulazione accelerazione}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Andamento della velocit\IeC {\`a} in base alla dstanza percorsa di una vettura con velocit\IeC {\`a} iniziale pari a 0m/s}}{12}}
-\newlabel{fgr:GraficoVelocita}{{3.1}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Andamento della velocit\IeC {\`a} in funzione della distanza, assumento che la vettura abbia una velocit\IeC {\`a} iniziale di 60m/s}}{12}}
-\newlabel{fgr:GraficoVelocitaTraslato}{{3.2}{12}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Simulazione decellerazione}{12}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.4}Simulazioe tratto a velocit\IeC {\`a} costante}{12}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.5}Srategia}{12}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Sender}{13}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Monitor}{14}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}Concorrrenza}{14}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.1}Schieramento nella griglia di partenza}{14}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.2}Acceso ai segmenti}{15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Stato del segmento S all'istante in cui il pilota C chiede l'accesso}}{16}}
-\newlabel{fgr:AccessoSegmentiStatoInziale}{{3.3}{16}}
-\@writefile{toc}{\contentsline {subsubsection}{Caso $T_i < T_a$}{17}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Caso 1: Stato del segmento S dopo che il pilota C ha effettuato l'accesso}}{17}}
-\newlabel{fgr:AccessoSegmentiCaso1}{{3.4}{17}}
-\@writefile{toc}{\contentsline {subsubsection}{Caso $T_a < T_i < T_b$}{17}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Caso 2: Stato del segmento S dopo che il pilota C ha effettuato l'accesso}}{18}}
-\newlabel{fgr:AccessoSegmentiCaso2}{{3.5}{18}}
-\@writefile{toc}{\contentsline {subsubsection}{Caso $T_i > T_b$}{18}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.7}Distribuzione}{18}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Caso 3: Stato del segmento S dopo che il pilota C ha effettuato l'accesso}}{19}}
-\newlabel{fgr:AccessoSegmentiCaso3}{{3.6}{19}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Implementazione}{21}}
+\@writefile{toc}{\contentsline {paragraph}{Meteo}{6}}
+\@writefile{toc}{\contentsline {paragraph}{Circuito}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Segmenti}{6}}
+\@writefile{toc}{\contentsline {paragraph}{Codice segnemento}{7}}
+\@writefile{toc}{\contentsline {paragraph}{Tipologia}{7}}
+\@writefile{toc}{\contentsline {paragraph}{Lunghezza}{8}}
+\@writefile{toc}{\contentsline {paragraph}{Velocit\IeC {\`a} massima}{8}}
+\@writefile{toc}{\contentsline {paragraph}{Numero di corsie}{8}}
+\@writefile{toc}{\contentsline {paragraph}{Presenza fotucellula}{8}}
+\@writefile{toc}{\contentsline {paragraph}{Risorsa protetta}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Circuito}{9}}
+\@writefile{toc}{\contentsline {paragraph}{Lista dei segmenti}{9}}
+\@writefile{toc}{\contentsline {paragraph}{Griglia di partenza}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Gara}{10}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Piloti}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Fasi della gara}{11}}
+\@writefile{toc}{\contentsline {subsubsection}{Partenza}{11}}
+\@writefile{toc}{\contentsline {subsubsection}{Attraversamento dei segmenti}{12}}
+\newlabel{AttraversamentoSegmenti}{{3.3.1}{12}}
+\@writefile{toc}{\contentsline {paragraph}{Tratto di acelerazione\\}{12}}
+\@writefile{toc}{\contentsline {paragraph}{Tratto di decellerazione}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Simulazione accelerazione}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Andamento della velocit\IeC {\`a} in base alla dstanza percorsa di una vettura con velocit\IeC {\`a} iniziale pari a 0m/s}}{14}}
+\newlabel{fgr:GraficoVelocita}{{3.1}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Andamento della velocit\IeC {\`a} in funzione della distanza, assumento che la vettura abbia una velocit\IeC {\`a} iniziale di 60m/s}}{15}}
+\newlabel{fgr:GraficoVelocitaTraslato}{{3.2}{15}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Simulazione decellerazione}{15}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.4}Simulazioe tratto a velocit\IeC {\`a} costante}{15}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.5}Srategia}{15}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Sender}{16}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Monitor}{16}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Concorrrenza}{16}}
+\newlabel{Concorenza}{{3.6}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.1}Schieramento nella griglia di partenza}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.2}Acceso ai segmenti}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Stato del segmento S all'istante in cui il pilota C chiede l'accesso}}{19}}
+\newlabel{fgr:AccessoSegmentiStatoInziale}{{3.3}{19}}
+\@writefile{toc}{\contentsline {subsubsection}{Caso $T_i < T_a$}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Caso 1: Stato del segmento S dopo che il pilota C ha effettuato l'accesso}}{20}}
+\newlabel{fgr:AccessoSegmentiCaso1}{{3.4}{20}}
+\@writefile{toc}{\contentsline {subsubsection}{Caso $T_a < T_i < T_b$}{20}}
+\@writefile{toc}{\contentsline {subsubsection}{Caso $T_i > T_b$}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Caso 2: Stato del segmento S dopo che il pilota C ha effettuato l'accesso}}{21}}
+\newlabel{fgr:AccessoSegmentiCaso2}{{3.5}{21}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.7}Distribuzione}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Caso 3: Stato del segmento S dopo che il pilota C ha effettuato l'accesso}}{22}}
+\newlabel{fgr:AccessoSegmentiCaso3}{{3.6}{22}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Implementazione}{23}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Circuito}{21}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Configurazione}{23}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Circuito}{23}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Configurazione}{25}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Compilazione ed esecuzione}{25}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Compilazione ed esecuzione}{27}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}

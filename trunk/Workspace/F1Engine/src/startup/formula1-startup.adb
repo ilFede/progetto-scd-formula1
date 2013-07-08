@@ -25,7 +25,7 @@ package body Formula1.Startup is
 
    begin
       -- inizializo il monitor
-      Put_Line("Ior inserito: " & IOR_Str_Ref.all);
+      Put_Line("IOR inserito: " & IOR_Str_Ref.all & "###");
       Sender_Ref.Inizialize_Corba (IOR_Str_Ref);
       -- estraggo i parametri della gara
       Read_Config_File (Race_Config_Path & Race_Config_Filename_Ref.all, Competitor_Configuration);

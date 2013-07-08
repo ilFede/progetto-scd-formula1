@@ -15,9 +15,12 @@ package body Formula1.Sender is
       begin
          CORBA.ORB.Initialize ("ORB");
          CORBA.ORB.String_To_Object (CORBA.To_CORBA_String (IOR_Ref.all), MyInterface);
-      exception
-         when others =>
-            Put_Line ("!!!!!!!!! Impossibile inizializzare il monitor !!!!!!!!!");
+         -- Put_Line(IOR_Ref.all);
+         -- Put_Line(Ada.Command_Line.Argument (2));
+         -- CORBA.ORB.String_To_Object (CORBA.To_CORBA_String (Ada.Command_Line.Argument (2)), MyInterface);
+      --exception
+         --when others =>
+            --Put_Line ("!!!!!!!!! Impossibile inizializzare il monitor !!!!!!!!!");
       end Inizialize_Corba;
       --+--------
 

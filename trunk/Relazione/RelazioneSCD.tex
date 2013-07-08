@@ -178,22 +178,145 @@
       programma.
       
     \section{Gara}
-      L'entità Gara rappresenta la competizione vera e propria nella quale si sfideranno i vari
-      concorreti. Essa è descitta dale seguenti proprietà:
+      La Gara rappresenta la competizione vera e propria nella quale si sfideranno i vari
+      concorreti. 
+      Una gara è composta essenzialmente da un circuito, a sua volta composto da vari segmenti. Oltre a 
+      questa struttura base ci sono poi tutta una serie di altri parametri che completeranno la descrizione della gara.
+      Per semplicità d'esposizioni si descriverà prima il record dati che rappresentano isegnenti, descrivendo poi il
+      circuito e in seguito la gara.
       
+      nel quale si svolge la gara, dato che non deve 
+	eseguire alcuna azione si
+	tratta di una entità passiva che ha lo solo scopo di accogliere i piloti impegnati ad affrontare la
+	competizione.
+	Dovrà comunque regolamentare la loro attività garantendo che vengano rispettate delle regole di accesso congrue
+	ad una ipotetica competizione reale. 
+	Le caratteristiche e le regole che il circuito dovrà fornire saranno le seguenti:
+	
+	\begin{itemize}
+	  \item Dovrà essere specificata una lunghezza del circuito
+	  \item Il circuito deve avere una larghezza variabile durante la sua percorrenza, non in tutti i tratti sarà
+		ad esempio possibile eseguire un sorpasso per via dello spazio limitato
+	  \item Nel circuito dovranno essere presenti sia tratti curvi che rettilinei, che avranno quindi diverse velocità
+		di percorrenza
+	  \item Dovranno esserci dei punti per il rilevamento delle prestazioni
+	  \item Dovrà essere presente una corsia per i box, con relative regole di accesso
+	  \item Tutte queste opzioni dovranno poter essere configurate mediante file di configurazione
+	\end{itemize}
+	
+	E' composta dai seguenti campi
+	
       \begin{itemize}
 	\item Circuito
 	\item Numero di giri
 	\item Meteo
       \end{itemize}
 	
-      \subsubsection{Meteo}
-        Può essere ascutto o bagnato, e rappresenta la condizione climatica al momento della gara.
+      \paragraph{Meteo}
+        Può essere asciutto o bagnato, e rappresenta la condizione climatica al momento della gara.
         Nel caso in cui esso sia impostato su bagnato si avranno dei peggioramenti nei tempi con cui ogni pilota
 	completerà i giri della pista, simulando quindi un asfalta bagnato e con meno aderenza
 	
-      \subsubsection{Circuito}
-        Rapprensenta il tracciato su cui si svolge la competizione, contiene le informaziono ad esso relativo come
+      \paragraph{Circuito}
+        Rappresenta il circuito su cui si svolge la gara, compostoa sua volta dai vari segmenti
+	Per semplicità d'esposizioni si descriverà prima il record dati che rappresentano isegnenti, descrivendo poi il
+        circuito e in seguito la gara.
+      
+      \subsection{Segmenti}
+	I segmenti rappresentano i tratti di pista che un pilota dovra percorrere per completare un giro,
+	e ognuno di essi contiene la descizione del ratto di psta che rappresenta.
+	La loro funzione, oltre a quella di descrivere il circuito su cui si svolge la gara, e quella
+	di gestire la parte di concorrenza relativa ai sorpassi tra piloti determinando i loro tempi di attraversamento
+	in modo coerente ispetto ala presenza o meno di altri piloti.
+	
+	Un segmento è dunque rappresentato da un record contenenti e seguinti campi dati:
+	
+	\begin{itemize}
+	  \item Codice segmento
+	  \item Tipologia
+	  \item Lunghezza
+	  \item Velocità massima
+	  \item Numero di cosie
+	  \item Presenza fotocellula
+	  \item Risorsa protetta
+	\end{itemize}
+	
+	\paragraph{Codice segnemento}
+	  Serve per poter distinguere i vari segmenti tramite un codice univoco crescnete che ne determinandoil loro ordinamento
+	  nella composizione del circuito. 
+
+	  Per semplicità di implementazione si è scelta la seguente numerazione dei segmenti
+	  \begin{itemize}
+	    \item 1: il segmento di entrata ai box
+	    \item 2: il segmento della corsia dei box
+	    \item 3: il segmento di uscita dai box
+	    \item 4: il segmento del rettilineo principale (quello in cui è presente il traguardo)
+	    \item i>4: gli altri segmenti che vengono dopo il traguardo
+	  \end{itemize}
+	
+	\paragraph{Tipologia}
+	  Un segmento deve essere in grado di rappresentare il più fedelemente possibile il tratto di pista
+	  a lui corrispondente. Copatibilmente con i requisiti del progetto sono state individuate 3 clissi
+	  di tipologia di segmento:
+	  
+	  \begin{itemize}
+	    \item Segmenti di acelerazione
+	    \item Segmenti a velocità costante
+	    \item Segmenti di decelleraizione
+	  \end{itemize}
+	  
+	  I segmenti di acelerazione modellano tratti in cui i piloti accelerano, ovvero rettilinei e uscita dai box. I segmenti di
+	  decellerazione modellano invece ingressi in curva, staccate e corsia di entrata ai box. Invine
+	  i segmenti a velocità costanti modellano curve e corsia dei box
+	  
+	\paragraph{Lunghezza}
+	  Descrive seplicemente la lunghezza in metri del segmento
+	
+	\paragraph{Velocità massima}
+	  Il significato di questo dato varia in base alla tipologia del segmento. Nel caso
+	  in cui sia associato ad un segmento di accelerazione esso indica la massima velocità che la vettura èuò raggiungere,
+	  qyesto è utile ad esempio per modellare rettilinei non completamente dritti
+	  i segmenti di delerrazione la velocità massima indica invece la velocità che dovrà avere la vettura al termine del
+	  segmento, per poter poi effettuare una curva o entrare in un segmento a velocità controllata come ad esempio la
+	  corsia dei box
+	  Infine nei trati a velocità costante il valore rappresenta la velocità massima con cui il segmento potrà essere attraversato, 
+	  e avrà lo stesso valore del precedente tratto di delellarazione
+	  Un tratto a velocità costante deve essere sempre preduto da un tratto di decellerazione o di accelerazione
+	  che abbia la sua stessa velocità massima. Concettualmente è molto simile ad un tratto di acelerazione
+	  con velocità massima limitata, però tale distinzione risulterà poi comoda a livello implementativo
+	  per risparmiar inutili calcoli di accelerazione.
+	  
+	  Tutti i valori della velocità massima sono solo indicativi e servono per dare una descrizione del segmento,
+	  i reli valori di attaversamento verrano calcolati anche in base alle caratteriscitche e allo stato di 
+	  vettura e pilota, come sarà spegato nella sezione \ref{AttraversamentoSegmenti}
+	  
+	\paragraph{Numero di corsie}
+	  Rappresenta il numero di corsie presenti nel segmento, influenzando la possibilità
+	  di poter effettuare sorpassi da parte dei piloti in quanto il loro numero detrmina quanti piloti possono trovarsi
+	  contemporaneamet nello stesso tratto di segmento
+	  
+	  In un segmento con una sola corsia sarà infatti impossibile effettuare sorpassi, mentre saranno più agevoli
+	  al loro aumentare.
+	  
+	  Le corsie d'ingresso e uscita dai box, la corsia dei box e le curve hanno sempre il numero di corsie pari
+	  a 1
+	  
+	\paragraph{Presenza fotucellula}
+	  Un circuito di Formula uno è solitamente diviso in 4 intermedi, alla fine dei quali
+	  è presente un dispositivo per rilevare i tempi dei vai piloti. Questo parametro
+	  indica se alla fine del segmento deve essere rilevato tale tempo, e in caso afermativo
+	  specifica anche il numero dell'ibtermedio alla quale tale tempo si riferisce.
+	
+
+	\paragraph{Risorsa protetta}
+	  Ogni segmento contiene al suo interno una risorsa protetta, che ha essenzialmente due compiti. Il primo
+	  è quello di rendere possibile un accesso ai segmenti congrunete ai vari vincoli imposti, 
+	  il secondo è quello di permettere un ordinamento dei piloti in base alla loro posizione.
+	  
+	  Una spiegazione dettagliata del loro funzionamento sarà data nella sezione \ref{Concorenza}
+	  
+      \subsection{Circuito}
+	Rapprensenta il tracciato su cui si svolge la competizione, contiene le informaziono ad esso relativo come
 	ad esempio il nome e la sua conformazione
 	
         Come detto rapresenta il tracciato su cui si svolge la competizione. Dato che in un reale circutio di formula uno
@@ -213,39 +336,27 @@
 	  \item Lunghezza del giro
 	\end{itemize}
 	
+	\paragraph{Lista dei segmenti}
+	  Questo parametro contiene la lista dei segmenti di cui è composto il circuito. Nella composizione
+	  del circuito dovranno essere rispettat i seguenti vncoli:
+	  
+	  \begin{itemize}
+	    \item I primi 3 segmenti saranno l'ingresso ai box, la corsia box e l'uscita dai box
+	    \item Il traguardo deve essere il quarto segmento
+	    \item Presenza i almeno 4 intermedi, l'ultimo dei quali coincidente col traguardo
+	  \end{itemize}
+	  
+	  Inoltre si assume che la liena del traguardo sia collocata all'inizio del quato segmento, che 
+	  l'ingresso dei box sia collocato all'inizio del rettilineo del traguardo e che l'uscita box sia collocata
+	  alla fine del rettilino del traguarfdo.
+
+	\paragraph{Griglia di partenza}
+	  La griglia di partenza è il luogo dove i piloti prendono posto attendendo l'inizio della gara, ed è modellata
+	  mediante una risprsa protetta.
+	  Il suo funzionamento ver spiegato nella sezione \ref{Concorenza}
+	  come una risorsa protetta
 	
-	I segmenti rappresentano i tratti di poista che un pilota dovra percorrere per completare un giro.
-	Ogni segmento contiene la descizione del ratto di psta che rappresenta e si occupa di
-	fornire ai piloti il tempo necessario per il suo atraversamento, gestendo anche gli eventuali sorpassi 
-	(questi aspetti saranno chiariti poi nella sezione METTERE RIFERIMENTO) 
-	
-	La griglia di partenza è il luogo dove i piloti si scherano in attesa di partire, anche questo aspetto
-	verrà chiarito nella sezione METTERE RIFERIMENTO
-	
-	
-	La griglia di partenza e i segmenti sono le entità che gestico l'aspetto concorrente del progetto,
-	questi aspetti verranno descritti nella sezione 
-	
-        
-	
-	Ogni segmento contiene le seguenti proprietà
-	\begin{itemize}
-	  \item Codice univoco
-	  \item Tipologia
-	  \item Lunghezza
-	  \item Velocità massima
-	  \item Numero di cosie
-	  \item Presenza fotocellula
-	\end{itemize}
-	
-	
-	
-	
-	
-	
-	
-	
-        
+	\subsection{Gara}
 	nel quale si svolge la gara, dato che non deve 
 	eseguire alcuna azione si
 	tratta di una entità passiva che ha lo solo scopo di accogliere i piloti impegnati ad affrontare la
@@ -267,13 +378,10 @@
 	
 	Questa risorsa sarà condivisa da più piloti allo stesso tempo, sarà quindi necessario gestire
 	tutte le problematiche di concorrenza derivate.
-	
-	METTERE DESCRIZONE TIPI SEGMENTO
-	
-	
-	
-	
-      
+	        METTERE COME VENGONO NUMERATI I SEGMENTI
+
+	METTERE DISCORSO DEI TICKRT
+       
     \section{Piloti}
       I piloti sono le entità che dovranno gareggiare nella competizione atraversando il circuito.
       Lo scopo di ognuno di essi è quello di percorrer tutti i giri prefisti nella gara nel mimor tempo possibile,
@@ -333,6 +441,7 @@
 	  Una volta che tutti i piloti saranno schierati la gara potrà partire e i piloti inizieranno a gareggiare
 	  
 	\subsubsection{Attraversamento dei segmenti}
+	\label{AttraversamentoSegmenti}
 	  In questa fase i piloti attraversano i vari segmenti del tracciato nel tantativo di completare tutti i giri
 	  il primapossibile.
 	  
@@ -509,8 +618,10 @@
       Contiene meteo, numero di giri, piloti.....
       
     \section{Monitor}
+      METTERE ORDINAMENTO PILOTI
   
     \section{Concorrrenza}
+    \label{Concorenza}
       Gli aspett del progetto in cui entrano in giorcho problemi di natura concorrenziale sono 3:
       
       \begin{itemize}
