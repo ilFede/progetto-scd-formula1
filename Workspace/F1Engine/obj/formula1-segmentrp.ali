@@ -3,14 +3,14 @@ A -gnatA
 P SS ZX
 R nnnnnnnvnvnnnnnnnnnnnnnvnvnnnvnnnnnnvnnnnnnnvnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnn
 
-U formula1.segmentrp%b	formula1-segmentrp.adb	439dbb10 NE OO PK
+U formula1.segmentrp%b	formula1-segmentrp.adb	d3d3c91f NE OO PK
 W ada.tags%s		a-tags.adb		a-tags.ali
 W formula1%s		formula1.adb		formula1.ali
 W interfaces%s		interfac.ads		interfac.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 
-U formula1.segmentrp%s	formula1-segmentrp.ads	1d20ea7a EE NE OO PK
+U formula1.segmentrp%s	formula1-segmentrp.ads	6f8db675 EE NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
@@ -46,8 +46,8 @@ D a-unccon.ads		20070406091342 f9eb8f06
 D a-uncdea.ads		20070406091342 f15a5ed1
 D corba.ads		20120514092039 5b6176ff
 D formula1.ads		20130610113645 768996f8
-D formula1-segmentrp.ads  20130609162003 4d331a44
-D formula1-segmentrp.adb  20130609164937 0eaea154
+D formula1-segmentrp.ads  20130708132234 3f9e464b
+D formula1-segmentrp.adb  20130708132427 ec4d8f54
 D interfac.ads		20090409150019 f77d8799
 D i-c.ads		20101007125900 809c38c4
 D i-cstrea.ads		20100622165701 1bd72c32
@@ -86,39 +86,40 @@ X 1 ada.ads
 16K9*Ada 19e8 26|2r6 3r6 3r24
 X 2 a-calend.ads
 36K13*Calendar 358e17 26|3w10 3r28
-38I9*Time 26|8r53 14r59 14r86 27|5r59 5r86 9r22
-52V13*Clock{38I9} 26|22s62
-94V13*"+"{38I9} 27|26s42 27s40
-103V13*"<"{boolean} 27|18s32
-104V13*"<="{boolean} 27|26s30
+38I9*Time 26|8r53 14r59 14r86 27|6r59 6r86 10r22
+52V13*Clock{38I9} 26|24s62
+94V13*"+"{38I9} 27|24s42 25s40
+103V13*"<"{boolean} 27|16s32
+104V13*"<="{boolean} 27|24s30
 X 5 a-contai.ads
 16K13*Containers 24e19 26|2r10
 X 6 a-convec.ads
 43k24*Vectors 380e27 26|2w21
 X 24 corba.ads
-49K9*CORBA 1029e10 26|1w6 14r108 25r16 27|5r108
-61I12*Long<28|45I9> 26|14r114 25r22 27|5r114
+49K9*CORBA 1029e10 26|1w6 16r45 27r16 27|36r45
+61I12*Long<28|45I9> 26|16r51 27r22 27|36r51
 X 25 formula1.ads
-8K9*Formula1 176e13 26|5r9 32r5 27|1r14 39r5
-75I12*Num_Lanes_Seg_T{positive} 26|11r45 19r25
-81o4*Min_Gap{duration} 27|26r44 27r42
+8K9*Formula1 176e13 26|5r9 34r5 27|1r14 45r5
+75I12*Num_Lanes_Seg_T{positive} 26|11r45 21r25
+81o4*Min_Gap{duration} 27|24r44 25r42
 X 26 formula1-segmentrp.ads
-5K18*SegmentRP 25|8k9 26|32l14 32e23 27|1b23 39l14 39t23
-8A9*Time_Array_T(2|38I9)<integer> 22r20
-11W19*Segment_RP_T 11d33 27l8 27e20 30r36 27|3b19 37l8 37t20
-11i33 Tot_Lanes{25|75I12} 19r44 22r37 27|17r24
-14U17 Get_Driving_Time 14>35 14<65 14<92 27|5b17 34l11 34t27
-14i35 Expected_Exit_Time{2|38I9} 27|5b35 24r28
-14i65 Real_Exit_Time{2|38I9} 27|5b65 24r10 26r14 27r13 30r35
-14i92 My_Ticket{24|61I12} 27|5b92 15r10
-19i7 Num_Lane_Subseg{25|75I12}
-22a7 Time_Array{8A9} 27|9r30 18r17 19r28 30r10
-25i7 Ticket{24|61I12} 27|14r10 14r20 15r23
-30P9*Segment_RP_Ref_T(11W19)
+5K18*SegmentRP 25|8k9 26|34l14 34e23 27|1b23 45l14 45t23
+8A9*Time_Array_T(2|38I9)<integer> 24r20
+11W19*Segment_RP_T 11d33 29l8 29e20 32r36 27|3b19 43l8 43t20
+11i33 Tot_Lanes{25|75I12} 21r44 24r37 27|15r24
+14U17 Get_Driving_Time 14>35 14<65 27|6b17 32l11 32t27
+14i35 Expected_Exit_Time{2|38I9} 27|6b35 22r28
+14i65 Real_Exit_Time{2|38I9} 27|6b65 22r10 24r14 25r13 28r35
+16U17 Get_Ticket 16<29 27|36b17 41l11 41t21
+16i29 My_Ticket{24|61I12} 27|36b29 40r10
+21i7 Num_Lane_Subseg{25|75I12}
+24a7 Time_Array{8A9} 27|10r30 16r17 17r28 28r10
+27i7 Ticket{24|61I12} 27|39r10 39r20 40r23
+32P9*Segment_RP_Ref_T(11W19)
 X 27 formula1-segmentrp.adb
-7i10 Num_Lane{positive} 20m16 30r22
-9i10 Min_Time{2|38I9} 18r34 19m16 26r33 27r31
-17i14 i{integer} 18r29 19r40 20r28
+8i10 Num_Lane{positive} 18m16 28r22
+10i10 Min_Time{2|38I9} 16r34 17m16 24r33 25r31
+15i14 i{integer} 16r29 17r40 18r28
 X 28 interfac.ads
 45I9*Integer_32<integer>
 

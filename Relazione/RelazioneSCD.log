@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.5.10)  2 JUL 2013 12:51
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.5.10)  8 JUL 2013 13:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -418,20 +418,17 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-))
+) [1
+
+])
 \tf@toc=\write4
 \openout4 = `RelazioneSCD.toc'.
 
- [1
-
-]
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 85.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 83.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
-) [2
-
-]
+) [2]
 Capitolo 1.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 102.
 
@@ -440,7 +437,9 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 102.
- [1] [2]
+ [1
+
+] [2]
 Capitolo 2.
 
 Underfull \hbox (badness 2846) in paragraph at lines 127--127
@@ -468,115 +467,112 @@ Underfull \hbox (badness 6316) in paragraph at lines 152--152
 Capitolo 3.
 [5
 
-] [6] [7] [8] [9] [10]
+] [6] [7] [8] [9] [10] [11] [12] [13]
 
 Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 431.
+(pdftex.def)                using `viewport' instead on input line 540.
 
-<./Immagini/GraficoVelocita.png, id=58, 994.99pt x 385.19165pt>
+<./Immagini/GraficoVelocita.png, id=67, 994.99pt x 385.19165pt>
 File: ./Immagini/GraficoVelocita.png Graphic file (type png)
 
 <use ./Immagini/GraficoVelocita.png>
-Package pdftex.def Info: ./Immagini/GraficoVelocita.png used on input line 431.
+Package pdftex.def Info: ./Immagini/GraficoVelocita.png used on input line 540.
 
 (pdftex.def)             Requested size: 341.43306pt x 129.54463pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 446.
+(pdftex.def)                using `viewport' instead on input line 555.
 
-<./Immagini/GraficoVelocitaTraslato.png, id=59, 994.99pt x 388.17186pt>
+<./Immagini/GraficoVelocitaTraslato.png, id=68, 994.99pt x 388.17186pt>
 File: ./Immagini/GraficoVelocitaTraslato.png Graphic file (type png)
 
 <use ./Immagini/GraficoVelocitaTraslato.png>
 Package pdftex.def Info: ./Immagini/GraficoVelocitaTraslato.png used on input l
-ine 446.
+ine 555.
 (pdftex.def)             Requested size: 341.43306pt x 129.54463pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[11] [12 <./Immagini/GraficoVelocita.png> <./Immagini/GraficoVelocitaTraslato.p
-ng>] [13]
-Overfull \hbox (17.50775pt too wide) in paragraph at lines 539--541
+ [14 <./Immagini/GraficoVelocita.png>] [15 <./Immagini/GraficoVelocitaTraslato.
+png>] [16]
+Overfull \hbox (17.50775pt too wide) in paragraph at lines 650--652
 []\OT1/cmr/m/n/10.95 Una vol-ta che ha crea-to tut-ti i pi-lo-ti chie-de aces-s
 o al ca-na-le Wait[]To[]Pilots,
  []
 
-[14] [15]
+[17] [18]
 
 Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 610.
+(pdftex.def)                using `viewport' instead on input line 721.
 
-<./Immagini/AccessoSegmentiStatoInziale.png, id=75, 577.15625pt x 339.2675pt>
+<./Immagini/AccessoSegmentiStatoInziale.png, id=85, 577.15625pt x 339.2675pt>
 File: ./Immagini/AccessoSegmentiStatoInziale.png Graphic file (type png)
 
 <use ./Immagini/AccessoSegmentiStatoInziale.png>
 Package pdftex.def Info: ./Immagini/AccessoSegmentiStatoInziale.png used on inp
-ut line 610.
+ut line 721.
 (pdftex.def)             Requested size: 312.9803pt x 183.9735pt.
- [16 <./Immagini/AccessoSegmentiStatoInziale.png (PNG copy)>]
+ [19 <./Immagini/AccessoSegmentiStatoInziale.png (PNG copy)>]
 
 Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 644.
+(pdftex.def)                using `viewport' instead on input line 755.
 
-<./Immagini/AccessoSegmentiCaso1.png, id=80, 577.15625pt x 322.20375pt>
+<./Immagini/AccessoSegmentiCaso1.png, id=89, 577.15625pt x 322.20375pt>
 File: ./Immagini/AccessoSegmentiCaso1.png Graphic file (type png)
 
 <use ./Immagini/AccessoSegmentiCaso1.png>
 Package pdftex.def Info: ./Immagini/AccessoSegmentiCaso1.png used on input line
- 644.
+ 755.
 (pdftex.def)             Requested size: 312.9803pt x 183.9735pt.
- [17 <./Immagini/AccessoSegmentiCaso1.png (PNG copy)>]
+
 
 Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 666.
+(pdftex.def)                using `viewport' instead on input line 777.
 
-<./Immagini/AccessoSegmentiCaso2.png, id=85, 577.15625pt x 322.20375pt>
+<./Immagini/AccessoSegmentiCaso2.png, id=90, 577.15625pt x 322.20375pt>
 File: ./Immagini/AccessoSegmentiCaso2.png Graphic file (type png)
 
 <use ./Immagini/AccessoSegmentiCaso2.png>
 Package pdftex.def Info: ./Immagini/AccessoSegmentiCaso2.png used on input line
- 666.
-(pdftex.def)             Requested size: 312.9803pt x 183.9735pt.
-
-
-Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 684.
-
-<./Immagini/AccessoSegmentiCaso3.png, id=86, 577.15625pt x 322.20375pt>
-File: ./Immagini/AccessoSegmentiCaso3.png Graphic file (type png)
-
-<use ./Immagini/AccessoSegmentiCaso3.png>
-Package pdftex.def Info: ./Immagini/AccessoSegmentiCaso3.png used on input line
- 684.
+ 777.
 (pdftex.def)             Requested size: 312.9803pt x 183.9735pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[18 <./Immagini/AccessoSegmentiCaso2.png (PNG copy)>] [19 <./Immagini/AccessoSe
-gmentiCaso3.png (PNG copy)>] [20
+[20 <./Immagini/AccessoSegmentiCaso1.png (PNG copy)>]
 
-]
+Package pdftex.def Warning: Option `bb' does not make sense,
+(pdftex.def)                using `viewport' instead on input line 795.
+
+<./Immagini/AccessoSegmentiCaso3.png, id=95, 577.15625pt x 322.20375pt>
+File: ./Immagini/AccessoSegmentiCaso3.png Graphic file (type png)
+
+<use ./Immagini/AccessoSegmentiCaso3.png>
+Package pdftex.def Info: ./Immagini/AccessoSegmentiCaso3.png used on input line
+ 795.
+(pdftex.def)             Requested size: 312.9803pt x 183.9735pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[21 <./Immagini/AccessoSegmentiCaso2.png (PNG copy)>] [22 <./Immagini/AccessoSe
+gmentiCaso3.png (PNG copy)>]
 Capitolo 4.
-[21] [22
+[23
+
+] [24
 
 ]
 Capitolo 5.
-[23] [24
+[25] [26
 
 ]
 Capitolo 6.
-[25] (./RelazioneSCD.aux) ) 
+[27] (./RelazioneSCD.aux) ) 
 Here is how much of TeX's memory you used:
- 6516 strings out of 495048
- 89327 string characters out of 3181554
- 166151 words of memory out of 3000000
- 9560 multiletter control sequences out of 15000+200000
+ 6518 strings out of 495048
+ 89364 string characters out of 3181554
+ 166175 words of memory out of 3000000
+ 9562 multiletter control sequences out of 15000+200000
  14579 words of font info for 52 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  41i,12n,43p,333b,541s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -595,10 +591,10 @@ cmss17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on RelazioneSCD.pdf (28 pages, 249623 bytes).
+Output written on RelazioneSCD.pdf (30 pages, 257539 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 109 compressed objects within 2 object streams
+ 168 PDF objects out of 1000 (max. 8388607)
+ 113 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

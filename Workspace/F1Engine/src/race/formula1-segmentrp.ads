@@ -11,7 +11,9 @@ package Formula1.SegmentRP is
    protected type Segment_RP_T (Tot_Lanes : Num_Lanes_Seg_T) is
 
       -- procedura che mi restituisce il tempo di percoerrenza del segmento
-      procedure Get_Driving_Time (Expected_Exit_Time : in Time; Real_Exit_Time : out Time; My_Ticket : out Corba.Long);
+      procedure Get_Driving_Time (Expected_Exit_Time : in Time; Real_Exit_Time : out Time);
+      -- procedura per ottenere il ticket del segmento
+      procedure Get_Ticket (My_Ticket : out Corba.Long);
 
    private
 

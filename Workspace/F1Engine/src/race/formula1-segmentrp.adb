@@ -2,7 +2,8 @@ package body Formula1.SegmentRP is
 
    protected body Segment_RP_T is
 
-      procedure Get_Driving_Time (Expected_Exit_Time : in Time; Real_Exit_Time : out Time; My_Ticket : out Corba.Long) is
+      -- procedura che mi restituisce il tempo di percoerrenza del segmento
+      procedure Get_Driving_Time (Expected_Exit_Time : in Time; Real_Exit_Time : out Time) is
       -- corsia che si libera prima
 	 Num_Lane  : Positive := 1;
 	 -- istante in cui si libera la corsia che si libera prima
@@ -10,9 +11,6 @@ package body Formula1.SegmentRP is
 	 -- tempo di uscita del chiamante rispetto al clock della risorsa
 	 -- Exit_Time : Time;
       begin
-         -- decremento il ticket
-         Ticket := Ticket - 1;
-         My_Ticket := Ticket;
 	 -- trova la corsia che si libera prima
 	 for i in 2 .. Tot_Lanes loop
 	    if (Time_Array (i) < Min_Time) then
@@ -34,6 +32,14 @@ package body Formula1.SegmentRP is
       end Get_Driving_Time;
       --+--------
 
+      -- procedura per ottenere il ticket del segmento
+      procedure Get_Ticket (My_Ticket : out Corba.Long) is
+      begin
+         -- decremento il ticket
+         Ticket := Ticket - 1;
+         My_Ticket := Ticket;
+      end Get_Ticket;
+      --+--------
    end Segment_RP_T;
 
 end Formula1.SegmentRP;
