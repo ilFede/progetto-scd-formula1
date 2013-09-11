@@ -14,6 +14,7 @@ package body Formula1.Car is
       Car.Coeff_Tire_Wear := Coeff_Tire_Wear_T'Value (Car_Configuration.Element (5).all.Element (0).all);
       Car.Consumption := Float'Value (Car_Configuration.Element (6).all.Element (0).all);
       Car.Max_Fuel_Level := Float'Value (Car_Configuration.Element (7).all.Element (0).all);
+      Car.Affidability := Coeff_Reliability_T'Value (Car_Configuration.Element (8).all.Element (0).all);
       Car.Fuel_Level := 0.0;
    end Build_Car;
    --+--------

@@ -193,7 +193,7 @@ package body Formula1.Pilot is
          -- aggiungo la penalità per le condizioni degli neumatici
          Penality := Penality + ((Acceleration_Time / 100) * Duration (Car.Tires_Condition * 2));
          -- aggiungo la penalità per la benzina presente nella vettura
-         Penality := Penality + ((Acceleration_Time / 100) * Duration (Car.Fuel_Level * 0.4));
+         Penality := Penality + ((Acceleration_Time / 100) * Duration (Car.Fuel_Level * 0.04));
          -- sommo le penalità al tempo
          Acceleration_Time := Acceleration_Time + Penality;
       end Do_Acceleration;
@@ -441,7 +441,7 @@ package body Formula1.Pilot is
                On_Race := false;
                Finish_Reason := 1;
             end if;
-            -- TODO controllo guasti
+            TODO controllo guasti
             ------------------------------------------------
             -- FINE VERIFICA PIT STOP, CARBURANTE E GUASTI
             ------------------------------------------------

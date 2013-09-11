@@ -106,8 +106,11 @@ package Formula1 is
    -- sottotipo per il coefficente di tenuta
    subtype Coeff_Roadholding_T is Positive range 1..10;
 
--- sottotipo per il coefficente di usrura gomme
+   -- sottotipo per il coefficente di usrura gomme
    subtype Coeff_Tire_Wear_T is Positive range 1..10;
+
+   -- sottotipo per il coefficente di affidabilità
+   subtype Coeff_Reliability_T is Positive range 1..10;
 
    -- sottotipo per le condizioni delle gomme
    subtype Tires_Condition_T is Corba.Long range 0..2;
