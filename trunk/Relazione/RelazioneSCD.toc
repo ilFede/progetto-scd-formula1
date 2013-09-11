@@ -21,75 +21,76 @@
 \contentsline {subsubsection}{Velocit\IeC {\`a} massima}{11}
 \contentsline {subsubsection}{Numero di corsie}{11}
 \contentsline {subsubsection}{Presenza fotocellula}{11}
-\contentsline {subsubsection}{Risorsa protetta}{11}
+\contentsline {subsubsection}{Risorsa protetta}{12}
 \contentsline {subsection}{\numberline {3.2.4}Griglia di partenza}{12}
 \contentsline {section}{\numberline {3.3}Piloti}{12}
 \contentsline {subsection}{\numberline {3.3.1}Simulazione accelerazione}{13}
 \contentsline {subsection}{\numberline {3.3.2}Simulazione decelerazione}{14}
 \contentsline {subsection}{\numberline {3.3.3}Simulazione tratto a velocit\IeC {\`a} costante}{15}
 \contentsline {subsection}{\numberline {3.3.4}Azioni del pilota}{15}
-\contentsline {subsubsection}{Schieramento nella griglia di partenza}{15}
+\contentsline {subsubsection}{Schieramento nella griglia di partenza}{16}
 \contentsline {subsubsection}{Partenza}{16}
 \contentsline {subsubsection}{Attraversamento dei segmenti}{16}
 \contentsline {subsubsection}{Soste ai box}{18}
-\contentsline {subsubsection}{Fine della gara}{18}
+\contentsline {subsubsection}{Fine della gara}{19}
 \contentsline {subsection}{\numberline {3.3.5}Invio dello stato del pilota}{19}
-\contentsline {section}{\numberline {3.4}Monitor}{19}
-\contentsline {section}{\numberline {3.5}StartUp}{20}
-\contentsline {chapter}{\numberline {4}Distribuzione}{21}
-\contentsline {section}{\numberline {4.1}Partizionamento}{21}
-\contentsline {section}{\numberline {4.2}Comunicazione}{22}
-\contentsline {chapter}{\numberline {5}Concorrenza}{23}
-\contentsline {section}{\numberline {5.1}Schieramento nella griglia di partenza}{23}
-\contentsline {section}{\numberline {5.2}Acceso ai segmenti}{24}
-\contentsline {subsection}{\numberline {5.2.1}Caso $T_i < T_a$}{26}
-\contentsline {subsection}{\numberline {5.2.2}Caso $T_a < T_i < T_b$}{27}
-\contentsline {subsection}{\numberline {5.2.3}Caso $T_i > T_b$}{27}
-\contentsline {section}{\numberline {5.3}Stallo}{28}
-\contentsline {subsection}{\numberline {5.3.1}Accesso esclusivo a risorsa condivisa}{29}
-\contentsline {subsection}{\numberline {5.3.2}Inibizione del prerilascio}{29}
-\contentsline {subsection}{\numberline {5.3.3}Attesa circolare}{29}
-\contentsline {subsection}{\numberline {5.3.4}Accumulo di risorse}{29}
-\contentsline {section}{\numberline {5.4}Starvation}{30}
-\contentsline {section}{\numberline {5.5}Avvio e terminazione}{30}
-\contentsline {subsection}{\numberline {5.5.1}F1ControlPanel}{30}
-\contentsline {subsubsection}{Avvio}{30}
-\contentsline {subsubsection}{Terminazione}{31}
-\contentsline {subsubsection}{Caduta o mancanza del nodo F1Engine}{31}
-\contentsline {subsection}{\numberline {5.5.2}F1Engine}{31}
-\contentsline {subsubsection}{Avvio}{31}
-\contentsline {subsubsection}{Terminazione}{31}
-\contentsline {subsubsection}{Caduta o mancanza del nodo F1ControlPanel}{32}
-\contentsline {section}{\numberline {5.6}Problemi legati alla granularit\IeC {\`a} del tempo}{32}
-\contentsline {chapter}{\numberline {6}Implementazione}{35}
-\contentsline {section}{\numberline {6.1}Nodo 1}{35}
-\contentsline {section}{\numberline {6.2}Nodo 2}{35}
-\contentsline {section}{\numberline {6.3}Middleware}{36}
-\contentsline {section}{\numberline {6.4}Accorgimenti}{36}
-\contentsline {chapter}{\numberline {7}Compilazione, configurazione ed esecuzione}{39}
-\contentsline {section}{\numberline {7.1}Ambiente d'esecuzione}{39}
-\contentsline {section}{\numberline {7.2}Compilazione}{39}
-\contentsline {section}{\numberline {7.3}Configurazione}{39}
-\contentsline {section}{\numberline {7.4}File .trk}{40}
-\contentsline {subsubsection}{Segment\_Type}{40}
-\contentsline {subsubsection}{Lenght}{40}
-\contentsline {subsubsection}{Speed}{40}
-\contentsline {subsubsection}{Num\_Lane}{40}
-\contentsline {subsubsection}{Has\_Time\_Check}{41}
-\contentsline {section}{\numberline {7.5}File .car}{41}
-\contentsline {subsubsection}{Manufacter}{41}
-\contentsline {subsubsection}{Coeff\_Acceleration}{41}
-\contentsline {subsubsection}{Coeff\_Deceleration}{41}
-\contentsline {subsubsection}{Max\_Speed}{41}
-\contentsline {subsubsection}{Coeff\_Roadholding}{42}
-\contentsline {subsubsection}{Coeff\_Tire\_Wear}{42}
-\contentsline {subsubsection}{Consuption}{42}
-\contentsline {subsubsection}{Max\_Fuel\_Level}{42}
-\contentsline {subsubsection}{Reliability}{42}
-\contentsline {section}{\numberline {7.6}File .plt}{42}
-\contentsline {subsubsection}{Number}{42}
-\contentsline {subsubsection}{Name}{42}
-\contentsline {subsubsection}{Skill\_Acceleration}{42}
-\contentsline {subsubsection}{Skill\_Deceleration}{43}
-\contentsline {section}{\numberline {7.7}File .conf}{43}
-\contentsline {section}{\numberline {7.8}Esecuzione}{43}
+\contentsline {section}{\numberline {3.4}Monitor}{20}
+\contentsline {section}{\numberline {3.5}StartUp}{21}
+\contentsline {chapter}{\numberline {4}Distribuzione}{23}
+\contentsline {section}{\numberline {4.1}Partizionamento}{23}
+\contentsline {section}{\numberline {4.2}Comunicazione}{24}
+\contentsline {chapter}{\numberline {5}Concorrenza}{25}
+\contentsline {section}{\numberline {5.1}Organizzazione gerarchica dei thead di F1Engine}{25}
+\contentsline {section}{\numberline {5.2}Schieramento nella griglia di partenza}{26}
+\contentsline {section}{\numberline {5.3}Acceso ai segmenti}{27}
+\contentsline {subsection}{\numberline {5.3.1}Caso $T_i < T_a$}{29}
+\contentsline {subsection}{\numberline {5.3.2}Caso $T_a < T_i < T_b$}{29}
+\contentsline {subsection}{\numberline {5.3.3}Caso $T_i > T_b$}{31}
+\contentsline {section}{\numberline {5.4}Stallo}{31}
+\contentsline {subsection}{\numberline {5.4.1}Accesso esclusivo a risorsa condivisa}{32}
+\contentsline {subsection}{\numberline {5.4.2}Inibizione del prerilascio}{32}
+\contentsline {subsection}{\numberline {5.4.3}Accumulo di risorse}{32}
+\contentsline {subsection}{\numberline {5.4.4}Attesa circolare}{32}
+\contentsline {section}{\numberline {5.5}Starvation}{32}
+\contentsline {section}{\numberline {5.6}Avvio e terminazione}{33}
+\contentsline {subsection}{\numberline {5.6.1}F1ControlPanel}{33}
+\contentsline {subsubsection}{Avvio}{33}
+\contentsline {subsubsection}{Terminazione}{33}
+\contentsline {subsubsection}{Caduta o mancanza del nodo F1Engine}{34}
+\contentsline {subsection}{\numberline {5.6.2}F1Engine}{34}
+\contentsline {subsubsection}{Avvio}{34}
+\contentsline {subsubsection}{Terminazione}{34}
+\contentsline {subsubsection}{Caduta o mancanza del nodo F1ControlPanel}{35}
+\contentsline {section}{\numberline {5.7}Problemi legati alla granularit\IeC {\`a} del tempo}{35}
+\contentsline {chapter}{\numberline {6}Implementazione}{37}
+\contentsline {section}{\numberline {6.1}Nodo 1}{37}
+\contentsline {section}{\numberline {6.2}Nodo 2}{37}
+\contentsline {section}{\numberline {6.3}Middleware}{38}
+\contentsline {section}{\numberline {6.4}Accorgimenti}{38}
+\contentsline {chapter}{\numberline {7}Compilazione, configurazione ed esecuzione}{41}
+\contentsline {section}{\numberline {7.1}Ambiente d'esecuzione}{41}
+\contentsline {section}{\numberline {7.2}Compilazione}{41}
+\contentsline {section}{\numberline {7.3}Configurazione}{41}
+\contentsline {section}{\numberline {7.4}File .trk}{42}
+\contentsline {subsubsection}{Segment\_Type}{42}
+\contentsline {subsubsection}{Length}{42}
+\contentsline {subsubsection}{Speed}{42}
+\contentsline {subsubsection}{Num\_Lane}{42}
+\contentsline {subsubsection}{Has\_Time\_Check}{43}
+\contentsline {section}{\numberline {7.5}File .car}{43}
+\contentsline {subsubsection}{Manufacter}{43}
+\contentsline {subsubsection}{Coeff\_Acceleration}{43}
+\contentsline {subsubsection}{Coeff\_Deceleration}{43}
+\contentsline {subsubsection}{Max\_Speed}{43}
+\contentsline {subsubsection}{Coeff\_Roadholding}{44}
+\contentsline {subsubsection}{Coeff\_Tire\_Wear}{44}
+\contentsline {subsubsection}{Consuption}{44}
+\contentsline {subsubsection}{Max\_Fuel\_Level}{44}
+\contentsline {subsubsection}{Reliability}{44}
+\contentsline {section}{\numberline {7.6}File .plt}{44}
+\contentsline {subsubsection}{Number}{44}
+\contentsline {subsubsection}{Name}{44}
+\contentsline {subsubsection}{Skill\_Acceleration}{44}
+\contentsline {subsubsection}{Skill\_Deceleration}{45}
+\contentsline {section}{\numberline {7.7}File .conf}{45}
+\contentsline {section}{\numberline {7.8}Esecuzione}{45}
