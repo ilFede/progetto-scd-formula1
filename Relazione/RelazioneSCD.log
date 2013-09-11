@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.5.10)  8 JUL 2013 13:37
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.5.10)  11 SEP 2013 11:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -311,7 +311,11 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-(./RelazioneSCD.aux)
+(./RelazioneSCD.aux
+
+LaTeX Warning: Label `tbl:RequisitiFunzionaliObbligatori' multiply defined.
+
+)
 \openout1 = `RelazioneSCD.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
@@ -332,7 +336,8 @@ LaTeX Font Info:    Try loading font information for LGR+cmr on input line 54.
 File: lgrcmr.fd 2008/06/17 v2.3 Greek Computer Modern
 )
 LaTeX Font Info:    ... okay on input line 54.
- (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
+
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 
 fontencoding LGR patched
@@ -408,58 +413,73 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <20.74> not available
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./RelazioneSCD.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 2846) in paragraph at lines 90--90
+[]|\OT1/cmr/m/n/10.95 Presenza di un si-ste-ma di con-trol-lo del-la
+ []
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+Underfull \hbox (badness 5105) in paragraph at lines 94--94
+[]|\OT1/cmr/m/n/10.95 La pi-sta e la cor-sia box de-vo-no es-se-re
+ []
+
+
+Underfull \hbox (badness 5217) in paragraph at lines 101--101
+[]|\OT1/cmr/m/n/10.95 Il si-ste-ma di con-trol-lo de-ve ri-por-ta-re le
+ []
+
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 109.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+) [1] [2
+
+]
+(./RelazioneSCD.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-) [1
-
-])
+) [3])
 \tf@toc=\write4
 \openout4 = `RelazioneSCD.toc'.
 
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 83.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
-File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
-) [2]
+ [4]
 Capitolo 1.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 102.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 124.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 102.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 124.
  [1
 
 ] [2]
 Capitolo 2.
 
-Underfull \hbox (badness 2846) in paragraph at lines 127--127
+Underfull \hbox (badness 2846) in paragraph at lines 183--183
 []|\OT1/cmr/m/n/10.95 Presenza di un si-ste-ma di con-trol-lo del-la
  []
 
 
-Underfull \hbox (badness 5105) in paragraph at lines 131--131
+Underfull \hbox (badness 5105) in paragraph at lines 187--187
 []|\OT1/cmr/m/n/10.95 La pi-sta e la cor-sia box de-vo-no es-se-re
  []
 
 
-Underfull \hbox (badness 5217) in paragraph at lines 138--138
+Underfull \hbox (badness 5217) in paragraph at lines 194--194
 []|\OT1/cmr/m/n/10.95 Il si-ste-ma di con-trol-lo de-ve ri-por-ta-re le
  []
 
 [3
 
 ]
-Underfull \hbox (badness 6316) in paragraph at lines 152--152
+Underfull \hbox (badness 6316) in paragraph at lines 208--208
 []|\OT1/cmr/m/n/10.95 Il cir-cui-to pu^^Ro es-se-re scel-to in fa-se di
  []
 
@@ -467,134 +487,156 @@ Underfull \hbox (badness 6316) in paragraph at lines 152--152
 Capitolo 3.
 [5
 
-] [6] [7] [8] [9] [10] [11] [12] [13]
+] [6] [7] <./Immagini/SchemaGara.png, id=52, 751.9pt x 269.70866pt>
+File: ./Immagini/SchemaGara.png Graphic file (type png)
 
-Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 540.
-
-<./Immagini/GraficoVelocita.png, id=67, 994.99pt x 385.19165pt>
+<use ./Immagini/SchemaGara.png>
+Package pdftex.def Info: ./Immagini/SchemaGara.png used on input line 340.
+(pdftex.def)             Requested size: 312.9803pt x 112.26859pt.
+ [8 <./Immagini/SchemaGara.png>] [9] [10]
+[11] [12] <./Immagini/GraficoVelocita.png, id=71, 994.99pt x 385.19165pt>
 File: ./Immagini/GraficoVelocita.png Graphic file (type png)
 
 <use ./Immagini/GraficoVelocita.png>
-Package pdftex.def Info: ./Immagini/GraficoVelocita.png used on input line 540.
+Package pdftex.def Info: ./Immagini/GraficoVelocita.png used on input line 564.
 
-(pdftex.def)             Requested size: 341.43306pt x 129.54463pt.
-
-
-Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 555.
-
-<./Immagini/GraficoVelocitaTraslato.png, id=68, 994.99pt x 388.17186pt>
+(pdftex.def)             Requested size: 341.43306pt x 132.18007pt.
+ [13]
+<./Immagini/GraficoVelocitaTraslato.png, id=76, 994.99pt x 388.17186pt>
 File: ./Immagini/GraficoVelocitaTraslato.png Graphic file (type png)
 
 <use ./Immagini/GraficoVelocitaTraslato.png>
 Package pdftex.def Info: ./Immagini/GraficoVelocitaTraslato.png used on input l
-ine 555.
-(pdftex.def)             Requested size: 341.43306pt x 129.54463pt.
- [14 <./Immagini/GraficoVelocita.png>] [15 <./Immagini/GraficoVelocitaTraslato.
-png>] [16]
-Overfull \hbox (17.50775pt too wide) in paragraph at lines 650--652
-[]\OT1/cmr/m/n/10.95 Una vol-ta che ha crea-to tut-ti i pi-lo-ti chie-de aces-s
-o al ca-na-le Wait[]To[]Pilots,
+ine 579.
+(pdftex.def)             Requested size: 341.43306pt x 133.20274pt.
+ [14 <./Immagini/GraficoVelocita.png> <./Immagini/GraficoVelocitaTraslato.png>]
+ [15] [16] [17] [18] [19] [20]
+Capitolo 4.
+[21
+
+] <./Immagini/SchemaDistribuzione.png, id=103, 2186.1675pt x 794.97pt>
+File: ./Immagini/SchemaDistribuzione.png Graphic file (type png)
+
+<use ./Immagini/SchemaDistribuzione.png>
+Package pdftex.def Info: ./Immagini/SchemaDistribuzione.png used on input line 
+865.
+(pdftex.def)             Requested size: 341.43306pt x 124.1531pt.
+ [22 <./Immagini/SchemaDistribuzione.png>]
+Capitolo 5.
+
+Overfull \hbox (22.37442pt too wide) in paragraph at lines 898--900
+[]\OT1/cmr/m/n/10.95 Una vol-ta che ha crea-to tut-ti i pi-lo-ti chie-de ac-ces
+-so al ca-na-le Wait[]To[]Pilots,
  []
 
-[17] [18]
+[23
 
-Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 721.
-
-<./Immagini/AccessoSegmentiStatoInziale.png, id=85, 577.15625pt x 339.2675pt>
+] [24]
+<./Immagini/AccessoSegmentiStatoInziale.png, id=114, 577.15625pt x 339.2675pt>
 File: ./Immagini/AccessoSegmentiStatoInziale.png Graphic file (type png)
 
 <use ./Immagini/AccessoSegmentiStatoInziale.png>
 Package pdftex.def Info: ./Immagini/AccessoSegmentiStatoInziale.png used on inp
-ut line 721.
-(pdftex.def)             Requested size: 312.9803pt x 183.9735pt.
- [19 <./Immagini/AccessoSegmentiStatoInziale.png (PNG copy)>]
+ut line 983.
+(pdftex.def)             Requested size: 312.9803pt x 183.98341pt.
 
-Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 755.
 
-<./Immagini/AccessoSegmentiCaso1.png, id=89, 577.15625pt x 322.20375pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[25] [26 <./Immagini/AccessoSegmentiStatoInziale.png (PNG copy)>]
+<./Immagini/AccessoSegmentiCaso1.png, id=123, 577.15625pt x 322.20375pt>
 File: ./Immagini/AccessoSegmentiCaso1.png Graphic file (type png)
 
 <use ./Immagini/AccessoSegmentiCaso1.png>
 Package pdftex.def Info: ./Immagini/AccessoSegmentiCaso1.png used on input line
- 755.
-(pdftex.def)             Requested size: 312.9803pt x 183.9735pt.
+ 1018.
+(pdftex.def)             Requested size: 312.9803pt x 174.72981pt.
 
-
-Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 777.
-
-<./Immagini/AccessoSegmentiCaso2.png, id=90, 577.15625pt x 322.20375pt>
+<./Immagini/AccessoSegmentiCaso2.png, id=124, 577.15625pt x 322.20375pt>
 File: ./Immagini/AccessoSegmentiCaso2.png Graphic file (type png)
 
 <use ./Immagini/AccessoSegmentiCaso2.png>
 Package pdftex.def Info: ./Immagini/AccessoSegmentiCaso2.png used on input line
- 777.
-(pdftex.def)             Requested size: 312.9803pt x 183.9735pt.
+ 1040.
+(pdftex.def)             Requested size: 312.9803pt x 174.72981pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[20 <./Immagini/AccessoSegmentiCaso1.png (PNG copy)>]
-
-Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 795.
-
-<./Immagini/AccessoSegmentiCaso3.png, id=95, 577.15625pt x 322.20375pt>
+<./Immagini/AccessoSegmentiCaso3.png, id=125, 577.15625pt x 322.20375pt>
 File: ./Immagini/AccessoSegmentiCaso3.png Graphic file (type png)
 
 <use ./Immagini/AccessoSegmentiCaso3.png>
 Package pdftex.def Info: ./Immagini/AccessoSegmentiCaso3.png used on input line
- 795.
-(pdftex.def)             Requested size: 312.9803pt x 183.9735pt.
+ 1058.
+(pdftex.def)             Requested size: 312.9803pt x 174.72981pt.
+ [27 <./Immagini/AccessoSegmentiCaso1.png (PNG copy)>] [28 <./Immagini/AccessoS
+egmentiCaso2.png (PNG copy)> <./Immagini/AccessoSegmentiCaso3.png (PNG copy)>] 
+[29] [30]
+<./Immagini/Scope.png, id=138, 823.075pt x 592.2125pt>
+File: ./Immagini/Scope.png Graphic file (type png)
+
+<use ./Immagini/Scope.png>
+Package pdftex.def Info: ./Immagini/Scope.png used on input line 1172.
+(pdftex.def)             Requested size: 341.43306pt x 245.6642pt.
+ [31] [32 <./Immagini/Scope.png>] [33] [34
+
+]
+Capitolo 6.
+
+Underfull \vbox (badness 1708) has occurred while \output is active []
+
+ [35]
+<./Immagini/SchemaDistribuzioneSender.png, id=156, 2186.1675pt x 794.97pt>
+File: ./Immagini/SchemaDistribuzioneSender.png Graphic file (type png)
+
+<use ./Immagini/SchemaDistribuzioneSender.png>
+Package pdftex.def Info: ./Immagini/SchemaDistribuzioneSender.png used on input
+ line 1296.
+(pdftex.def)             Requested size: 341.43306pt x 124.1531pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[21 <./Immagini/AccessoSegmentiCaso2.png (PNG copy)>] [22 <./Immagini/AccessoSe
-gmentiCaso3.png (PNG copy)>]
-Capitolo 4.
-[23
-
-] [24
+[36] [37 <./Immagini/SchemaDistribuzioneSender.png>] [38
 
 ]
-Capitolo 5.
-[25] [26
+Capitolo 7.
+[39] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-34.def
+File: uni-34.def 2012/04/20 UCS: Unicode data U+2200..U+22FF
+) [40]
+[41] [42] [43] [44] (./RelazioneSCD.aux)
 
-]
-Capitolo 6.
-[27] (./RelazioneSCD.aux) ) 
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6518 strings out of 495048
- 89364 string characters out of 3181554
- 166175 words of memory out of 3000000
- 9562 multiletter control sequences out of 15000+200000
- 14579 words of font info for 52 fonts, out of 3000000 for 9000
+ 7359 strings out of 495048
+ 98362 string characters out of 3181554
+ 166334 words of memory out of 3000000
+ 10399 multiletter control sequences out of 15000+200000
+ 14288 words of font info for 50 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 41i,12n,43p,333b,541s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/
-8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmss17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on RelazioneSCD.pdf (30 pages, 257539 bytes).
+ 41i,12n,43p,333b,1042s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/urw/helvetic/uhvb8a.pfb>
+Output written on RelazioneSCD.pdf (49 pages, 504863 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
+ 240 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

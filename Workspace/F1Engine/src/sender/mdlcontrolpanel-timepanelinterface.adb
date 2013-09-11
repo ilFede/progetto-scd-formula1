@@ -210,32 +210,37 @@ package body MDLControlPanel.TimePanelInterface is
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          sendPilot_Arg_Name_num_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_num_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_num_Ü)),
          PolyORB.Any.ARG_IN);
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          sendPilot_Arg_Name_name_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_name_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_name_Ü)),
          PolyORB.Any.ARG_IN);
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          sendPilot_Arg_Name_car_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_car_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_car_Ü)),
          PolyORB.Any.ARG_IN);
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          sendPilot_Arg_Name_strategyStr_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_strategyStr_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_strategyStr_Ü)),
          PolyORB.Any.ARG_IN);
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          sendPilot_Arg_Name_fuel_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_fuel_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_fuel_Ü)),
          PolyORB.Any.ARG_IN);
       --  Creating the request
       PolyORB.Requests.Setup_Request
@@ -245,7 +250,8 @@ package body MDLControlPanel.TimePanelInterface is
               (Self)),
          Operation => "sendPilot",
          Arg_List => Argument_List_Ü,
-         Result => Result_Nv_Ü);
+         Result => Result_Nv_Ü,
+         Req_Flags => PolyORB.Requests.Sync_With_Transport);
       --  Invoking the request (synchronously or asynchronously)
       PolyORB.CORBA_P.Interceptors_Hooks.Client_Invoke
         (Request_Ü'Access,
@@ -371,38 +377,44 @@ package body MDLControlPanel.TimePanelInterface is
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          sendPilotIntermediate_Arg_Name_Number_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_Number_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_Number_Ü)),
          PolyORB.Any.ARG_IN);
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          sendPilotIntermediate_Arg_Name_time_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_time_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_time_Ü)),
          PolyORB.Any.ARG_IN);
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          sendPilotIntermediate_Arg_Name_numLap_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_numLap_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_numLap_Ü)),
          PolyORB.Any.ARG_IN);
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          sendPilotIntermediate_Arg_Name_numIntermediate_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_numIntermediate_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_numIntermediate_Ü)),
          PolyORB.Any.ARG_IN);
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          sendPilotIntermediate_Arg_Name_ticket_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_ticket_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_ticket_Ü)),
          PolyORB.Any.ARG_IN);
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          sendPilotIntermediate_Arg_Name_totTime_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_totTime_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_totTime_Ü)),
          PolyORB.Any.ARG_IN);
       --  Creating the request
       PolyORB.Requests.Setup_Request
@@ -412,7 +424,8 @@ package body MDLControlPanel.TimePanelInterface is
               (Self)),
          Operation => "sendPilotIntermediate",
          Arg_List => Argument_List_Ü,
-         Result => Result_Nv_Ü);
+         Result => Result_Nv_Ü,
+         Req_Flags => PolyORB.Requests.Sync_With_Transport);
       --  Invoking the request (synchronously or asynchronously)
       PolyORB.CORBA_P.Interceptors_Hooks.Client_Invoke
         (Request_Ü'Access,
@@ -478,8 +491,9 @@ package body MDLControlPanel.TimePanelInterface is
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          enterBox_Arg_Name_Number_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_Number_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_Number_Ü)),
          PolyORB.Any.ARG_IN);
       --  Creating the request
       PolyORB.Requests.Setup_Request
@@ -489,7 +503,8 @@ package body MDLControlPanel.TimePanelInterface is
               (Self)),
          Operation => "enterBox",
          Arg_List => Argument_List_Ü,
-         Result => Result_Nv_Ü);
+         Result => Result_Nv_Ü,
+         Req_Flags => PolyORB.Requests.Sync_With_Transport);
       --  Invoking the request (synchronously or asynchronously)
       PolyORB.CORBA_P.Interceptors_Hooks.Client_Invoke
         (Request_Ü'Access,
@@ -567,14 +582,16 @@ package body MDLControlPanel.TimePanelInterface is
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          exitBox_Arg_Name_Number_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_Number_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_Number_Ü)),
          PolyORB.Any.ARG_IN);
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          exitBox_Arg_Name_fuel_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_fuel_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_fuel_Ü)),
          PolyORB.Any.ARG_IN);
       --  Creating the request
       PolyORB.Requests.Setup_Request
@@ -584,7 +601,8 @@ package body MDLControlPanel.TimePanelInterface is
               (Self)),
          Operation => "exitBox",
          Arg_List => Argument_List_Ü,
-         Result => Result_Nv_Ü);
+         Result => Result_Nv_Ü,
+         Req_Flags => PolyORB.Requests.Sync_With_Transport);
       --  Invoking the request (synchronously or asynchronously)
       PolyORB.CORBA_P.Interceptors_Hooks.Client_Invoke
         (Request_Ü'Access,
@@ -686,26 +704,30 @@ package body MDLControlPanel.TimePanelInterface is
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          sendRaceDescription_Arg_Name_name_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_name_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_name_Ü)),
          PolyORB.Any.ARG_IN);
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          sendRaceDescription_Arg_Name_lenght_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_lenght_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_lenght_Ü)),
          PolyORB.Any.ARG_IN);
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          sendRaceDescription_Arg_Name_numLap_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_numLap_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_numLap_Ü)),
          PolyORB.Any.ARG_IN);
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          sendRaceDescription_Arg_Name_meteo_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_meteo_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_meteo_Ü)),
          PolyORB.Any.ARG_IN);
       --  Creating the request
       PolyORB.Requests.Setup_Request
@@ -715,7 +737,8 @@ package body MDLControlPanel.TimePanelInterface is
               (Self)),
          Operation => "sendRaceDescription",
          Arg_List => Argument_List_Ü,
-         Result => Result_Nv_Ü);
+         Result => Result_Nv_Ü,
+         Req_Flags => PolyORB.Requests.Sync_With_Transport);
       --  Invoking the request (synchronously or asynchronously)
       PolyORB.CORBA_P.Interceptors_Hooks.Client_Invoke
         (Request_Ü'Access,
@@ -773,7 +796,8 @@ package body MDLControlPanel.TimePanelInterface is
               (Self)),
          Operation => "sendStartRace",
          Arg_List => Argument_List_Ü,
-         Result => Result_Nv_Ü);
+         Result => Result_Nv_Ü,
+         Req_Flags => PolyORB.Requests.Sync_With_Transport);
       --  Invoking the request (synchronously or asynchronously)
       PolyORB.CORBA_P.Interceptors_Hooks.Client_Invoke
         (Request_Ü'Access,
@@ -863,20 +887,23 @@ package body MDLControlPanel.TimePanelInterface is
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          sendFuelAndTires_Arg_Name_number_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_number_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_number_Ü)),
          PolyORB.Any.ARG_IN);
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          sendFuelAndTires_Arg_Name_fuel_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_fuel_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_fuel_Ü)),
          PolyORB.Any.ARG_IN);
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          sendFuelAndTires_Arg_Name_tires_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_tires_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_tires_Ü)),
          PolyORB.Any.ARG_IN);
       --  Creating the request
       PolyORB.Requests.Setup_Request
@@ -886,7 +913,8 @@ package body MDLControlPanel.TimePanelInterface is
               (Self)),
          Operation => "sendFuelAndTires",
          Arg_List => Argument_List_Ü,
-         Result => Result_Nv_Ü);
+         Result => Result_Nv_Ü,
+         Req_Flags => PolyORB.Requests.Sync_With_Transport);
       --  Invoking the request (synchronously or asynchronously)
       PolyORB.CORBA_P.Interceptors_Hooks.Client_Invoke
         (Request_Ü'Access,
@@ -976,20 +1004,23 @@ package body MDLControlPanel.TimePanelInterface is
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          sendFinishRace_Arg_Name_number_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_number_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_number_Ü)),
          PolyORB.Any.ARG_IN);
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          sendFinishRace_Arg_Name_time_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_time_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_time_Ü)),
          PolyORB.Any.ARG_IN);
       PolyORB.Any.NVList.Add_Item
         (Argument_List_Ü,
          sendFinishRace_Arg_Name_reason_Ü,
-         PolyORB.Any.Any
-           (Arg_Any_reason_Ü),
+         PolyORB.Any.Copy_Any
+           (PolyORB.Any.Any
+              (Arg_Any_reason_Ü)),
          PolyORB.Any.ARG_IN);
       --  Creating the request
       PolyORB.Requests.Setup_Request
@@ -999,7 +1030,8 @@ package body MDLControlPanel.TimePanelInterface is
               (Self)),
          Operation => "sendFinishRace",
          Arg_List => Argument_List_Ü,
-         Result => Result_Nv_Ü);
+         Result => Result_Nv_Ü,
+         Req_Flags => PolyORB.Requests.Sync_With_Transport);
       --  Invoking the request (synchronously or asynchronously)
       PolyORB.CORBA_P.Interceptors_Hooks.Client_Invoke
         (Request_Ü'Access,

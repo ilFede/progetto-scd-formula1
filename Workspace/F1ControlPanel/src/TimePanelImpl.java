@@ -244,7 +244,7 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 	}
 
 	// aggiunge un nuovo pilota a monitor
-	public void sendPilot(int num, String name, String car, String strategy,
+	public synchronized void sendPilot(int num, String name, String car, String strategy,
 			String fuelLevel) {
 		String[] temp = strategy.split(",");
 		/**
@@ -269,7 +269,7 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 	}
 
 	// aggiorna l'intermedio di un pilota
-	public void sendPilotIntermediate(int pilotNum, String time, int lapNum,
+	public synchronized void sendPilotIntermediate(int pilotNum, String time, int lapNum,
 			int intermediateNum, int ticket, String totTime) {
 		// long timeNow = System.currentTimeMillis();
 		boolean isPresent = false;
@@ -354,7 +354,7 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 	}
 
 	// notifica l'entrata ai box di un pilota
-	public void enterBox(int pilotNum) {
+	public synchronized void enterBox(int pilotNum) {
 		boolean isPresent = false;
 		int rowNumber = 0;
 		int setRowNumber = 0;
@@ -378,7 +378,7 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 	}
 
 	// notifica l'uscita dai box di un pilota
-	public void exitBox(int pilotNum, String fuelLevel) {
+	public synchronized void exitBox(int pilotNum, String fuelLevel) {
 		boolean isPresent = false;
 		int rowNumber = 0;
 		int setRowNumber = 0;
@@ -401,7 +401,7 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 	}
 
 	// riceve la descrizione della gara
-	public void sendRaceDescription(String name, String lenght, String numLap,
+	public synchronized void sendRaceDescription(String name, String lenght, String numLap,
 			String meteo) {
 		if (meteo.equals("DRY")) {
 			meteo = "Asciutto";
@@ -423,13 +423,13 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 	}
 
 	// notifica la partenza della gara
-	public void sendStartRace() {
+	public synchronized void sendStartRace() {
 		txtRaceState.setText("Gara in corso!");
 		sortTable();
 	}
 
 	// notifica il livello di carburant di un pilota
-	public void sendFuelAndTires(int pilotNum, String fuelLevel, int tiresWear) {
+	public synchronized void sendFuelAndTires(int pilotNum, String fuelLevel, int tiresWear) {
 		boolean isPresent = false;
 		int rowNumber = 0;
 		int setRowNumber = 0;
@@ -454,7 +454,7 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 	}
 
 	// notifica la fine della gara di parte di un pilota
-	public void sendFinishRace(int pilotNum, String time, int reason) {
+	public synchronized void sendFinishRace(int pilotNum, String time, int reason) {
 		boolean isPresent = false;
 		int rowNumber = 0;
 		int setRowNumber = 0;
@@ -499,7 +499,7 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 	}
 
 	// aggiorna la larghezza della tabella
-	public void sortTable() {
+	public synchronized void sortTable() {
 		try {
 			TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(
 					tblTimes.getModel());
@@ -518,7 +518,7 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 	}
 
 	// riordina la tabella
-	public void resizeTable() {
+	public synchronized void resizeTable() {
 		ColumnsAutoSizer.sizeColumnsToFit(tblTimes);
 		tblTimes.getColumnModel().getColumn(getColumIndex("#Int"))
 				.setMinWidth(0);
@@ -539,7 +539,7 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 	}
 
 	// resitituisce l'indice di una colonna dato il nome
-	private int getColumIndex(String name) {
+	private synchronized int getColumIndex(String name) {
 		int index = -1;
 		for (int i = 0; (i < timesDataModel.getColumnCount()); i++) {
 			if (name.equalsIgnoreCase(timesDataModel.getColumnName(i))) {
@@ -550,7 +550,7 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 	}
 
 	// metodo di test
-	public int test(int num) {
+	public synchronized int test(int num) {
 		System.out.println("Ho ricevuto da client " + num);
 		Random generator = new Random();
 		int num2 = generator.nextInt(100);

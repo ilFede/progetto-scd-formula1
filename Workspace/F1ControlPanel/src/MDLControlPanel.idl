@@ -2,13 +2,13 @@ module MDLControlPanel {
   interface TimePanelInterface
   {
     long test (in long num);
-    void sendPilot (in long num, in string name, in string car,  in string strategyStr, in string fuel);
-    void sendPilotIntermediate (in long Number, in string time, in long numLap, in long numIntermediate, in long ticket, in string totTime);
-    void enterBox (in long Number);
-    void exitBox (in long Number, in string fuel);
-    void sendRaceDescription (in string name, in string lenght, in string numLap, in string meteo); 
-    void sendStartRace();
-    void sendFuelAndTires(in long number, in string fuel, in long tires);
-    void sendFinishRace(in long number, in string time, in long reason);
+    oneway void sendPilot (in long num, in string name, in string car,  in string strategyStr, in string fuel);
+    oneway void sendPilotIntermediate (in long Number, in string time, in long numLap, in long numIntermediate, in long ticket, in string totTime);
+    oneway void enterBox (in long Number);
+    oneway void exitBox (in long Number, in string fuel);
+    oneway void sendRaceDescription (in string name, in string lenght, in string numLap, in string meteo); 
+    oneway void sendStartRace();
+    oneway void sendFuelAndTires(in long number, in string fuel, in long tires);
+    oneway void sendFinishRace(in long number, in string time, in long reason);
   };	
 };
