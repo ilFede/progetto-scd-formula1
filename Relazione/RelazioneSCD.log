@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.5.10)  11 SEP 2013 11:38
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.5.10)  11 SEP 2013 11:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -414,25 +414,385 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <20.74> not available
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 2846) in paragraph at lines 90--90
-[]|\OT1/cmr/m/n/10.95 Presenza di un si-ste-ma di con-trol-lo del-la
+Overfull \hbox (10.25409pt too wide) in paragraph at lines 86--86
+[]|\OT1/cmr/bx/n/10.95 MODIFICA| 
  []
 
 
-Underfull \hbox (badness 5105) in paragraph at lines 94--94
-[]|\OT1/cmr/m/n/10.95 La pi-sta e la cor-sia box de-vo-no es-se-re
+Overfull \hbox (9.69136pt too wide) in paragraph at lines 86--86
+[]|\OT1/cmr/bx/n/10.95 VERSIONE| 
  []
 
 
-Underfull \hbox (badness 5217) in paragraph at lines 101--101
-[]|\OT1/cmr/m/n/10.95 Il si-ste-ma di con-trol-lo de-ve ri-por-ta-re le
+Underfull \hbox (badness 2261) in paragraph at lines 88--88
+\OT1/cmr/m/n/10.95 un cir-cui-to
  []
 
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 109.
+
+Underfull \hbox (badness 7291) in paragraph at lines 88--88
+\OT1/cmr/m/n/10.95 nel-la com-
+ []
+
+
+Underfull \hbox (badness 3209) in paragraph at lines 89--89
+\OT1/cmr/m/n/10.95 pi-lo-ti nel-la
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--89
+\OT1/cmr/m/n/10.95 com-pe-ti-zio-
+ []
+
+
+Underfull \hbox (badness 3009) in paragraph at lines 90--90
+\OT1/cmr/m/n/10.95 un si-ste-ma
+ []
+
+
+Underfull \hbox (badness 7291) in paragraph at lines 90--90
+\OT1/cmr/m/n/10.95 del-la com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
+[]|\OT1/cmr/m/n/10.95 Il cir-cui-to
+ []
+
+
+Underfull \hbox (badness 1436) in paragraph at lines 91--91
+\OT1/cmr/m/n/10.95 de-ve es-se-re
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
+\OT1/cmr/m/n/10.95 do-ta-to di
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
+\OT1/cmr/m/n/10.95 di ri-for-ni-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+[]|\OT1/cmr/m/n/10.95 La pi-sta
+ []
+
+
+Underfull \hbox (badness 1436) in paragraph at lines 92--92
+\OT1/cmr/m/n/10.95 de-ve es-se-re
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+\OT1/cmr/m/n/10.95 sog-get-ta
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+\OT1/cmr/m/n/10.95 a re-go-le
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+\OT1/cmr/m/n/10.95 con-gruen-ti
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
+[]|\OT1/cmr/m/n/10.95 La cor-sia
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
+\OT1/cmr/m/n/10.95 dei box
+ []
+
+
+Underfull \hbox (badness 1436) in paragraph at lines 93--93
+\OT1/cmr/m/n/10.95 de-ve es-se-re
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
+\OT1/cmr/m/n/10.95 sog-get-ta
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
+\OT1/cmr/m/n/10.95 a re-go-le
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
+\OT1/cmr/m/n/10.95 con-gruen-ti
+ []
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 94--94
+[]|\OT1/cmr/m/n/10.95 La pi-sta e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+\OT1/cmr/m/n/10.95 la cor-sia
+ []
+
+
+Underfull \hbox (badness 2970) in paragraph at lines 94--94
+\OT1/cmr/m/n/10.95 es-se-re con-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+\OT1/cmr/m/n/10.95 di-vi-si-bi-li
+ []
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 95--95
+[]|\OT1/cmr/m/n/10.95 La pi-sta e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+\OT1/cmr/m/n/10.95 la cor-sia
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+\OT1/cmr/m/n/10.95 box de-vo-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+\OT1/cmr/m/n/10.95 no ave-re
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+\OT1/cmr/m/n/10.95 tem-pi di
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+\OT1/cmr/m/n/10.95 per-cor-ren-za
+ []
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 96--96
+[]|\OT1/cmr/m/n/10.95 La pi-sta e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+\OT1/cmr/m/n/10.95 la cor-sia
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+\OT1/cmr/m/n/10.95 box de-vo-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+\OT1/cmr/m/n/10.95 no es-se-re
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+\OT1/cmr/m/n/10.95 sog-get-te a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+\OT1/cmr/m/n/10.95 con-di-zio-ni
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+\OT1/cmr/m/n/10.95 at-mo-sfe-ri-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+\OT1/cmr/m/n/10.95 ti de-vo-no
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+\OT1/cmr/m/n/10.95 pos-se-de-re
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+\OT1/cmr/m/n/10.95 per-so-na-li
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+\OT1/cmr/m/n/10.95 ca-rat-te-ri-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+\OT1/cmr/m/n/10.95 sti-che di
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+\OT1/cmr/m/n/10.95 ti de-vo-no
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+\OT1/cmr/m/n/10.95 pos-se-de-re
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+\OT1/cmr/m/n/10.95 una stra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+\OT1/cmr/m/n/10.95 te-gia di
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+\OT1/cmr/m/n/10.95 ti de-vo-no
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+\OT1/cmr/m/n/10.95 pos-se-de-re
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+\OT1/cmr/m/n/10.95 una vet-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+\OT1/cmr/m/n/10.95 tu-ra con
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+\OT1/cmr/m/n/10.95 spe-ci-fi-che
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+\OT1/cmr/m/n/10.95 ca-rat-te-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+\OT1/cmr/m/n/10.95 ri-sti-che
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+\OT1/cmr/m/n/10.95 pre-sta-zio-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+[]|\OT1/cmr/m/n/10.95 Il si-ste-ma
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+\OT1/cmr/m/n/10.95 de-ve ri-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+\OT1/cmr/m/n/10.95 por-ta-re lo
+ []
+
+
+Underfull \hbox (badness 5533) in paragraph at lines 100--100
+\OT1/cmr/m/n/10.95 sta-to del-la
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+\OT1/cmr/m/n/10.95 com-pe-ti-zio-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--101
+[]|\OT1/cmr/m/n/10.95 Il si-ste-ma
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--101
+\OT1/cmr/m/n/10.95 de-ve ri-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--101
+\OT1/cmr/m/n/10.95 por-ta-re le
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--101
+\OT1/cmr/m/n/10.95 pre-sta-zio-ni
+ []
+
+
+Underfull \hbox (badness 7613) in paragraph at lines 101--101
+\OT1/cmr/m/n/10.95 e o sta-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
+[]|\OT1/cmr/m/n/10.95 Il si-ste-ma
+ []
+
+
+Underfull \hbox (badness 7203) in paragraph at lines 102--102
+\OT1/cmr/m/n/10.95 de-ve te-ner
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
+\OT1/cmr/m/n/10.95 le mi-glio-ri
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--103
+[]|\OT1/cmr/m/n/10.95 Durata e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--103
+\OT1/cmr/m/n/10.95 con-di-zio-ne
+ []
+
+
+Underfull \hbox (badness 2970) in paragraph at lines 103--103
+\OT1/cmr/m/n/10.95 es-se-re con-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+\OT1/cmr/m/n/10.95 zio-ne dei
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+\OT1/cmr/m/n/10.95 con-cor-ren-ti
+ []
+
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 107.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
-) [1] [2
+) [1] [2] [3] [4
 
 ]
 (./RelazioneSCD.toc
@@ -444,11 +804,11 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-) [3])
+) [5])
 \tf@toc=\write4
 \openout4 = `RelazioneSCD.toc'.
 
- [4]
+ [6]
 Capitolo 1.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 124.
 
@@ -487,14 +847,14 @@ Underfull \hbox (badness 6316) in paragraph at lines 208--208
 Capitolo 3.
 [5
 
-] [6] [7] <./Immagini/SchemaGara.png, id=52, 751.9pt x 269.70866pt>
+] [6] [7] <./Immagini/SchemaGara.png, id=59, 751.9pt x 269.70866pt>
 File: ./Immagini/SchemaGara.png Graphic file (type png)
 
 <use ./Immagini/SchemaGara.png>
 Package pdftex.def Info: ./Immagini/SchemaGara.png used on input line 340.
 (pdftex.def)             Requested size: 312.9803pt x 112.26859pt.
  [8 <./Immagini/SchemaGara.png>] [9] [10]
-[11] [12] <./Immagini/GraficoVelocita.png, id=71, 994.99pt x 385.19165pt>
+[11] [12] <./Immagini/GraficoVelocita.png, id=78, 994.99pt x 385.19165pt>
 File: ./Immagini/GraficoVelocita.png Graphic file (type png)
 
 <use ./Immagini/GraficoVelocita.png>
@@ -502,7 +862,7 @@ Package pdftex.def Info: ./Immagini/GraficoVelocita.png used on input line 564.
 
 (pdftex.def)             Requested size: 341.43306pt x 132.18007pt.
  [13]
-<./Immagini/GraficoVelocitaTraslato.png, id=76, 994.99pt x 388.17186pt>
+<./Immagini/GraficoVelocitaTraslato.png, id=83, 994.99pt x 388.17186pt>
 File: ./Immagini/GraficoVelocitaTraslato.png Graphic file (type png)
 
 <use ./Immagini/GraficoVelocitaTraslato.png>
@@ -514,7 +874,7 @@ ine 579.
 Capitolo 4.
 [21
 
-] <./Immagini/SchemaDistribuzione.png, id=103, 2186.1675pt x 794.97pt>
+] <./Immagini/SchemaDistribuzione.png, id=109, 2186.1675pt x 794.97pt>
 File: ./Immagini/SchemaDistribuzione.png Graphic file (type png)
 
 <use ./Immagini/SchemaDistribuzione.png>
@@ -532,7 +892,7 @@ Overfull \hbox (22.37442pt too wide) in paragraph at lines 898--900
 [23
 
 ] [24]
-<./Immagini/AccessoSegmentiStatoInziale.png, id=114, 577.15625pt x 339.2675pt>
+<./Immagini/AccessoSegmentiStatoInziale.png, id=121, 577.15625pt x 339.2675pt>
 File: ./Immagini/AccessoSegmentiStatoInziale.png Graphic file (type png)
 
 <use ./Immagini/AccessoSegmentiStatoInziale.png>
@@ -544,7 +904,7 @@ ut line 983.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [25] [26 <./Immagini/AccessoSegmentiStatoInziale.png (PNG copy)>]
-<./Immagini/AccessoSegmentiCaso1.png, id=123, 577.15625pt x 322.20375pt>
+<./Immagini/AccessoSegmentiCaso1.png, id=129, 577.15625pt x 322.20375pt>
 File: ./Immagini/AccessoSegmentiCaso1.png Graphic file (type png)
 
 <use ./Immagini/AccessoSegmentiCaso1.png>
@@ -552,7 +912,7 @@ Package pdftex.def Info: ./Immagini/AccessoSegmentiCaso1.png used on input line
  1018.
 (pdftex.def)             Requested size: 312.9803pt x 174.72981pt.
 
-<./Immagini/AccessoSegmentiCaso2.png, id=124, 577.15625pt x 322.20375pt>
+<./Immagini/AccessoSegmentiCaso2.png, id=130, 577.15625pt x 322.20375pt>
 File: ./Immagini/AccessoSegmentiCaso2.png Graphic file (type png)
 
 <use ./Immagini/AccessoSegmentiCaso2.png>
@@ -563,7 +923,7 @@ Package pdftex.def Info: ./Immagini/AccessoSegmentiCaso2.png used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Immagini/AccessoSegmentiCaso3.png, id=125, 577.15625pt x 322.20375pt>
+<./Immagini/AccessoSegmentiCaso3.png, id=131, 577.15625pt x 322.20375pt>
 File: ./Immagini/AccessoSegmentiCaso3.png Graphic file (type png)
 
 <use ./Immagini/AccessoSegmentiCaso3.png>
@@ -573,7 +933,7 @@ Package pdftex.def Info: ./Immagini/AccessoSegmentiCaso3.png used on input line
  [27 <./Immagini/AccessoSegmentiCaso1.png (PNG copy)>] [28 <./Immagini/AccessoS
 egmentiCaso2.png (PNG copy)> <./Immagini/AccessoSegmentiCaso3.png (PNG copy)>] 
 [29] [30]
-<./Immagini/Scope.png, id=138, 823.075pt x 592.2125pt>
+<./Immagini/Scope.png, id=145, 823.075pt x 592.2125pt>
 File: ./Immagini/Scope.png Graphic file (type png)
 
 <use ./Immagini/Scope.png>
@@ -587,7 +947,7 @@ Capitolo 6.
 Underfull \vbox (badness 1708) has occurred while \output is active []
 
  [35]
-<./Immagini/SchemaDistribuzioneSender.png, id=156, 2186.1675pt x 794.97pt>
+<./Immagini/SchemaDistribuzioneSender.png, id=162, 2186.1675pt x 794.97pt>
 File: ./Immagini/SchemaDistribuzioneSender.png Graphic file (type png)
 
 <use ./Immagini/SchemaDistribuzioneSender.png>
@@ -613,7 +973,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  7359 strings out of 495048
  98362 string characters out of 3181554
- 166334 words of memory out of 3000000
+ 171334 words of memory out of 3000000
  10399 multiletter control sequences out of 15000+200000
  14288 words of font info for 50 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -633,10 +993,10 @@ r9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on RelazioneSCD.pdf (49 pages, 504863 bytes).
+Output written on RelazioneSCD.pdf (51 pages, 506048 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 158 compressed objects within 2 object streams
+ 246 PDF objects out of 1000 (max. 8388607)
+ 162 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

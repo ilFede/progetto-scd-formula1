@@ -78,13 +78,12 @@
   \pagenumbering{Roman}
   \setcounter{page}{1}
   %Fine titolo
-
-  \tableofcontents
-  \newpage
   
-  \begin{longtable}{|p{2cm}|p{8cm}|}
+  \section*{Diario delle modifiche}
+  
+  \begin{longtable}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
       \toprule
-	\bfseries{CODICE} & \bfseries{DESCRIZIONE} \\\hline
+	\bfseries{MODIFICA} & \bfseries{AUTORE} & \bfseries{DATA} & \bfseries{VERSIONE} \\\hline
       \endfirsthead
       RFOBB-01 & Presenza di un circuito nella competizione \\\hline
       RFOBB-02 & Presenza di piloti nella competizione \\\hline 
@@ -106,6 +105,9 @@
       \caption{Requisiti funzionali obbligatori}
       \label{tbl:RequisitiFunzionaliObbligatori}
     \end{longtable}
+    
+  \tableofcontents
+  \newpage
   
   \chapter{Introduzione}
     \setcounter{page}{1}
