@@ -10,6 +10,8 @@ with Ada.Calendar; use Ada.Calendar;
 with Formula1.Startup; use Formula1.Startup;
 with Formula1; use Formula1;
 with Corba; Use Corba;
+with ada.numerics.discrete_random;
+
 
 procedure Main is
    Filename   : String := "ior.txt";
@@ -17,17 +19,15 @@ procedure Main is
    Line_Count : Natural := 0;
    IOR_Str_Ref : String_Ref_T := new String'("");
    Race_Config_Filename_Ref : String_Ref_T;
-
-   Int : Integer := 8;
-   Flo : Float := Float (Int);
    NowTime : Time := Clock;
-   cio : String := "caosad";
-   test : Corba.Long := Corba.Long'Value("3");
+   type Rand_Draw is range 1..99;
+   package Rand_Int is new Ada.Numerics.Discrete_Random(Rand_Draw);
 
 begin
    Ada.Text_IO.Open (File => File,
                      Mode => Ada.Text_IO.In_File,
                      Name => IOR_Set_Path & Filename);
+
    while not Ada.Text_IO.End_Of_File (File) loop
       declare
          Line : String := Ada.Text_IO.Get_Line (File);

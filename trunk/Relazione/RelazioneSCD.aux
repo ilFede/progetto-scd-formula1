@@ -18,6 +18,8 @@
 \@writefile{toc}{\contentsline {paragraph}{Circuito}{2}}
 \@writefile{toc}{\contentsline {paragraph}{Gara}{2}}
 \@writefile{toc}{\contentsline {paragraph}{Concorrente}{2}}
+\@writefile{toc}{\contentsline {paragraph}{Stato del pilota}{2}}
+\@writefile{toc}{\contentsline {paragraph}{Stato del sistema o stato della gara}{2}}
 \gdef \LT@ii {\LT@entry 
     {1}{69.70549pt}\LT@entry 
     {1}{240.02203pt}}
@@ -46,7 +48,7 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Segmenti}{9}}
 \@writefile{toc}{\contentsline {subsubsection}{Codice segmento}{10}}
 \@writefile{toc}{\contentsline {subsubsection}{Tipologia}{10}}
-\@writefile{toc}{\contentsline {subsubsection}{Lunghezza}{10}}
+\@writefile{toc}{\contentsline {subsubsection}{Lunghezza}{11}}
 \@writefile{toc}{\contentsline {subsubsection}{Velocit\IeC {\`a} massima}{11}}
 \@writefile{toc}{\contentsline {subsubsection}{Numero di corsie}{11}}
 \@writefile{toc}{\contentsline {subsubsection}{Presenza fotocellula}{11}}
@@ -70,6 +72,7 @@
 \@writefile{toc}{\contentsline {subsubsection}{Fine della gara}{19}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.5}Invio dello stato del pilota}{19}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.4}Monitor}{20}}
+\newlabel{Monitor}{{3.4}{20}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.5}StartUp}{21}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {4}Distribuzione}{23}}
 \@writefile{lof}{\addvspace {10\p@ }}
@@ -77,84 +80,88 @@
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Partizionamento}{23}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.2}Comunicazione}{24}}
 \newlabel{Comunicazione}{{4.2}{24}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Schema di distribuzione e dei canali di comunicazione}}{24}}
-\newlabel{Fig:SchemaDistribuzione}{{4.1}{24}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Concorrenza}{25}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Middleware e interfaccia}{24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Schema di distribuzione e dei canali di comunicazione}}{25}}
+\newlabel{Fig:SchemaDistribuzione}{{4.1}{25}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Concorrenza}{27}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{Concorenza}{{5}{25}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Organizzazione gerarchica dei thead di F1Engine}{25}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Organizzazione gerarchica dei thread di F1Engine}}{26}}
-\newlabel{fig:OrganizzazioneThreadF1Engine}{{5.1}{26}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Schieramento nella griglia di partenza}{26}}
-\newlabel{Schieramento nella griglia di partenza}{{5.2}{26}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Acceso ai segmenti}{27}}
-\newlabel{Accesso ai segmenti}{{5.3}{27}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Stato del segmento S all'istante in cui il pilota C chiede l'accesso}}{29}}
-\newlabel{fgr:AccessoSegmentiStatoInziale}{{5.2}{29}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Caso $T_i < T_a$}{29}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Caso $T_a < T_i < T_b$}{29}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Caso 1: Stato del segmento S dopo che il pilota C ha effettuato l'accesso}}{30}}
-\newlabel{fgr:AccessoSegmentiCaso1}{{5.3}{30}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Caso 2: Stato del segmento S dopo che il pilota C ha effettuato l'accesso}}{30}}
-\newlabel{fgr:AccessoSegmentiCaso2}{{5.4}{30}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Caso $T_i > T_b$}{31}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Caso 3: Stato del segmento S dopo che il pilota C ha effettuato l'accesso}}{31}}
-\newlabel{fgr:AccessoSegmentiCaso3}{{5.5}{31}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Stallo}{31}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Accesso esclusivo a risorsa condivisa}{32}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Inibizione del prerilascio}{32}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Accumulo di risorse}{32}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}Attesa circolare}{32}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Starvation}{32}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.6}Avvio e terminazione}{33}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.1}F1ControlPanel}{33}}
-\@writefile{toc}{\contentsline {subsubsection}{Avvio}{33}}
-\@writefile{toc}{\contentsline {subsubsection}{Terminazione}{33}}
-\@writefile{toc}{\contentsline {subsubsection}{Caduta o mancanza del nodo F1Engine}{34}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.2}F1Engine}{34}}
-\@writefile{toc}{\contentsline {subsubsection}{Avvio}{34}}
-\@writefile{toc}{\contentsline {subsubsection}{Terminazione}{34}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Scope del nodo F1Engine}}{35}}
-\newlabel{Fig:Scope}{{5.6}{35}}
-\@writefile{toc}{\contentsline {subsubsection}{Caduta o mancanza del nodo F1ControlPanel}{35}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.7}Problemi legati alla granularit\IeC {\`a} del tempo}{35}}
-\newlabel{Problemi legati alla granularita del tempo}{{5.7}{35}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Implementazione}{37}}
+\newlabel{Concorrenza}{{5}{27}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Organizzazione gerarchica dei thread di F1Engine}{27}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Organizzazione gerarchica dei thread di F1Engine}}{28}}
+\newlabel{fig:OrganizzazioneThreadF1Engine}{{5.1}{28}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Schieramento nella griglia di partenza}{28}}
+\newlabel{Schieramento nella griglia di partenza}{{5.2}{28}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Acceso ai segmenti}{29}}
+\newlabel{Accesso ai segmenti}{{5.3}{29}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Schema del protocollo di schieramento nella griglia di partenza}}{30}}
+\newlabel{fig:SchemaSchieramento}{{5.2}{30}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Stato del segmento S all'istante in cui il pilota C chiede l'accesso}}{32}}
+\newlabel{fgr:AccessoSegmentiStatoInziale}{{5.3}{32}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Caso $T_i < T_{Pb}$}{32}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Caso 1: Stato del segmento $S$ dopo che il pilota $P_C$ ha effettuato l'accesso nel caso $T_i < T_{Pb}$}}{33}}
+\newlabel{fgr:AccessoSegmentiCaso1}{{5.4}{33}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Caso $T_{Pb} < T_i < T_{Pa}$}{33}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Caso $T_i > T_{Pa}$}{33}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Caso 2: Stato del segmento $S$ dopo che il pilota C ha effettuato l'accesso nel caso $T_{Pb} < T_i < T_{Pa}$}}{34}}
+\newlabel{fgr:AccessoSegmentiCaso2}{{5.5}{34}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Altri casi particolari}{34}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Stallo}{34}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Caso 3: Stato del segmento S dopo che il pilota C ha effettuato l'accesso nel caso $T_i > T_a$}}{35}}
+\newlabel{fgr:AccessoSegmentiCaso3}{{5.6}{35}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Accesso esclusivo a risorsa condivisa}{35}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Inibizione del prerilascio}{35}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Accumulo di risorse}{36}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}Condizioni di attesa circolare}{36}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Starvation}{37}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Avvio e terminazione}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.1}F1ControlPanel}{37}}
+\@writefile{toc}{\contentsline {subsubsection}{Avvio}{37}}
+\@writefile{toc}{\contentsline {subsubsection}{Terminazione}{37}}
+\@writefile{toc}{\contentsline {subsubsection}{Caduta o mancanza del nodo F1Engine}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.2}F1Engine}{38}}
+\@writefile{toc}{\contentsline {subsubsection}{Avvio}{38}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Scope del nodo F1Engine}}{38}}
+\newlabel{Fig:Scope}{{5.7}{38}}
+\@writefile{toc}{\contentsline {subsubsection}{Terminazione}{39}}
+\@writefile{toc}{\contentsline {subsubsection}{Caduta o mancanza del nodo F1ControlPanel}{39}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.7}Problemi legati alla granularit\IeC {\`a} del tempo}{39}}
+\newlabel{Problemi legati alla granularita del tempo}{{5.7}{39}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Implementazione}{41}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Nodo 1}{37}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Nodo 2}{37}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Middleware}{38}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Accorgimenti}{38}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Schema di distribuzione dopo l'aggiunta dell'entit\IeC {\`a} Sender}}{39}}
-\newlabel{Fig:SchemaDistribuzioneSender}{{6.1}{39}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Compilazione, configurazione ed esecuzione}{41}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Nodo 1}{41}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Nodo 2}{41}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Middleware}{42}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Accorgimenti}{42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Schema di distribuzione dopo l'aggiunta dell'entit\IeC {\`a} Sender}}{43}}
+\newlabel{Fig:SchemaDistribuzioneSender}{{6.1}{43}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Compilazione, configurazione ed esecuzione}{45}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Ambiente d'esecuzione}{41}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}Compilazione}{41}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.3}Configurazione}{41}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.4}File .trk}{42}}
-\@writefile{toc}{\contentsline {subsubsection}{Segment\_Type}{42}}
-\@writefile{toc}{\contentsline {subsubsection}{Length}{42}}
-\@writefile{toc}{\contentsline {subsubsection}{Speed}{42}}
-\@writefile{toc}{\contentsline {subsubsection}{Num\_Lane}{42}}
-\@writefile{toc}{\contentsline {subsubsection}{Has\_Time\_Check}{43}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.5}File .car}{43}}
-\@writefile{toc}{\contentsline {subsubsection}{Manufacter}{43}}
-\@writefile{toc}{\contentsline {subsubsection}{Coeff\_Acceleration}{43}}
-\@writefile{toc}{\contentsline {subsubsection}{Coeff\_Deceleration}{43}}
-\@writefile{toc}{\contentsline {subsubsection}{Max\_Speed}{43}}
-\@writefile{toc}{\contentsline {subsubsection}{Coeff\_Roadholding}{44}}
-\@writefile{toc}{\contentsline {subsubsection}{Coeff\_Tire\_Wear}{44}}
-\@writefile{toc}{\contentsline {subsubsection}{Consuption}{44}}
-\@writefile{toc}{\contentsline {subsubsection}{Max\_Fuel\_Level}{44}}
-\@writefile{toc}{\contentsline {subsubsection}{Reliability}{44}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.6}File .plt}{44}}
-\@writefile{toc}{\contentsline {subsubsection}{Number}{44}}
-\@writefile{toc}{\contentsline {subsubsection}{Name}{44}}
-\@writefile{toc}{\contentsline {subsubsection}{Skill\_Acceleration}{44}}
-\@writefile{toc}{\contentsline {subsubsection}{Skill\_Deceleration}{45}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.7}File .conf}{45}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.8}Esecuzione}{45}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Ambiente d'esecuzione}{45}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Compilazione}{45}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}Configurazione}{45}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.4}File .trk}{46}}
+\@writefile{toc}{\contentsline {subsubsection}{Segment\_Type}{46}}
+\@writefile{toc}{\contentsline {subsubsection}{Length}{46}}
+\@writefile{toc}{\contentsline {subsubsection}{Speed}{46}}
+\@writefile{toc}{\contentsline {subsubsection}{Num\_Lane}{46}}
+\@writefile{toc}{\contentsline {subsubsection}{Has\_Time\_Check}{47}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.5}File .car}{47}}
+\@writefile{toc}{\contentsline {subsubsection}{Manufacter}{47}}
+\@writefile{toc}{\contentsline {subsubsection}{Coeff\_Acceleration}{47}}
+\@writefile{toc}{\contentsline {subsubsection}{Coeff\_Deceleration}{47}}
+\@writefile{toc}{\contentsline {subsubsection}{Max\_Speed}{47}}
+\@writefile{toc}{\contentsline {subsubsection}{Coeff\_Roadholding}{48}}
+\@writefile{toc}{\contentsline {subsubsection}{Coeff\_Tire\_Wear}{48}}
+\@writefile{toc}{\contentsline {subsubsection}{Consuption}{48}}
+\@writefile{toc}{\contentsline {subsubsection}{Max\_Fuel\_Level}{48}}
+\@writefile{toc}{\contentsline {subsubsection}{Reliability}{48}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.6}File .plt}{48}}
+\@writefile{toc}{\contentsline {subsubsection}{Number}{48}}
+\@writefile{toc}{\contentsline {subsubsection}{Name}{48}}
+\@writefile{toc}{\contentsline {subsubsection}{Skill\_Acceleration}{48}}
+\@writefile{toc}{\contentsline {subsubsection}{Skill\_Deceleration}{49}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.7}File .conf}{49}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.8}Esecuzione}{49}}

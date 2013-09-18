@@ -9,6 +9,8 @@ with Ada.Numerics.Elementary_Functions;
 with Formula1.Race; use Formula1.Race;
 with Formula1.Segment; use Formula1.Segment;
 with Ada.Calendar; use Ada.Calendar;
+with ada.numerics.discrete_random;
+-- with Numerics.Discrete_Random;
 
 package body Formula1.Pilot is
 
@@ -83,6 +85,12 @@ package body Formula1.Pilot is
          -- 0 => Gara conclusa
          -- 1 => Benzina finita
          -- 2 => Guasto tecnico
+
+      -- generatore random
+      type Rand_Draw is range 1..99;
+      package Rand_Int is new Ada.Numerics.Discrete_Random(Rand_Draw);
+      seed : Rand_Int.Generator;
+      Num : Rand_Draw;
 
       ---------------------------------------------------
       -- DEFINIZIONE DELLE PROCEDURE E FUNZIONI DI APPOGGIO
@@ -302,6 +310,9 @@ package body Formula1.Pilot is
       -- calcolo il carburante necessario per un giro di pista
       Fuel_For_Lap := Car.Consumption * Float (The_Race.Track.Lap_Length) / 1000.0;
 
+      -- resetto il generatore
+      Rand_Int.Reset(seed);
+
       ---------------------------------------------------
       -- REGISTRO IL PILOTA NEL MONITOR
       ---------------------------------------------------
@@ -441,7 +452,13 @@ package body Formula1.Pilot is
                On_Race := false;
                Finish_Reason := 1;
             end if;
-            TODO controllo guasti
+            -- controllo guasti
+            Num := Rand_Int.Random(seed);
+            if (Integer'Value(Rand_Draw'Image(Num)) > Integer'(Car.Reliability)) then
+              -- la vettura ha subito un guasto
+              On_Race := false;
+              Finish_Reason := 2;
+            end if;
             ------------------------------------------------
             -- FINE VERIFICA PIT STOP, CARBURANTE E GUASTI
             ------------------------------------------------
@@ -454,7 +471,7 @@ package body Formula1.Pilot is
       Sender_Ref.all.Send_Finish_Race (Number, (new String'(Duration'Image (Clock - Race_Start_Time))), Finish_Reason);
    exception
       when Error : others =>
-	 Put_Line ("You have a problem!!");
+	 Put_Line ("You have a commuication problem!!");
 	 Put_Line (Exception_Name (Error));
 	 Put (Exception_Message (Error));
    end Pilot_T;

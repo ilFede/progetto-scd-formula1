@@ -20,7 +20,7 @@ W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 
-U formula1.sender%s	formula1-sender.ads	5b35d450 EE OO PK
+U formula1.sender%s	formula1-sender.ads	4a934aa7 EE OO PK
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.finalization.list_controller%s  a-filico.adb  a-filico.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -74,15 +74,15 @@ D corba-policy.ads	20120514092038 6f47498d
 D corba-request.ads	20120514092038 b6132a43
 D corba-sequences.ads	20120514092039 f2f01446
 D corba-sequences-unbounded.ads  20120514092039 3997a2a3
-D formula1.ads		20130610113645 768996f8
+D formula1.ads		20130915143217 672f080f
 D formula1-sender.ads	20130613201732 61cb592a
 D formula1-sender.adb	20130706171352 1b02421d
 D interfac.ads		20090409150019 f77d8799
 D i-c.ads		20101007125900 809c38c4
 D i-cstrea.ads		20100622165701 1bd72c32
-D mdlcontrolpanel.ads	20130715124519 7d2d71fb
-D mdlcontrolpanel-timepanelinterface.ads  20130715124519 365b996c
-D mdlcontrolpanel-timepanelinterface-helper.ads  20130715124519 1fec3a1a
+D mdlcontrolpanel.ads	20130915145843 7d2d71fb
+D mdlcontrolpanel-timepanelinterface.ads  20130915145843 365b996c
+D mdlcontrolpanel-timepanelinterface-helper.ads  20130915145843 1fec3a1a
 D polyorb.ads		20120514092109 1b2dc832
 D polyorb-annotations.ads  20120514092100 177ede12
 D polyorb-any.ads	20120514092101 06c36295
@@ -169,7 +169,7 @@ X 34 corba-orb.ads
 112U14*String_To_Object 41|17s20
 227U14*Initialize 41|16s20
 X 39 formula1.ads
-8K9*Formula1 176e13 40|7r9 49r5 41|9r14 109r5
+8K9*Formula1 179e13 40|7r9 49r5 41|9r14 109r5
 28P9*String_Ref_T(string) 40|13r45 16r74 16r107 16r136 16r174 16r212 19r68
 . 19r179 25r73 28r62 28r88 28r116 28r141 34r84 37r75 41|14r45 28r74 28r107
 . 28r136 28r174 28r212 39r68 39r179 59r73 69r62 69r88 69r116 69r141 89r84
