@@ -110,7 +110,7 @@ package Formula1 is
    subtype Coeff_Tire_Wear_T is Positive range 1..10;
 
    -- sottotipo per il coefficente di affidabilità
-   subtype Coeff_Reliability_T is Positive range 1..10;
+   subtype Coeff_Reliability_T is Integer range 1..100;
 
    -- sottotipo per le condizioni delle gomme
    subtype Tires_Condition_T is Corba.Long range 0..2;

@@ -15,7 +15,7 @@ package Formula1.Car is
 	 Max_Speed          : Real_T;
 	 -- coefficente di tenuta di strada
 	 Coeff_Roadholding  : Coeff_Roadholding_T;
-         --coefficente usura gomme
+         -- coefficente usura gomme
          Coeff_Tire_Wear : Coeff_Tire_Wear_T;
 	 -- consumo di carburante
 	 Consumption        : Car_Consumption_T;
@@ -25,6 +25,8 @@ package Formula1.Car is
          Max_Fuel_Level : Float;
          -- condizioni delle gomme
          Tires_Condition : Tires_Condition_T;
+         -- affidabilità
+         Reliability : Coeff_Reliability_T;
       end record;
 
    -- tipo per l'accesso a una variabile di tipo Car_T

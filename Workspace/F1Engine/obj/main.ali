@@ -2,20 +2,23 @@ V "GNAT Lib v4.6"
 M P AB W=b
 A -gnatA
 P SS ZX
-R nnnvnnnvnvnnnnnnnnnnnnnnvvnnnnnvnnnnnnnnnvnnvnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+R nnnvnnnvnvnnnnnnnnnnnvnnnvnnnnnvnnnnnnnnnvnnvnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
 
-U main%b		main.adb		27a4af75 NE OO SU
+U main%b		main.adb		342f9545 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 W ada.command_line%s	a-comlin.adb		a-comlin.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.discrete_random%s
 W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W corba%s		corba.adb		corba.ali
 W formula1%s		formula1.adb		formula1.ali
 W formula1.startup%s	formula1-startup.adb	formula1-startup.ali
+W system%s		system.ads		system.ali
 W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.random_numbers%s  s-rannum.adb		s-rannum.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
-W system.val_int%s	s-valint.adb		s-valint.ali
 
 D ada.ads		20070406091342 3ffc8e18
 D a-calend.ads		20090409150019 343c83dd
@@ -28,6 +31,9 @@ D a-except.ads		20090727140100 0c711ac9
 D a-finali.ads		20090409150019 e5e85fa4
 D a-filico.ads		20090409150019 872dc219
 D a-ioexce.ads		20091130110856 8b9de6cd
+D a-numeri.ads		20080324174807 bb51c45a
+D a-nudira.ads		20100622172941 2fef2912
+D a-nudira.adb		20100622172941 e57ce22b
 D a-stream.ads		20090409150019 2ca4ee37
 D a-string.ads		20070406091342 90ac6797
 D a-strfix.ads		20101008130255 d07c346e
@@ -42,11 +48,11 @@ D a-textio.ads		20091028140912 386df5d4
 D a-unccon.ads		20070406091342 f9eb8f06
 D a-uncdea.ads		20070406091342 f15a5ed1
 D corba.ads		20120514092039 5b6176ff
-D formula1.ads		20130610113645 768996f8
+D formula1.ads		20130915143217 672f080f
 D formula1-startup.ads	20130609221630 21ca4fb3
 D interfac.ads		20090409150019 f77d8799
 D i-cstrea.ads		20100622165701 1bd72c32
-D main.adb		20130609232752 e6b1f3de
+D main.adb		20130915145838 cb737e0b
 D polyorb.ads		20120514092109 1b2dc832
 D polyorb-any.ads	20120514092101 06c36295
 D polyorb-errors.ads	20120514092102 ab5de59c
@@ -59,7 +65,10 @@ D s-exctab.ads		20090417131547 66e51330
 D s-ficobl.ads		20100909103250 443b9d66
 D s-finimp.ads		20090409150019 46853fe8
 D s-finroo.ads		20090409150019 dbb860c9
+D s-imguns.ads		20090409150019 9ff43cf7
 D s-parame.ads		20091130110856 9c5d83fa
+D s-rannum.ads		20100623054052 5eb33f0a
+D s-rannum.adb		20100623062126 67756f39
 D s-secsta.ads		20090707124243 eea35a36
 D s-soflin.ads		20090729085153 9414c974
 D s-stache.ads		20090417130712 596fc1b4
@@ -69,52 +78,59 @@ D s-stoele.adb		20100617152355 afc5dc80
 D s-stratt.ads		20100909123135 aedef97e
 D s-traent.ads		20090417130712 5221ee41
 D s-unstyp.ads		20090409150019 6ae15c76
-D s-valint.ads		20090409150019 48a52a3f
+D s-valuns.ads		20090409150019 10a8ed3b
 D s-wchcon.ads		20090417130712 bfeb2e3d
 X 1 ada.ads
-16K9*Ada 19e8 30|3r6 4r5 7r6 8r5 9r6 9r24 16r17 28r4 29r30 31r14 33r27 38r4
-. 39r44
+16K9*Ada 19e8 33|3r6 4r5 7r6 8r5 9r6 9r24 13r6 18r17 24r28 27r4 28r30 31r14
+. 33r27 38r4 39r44
 X 2 a-calend.ads
-36K13*Calendar 358e17 30|9w10 9r28
-38I9*Time 30|23r14
-52V13*Clock{38I9} 30|23s22
+36K13*Calendar 358e17 33|9w10 9r28
+38I9*Time 33|22r14
+52V13*Clock{38I9} 33|22s22
 X 5 a-comlin.ads
-38K13*Command_Line 139e21 30|3w10 4r9 39r48
-48V13*Argument{string} 30|39s61
-X 22 a-textio.ads
-49K13*Text_IO 472e16 30|7w10 8r9 16r21 28r8 29r34 31r18 33r31 38r8
-52P9*File_Type(370R9) 30|16r29
-53n23*In_File{53E9} 30|29r42
-93U14*Open 30|28s16
-94p7 File{52P9} 30|28r22
-95e7 Mode{53E9} 30|29r22
-96s7 Name{string} 30|30r22
-99U14*Close 30|38s16
-184V13*End_Of_File{boolean} 30|31s26
-254V13*Get_Line{string} 30|33s39
-X 25 corba.ads
-49K9*CORBA 1029e10 30|12w6 12r17 25r11 25r25
-61I12*Long<28|45I9> 30|25r17 25r31
-X 26 formula1.ads
-8K9*Formula1 176e13 30|1r6 10r6 10r28 11w6 11r20
-28P9*String_Ref_T(string) 30|18r18 19r31
-152a4*IOR_Set_Path{string} 30|30r30
-X 27 formula1-startup.ads
-3K18*Startup 11e21 30|1w15 10w15 10r37
-9U14*Race_Startup 30|40s4
-X 28 interfac.ads
-45I9*Integer_32<integer>
-X 30 main.adb
-14U11*Main 14b11 42l5 42t9
-15a4 Filename{string} 30r45
-16p4 File{22|52P9} 28m30 31r39 33r49 38m23
-17i4 Line_Count{natural}
-18p4 IOR_Str_Ref{26|28P9} 35m10 35r37 40r44
-19p4 Race_Config_Filename_Ref{26|28P9} 39m4 40r18
-21i4 Int{integer} 22r26
-22f4 Flo{float}
-23i4 NowTime{2|38I9}
-24a4 cio{string}
-25i4 test{25|61I12}
+38K13*Command_Line 139e21 33|3w10 4r9 39r48
+48V13*Argument{string} 33|39s61
+X 12 a-numeri.ads
+16K13*Numerics 32e17 33|13r10 24r32
+X 13 a-nudira.ads
+44k22*Discrete_Random 73e33 33|13w19 24r41
+X 14 a-nudira.adb
+51V16 Random[48|74]{33|23I9} 49|394b13[33|24]
+X 25 a-textio.ads
+49K13*Text_IO 472e16 33|7w10 8r9 18r21 27r8 28r34 31r18 33r31 38r8
+52P9*File_Type(370R9) 33|18r29
+53n23*In_File{53E9} 33|28r42
+93U14*Open 33|27s16
+94p7 File{52P9} 33|27r22
+95e7 Mode{53E9} 33|28r22
+96s7 Name{string} 33|29r22
+99U14*Close 33|38s16
+184V13*End_Of_File{boolean} 33|31s26
+254V13*Get_Line{string} 33|33s39
+X 28 corba.ads
+49K9*CORBA 1029e10 33|12w6 12r17
+X 29 formula1.ads
+8K9*Formula1 179e13 33|1r6 10r6 10r28 11w6 11r20
+28P9*String_Ref_T(string) 33|20r18 21r31
+155a4*IOR_Set_Path{string} 33|29r30
+X 30 formula1-startup.ads
+3K18*Startup 11e21 33|1w15 10w15 10r37
+9U14*Race_Startup 33|40s4
+X 31 interfac.ads
+57M9*Unsigned_32
+60M9*Unsigned_64
+X 33 main.adb
+16U11*Main 16b11 42l5 42t9
+17a4 Filename{string} 29r45
+18p4 File{25|52P9} 27m30 31r39 33r49 38m23
+19i4 Line_Count{natural}
+20p4 IOR_Str_Ref{29|28P9} 35m10 35r37 40r44
+21p4 Race_Config_Filename_Ref{29|28P9} 39m4 40r18
+22i4 NowTime{2|38I9}
+23I9 Rand_Draw<short_short_integer> 24r57
+24K12 Rand_Int[13|44]
 33a10 Line{string} 35r55
+X 48 s-rannum.ads
+66V13*Random{31|57M9} 49|223i21
+67V13*Random{31|60M9} 49|223i21
 

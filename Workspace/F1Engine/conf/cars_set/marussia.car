@@ -9,6 +9,7 @@
 #   -Coeff_Tire_Wear: (Integer 1..10)
 #   -Consuption: (Float 1..∞)
 #   -Max_Fule_Level: (Float 1..∞)
+#   -Reliability: (Integer 1..100)
 #
 #Manufacter indica la casa costruttrice della vettura
 #
@@ -25,6 +26,8 @@
 #Consuption indica il consumo dell'auto, misurato in litri per chilometro
 #
 #Max_Fuel_Level indica la capienza del serbatoio in litri
+#
+#Reliability indica l'affidabilità della vettura
 #
 #Non insere spazi a inizio riga
 #I commenti devono iniziare a inizio riga
@@ -47,4 +50,6 @@ Marussia
 1.5
 #Capienza serbatio
 240
+#Affidabilità
+20
 ####### Fine configurazione vettura #######

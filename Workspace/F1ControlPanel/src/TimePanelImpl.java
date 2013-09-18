@@ -479,11 +479,11 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 				(lngTime % 60000) / 1000, (lngTime % 1000));
 		String txt = "";
 		if (reason == 0) {
-			txt = "gara finita";
+			txt = "gara finita!";
 		} else if (reason == 1) {
-			txt = "benzina finita";
+			txt = "benzina finita!";
 		} else {
-			txt = "gusto";
+			txt = "guasto!";
 		}
 		timesDataModel.setValueAt(txt, rowNumber,
 				getColumIndex("Stato del pilota"));

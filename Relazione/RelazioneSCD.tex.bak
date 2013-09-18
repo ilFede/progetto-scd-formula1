@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt, twoside]{book}
+\documentclass[a4paper,11pt, twoside, openright]{book}
 
 \usepackage[italian]{babel}
 \usepackage[utf8x]{inputenc}
@@ -74,35 +74,39 @@
   
   
   \begin{flushright}
-    Studente: Cacco Federico\\Matricola: 624686\\Data: 11 settembre 2013\\Versione: 1.1
+    Studente: Cacco Federico\\Matricola: 624686\\Data: 12 settembre 2013\\Versione: 1.1
   \end{flushright}
 
   \newpage
   \pagenumbering{Roman}
-  \setcounter{page}{1}
+  \setcounter{page}{2}
   %Fine titolo
   
   \section*{Diario delle modifiche}
   
-  \begin{small}
+    Tra parentesi sono indicate le numerazioni delle sezioni corrispondenti alla versione precedente.
     
-    \begin{longtable}{|p{6cm}|p{2.4cm}|p{1.8cm}|p{0.8cm}|}
-      \toprule
-	\bfseries{MODIFICA} & \bfseries{AUTORE} & \bfseries{DATA} & \bfseries{VER} \\
-      \hline \hline \endfirsthead
+    \begin{small}
       
-      Prima versione del documento & Cacco Federico & 28-07-2013 & 1.0 \\\hline
+      \begin{longtable}{|p{6cm}|p{2.4cm}|p{1.8cm}|p{0.8cm}|}
+	\toprule
+	  \bfseries{MODIFICA} & \bfseries{AUTORE} & \bfseries{DATA} & \bfseries{VER} \\
+	\hline \hline \endfirsthead
+	
+	Prima versione del documento & Cacco Federico & 28-07-2013 & 1.0 \\\hline
+	
+	Correzione errori ortografici \newline\
+	Migliorata la leggibilità \newline\
+	Aggiunte sezioni 4.3, 5.1 e 5.3.4 \newline\
+	Modificati e integrati sezioni 1.2, 3.1, 3.3.1, 4.2, 5.2 (5.1)
+	5.3 (5.2), 5.4 (5.3), 5.5 (5.4), 5.6.1 (5.5.1), 5.6.2 (5.5.2), 5.7 (5.6)
+
+	& Cacco Federico & 12-09-2013 & 1.1 \\\hline
+      \end{longtable}
       
-      Correzione errori ortografici \newline\
-      Prova1 \newline
-      Prova2
-      & Cacco Federico & 11-09-2013 & 1.1 \\\hline
-    \end{longtable}
-    
-  \end{small}
-    
+    \end{small}
+      
   \tableofcontents
-  \newpage
   
   \chapter{Introduzione}
     \setcounter{page}{1}
@@ -164,8 +168,19 @@
 	
       \paragraph{Concorrente}
         Si tratta dell'entità che partecipa alla gara, ogni concorrente è composto da un pilota e da una vettura
-	a lui associata.
+	a lui associata.  
         
+      \paragraph{Stato del pilota}
+        Con stato del pilota si intende l'insieme dei valori che caratterizzano un pilota e la relativa vettura 
+	(ovvero nome, numero, costruttore, benzina nel serbatoio e stato degli pneumatici) e quelli relativi
+	alla sua gara, ovvero i tempi degli intermedi del giro corrente, il tempo totale di gara. il numero
+	di soste fatte e il numero di giri conclusi.
+	
+      \paragraph{Stato del sistema o stato della gara}
+        Con stato del sistema, o stato della gara, si intende l'insieme dei valori che consentono di descrivere 
+	le caratteristiche della gara (nome circuito, numero di giri e condizioni meteorologiche), unite alle informazioni
+	relative allo stato di ogni pilota partecipante a tale gara in modo da poter ricavare la classifica corrente
+	e i distacchi dei vari piloti dal primo in classifica.
   \chapter{Analisi dei requisiti}
     I requisiti funzionali obbligatori del progetto sono elencati nella tabella \ref{tbl:RequisitiFunzionaliObbligatori}
     
@@ -213,42 +228,47 @@
     
     \section{Modello e componenti}
       \subsection{Modello}
-	Per prima è stato necessario decidere con che modello rappresentare lo scenario proposto. Dato che lo scopo
-	del progetto si focalizza sugli aspetti di natura concorrente e distribuita, è stato scelto di utilizzare un
+      \label{Modello}
+	Nello sviluppo del progetto 
+	per prima cosa è stato necessario stabilire con che modello rappresentare lo scenario proposto. Dato che lo scopo
+	di tale progetto
+        si focalizza sullo studio degli aspetti di natura concorrente e distribuita, è stato scelto di utilizzare un
 	modello a tempo discreto piuttosto che uno a tempo continuo.
 	
-	Questo perchè volendo appunto analizzare aspetti di natura concorrente non sarebbe interessante 
-	valutare l'evoluzione del sistema eseguendolo mediante una successione di avanzamenti unitari, dato
-	che ciò porterebbe alla mancanza di una esecuzione in tempo reale e verrebbero meno
+	Questo perché, volendo appunto analizzare aspetti di natura concorrente, non sarebbe interessante 
+	valutare l'evoluzione del sistema eseguito mediante una successione di avanzamenti unitari, dato
+	che ciò porterebbe alla mancanza di un'esecuzione in tempo reale e verrebbero quindi a mancare
 	molti aspetti legati allo studio della concorrenza tra le varie entità.
 	
-	Il fatto di aver quindi optato per un modello a tempo discreto ha comportato il dover decidere
+	Il fatto di aver optato per un modello a tempo discreto ha comportato il dover decidere
 	in quali istanti dovesse essere fornito uno stato coerente del sistema. Rapportandosi
-	alla realtà della Formula 1, dove lo stato di ogni pilota viene rilevato in determinati 
-	settori della pista,
-	si è scelto di procedere in modo analogo, ovvero aggiornando lo stato del sistema ogni volta che
-	un pilota attraversasse un determinato punto del tracciato. 
-        Sulla base di ciò come prima cosa è stata elaborata l'idea di suddividere un tracciato in vari segmenti.
+	alla realtà della Formula 1, dove lo stato di ogni pilota viene rilevato al termine di determinati 
+	settori della pista (chiamati intermedi),
+	si è scelto di procedere in modo analogo ovvero aggiornando lo stato del sistema ogni volta che
+	un pilota attraversa un determinato punto del tracciato.
 
-	
 	L'aggiornamento del sistema risulta quindi legato ad una dimensione spaziale (la posizione del pilota nella pista)
 	e non temporale (il tempo trascorso), e ciò ha implicato
 	che non sia più il tempo, ma la distanza percorsa la variabile indipendente tramite 
 	la quale vengono calcolati tutti gli altri dati.
 	
-	Dato che lo stato del sistema viene aggiornato in modo discreto, è necessaria la presenza di un modello
+	Scegliere il tempo come variabile indipendente non sarebbe stata una scelta molto conveniente, in quanto per
+	calcolare in quali istanti di tempo determinare lo stato del sistema si sarebbero dovuti calcolare
+	tutti gli istanti in cui un pilota sarebbe uscito da un segmento. Viceversa questa sarebbe stata una scelta
+	valida nel caso in cui si fosse deciso di determinare uno stato coerente del sistema ad intervalli regolari
+	di tempo invece che in base alla distanza percorra da un pilota.
+	
+	Dato che lo stato del sistema viene aggiornato in modo discreto, è inoltre necessaria la presenza di un modello
 	di concorrenza per far si che esso evolva in modo corretto tra uno stato e l'altro.
 	
-	Sulla base di ciò come prima cosa è stata elaborata l'idea di suddividere un tracciato in vari segmenti.
-	
       \subsection{Componenti}
-	Successivamente si è pensato a come scomporre il sistema, individuandone le varie componenti fondamentali
+	Successivamente si è pensato a come scomporre il sistema, individuandone le varie componenti fondamentali.
       
 	Per prima cosa sono state individuate 2 partizioni ben distinte, una chiamata F1Engine legata al 
 	funzionamento dell'applicazione e una chiamata F1ControlPanel legata alla visualizzazione dello stato della competizione.
 	
 	La motivazione di questa prima suddivisione risiede nella necessità di poter poi distribuire l'intero sistema,
-	creando 2 partizioni che potessero cooperare eseguendo però in modo indipendente l'una dall'altra.
+	creando 2 partizioni che possano cooperare eseguendo però in modo indipendente l'una dall'altra.
 	
 	Per ogni partizione del progetto sono state poi individuati i seguenti componenti:
 	
@@ -272,14 +292,14 @@
       Verrà ora descritta la struttura del componente \textsl{Gara}, con lo scopo di fornire una prima organizzazione gerarchica 
       dei vari componenti e averne quindi una prima visione d'insieme.
       
-      La gara come detto rappresenta l'evento alla quale partecipano i vari concorrenti, ed è composta
-      da un circuito, una condizione meteo e un numero di giri da percorrere.
+      \textsl{Gara} rappresenta l'evento alla quale partecipano i vari concorrenti, ed è composta
+      da un circuito, una condizione meteorologica e un numero di giri da percorrere.
       
       Essa non svolge alcun ruolo attivo
-      e la sua unica funzione è quella di accogliere i piloti impegnati nella competizione. 
-      La gestione della parte concorrente è effettuata mediante dei suoi sotto-componenti. 
+      e la sua unica funzione è quella di accogliere i piloti impegnati nella competizione,
+      la gestione della parte concorrente è infatti poi effettuata mediante dei suoi sotto-componenti. 
       
-      Alla base di ciò nella progettazione di Gara si è tenuto conto i questi aspetti:
+      Alla base di ciò nella progettazione di \textsl{Gara} si è tenuto conto i questi aspetti:
 	
 	\begin{itemize}
 	  \item Dovrà essere specificata una lunghezza del circuito
@@ -289,49 +309,51 @@
 		di percorrenza
 	  \item Dovranno esserci dei punti per il rilevamento delle prestazioni
 	  \item Dovrà essere presente una corsia per i box, con relative regole di accesso
-	  \item Le prestazioni possono essere influenzate dalle condizioni metereologiche
+	  \item Le prestazioni possono essere influenzate dalle condizioni meteorologiche
 	\end{itemize}
 	
       Come scritto la componente \textsl{Gara} in se non svolge alcun ruolo attivo, e trattandosi di una semplice
       collezione di dati non necessità di particolari accorgimenti come ad esempio possono richiederne una risorsa protetta
-      o un'entità passiva-reattiva. Prt questo motivo è dunque possibile modellare tale componente come un semplice record di dati 
+      o un'entità passiva-reattiva. Per questo motivo è possibile modellare tale componente come un semplice record di dati 
       che verrà condiviso tra tutti i piloti, contenente i seguenti campi:
       
       \begin{itemize}
-	\item Circuito
-	\item Numero di giri
-	\item Condizioni meteo
+	\item \textsl{Circuito}
+	\item \textsl{Numero di giri}
+	\item \textsl{Condizioni meteo}
       \end{itemize}
       
       \textsl{Numero di giri} è un semplice campo numerico, mentre \textsl{Condizioni meteo} può assumere i 
       valori asciutto o bagnato. Quest'ultimo andrà poi a influenzare il tempo necessario ad un pilota per compiere 
       un giro di pista, in quando con pista bagnata le prestazioni decrescono sensibilmente.
       
-      \textsl{Circuito} rappresenta invece il tracciato su cui si svolge la gara, comprendendo la relativa griglia di partenza.
+      \textsl{Circuito} rappresenta invece il tracciato su cui si svolge la gara, comprendendo anche
+      la relativa griglia di partenza.
       Come per \textsl{Gara} anche quest'ultimo non ha nessun ruolo attivo e può nuovamente
       essere rappresentato come un semplice record di dati con i seguenti campi:      
       
       \begin{itemize}
-	\item Nome del circuito
-	\item Numero di segmenti
-	\item Lista dei segmenti
-	\item Griglia di partenza
-	\item Lunghezza del giro
+	\item \textsl{Nome del circuito}
+	\item \textsl{Numero di segmenti}
+	\item \textsl{Lista dei segmenti}
+	\item \textsl{Griglia di partenza}
+	\item \textsl{Lunghezza del giro}
       \end{itemize}
       
       \textsl{Nome del circuito} e \textsl{Lunghezza del giro} sono dei semplici campi che contengono appunto
       il nome del circuito e la lunghezza di ogni giro (corsia dei box esclusa)
       
-      Data la necessità di fissare dei punti
-      in cui poter recuperare lo stato di un pilota e dato che in un reale circuito 
+      Dato che la transizione tra 2 stati coerenti del sistema viene effettuata quando 
+      un pilota attraversa determinati punti del circuito si ha la necessità di fissare tali punti.
+      Siccome che in un reale circuito 
       di Formula 1 si possono distinguere tratti di pista contigui con caratteristiche simili
-      (come ad esempio curve e rettilinei o anche
-      tratti che consentono o meno ai vari piloti i sorpassarsi), si è deciso
-      di suddividere il tracciato in vari segmenti, che sono appunto tratti di pista contigui con simili caratteristiche.
-      Un tracciato è dunque rappresentato come usa successione di questi
+      (come ad esempio curve, rettilinei o
+      tratti che consentono o meno ai vari piloti di sorpassarsi), si è deciso
+      di suddividere il tracciato in vari segmenti, ovvero tratti di pista contigui con simili caratteristiche.
+      Un tracciato è dunque rappresentato come usa successione di questi ultimi, salvata in \textsl{Lista dei segmenti}.
       
       Anche \textsl{Griglia di partenza} non è un semplice campo dati, ma si tratta di una entità un po' più complessa
-      in quanto rappresenta la griglia di partenza nella quale i piloti si schiereranno nell'attesa del via.
+      in quanto rappresenta la griglia di partenza nella quale i piloti si schierano nell'attesa della partenza.
       
       Per chiarezza uno schema della struttura del componente \textsl{Gara} è riportato nella figura \ref{Fig:SchemaGara}
       
@@ -339,7 +361,7 @@
 	\centering
 	\includegraphics[width=110mm]{./Immagini/SchemaGara.png}
 	% SchemaGara.png: 2178x2098 pixel, 72dpi, 76.83x74.01 cm, bb=0 0 2178 2098
-	\caption{Schema di Gara}
+	\caption{Schema di \textsl{Gara}}
 	\label{Fig:SchemaGara}
       \end{figure}
       
@@ -347,10 +369,10 @@
       chiarezza i componenti principali.
 	
       \subsection{Circuito}
-	Come già detto rappresenta il tracciato su cui si svolge la competizione che viene rappresentato come una successione
-	di segmenti, e la relativa griglia di partenza.
+	\textsl{Circuito} rappresenta il tracciato su cui si svolge la competizione, e viene rappresentato con una successione
+	di segmenti e una griglia di partenza.
 	
-	Sulla base di ciò \textsl{Circuito} contiene quindi le seguenti proprietà:
+	Sulla base di ciò esso contiene quindi le seguenti proprietà:
 	
 	\begin{itemize}
 	  \item Nome del circuito
@@ -377,7 +399,7 @@
       \subsection{Segmenti}
 	La loro funzione, oltre a quella di descrivere il tracciato su cui si svolge la gara, è quella
 	di gestire la parte di concorrenza relativa ai sorpassi tra piloti determinando i loro tempi di attraversamento
-	in modo coerente rispetto ala presenza o meno di altri piloti.
+	in modo coerente rispetto alla presenza o meno di altri piloti.
 	
 	Le caratteristiche in base alla quale vengono raggruppati i tratti di pista contigui per dare origine ai segmenti sono:
 	\begin{itemize}
@@ -385,12 +407,12 @@
 	  \item Tipologia del tratto di pista (accelerazione, frenata, curva, entrata ai box, uscita dai box, corsia dei box)
 	\end{itemize}
 	
-	Il \textsl{numero di corsie} specifica quanti piloti possono attraversare il tratto di pista contemporaneamente uno in 
+	\textsl{Numero di corsie} specifica quanti piloti possono attraversare quel tratto di pista contemporaneamente uno di
 	fianco all'altro.
-	La \textsl{tipologia del tratto di pista} invece rappresenta il modo in cui si deve comportare un pilota quando lo attraversa,
+	\textsl{Tipologia del tratto di pista} invece rappresenta il modo in cui si deve comportare un pilota quando lo attraversa,
 	le varie tipologie sono accelerazione, frenata, curva, entrata ai box, uscita dai box e corsia dei box.
 	
-	Un segmento è dunque rappresentato da un record contenenti i seguenti campi:
+	Un segmento è dunque rappresentato da un record contenente i seguenti campi:
 	
 	\begin{itemize}
 	  \item Codice segmento
@@ -432,51 +454,54 @@
 	  i segmenti a velocità costanti modellano curve e corsia dei box.
 	  
 	\subsubsection{Lunghezza}
-	  Descrive semplicemente la lunghezza in metri del segmento
+	  Descrive semplicemente la lunghezza in metri del segmento.
 	
 	\subsubsection{Velocità massima}
-	  Il significato di questo dato varia in base alla tipologia del segmento. Nel caso
+	  Il significato di questo dato varia in base alla tipologia del segmento. 
+	  
+	  Nel caso
 	  in cui esso sia associato ad un segmento di accelerazione indica la massima velocità che la vettura può raggiungere,
 	  questo è utile ad esempio per modellare rettilinei non completamente dritti.
+	  
 	  Nei segmenti di decelerazione la velocità massima indica invece la velocità che dovrà avere la vettura al termine del
 	  segmento, per poter poi effettuare una curva o entrare in un segmento a velocità controllata come ad esempio la
 	  corsia dei box.
+	  
 	  Infine nei tratti a velocità costante il valore rappresenta la velocità massima con cui il segmento potrà essere
 	  attraversato, e avrà lo stesso valore del precedente tratto di decelerazione.
 	  
 	  Un tratto a velocità costante deve essere sempre preceduto da un tratto di decelerazione o di accelerazione
 	  che abbia la sua stessa velocità massima. Concettualmente è molto simile ad un tratto di accelerazione
 	  con velocità massima limitata, però tale distinzione risulterà poi comoda a livello implementativo
-	  per risparmiar inutili calcoli di accelerazione.
+	  per risparmiare inutili calcoli di accelerazione.
 	  
 	  Tutti i valori della velocità massima sono solo indicativi e servono per dare una descrizione del segmento,
 	  i reali valori di attraversamento verranno calcolati anche in base alle caratteristiche e allo stato di 
 	  vettura e pilota, come sarà spiegato nella sezione \ref{AttraversamentoSegmenti}
 	    
 	\subsubsection{Numero di corsie}
-	  Rappresenta il numero di corsie presenti nel segmento, influenzando la possibilità
+	  Rappresenta il numero di corsie presenti nel segmento, che influenzano la possibilità
 	  di poter effettuare sorpassi da parte dei piloti. Il loro numero determina infatti quanti piloti possono trovarsi
-	  contemporaneamente nello stesso tratto di segmento
+	  contemporaneamente nello stesso tratto di segmento.
 	  
 	  In un segmento con una sola corsia sarà dunque impossibile effettuare sorpassi, mentre saranno più agevoli
 	  al loro aumentare.
 	  
 	  Le corsie d'ingresso e uscita dai box, la corsia dei box e le curve hanno sempre il numero di corsie pari
-	  a 1
+	  a 1.
 	  
 	\subsubsection{Presenza fotocellula}
-	  Un circuito di Formula uno è solitamente diviso in 4 intermedi, alla fine dei quali
+	  Un circuito di Formula 1 è solitamente suddiviso in 4 intermedi, alla fine dei quali
 	  è presente un dispositivo per rilevare i tempi dei vari piloti. Questo parametro
 	  indica se alla fine del segmento deve essere rilevato tale tempo, e in caso affermativo
-	  specifica anche il numero dell'intermedio alla quale tale tempo si riferisce.
+	  specifica anche il numero dell'intermedio alla quale tale rilevazione fa riferimento.
 	
-
 	\subsubsection{Risorsa protetta}
 	  Ogni segmento contiene al suo interno una risorsa protetta, che ha essenzialmente due compiti. Il primo
 	  è quello di rendere possibile un accesso ai segmenti congruente ai vari vincoli imposti, 
 	  il secondo è quello di permettere un ordinamento dei piloti in base alla loro posizione.
 	  
-	  Una spiegazione dettagliata del loro funzionamento sarà data nella sezione \ref{Accesso ai segmenti}
+	  Una spiegazione dettagliata del suo funzionamento sarà data nella sezione \ref{Accesso ai segmenti}.
 	  
       \subsection{Griglia di partenza}
 	La griglia di partenza è il luogo dove i piloti prendono posto attendendo l'inizio della gara, ed è anch'essa modellata
@@ -517,6 +542,7 @@
 	\item Velocità massima
 	\item Tenuta di strada
 	\item Consumo degli pneumatici
+	\item Affidabilità
       \end{itemize}
       
       I coefficienti di accelerazione e di decelerazione indicano le prestazioni di accelerazione e frenata della vettura, 
@@ -529,6 +555,9 @@
       Il consumo degli pneumatici invece stabilisce in quanti giri essi degradano e hanno quindi bisogno di essere sostituiti
       ai box. Vetture con un basso degrado degli pneumatici potranno compiere più giri senza doversi fermare ai box.
       
+      L'affidabilità specifica invece la probabilità che ha una vettura di riuscire a compiere l'intera
+      gara senza essere soggetta a gusti che porterebbero ad un ritiro del pilota che la utilizza.
+      
       Ogni pilota inoltre possiede un propria strategia, che rappresenta l'elenco dei giri in cui fermarsi per effettuare il
       cambio gomme. E' importante bilanciare il vantaggio di avere sempre pneumatici in buone condizioni con lo svantaggio
       di doversi fermare per sostituirli.
@@ -537,16 +566,17 @@
       immagazzinando alla partenza un minor quantitativo d'esso, rendendo così la vettura più leggera e performante.
       
       \subsection{Simulazione accelerazione}
-	Dato che simulare la reale curva di accelerazione di una vettura di Formula 1 è una operazione complessa,
+	Dato che simulare la reale curva di accelerazione di una vettura di Formula 1 è un'operazione molto complessa,
 	è stato deciso di semplificarne la sua rappresentazione.
 	L'aspetto chiave da tenere in considerazione è il fatto che la forza di accelerazione varia in funzione della velocità,
 	più precisamente più bassa è la velocità e maggiore è l'accelerazione che si riesce ad imprimere alla vettura.
 	
-	In più, dato che tutto il sistema di riferimento è in base allo spazio percorso e non al tempo, la velocità
-	viene calcolata in base alla distanza percorsa e non in base al tempo.
+	Come scritto in \ref{Modello} la variabile indipendente adottata nel sistema è lo spazio percorso, questo implica
+	che il tempo necessario ad attraversare un segmento e la velocità raggiunta da una vettura nel suo attraversamento
+	devono essere calcolati in funzione di esso. 
 	
 	La funzione scelta per rappresentare la velocità $v$ in funzione della distanza $x$ percorsa è 
-	dunque la seguente:
+	la seguente:
 	
 	$$v(x)=80*log[(\frac{x}{100})+1]$$
 	
@@ -554,11 +584,14 @@
 	
 	$$x(v)=100*[10^{(v/80)}-1]$$
 	
-	Il tempo necessario all'attraversamento viene poi calcolato ipotizzando di attraversare il segmento ad una velocità
-	costante pari alla media tra la velocità di ingresso e quella d'uscita.
+	Il tempo necessario all'attraversamento viene poi calcolato partendo dall'ipotesi di attraversare 
+	il segmento ad una velocità
+	costante pari alla media tra la velocità di ingresso e quella d'uscita, ma una descrizione più dettagliata
+	del suo calcolo verrà data in \ref{Azioni del pilota}.
 		
 	Nella figura \ref{fgr:GraficoVelocita} viene rappresentato il grafico della funzione usata per simulare il valore
-	della velocità raggiunta in funzione della distanza percorsa.
+	della velocità raggiunta in funzione della distanza percorsa, si nota come l'accelerazione diminuisca 
+	all'aumentare della velocità.
 	
 	\begin{figure}[ht]
 	  \centering
@@ -569,11 +602,12 @@
 	  \label{fgr:GraficoVelocita}
 	\end{figure}
 	
-	Tale grafico presuppone che la vettura parta da una velocità iniziale di 0m/s, ma questo si verifica solo 
+	Tale grafico presuppone che la vettura parta da una velocità iniziale di 0m/s, ma questo si verifica però solo 
 	alla partenza.
-	Per calcolare la variazione di velocità della vettura in funzione della distanza percorsa, nel caso in cui la vettura
-	abbia una velocità iniziale $v_0$ diversa da 0 è sufficiente traslare il grafico fino a intersecare tale valore $v_0$
-	con l'asse delle ordinate, come nell'esempio in figura \ref{fgr:GraficoVelocitaTraslato}
+	Per poter calcolare la variazione di velocità della vettura in funzione della distanza percorsa anche nel caso
+	in cui essa
+	abbia una velocità iniziale $v_0$ diversa da 0, è sufficiente traslare il grafico fino a intersecare tale valore $v_0$
+	con l'asse delle ordinate. Un esempio è mostrato in figura \ref{fgr:GraficoVelocitaTraslato}
 	
 	\begin{figure}[ht]
 	  \centering
@@ -609,9 +643,10 @@
         Il questo caso per calcolare il tempo di attraversamento di usano le leggi del moto rettilineo uniforme,
 	dove $v$ è la velocità di attraversamento e $l$ la lunghezza del segmento
 	
-	$$t(v)=l/v$$
+	$$t(v)= \frac{l}{v}$$
 	
       \subsection{Azioni del pilota}
+      \label{Azioni del pilota}
         Nel loro ciclo di vita i piloti compiono le seguenti azioni:
 	
 	\begin{itemize}
@@ -621,6 +656,9 @@
 	  \item Eventuali soste ai box
 	  \item Terminazione della gara
 	\end{itemize}
+	
+	Tali azioni verranno descritte a seguire, ma senza fare alcun riferimento a concetti
+	di concorrenza, in quanto saranno poi esposti nel capitolo \ref{Concorrenza}
 
 	\subsubsection{Schieramento nella griglia di partenza}
 	  Questa è la prima fase della gara, semplicemente una volta che il pilota è stato creato
@@ -639,10 +677,10 @@
 	  nel minor tempo possibile.
 	  
 	  L'attraversamento di un segmento si svolge in modo analogo sia che il tratto di pista sia
-	  di accelerazione, di frenata o a velocità costante (curva). Cambia solo il modo con cui esso viene 
+	  di accelerazione, di frenata o a velocità costante (curva). Nei vari casi cambia solo il modo con cui viene 
 	  determinato il tempo di attraversamento.
 	  
-	  Nel caso in cui il pilota sia impegnato in un tratto di a velocità costante
+	  Nel caso in cui il pilota sia impegnato in un tratto a velocità costante
 	  il tempo di attraversamento viene calcolato nel seguente modo:
 	  
 	  \begin{enumerate}
@@ -654,7 +692,7 @@
 		    \item Peso della benzina nella vettura (0,05\% in più del tempo per ogni litro nel serbatoio)
 		  \end{itemize}
 		  Tali penalità vengono poi sommate al tempo di attraversamento
-	    \item A questo punto il pilota chiede l'accesso alla risorsa protetta del segmento
+	    \item Il pilota chiede l'accesso alla risorsa protetta del segmento
 		  comunicando il tempo atteso per l'attraversamento. La risorsa risponde comunicando il tempo
 		  effettivo di attraversamento sulla base della presenza o meno di altri piloti
 	  \end{enumerate}
@@ -679,7 +717,7 @@
 		    \item Peso della benzina nella vettura (0,05\% in più del tempo per ogni litro nel serbatoio)
 		  \end{itemize}
 		  Tali penalità vengono poi sommate al tempo di attraversamento
-	    \item A questo punto il pilota chiede l'accesso alla risorsa protetta del segmento
+	    \item Il pilota chiede l'accesso alla risorsa protetta del segmento
 		  comunicando il tempo atteso per l'attraversamento. La risorsa risponde comunicando il tempo
 		  effettivo di attraversamento sulla base della presenza o meno di altri piloti
 	  \end{enumerate}
@@ -702,7 +740,7 @@
 		    \item Peso della benzina nella vettura (0,05\% in più del tempo per ogni litro nel serbatoio)
 		  \end{itemize}
 		  Tali penalità vengono poi sommate al tempo di attraversamento
-	    \item A questo punto il pilota chiede l'accesso alla risorsa protetta del segmento
+	    \item Il pilota chiede l'accesso alla risorsa protetta del segmento
 		  comunicando il tempo atteso per l'attraversamento. La risorsa risponde comunicando il tempo
 		  effettivo di attraversamento sulla base della presenza o meno di altri piloti
 	  \end{enumerate}
@@ -710,7 +748,6 @@
 	  
 
 	\subsubsection{Soste ai box}
-    
 	  I piloti avranno poi una loro personale strategia di gara, questo consentirà loro di effettuare
 	  i sorpassi non solo durante la percorrenza del giro, ma anche mediante le soste ai box.
 	  La strategia di gara specifica la benzina iniziale che la vettura avrà nel serbatoio a inizio gara,
@@ -742,10 +779,10 @@
 	  
 	  Ogni volta che si conclude il giro viene fatto un controllo per determinare se il pilota
 	  ha abbastanza benzina per completare un altro giro. In caso affermativo esso procede normalmente
-	  effettuando il giro successivo, in caso contrario esso si ritira dalla competizione terminando così la sua gara
+	  effettuando il giro successivo, in caso contrario esso si ritira dalla competizione terminando così la sua gara.
 	  
-	  In base all'affidabilità della vettura poi un pilota ha una certa probabilità che durante la percorrenza del giro
-	  la sua vettura possa rompersi causandone il suo ritiro
+	  In base all'affidabilità della vettura inoltre un pilota ha una certa probabilità che durante la percorrenza del giro
+	  la sua vettura possa rompersi causandone il suo ritiro.
 	
       \subsection{Invio dello stato del pilota}
 	Il pilota inoltre in determinati momenti invia delle informazioni sul suo stato al monitor, 
@@ -759,12 +796,13 @@
 	  \item Ingresso ai box
 	  \item Uscita dai box
 	  \item Comunicazione della benzina rimasta e dello stato degli pneumatici
-	  \item Comunicazione di gara terminata da parte del pilota
+	  \item Comunicazione di gara terminata
 	\end{itemize}
 	
-	Nella sezione \ref{Comunicazione} si spiegherà come queste informazioni vengono effettivamente inviate al monitor
+	Nella sezione \ref{Comunicazione} si spiegherà come queste informazioni vengono effettivamente inviate al monitor.
 	
     \section{Monitor}
+    \label{Monitor}
       Il monitor è una semplice interfaccia grafica che raccoglie le informazioni sullo stato dei piloti ordinati secondo
       la loro posizione.
       
@@ -813,7 +851,7 @@
     \section{Partizionamento}
       Il progetto svolto si presta ad alcune considerazioni sull'aspetto della distribuzione. 
       Si può infatti notare che esso è strutturato in 2 parti ben distinte, una contenente la logica della
-      competizione (piloti e gara), e una contenente il monitor per la visualizzazione dello
+      competizione (Piloti, Gara e StartUp), e una contenente il monitor per la visualizzazione dello
       stato della competizioni.
       
       Inoltre entrambi i blocchi sono indipendenti uno dall'altro. I piloti possono infatti
@@ -823,17 +861,18 @@
       Tale suddivisione è inoltre giustificata dal fatto che le parti che richiedono un certo carico computazionale 
       (seppur modesto) sono quelle relative ai piloti e al monitor, mentre
       Gara, trattandosi di una collezione di record di memoria e di risorse protette, ha solamente un ruolo passivo
-      e richiede perciò una capacità di calcolo molto inferiore
+      e richiede perciò una capacità di calcolo molto inferiore.
       
       Queste considerazioni hanno portato quindi a scomporre il progetto in 2 nodi così composti:
       
       \begin{itemize}
-	\item Nodo 1:
+	\item Nodo 1 (F1Engine):
 	\begin{itemize}
 	  \item Piloti
 	  \item Gara
+	  \item StartUp
 	\end{itemize}
-	\item Nodo 2:
+	\item Nodo 2 (F1ControlPanel):
 	\begin{itemize}
 	  \item Monitor
 	\end{itemize}
@@ -841,43 +880,111 @@
           
     \section{Comunicazione}
     \label{Comunicazione}
-      Una parte fondamentale della distribuzione riguarda la scelta del meccanismo di scambio informazioni tra i 2 nodi.
+      Una parte fondamentale della distribuzione riguarda la scelta del modello da usare per lo
+      scambio delle informazioni tra i 2 nodi
+      F1Engine e F1ControlPanel.
       
-      Nel nostro caso le informazioni scambiate hanno una sola direzione, in quanto il monitor ha il solo compito di
-      ricevere le informazioni dal nodo F1Engine e mostrarle a video.
+      Nel nostro caso le informazioni scambiate hanno una sola direzione in quanto il monitor nel nodo F1ControlPanel, 
+      che ha il solo compito di
+      ricevere le informazioni dal nodo F1Engine e mostrarle a video, non manda alcun messaggio
+      di risposta verso il nodo F1Engine.
       
-      Dato che molte informazioni vengono inviate dal pilota, non è desiderabile che esso
+      Questo perché dato che quasi la totalità delle informazioni visualizzate
+      vengono inviate dal pilota, non è desiderabile che esso
       attenda la risposta di avvenuta ricezione del messaggio da parte del monitor,
-      in quando questo trasformerebbe l'operazione di invio messaggio in una operazione bloccante, influenzando così
+      in quando questo trasformerebbe l'operazione di invio messaggio in una operazione bloccante influenzandone così
       in modo indesiderato il suo comportamento.
       
-      Un altra considerazione riguarda il fatto che un'informazione non ricevuta o ricevuta in ritardo 
-      non causerebbe un'inconsistenza dello stato della competizione a livello logico,
+      Tale aspetto potrebbe essere risolto creando un modulo dedicato solamente alla gestione dei messaggi spediti al monitor
+      da parte dei piloti che sia disaccoppiato da quest'ultimi, in modo da poterne rinviare i messaggi senza 
+      bloccarne l'esecuzione in attesa di una risposta.
+      Ciò avrebbe richiesto tuttavia una progettazione più complessa che avrebbe portato al superamento delle ore di lavoro
+      previste per la realizzazione del progetto.
+      
+      Il verificarsi di una informazione non ricevuta o ricevuta in ritardo 
+      non causerebbe comunque un'inconsistenza dello stato della competizione a livello logico,
       ma solo una inconsistenza dei dati mostrati a video. Tale fenomeno si risolverebbe poi mano a mano che la gara avanza
       e che i nuovi dati aggiornati vengono ricevuti.
       
       Tali considerazioni suggeriscono quindi la possibilità di usare una comunicazione asincrona nello scambio dei messaggi
-      tra i 2 nodi basata su chiamate a procedure remote, con semantica oneway best-efford
-            
-      Uno schema della distribuzione è riportato nella figura \ref{Fig:SchemaDistribuzione}
+      tra i 2 nodi basata su chiamate a procedure remote, con semantica oneway best-effort.
       
-      \begin{figure}[ht]
-	\centering
-	\includegraphics[width=120mm]{./Immagini/SchemaDistribuzione.png}
-	% SchemaDistribuzione.png: 2178x792 pixel, 72dpi, 76.83x27.94 cm, bb=0 0 2178 792
-	\caption{Schema di distribuzione del progetto}
-	\label{Fig:SchemaDistribuzione}
-      \end{figure}
-  
+    \section{Middleware e interfaccia}
+      La realizzazione della distribuzione tra 2 nodi comporta il dover utilizzare un middleware
+      per permettere la loro comunicazione.
+      Dato che il nodo F1ControlPanel svolge il solo ruolo di servente, in quanto tutte le sue azioni svolte 
+      (che consistono solamente nella visualizzazione dei dati)
+      sono conseguenza di messaggi inviati dal nodo F1Engine, è ragionevole utilizzare un middleware di distribuzione
+      che adotti un modello cliente-servente. In questa prospettiva il nodo F1ControlPanel si occuperà
+      di avviare il lato servente
+      fornendo tutte le informazioni al lato cliente (in questo caso il nodo F1Engine) per poter interagire con esso.
+      
+      Diviene poi necessario stabilire un'interfaccia di comunicazione, che renda possibile l'esecuzione
+      di tutte funzionalità assegnate al monitor elencate in \ref{Monitor}. Tale interfaccia dovrà quindi contenere
+      le seguenti chiamate, dove tra parentesi sono indicati i relativi parametri:
+      
+    \begin{itemize}
+      \item Aggiunta di un pilota al monitor (numero, nome, costruttore della relativa vettura, strategia, quantità di benzina a bordo)
+      \item Notifica del tempo realizzato in un intermedio (numero del pilota, tempo realizzato, numero giri, numero intermedio, 
+            ticket, tempo attuale di gara)
+      \item Notifica di entrata ai box di un pilota (numero del pilota entrante)
+      \item Notifica di uscita ai box di un pilota (numero del pilota uscente)
+      \item Invio dei dati della gara (nome del circuito, lunghezza, numero di giri previsti, condizioni meteo)
+      \item Notifica di gara partita
+      \item Notifica dello stato della vettura di un pilota (numero pilota, stato gomme, livello carburante nel serbatoio)
+      \item Notifica di fine gara da parte di un pilota (numero pilota, tempo di gara, ragione che ha causato il termine della gara)
+    \end{itemize}
+
+    Questa interfaccia consente di scambiare col monitor tutti i dati necessari per la visualizzazione delle informazioni
+    sullo stato della gara. 
     
+    Uno schema della distribuzione e dei canali di comunicazione è riportato nella figura \ref{Fig:SchemaDistribuzione}
+      
+    \begin{figure}[ht]
+      \centering
+      \includegraphics[width=130mm]{./Immagini/SchemaDistribuzione.png}
+      % SchemaDistribuzione.png: 2178x792 pixel, 72dpi, 76.83x27.94 cm, bb=0 0 2178 792
+      \caption{Schema di distribuzione e dei canali di comunicazione}
+      \label{Fig:SchemaDistribuzione}
+    \end{figure}
+  
+       
   \chapter{Concorrenza}
-  \label{Concorenza}
+  \label{Concorrenza}
     Gli aspetti del progetto in cui entrano in gioco problemi di natura concorrenziale sono i seguenti:
     
     \begin{itemize}
       \item Schieramento nella griglia di partenza
       \item Attraversamento dei segmenti da parte dei piloti
     \end{itemize}
+    
+    Essi riguardano solamente il nodo F1Engine, in quanto F1ControlPanel consiste solamente nel monitor per
+    la visualizzazione dei dati e non presenta aspetti di natura concorrente relativi al progetto.
+    
+    \section{Organizzazione gerarchica dei thread di F1Engine}
+      Durante l'esecuzione del nodo F1Engine i vari thread vengono creati con questa sequenza:
+      
+      \begin{enumerate}
+        \item All'avvio del nodo F1Engine viene avviato il thread principale StartUp
+	\item StartUp crea e configura Gara
+	\item StartUp crea vari thread Pilota, uno per ciascun pilota
+	\item I thread Pilota si configurano e si schierano sulla griglia di partenza
+	\item StartUp attende che tutti i thread Pilota siano schierati e che l'utente dia il via alla gara
+	\item Una volta che la gara è partita i piloti iniziano a gareggiare tra loro
+      \end{enumerate}
+      
+      Riguardo all'organizzazione gerarchica i thread Pilota appartengono allo scope del thread StartUp,
+      ed ogni thread Pilota è al di fuori dello scope di ogni altro thread Pilota. Uno schema di tale
+      struttura gerarchica è mostrato in figura \ref{fig:OrganizzazioneThreadF1Engine}
+      
+      \begin{figure}[ht]
+	\centering
+	\includegraphics[width=80mm]{./Immagini/OrganizzazioneThreadF1Engine.png}
+	% OrganizzazioneThreadF1Engine.png: 2178x2660 pixel, 72dpi, 76.83x93.84 cm, bb=0 0 2178 2660
+	\caption{Organizzazione gerarchica dei thread di F1Engine}
+	\label{fig:OrganizzazioneThreadF1Engine}
+      \end{figure}
+
     
     \section{Schieramento nella griglia di partenza}
     \label{Schieramento nella griglia di partenza}
@@ -893,60 +1000,79 @@
 	\item Uno pubblico controllato da guardia chiamato Wait\_To\_Pilots, inizialmente chiusa
       \end{itemize}
       
-      Il protocollo d'accesso alla griglia di partenza è il seguente, e comprende 2 serie di eventi
-      concorrenti:
+      Il protocollo d'accesso alla griglia di partenza è il seguente, ed è composto da 2 serie di eventi
+      concorrenti. La prima comprendente il thread StartUp e la seconda comprendente i thread Pilota
+      creati da StartUp:
       
-      Thread di gestione della gara
+      Thread StartUp:
       \begin{itemize}
-	\item Una volta che ha creato tutti i piloti chiede accesso al canale Wait\_To\_Pilots,
+	\item Una volta che ha creato tutti i thread Pilota StartUp chiede accesso al canale Wait\_To\_Pilots,
 	      inizialmente con guardia chiusa
-	\item Una volta che tutti i piloti sono schierati la guardia di Wait\_To\_Pilots viene aperta e il controllore
+	\item Una volta che tutti i thread Pilota sono schierati la guardia di Wait\_To\_Pilots viene aperta e StartUp
 	      si pone in attesa del segnale di inizio gara da parte dell'utente
 	\item Una volta ricevuto tale segnale viene aperta la guardia Wait\_To\_Start
       \end{itemize}
       
-      Thread dei piloti:
+      Thread Pilota:
       \begin{itemize}
-	\item Un pilota viene creato e chiede di schierarsi nella griglia di partenza tramite il canale Place\_On\_Grid,
+	\item Un thread Pilota viene creato e chiede di schierarsi nella griglia di partenza tramite il canale Place\_On\_Grid,
               il numero di piloti in griglia viene aumentato di uno
-	\item Il pilota viene poi riaccordato nel canale Wait\_To\_Start, inizialmente chiuso
+	\item Pilota viene poi riaccordato nel canale Wait\_To\_Start, inizialmente chiuso
 	\item Quando il numero dei piloti schierati è uguale al numero di piloti che devono prendere parte alla gara
 	      la guardia di Wait\_To\_Pilots viene aperta
-	\item I piloti attendono ora l'apertura della guardia Wait\_To\_Start da parte del controllore
+	\item Tutti i thread Pilota attendono ora l'apertura della guardia Wait\_To\_Start da parte di StartUp per
+	      poter iniziare a gareggiare
       \end{itemize}
+      
+      Una schematizzazione di questo protocollo è mostrata in figura \ref{fig:SchemaSchieramento}, dove in giallo è indicato
+      il flusso di funzionamento del thread StartUp e in verde quelli ralativi ai thread Pilota.
+      
+      \begin{figure}[ht]
+	\centering
+	\includegraphics[width=140mm,bb=0 0 2009 1854]{./Immagini/SchemaSchieramento.png}
+	% SchemaSchieramento.png: 2763x2549 pixel, 99dpi, 70.88x65.39 cm, bb=0 0 2009 1854
+	\caption{Schema del protocollo di schieramento nella griglia di partenza}
+	\label{fig:SchemaSchieramento}
+      \end{figure}
+
 
 	    
     \section{Acceso ai segmenti}
     \label{Accesso ai segmenti}
       L'accesso ai segmenti è la parte cruciale di tutto il sistema in quanto tramite essi viene gestita
-      tutta la dinamica della gara, ovvero tempi di percorrenza del circuito, sorpassi e accesso ai box.
-      Fornisce inoltre il meccanismo di ordinamento dei piloti durante la competizione
+      l'intera dinamica della gara, ovvero tempi di percorrenza del circuito, sorpassi e accesso ai box.
+      Fornisce inoltre il meccanismo di ordinamento dei piloti durante la competizione.
       
-      Come detto un segmento è composto da una o più corsie gestite mediante una risorsa protetta per garantire
+      Come detto un segmento è composto da una o più corsie gestite mediante una risorsa protetta per garantirne
       l'accesso in mutua esclusione, esse consentono ai piloti di entrare nello stesso segmento 
       contemporaneamente e di effettuare sorpassi.
       Se un segmento è composto da una sola corsia i piloti dovranno necessariamente accodarsi in un'unica fila e attraversare
       il segmento senza alcuna possibilità di effettuare sorpassi.
       
       L'accesso viene modellato mediante una risorsa protetta associata a ciascun segmento, che contiene
-      la rappresentazione delle sue corsie e il loro stato. Lo stato della risorsa protetta associata al segmento
-      consiste nella memorizzazione dell'istante in cui l'ultimo pilota che vi ha chiesto l'accesso uscirà dalla corsia.
+      la rappresentazione delle sue corsie ed il suo stato. Lo stato consiste nell'associare ad ogni corsia del segmento
+      l'istante in cui l'ultimo pilota che vi ha chiesto l'accesso uscirà da essa,
+      nel caso in cui nessun pilota abbia ancora attraversato la corsia a tale istante viene dato valore 0.
       
-      Inoltre ad ogni segmento è assegnato un contatore, che eroga dei ticket decrescenti ai piloti ogni volta ognuno di
+      Tale rappresentazione permette ad un pilota di capire immediatamente se una corsia è libera o no, in quanto
+      se il valore memorizzato nel relativo stato è minore dell'istante in cui il pilota ne chiede l'accesso
+      vorrà dire che tale corsia sarà completamente libera, in quanto l'ultimo pilota che la occupava sarà
+      già uscito da essa.
+      
+      Inoltre ad ogni segmento è assegnato un contatore, che eroga dei ticket decrescenti ai piloti ogni volta che ognuno di
       essi esce dal segmento. In questo modo è possibile ordinare i piloti con relativa semplicità senza
-      dover tenere in considerazioni alcun aspetto legato al calcolo dei tempi. 
+      dover tenere in considerazione alcun aspetto legato al calcolo dei tempi. 
       
       I piloti vengono infatti ordinati, nel momento in cui escono dai segmenti aventi la fotocellula per il rilevamento dei tempi,
       in base al giro in cui sono, al segmento in cui si trovano e al ticket in loro possesso.
-      Il caso più difficile è quando si confrontano 2 piloti nello stesso giro usciti dallo stesso segmento,
-      rendendo così necessario analizzare il momento temporale in cui sono usciti. Con l'utilizzo dei ticket sarà invece
-      sufficiente vedere chi dei 2 ha il ticket più alto, in quanto vorrà dire che sarà quello uscito prima dal segmento.
+      Il caso più complesso si ha quando si confrontano 2 piloti nello stesso giro usciti dallo stesso segmento,
+      rendendo così necessario analizzare l'istante temporale in cui sono usciti. Con l'utilizzo dei ticket sarà invece
+      sufficiente vedere chi dei 2 ha il ticket più alto, chi lo avrà sarà quello uscito prima dal segmento.
       
-      La modalità d'accesso ai segmenti non varia in base alla sua tipologia, restando la medesima per ognuno d'essi.
+      Il protocollo d'accesso ai segmenti da parte di un pilota non varia in base alla loro tipologia, restando la medesima 
+      per ognuna di esse:
       
-      Per semplicità il protocollo d'accesso ad un segmento da parte di un pilota è il seguente:
-      
-      \begin{itemize}
+      \begin{enumerate}
 	\item Reperimento delle informazioni del segmento
 	\item Calcolo del tempo di attraversamento ideale $T_i$ in base al suo stato e alle caratteristiche del segmento
 	\item Accesso in mutua esclusione alla risorsa protetta del segmento
@@ -959,7 +1085,7 @@
 	\item Chiamata alla procedura di uscita dal segmento per assegnamento ticket
 	\item Aggiornamento della risorsa protetta
 	\item Rilascio della risorsa protetta
-      \end{itemize}
+      \end{enumerate}
       
       $T_i$ non fa nessuna considerazione sugli aspetti relativi alla concorrenza, ma calcola il tempo
       assumendo che il segmento non sia occupato da nessuna vettura. Questo tempo serve alla risorsa protetta come
@@ -973,11 +1099,11 @@
       
       \begin{itemize}
 	\item Corsia 1 occupata da un pilota $P_a$ con istante d'uscita $T_{Pa}=16$
-	\item Corsia 1 occupata da un pilota $P_b$ con istante d'uscita $T_{Pb}=8$
+	\item Corsia 2 occupata da un pilota $P_b$ con istante d'uscita $T_{Pb}=8$
       \end{itemize}
       
-      $T_{c1}$ e $T_{c2}$ sono gli istanti in cui l'ultimo pilota libera rispettivamente la corsia 1
-      e la corsia 2, quindi si avrà $T_{c1} = T_{Pa}$ e $T_{c2} = T_{Pb}$
+      $T_{C1}$ e $T_{C2}$ sono gli istanti in cui l'ultimo pilota libera rispettivamente la corsia 1
+      e la corsia 2, quindi si avrà $T_{C1} = T_{Pa}$ e $T_{C2} = T_{Pb}$
       
       Uno schema dello stato del segmento è rappresentato nella figura \ref{fgr:AccessoSegmentiStatoInziale}
       
@@ -989,80 +1115,108 @@
 	\label{fgr:AccessoSegmentiStatoInziale}
       \end{figure}
       
-      Ora a seconda del valore di $T_i$ relativo al pilota A si possono ipotizzare tre possibili scenari, che sono
+      Ora a seconda del valore di $T_i$ relativo al pilota $P_a$ si possono ipotizzare tre possibili scenari, che sono
       
       \begin{itemize}
-	\item $T_i < T_a$
-	\item $T_a < T_i < T_b$
-	\item $T_i > T_b$
+	\item $T_i < T_{Pb}$
+	\item $T_{Pb} < T_i < T_{Pa}$
+	\item $T_i > T_{Pa}$
       \end{itemize}
       
       Occorre anche introdurre un tempo chiamato $T_{min}$, ovvero il distacco minimo che 2 vetture possono avere
       stando sulla stessa corsia senza sovrapporsi. L'utilizzo di tale parametro verrà chiarito nella sezione
-      \ref{Problemi legati alla granularita del tempo}
+      \ref{Problemi legati alla granularita del tempo}. Ai fini della spiegazione teorica esso può
+      comunque essere posto uguale a $0$,
+      in quanto non influisce sulla scelta della corsia su cui far accodare un pilota.
       
       Vediamo ora come si calcolerà il tempo d'uscita del pilota $P_c$ per ognuno di questi 3 casi.
       
-      \subsection{Caso $T_i < T_a$}
-	In questo caso il pilota $P_c$ uscirebbe sia prima di $P_a$ che di $P_b$, questo tuttavia non è possibile in quanto
-	entrambe le corsie sono già occupate da piloti che la liberano dopo di lui in quanto $T_i < T_a < T_b$
+      \subsection{Caso $T_i < T_{Pb}$}
+	In questo caso il pilota $P_c$ uscirebbe sia prima di $P_b$ che di $P_a$, questo tuttavia non è possibile in quanto
+	entrambe le corsie sono già occupate da piloti che la liberano dopo di lui, dato che $T_i < T_{Pb} < T_{Pa}$.
 	
-	Il pilota $P_{c}$ verrà dunque inserito nella corsia con il tempo di uscita minore, ovvero $C_2$,
-	e quindi attraverserà il segmento $S$ usando la corsia $C_2$ in tempo $T_r = T{c1} + T_{min}$
-	uscendo subito dopo il pilota $P_2$. L'ordine d'uscita dal segmento sarà dunque $P_a -> P_c -> P_b$
-	($P_c$ riesce a sorpassare $P_b$)
+	Il pilota $P_{c}$ verrà dunque inserito nella corsia con l'istante d'uscita minore, ovvero $C_2$,
+	e quindi attraverserà il segmento $S$ usando tale corsia in tempo $T_r = T_{c2} + T_{min}$
+	uscendo subito dopo il pilota $P_2$. L'ordine d'uscita dal segmento sarà dunque $P_b -> P_c -> P_a$
+	(nella realtà $P_c$ riesce a sorpassare $P_a$ solo se $T_r = T_{Pa} + T_{min} < T_{Pa}$, in caso questo non sia verificato
+	ci si ritroverà nella stessa situazione del caso $T_i > T_{Pa}$)
 	
-	Bisognerà poi aggiornare lo stato del segmento, ponendo l'aggiornamento dello stato del segmento ponendo
-	$T_{C1} = T_{r}$ in quanto ora $P_c$ è l'ultimo pilota ad uscirà dalla corsia $C_2$, uno schema del
-	nuovo stato del segmento è riportato nella figura \ref{fgr:AccessoSegmentiCaso1}
+	Bisognerà poi aggiornare lo stato del segmento, ponendo
+	$T_{C2} = T_{r}$ in quanto ora $P_c$ è l'ultimo pilota ad uscire dalla corsia $C_2$, uno schema del
+	nuovo stato della risorsa protetta relativa al
+	segmento $S$ dopo che il pilota $P_c$ ha effettuato l'accesso è riportato nella figura \ref{fgr:AccessoSegmentiCaso1}.
 	
 	\begin{figure}[ht]
 	  \centering
 	  \fbox{\includegraphics[width=110mm]{./Immagini/AccessoSegmentiCaso1.png}}
 	  % AccessoSegmentiStatoInziale.png: 575x338 pixel, 72dpi, 20.28x11.92 cm, bb=0 0 575 338
-	  \caption{Caso 1: Stato del segmento S dopo che il pilota C ha effettuato l'accesso}
+	  \caption{Caso 1: Stato del segmento $S$ dopo che il pilota $P_C$ ha effettuato l'accesso nel caso $T_i < T_{Pb}$}
 	  \label{fgr:AccessoSegmentiCaso1}
 	\end{figure}
 	
-      \subsection{Caso $T_a < T_i < T_b$}
-	In questo caso il pilota $P_c$ uscirebbe dopo $P_a$ e prima di $P_b$, questo è compatibile con 
-	lo stato del segmento in quando $P_c$ vede la corsia $C_1$ virtualmente libera poichè
-	il pilota che la impegna esce in ogni caso prima di lui e non comporta nessun ostacolo alla sua percorrenza
+      \subsection{Caso $T_{Pb} < T_i < T_{Pa}$}
+	In questo caso il pilota $P_c$ uscirebbe dopo $P_b$ e prima di $P_a$, questo è compatibile con 
+	lo stato del segmento in quando $P_c$ vede la corsia $C_2$ virtualmente libera poiché
+	il pilota che la impegna esce in ogni caso prima di lui e non comporta nessun ostacolo alla sua percorrenza.
 	
-	$P_c$ viene dunque inserito nella corsia con il tempo d'uscita minore, ovvero $C_2$ e dato che
+	$P_c$ viene dunque inserito nella corsia con il tempo d'uscita minore, ovvero $C_2$, e dato che
 	$T_i < T_{C2}$ potrà attraversare il segmento in un tempo $T_r = T_i$. 
-	Nello stato della risorsa protetta del segmento verrà posto $TC_2 = T_r$, mentre $T_C1$ resterà invariato.
-	L'ordine d'uscita dal segmento sarà poi $P_a -> P_c -> P_b$, e il pilota $P_c$ avrà effettivamente 
-	superato $P_b$ come previsto.
+	Nello stato della risorsa protetta del segmento verrà posto a $T_{C2} = T_r$, mentre $T_{C1}$ resterà invariato.
+	L'ordine d'uscita dal segmento sarà poi $P_b -> P_c -> P_a$, e il pilota $P_c$ avrà effettivamente 
+	superato $P_a$ come previsto.
 	
-	Uno schema del nuovo stato della risorsa protetta relativa al segmento $S$ è illustrato nella figura 
-	\ref{fgr:AccessoSegmentiCaso2}
+	Uno schema del nuovo stato della risorsa protetta relativa al segmento $S$ dopo che il
+	pilota $P_C$ ha effettuato l'accesso è illustrato nella figura 
+	\ref{fgr:AccessoSegmentiCaso2}.
 
 	\begin{figure}[ht]
 	  \centering
 	  \fbox{\includegraphics[width=110mm]{./Immagini/AccessoSegmentiCaso2.png}}
 	  % AccessoSegmentiStatoInziale.png: 575x338 pixel, 72dpi, 20.28x11.92 cm, bb=0 0 575 338
-	  \caption{Caso 2: Stato del segmento S dopo che il pilota C ha effettuato l'accesso}
+	  \caption{Caso 2: Stato del segmento $S$ dopo che il pilota C ha effettuato l'accesso nel caso $T_{Pb} < T_i < T_{Pa}$}
 	  \label{fgr:AccessoSegmentiCaso2}
 	\end{figure}
       
-      \subsection{Caso $T_i > T_b$}
+      \subsection{Caso $T_i > T_{Pa}$}
 	In questo caso il pilota $P_c$ uscirebbe sia dopo $P_a$ che dopo $P_c$, per lui il segmento
-	è virtualmente libero in quanto nessuno dei 2 piloti gli crea intralcio. $P_c$ attraverserà
+	è virtualmente libero in entrambe le corsie in quanto nessuno dei 2 piloti gli crea intralcio. $P_c$ attraverserà
 	dunque il segmento in tempo $T_r = T_i$ utilizzando comunque la corsia con il tempo d'uscita minore,
 	ovvero $C_2$.
 	
-	Lo stato della risorsa protetta associata al segmento $S$ sarà modificata ponendo $T_C2 = T_r$,
+	Lo stato della risorsa protetta associata al segmento $S$ sarà modificata ponendo $T_{C2} = T_r$,
 	come rappresentato in figura \ref{fgr:AccessoSegmentiCaso3}, e l'ordine d'uscita sarà come previsto
-	$P_a -> P_b -> P_c$.
+	$P_b -> P_a -> P_c$.
       
 	\begin{figure}[ht]
 	  \centering
 	  \fbox{\includegraphics[width=110mm]{./Immagini/AccessoSegmentiCaso3.png}}
 	  % AccessoSegmentiStatoInziale.png: 575x338 pixel, 72dpi, 20.28x11.92 cm, bb=0 0 575 338
-	  \caption{Caso 3: Stato del segmento S dopo che il pilota C ha effettuato l'accesso}
+	  \caption{Caso 3: Stato del segmento S dopo che il pilota C ha effettuato l'accesso nel caso $T_i > T_a$}
 	  \label{fgr:AccessoSegmentiCaso3}
 	\end{figure}
+	
+      \subsection{Altri casi particolari}
+        Generalizzare l'esempio appena fatto ad altri casi particolari è molto semplice.
+        
+        Volendo rifarsi al caso in cui ci sia un pilota $P_C$ che voglia attraversare in tempo $T_i$ un segmento
+	$S$ di una sola corsia occupata da $P_a$ con tempo d'uscita $T_{Pa}$, si possono avere solamente i 2 casi
+	in cui $T_i < T_{Pa}$ o $T_i > T_{Pa}$. 
+	  
+	Data la presenza di una sola corsia in ogni caso il pilota $P_{a}$ verrebbe accodato in ogni caso a $P_a$,
+	ma varierebbe il metodo con cui verrebbe calcolato il tempo di attraversamento $T_r$.
+	Nel primo caso attraverserebbe il segmento
+	in tempo $T_r = T_{C1} + T_{min}$, e si imposterebbe $T_{C1} = T_r = T_{C1} + T_{min}$, mentre nel
+	secondo caso il pilota $P_{C}$ attraverserebbe il segmento
+	in tempo $T_r = T_i$, e si imposterebbe $T_{C1} = T_r = T_i$.
+		
+	Nel caso in cui un pilota $P_C$ volesse attraversare un segmento $S$ dove una o più corsie non siano state
+	ancora attraversate da alcun pilota, $P_C$ verrebbe accodato nella corsia con instante d'uscita uguale a zero,
+	con relativa modifica allo stato del segmento. Se
+	tali corsie fossero più di una verrebbe scelta quella con indice minore.
+	
+	Va fatto notare che nel caso in cui 2 piloti volessero uscire da un segmento nello stesso istante,
+        dato che sarebbe comunque necessario stabilire un ordine d'uscita, 
+	verrebbe data la precedenza a quello entrato prima nel segmento.
 	    
     \section{Stallo}
       Affinché in un sistema possa esserci possibilità di stallo devono verificarci queste 4 condizioni
@@ -1072,7 +1226,7 @@
        \item Accesso esclusivo a risorsa condivisa
        \item Inibizione di prerilascio
        \item Accumulo di risorse
-       \item Condizione di attesa circolare
+       \item Condizioni di attesa circolare
       \end{enumerate}
       
       Cerchiamo di analizzare ora queste 4 condizioni per determinare se nel sistema progettato
@@ -1100,24 +1254,36 @@
 	al massimo dell'acquisizione di una sola risorsa protetta, quindi viene a mancare il caso in cui esso possa accumulare
 	solo una parte di risorse attendendone altre prima di continuare.
 	
-      \subsection{Attesa circolare}
-        Data la natura circolare di un tracciato di Formula 1 esistono le condizioni necessarie affinché possa verificarsi 
-	dell'attesa circolare, ma la dimensione del tracciato rapportata al numero di concorrenti fa si che questo 
-	evento di difficile avvenimento.
-      
+      \subsection{Condizioni di attesa circolare}
+        Data la natura circolare di un tracciato di Formula 1 si potrebbe pensare che esistano le condizioni necessarie
+	affinché possa verificarsi attesa circolare. Questo avviene quando si ha una catena chiusa ad anello 
+	di processi, dove ogni processo attende una risorsa in possesso del successivo processo.
+	
+        Nel sistema qui progettato questo evento è impossibile. Dopo la partenza della gara l'unico caso in cui un processo
+	si sospende in attesa che un altro processo liberi una risorsa si ha nell'accesso in mutua esclusione
+	ai segmenti, nel momento in cui si ottengono i reali tempi di attraversamento e se ne aggiorna lo stato.
+	Tuttavia il processo che possiede il lock del segmento non è in attesa di alcun altro processo per continuare,
+	in quanto esegue solamente operazioni matematiche con dati noti e aggiornamenti di variabili di cui possiede già il lock e
+	i nuovi valori. Viene quindi a mancare la catena di processi che mantengono un lock attendendo altri processi.
+	
+	L'altro momento i cui un processo si sospende è nella simulazione dell'attraversamento di un segmento. Anche in
+	questo caso però non può esserci attesa circolare in quanto il risveglio non è vincolato da nessun altro processo.
+	
+	Vi sono poi delle sospensioni da parte dei piloti nella griglia di partenza ma anche in questo caso
+	non si ha attesa circolare, in quanto tale operazione (il posizionarsi sulla griglia di partenza)
+	avviene senza alcuna sospensione e senza dover acquisire il lock di qualche risorsa.
+	      
       \subsection*{}
-	In conclusione dato il non verificarsi della condizione di accumulo risorse possiamo affermare che il sistema
+	In conclusione dato il non verificarsi della condizione di accumulo risorse e dell'attesa circolare
+	possiamo affermare che il sistema
 	progettato è esente da possibili stalli.    
     
     \section{Starvation}
-      La starvation si verifica quando un processo non viene mai eseguito restando sempre in uno stato di wait.
+      La starvation si verifica quando un processo non viene mai eseguito restando sempre in uno stato di wait,
+      a causa dell'utilizzo di politiche di accodamento dei processi non FIFO.
       
-      Nel nostro caso l'Utilizzo di politiche ad ordinamento temporale e gli accodamenti di tipo FIFO dovrebbero
-      garantire un certa sicurezza al rischio di starvation.
-      
-      Inoltre i processi che rappresentano i vari piloti sono in stato di sleep per quasi tutta la loro esistenza,
-      e non richiedono quindi un uso intensivo della CPU per poter eseguire garantendo la presenza di slot per
-      eseguire altri processi.
+      La starvation è quindi evitata implementando il sistema garantendo 
+      che tutti gli accodamenti dei processi siano regolati da una politica FIFO.
     
     \section{Avvio e terminazione}
       Di seguito verrà spiegato come sono stati gestiti l'avvio e la terminazione dei vari componenti.
@@ -1126,8 +1292,8 @@
       è necessario che entrambi siano attivi per avere un completo funzionamento del sistema.
       
       \subsection{F1ControlPanel}
-        Questo deve essere il primo nodo ad essere eseguito, in quanto pubblica lo IOR necessario al nodo F1Engine
-	per poterlo contattare.
+        Questo deve essere il primo nodo ad essere eseguito, in quanto come visto in \ref{Comunicazione} si occupa
+	della creazione del lato servente del middleware.
 	
 	\subsubsection{Avvio}
 	  L'avvio del nodo non ha particolari aspetti rilevanti, in quanto si tratta semplicemente di un
@@ -1136,8 +1302,7 @@
 	  Le operazioni eseguite sono:
 	  
 	  \begin{itemize}
-	    \item Inizializzazione di Corba
-	    \item Pubblicazione dello IOR
+	    \item Inizializzazione del middleware
 	    \item Creazione del pannello per visualizzare  dai ricevuti
 	    \item Ascolto per la ricezione dei messaggi
 	  \end{itemize}
@@ -1148,21 +1313,21 @@
 	  della gara è desiderabile che tali informazioni siano visibili anche al suo termine.
 	  
 	\subsubsection{Caduta o mancanza del nodo F1Engine}
-	  Come detto la caduta del nodo F1Engine non ha ripercussioni sull'esecuzione di F1ControlPanel. Tale nodo
+	  La caduta del nodo F1Engine non ha ripercussioni sull'esecuzione di F1ControlPanel. Tale nodo
 	  resterà comunque attivo anche se ovviamente non riceverà più alcun aggiornamento sullo stato della gara.
 	  Potrà comunque essere utilizzato per visualizzare i dati di una nuova gara eventualmente avviata tramite un nuovo nodo
 	  F1Engine.
 
       \subsection{F1Engine}
         Questo deve essere eseguito solo dopo aver avviato il nodo F1ControlPanel, in quanto necessita
-	dello IOR da esso pubblicato per poter spedire i dati
+	del middleware da lui creato per poter inviare i messaggi per le chiamate alle procedure remote.
 	
 	\subsubsection{Avvio}
 	  L'avvio del nodo consiste nelle seguenti operazioni:
 	  
 	  \begin{enumerate}
 	    \item Avvio del metodo main di F1Engine che invoca StartUp
-	    \item Avvio del metodo StartUp che crea Gara e i task Piloti
+	    \item StartUp crea Gara, Circuito, Segmenti e i task Pilota
 	    \item Attesa dello schieramento dei piloti
 	    \item Attesa del via da parte dell'utente
 	    \item Partenza dei piloti
@@ -1190,7 +1355,7 @@
 	  \end{enumerate}
 	  
 	  Il metodo main dunque termina dopo che tutti i piloti hanno concluso la loro gara, facendo così
-	  terminare tutto il nodo F1Engine
+	  terminare tutto il nodo F1Engine.
 	  
 	\subsubsection{Caduta o mancanza del nodo F1ControlPanel}
 	  La caduta o la mancanza del nodo F1ControlPanel non pregiudica il corretto svolgimento della gara,
@@ -1203,10 +1368,15 @@
       Nelle prime esecuzione del sistema si sono notate delle problematiche relative alla granularità con cui
       il sistema operativo gestisce lo scorrere del tempo.
       
-      Questo aspetto comportava il risveglio in ordine sbagliato dei piloti, dovuto al fatto che lo scheduler
-      non riesce a gestire in modo corretto il risveglio di thread con istanti di risveglio molto vicini tra loro.
+      Ciò accadeva quando in un segmento $S$ fossero presenti almeno 2 piloti $P_a$ e $P_b$ con un tempi di risveglio
+      molto vicini, ad esempio $T_{Pa} = T_0$ e $T_{Pb} = T_0 + \epsilon$
+      
+      Nel caso in cui $\epsilon$ sia minore della risoluzione con cui il sistema operativo discretizza il tempo,
+      lo scheduler non è più in grado di distinguere quale pilota vada svegliato prima e quale vada svegliato dopo,
+      causando spesso il loro risveglio in ordine errato.
+      
       Questo sostanzialmente comportava il verificarsi di sorpassi non possibili (ad esempio su segmenti con una sola
-      corsia), e sono state pensate 2 possibili soluzioni per evitarli
+      corsia con molti piloti ravvicinati in fila indiana), e sono state pensate 2 possibili soluzioni per evitarli
       
       La prima soluzione consisteva nel creare un sistema di prenotazione in modo che un pilota potesse prenotare
       la mutua esclusione della risorsa protetta del segmento successivo. 
@@ -1220,14 +1390,15 @@
       di calcolo richiesta per eseguire un riaccodamento, in quanto si tratta di una operazione molto onerosa.
       
       La soluzione alternativa, che è quella che è stata poi implementata nel sistema, è molto più semplice
-      ed è basata sul fatto che in una reale competizione i Formula 1 2 piloti su una stessa corsia
+      ed è basata sul fatto che in una reale competizione i Formula 1 due piloti su una stessa corsia
       non possono avere un distacco inferiore ad un certo limite, in quanto ciò significherebbe che essi sono sovrapposti.
       
-      Anche nel sistema progettato è stato quindi inserito un distacco minimo tra i piloti, che garantisce 
-      il fatto che 2 o più di essi non si risveglino mai in istanti così vicini da non essere ben gestiti 
-      dallo scheduler.
-      
-      Varie prove hanno portato a scegliere come distacco minimo tra 2 piloti il tempo di 0.05 secondi.
+      Anche nel sistema progettato è stato quindi inserito un distacco minimo $T_{min}$ tra i piloti, che garantisce 
+      che 2 o più di essi non si risveglino mai in istanti così vicini da non essere ben gestiti 
+      dallo scheduler. Il distacco minimo è stato scelto di 0.05 secondi, sia perché questa è pressapoco la distanza
+      minima che 2 vetture possono avere senza sovrapporsi, sia perché varie simulazioni di gare
+      effettuate sull'ambiente utilizzato per i test non hanno riportato sorpassi indesiderati con $T_{min}$
+      impostato a tale valore o valori superiori.
 	  
   \chapter{Implementazione}
     La presenza di 2 nodi distinti e con diverse funzioni ha portato a diverse considerazioni riguardo alla
@@ -1237,7 +1408,7 @@
       Come già detto il nodo 1 contiene la gara, i piloti e il relativo StartUp e gestisce tutti gli aspetti
       legati alla concorrenza e alla temporizzazione.
       
-      É stato quindi scelto di implementare questo nodo mediante il linguaggio ADA, che assicura un buon supporto sia
+      É stato quindi scelto di implementare questo nodo mediante il linguaggio Ada, che assicura un buon supporto sia
       riguardo alla concorrenza che riguardo alla distribuzione.
       
     \section{Nodo 2}
@@ -1250,22 +1421,22 @@
       
     \section{Middleware}
       Come Middleware è stato scelgo di utilizzare Corba, per via della sua diffusione e per il buon supporto dato
-      ad entrambi i linguaggi usati
+      ad entrambi i linguaggi utilizzati.
       
     \section{Accorgimenti}
       In fase di implementazione sono stati tuttavia necessari degli accorgimenti che hanno leggermente modificato la struttura 
-      iniziale del progetto, riportato in figura \ref{Fig:SchemaDistribuzione}
+      iniziale del progetto, riportato in figura \ref{Fig:SchemaDistribuzione}.
       
       I problemi sono sorti quando più piloti utilizzano contemporaneamente il middleware Corba per 
       inviare messaggi al monitor, in quando
-      ci sono state delle difficoltà nell'impostare Corba con una tasking policies che supportasse più thread per il lato ADA
+      ci sono state delle difficoltà nell'impostare Corba con una tasking policies che supportasse più thread per il lato Ada.
       
       Per non superare ulteriormente il limite delle ore da dedicare al progetto si è scelto quindi di modificarne leggermente
       la struttura, introducendo una nuova entità chiamata Sender.
       
-      Essa ha il compito si serializzare i messaggi inviati al monitor, in modo che non ce ne siano più di spediti
-      contemporaneamente. Nella sua realizzazione è stata modellata come una risorsa protetta, con un procedura esposta per
-      ogni tipo di evento che il pilota o lo StartUp può segnalare al monitor.
+      Essa ha il compito si serializzare i messaggi inviati al monitor, in modo che non ve ne siano più di spediti
+      contemporaneamente. La sua realizzazione è stata modellata come una risorsa protetta, con un procedura esposta per
+      ogni messaggio che il pilota o lo StartUp possono inviare al monitor.
       
       %ovvero
       
@@ -1281,7 +1452,7 @@
       %\end{itemize}
       
       Il fatto che si tratti di procedure garantisce che esse siano eseguite in mutua esclusione e quindi serializzate.
-      Esse comunque devono solo consegnare il messaggio al middleware, usando ugualmente una politica best-efford
+      Esse comunque devono solo consegnare il messaggio al middleware, usando ugualmente una politica best-effort
       e non introducono ritardi evidenti in fase di esecuzione.
       
       Lo stesso problema si è ripercosso anche nel nodo 2, in quanto poteva capitare che venissero chiamati
@@ -1315,12 +1486,12 @@
 
     \section{Compilazione}
       Nel progetto sono presenti 2 script, chiamati CompileEngine.sh e CompilePanel.sh
-      che servono per compilare rispettivamente la partizione F1Engine e la partizione F1ControllPanel
+      che servono per compilare rispettivamente la partizione F1Engine e la partizione F1ControlPanel
       in modo indipendente.
       
     \section{Configurazione}
       Il progetto prevede tutta una serie di file di configurazione per personalizzare la competizione
-      Questi file sono salvati nella cartella conf dell'F1Engine, e possono essere di 4 differenti tipi:
+      Questi file sono salvati nella cartella conf di F1Engine, e possono essere di 4 differenti tipi:
       
       \begin{itemize}
 	\item file .trk, contenuti nella sotto cartella circuits\_set 
@@ -1354,7 +1525,7 @@
 	\subsubsection{Speed}
 	  Indica la velocità (m/s) massima in caso di un segmento di accelerazione, la velocità di uscita in caso di 
 	  un segmento di decelerazione o la velocità di percorrenza in caso di segmento a velocità costante.
-	  Se un segmento di accelerazione o di decelerazioneo precede un segmento a velocità costante, dovranno avere l'attributo 
+	  Se un segmento di accelerazione o di decelerazione precede un segmento a velocità costante, dovranno avere l'attributo 
 	  Speed uguale.
 
 	\subsubsection{Num\_Lane}
@@ -1377,7 +1548,7 @@
 	  \item Coeff\_Tire\_Wear: (Integer 1..10)
 	  \item Consuption: (Float 1..∞)
 	  \item Max\_Fuel\_Level: (Float 1..∞)
-	  \item Reliability: (Integer 1..10)
+	  \item Reliability: (Integer 1..100)
 	\end{itemize}
 	
 	\subsubsection{Manufacter}
