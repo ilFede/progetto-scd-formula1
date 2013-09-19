@@ -68,7 +68,6 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 	private JTextField txtBestPilot;
 	private JTextField txtRaceState;
 	private JTextField txtBestTime;
-	private JButton btnNewButton;
 	private JTextField txtRaceDescription;
 	private JLabel lblNewLabel_2;
 	private JLabel lblNewLabel_3;
@@ -158,15 +157,6 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 		pnlSouth.add(txtRaceState);
 		txtRaceState.setColumns(10);
 
-		btnNewButton = new JButton("Ripristina");
-		btnNewButton.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				resetTable();
-			}
-		});
-		pnlSouth.add(btnNewButton);
-
 		lblNewLabel_5 = new JLabel("");
 		pnlSouth.add(lblNewLabel_5);
 
@@ -212,7 +202,7 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 	}
 
 	// resetta la tabella
-	private void resetTable() {
+	private synchronized void resetTable() {
 		// Salvo il numero delle righe perchè cambia ad ogni ciclo del for
 		int nRow = timesDataModel.getRowCount();
 		for (int i = 0; i < nRow; i++) {
@@ -403,6 +393,7 @@ public class TimePanelImpl extends TimePanelInterfacePOA {
 	// riceve la descrizione della gara
 	public synchronized void sendRaceDescription(String name, String lenght, String numLap,
 			String meteo) {
+		resetTable();
 		if (meteo.equals("DRY")) {
 			meteo = "Asciutto";
 		} else {
