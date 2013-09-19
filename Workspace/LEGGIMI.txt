@@ -1,0 +1,18 @@
+Per avviare il nodo F1ControlPanel è sufficiente entrare nella cartella F1ControlPanel
+ed eseguire i seguenti comadi:
+
+    sh CompilePanel.sh
+    sh StartPanel.sh
+
+Per avviare il nodo F1Engine è invece necessario entrare nella cartella F1Engine
+ed eseguire i seguenti comandi:
+
+    sh CompileEngine.sh
+    sh StartEngine.sh <nome file configurazione>
+
+Al posto di <nome file configurazione> va inserita la configurazione della gara.
+Sono disponibili 3 configurazioni preimpostate:
+
+* test_1lane_nopit.conf => corsa breve su circuito con una corsia senza soste ai box (sorpassi solo in caso di guasti o benzina finita)
+* test_1lane.conf => corsa breve su circuito con una corsia con soste ai box (sorpassi solo in caso di sosta ai box, guasti o benzina finita)
+* test_2lane.conf => corsa breve su circuito con tratti a 2 corsie (sorpassi possibili)
