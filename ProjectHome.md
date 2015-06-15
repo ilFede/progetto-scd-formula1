@@ -1,0 +1,1 @@
+Simulazione di una gara di Formula 1 mediante linguaggio concorrente edistribuito
